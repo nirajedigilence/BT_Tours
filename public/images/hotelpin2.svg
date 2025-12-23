@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="43px" viewBox="0 0 30 42" version="1.1">
+<defs>
+<g>
+<symbol overflow="visible" id="glyph0-0">
+<path style="stroke:none;" d="M 0.75 2.59375 L 0.75 -10.359375 L 8.25 -10.359375 L 8.25 2.59375 Z M 1.59375 1.78125 L 7.40625 1.78125 L 7.40625 -9.546875 L 1.59375 -9.546875 Z M 1.59375 1.78125 "/>
+</symbol>
+<symbol overflow="visible" id="glyph0-1">
+<path style="stroke:none;" d="M 1.375 -10.71875 L 4.203125 -10.71875 L 4.203125 -6.640625 L 8.359375 -6.640625 L 8.359375 -10.71875 L 11.171875 -10.71875 L 11.171875 0 L 8.359375 0 L 8.359375 -4.546875 L 4.203125 -4.546875 L 4.203125 0 L 1.375 0 Z M 1.375 -10.71875 "/>
+</symbol>
+</g>
+</defs>
+<g id="surface1">
+<path style="fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:4;" d="M 27.678125 3.373884 C 16.746094 3.373884 7.875781 11.610491 7.875781 21.761161 C 7.875781 36.063616 27.678125 60.583705 27.678125 60.583705 C 27.678125 60.583705 47.475 36.063616 47.475 21.761161 C 47.480469 11.610491 38.610156 3.373884 27.678125 3.373884 Z M 27.678125 3.373884 " transform="matrix(0.714286,0,0,0.7,-4.910714,-1.6625)"/>
+<g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
+  <use xlink:href="#glyph0-1" x="8.75" y="20.922559"/>
+</g>
+</g>
+</svg>

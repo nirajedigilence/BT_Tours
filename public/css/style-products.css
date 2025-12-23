@@ -1,0 +1,466 @@
+/*body{
+    font: normal normal normal 20px/24px Montserrat;
+}*/
+.error{
+    border: 1px solid red !important;
+}
+div.error{
+    border: none !important;
+    color: red;
+    /*border-color: #ddd !important;*/
+    /*border-radius: 2px !important;*/
+}
+    .accountContainer .accountRow #cartExperiencesPart .productsection{
+        width: calc(100% - 50px);
+        margin-left: 25px;
+        float: left;
+    }
+    .orangeLink.btn.pullright {
+        float: right;
+    }
+    .orangeLink.btn {
+            float: left;
+            background-color: #FCA311;
+            color: #fff;
+            font-size: 14px;
+            padding: 6px 20px;
+            border-radius: 4px;
+            margin-right: 15px;
+            font: normal normal 600 15px/20px Montserrat;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            opacity: 1;
+    }
+    .orangeLink.btn:first-child {
+        margin-right: 0px;
+    }
+    .header_part{
+        float: left;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .addProductBtn {
+        width: 11%;
+        height: 48px;
+        background: #FCA311;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        font-weight: 700;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        font-size: 1.125;
+        border-radius: 5px;
+    }
+    .fl_w{
+        float: left;
+        width: 100%;
+    }
+    .contentBooking{
+        float: left;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 0;
+        height: 1170px;
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+    .main_title{
+        text-align: left;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #333;
+    }
+    .white_part{
+        float: left;
+        width: 100%;
+        background-color: #FFFFFF;
+        /*padding: 20px 25px 25px;*/
+        padding: 5px 15px;
+        position: relative;
+    }
+    .white_part .form-group label{
+        color: #999;
+        font-size: 14px;
+        float: left;
+        width: 100%;
+    }
+    .white_part .part_one{
+        width: 80%;
+        float: left;
+    }
+    .white_part .part_two{
+        width: 20%;
+        float: left;
+    }
+    .custom_control {
+        float: left;
+        width: auto;
+        padding-right: 12px;
+    }
+    .costcontrol input{
+        max-width: 100px;
+    }
+    span.scoreperc {
+        float: left;
+        width: 100%;
+        font-size: 20px;
+        color: #008000;
+        font-weight: bold;
+    }
+    .pullright{
+        float: right;
+    }
+    .textright{
+        text-align: right;
+    }
+    .fl_w.comman{
+        padding-top: 15px;
+    }
+    span.levelbox {
+        width: 18px;
+        height: 18px;
+        border: 1px solid #000;
+        float: left;
+        display: inline-block;
+        margin-right: 4px;
+        border-radius: 2px;
+    }
+    span.levelbox.fill {
+        background-color: #333;
+    }
+    .boxes {
+        float: left;
+        width: auto;
+        margin-right: 15px;
+    }
+    .note {
+        float: left;
+        width: auto;
+        font-size: 13px;
+    }
+    .custom_full_control{
+        float: left;
+        width: 100%;
+    }
+    .custom_full_control textarea{
+        width: 100%;
+        float: left;
+        padding: 5px;
+        border-color: #ddd;
+        border-radius: 2px;
+    }
+    .image_galller {
+        float: left;
+        width: 33.3%;
+        border: 1px solid #ddd;
+        height: 140px;
+        display: inline-flex;
+        margin-bottom: 15px;
+    }
+    /*a.addmorelnk {*/
+    .addmorelnk {
+        color: #FCA311;
+        font-size: 13px;
+        padding-top: 2px;
+        float: left;
+        width: 100%;
+        cursor: pointer;
+    }
+    .browse_btn {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        cursor: pointer;
+        float: left;
+    }
+    .browse_btn input[type="file"] {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 1;
+        cursor: pointer;
+    }
+    .brw_user_ic {
+        font-size: 45px;
+        color: #656565;
+        left: 0;
+        top: 0;
+        position: absolute;
+        transform: inherit;
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .brw_user_ic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    input#user_image_upload {
+        cursor: pointer;
+    }
+    .brw_user_ic .far {
+        font-size: 60px;
+        color: #ddd;
+    }
+    .brw_plus {
+        font-size: 30px;
+        padding-left: 15px;
+        color: #ddd;
+    }
+    .rightContentDiv{
+        float: left;
+        width: 100%;
+    }
+    .contentDiv {
+        float: left;
+        width: 70%;
+        overflow: auto;
+        max-height: 937px;
+    }
+    .rightSidebarDiv {
+        float: right;
+        width: calc(30% - 20px);
+        background-color: #fff;
+        /*height: 100%;*/
+        padding: 15px 0px 0px;
+    }
+    .head_part_one {
+        float: left;
+        width: 40%;
+        font-size: 14px;
+        line-height: 35px;
+    }
+    .head_part_two {
+        float: right;
+        width: 60%;
+    }
+    .head_part_one label {
+        padding-right: 20px;
+        margin-bottom: 0px;
+    }
+    .head_part_one span {
+        color: #000;
+        font-weight: bold;
+    }
+    .sidebar_part_one{
+        float: left;
+        width: 100%;
+        padding: 0px 20px;
+    }
+    .sidebar_part_one span.scoreperc{
+        font-size: 50px;
+        text-align: center;
+    }
+    .sidebar_part_one span.scorelabel {
+        font-size: 15px;
+        text-align: center;
+        width: 100%;
+        float: left;
+        color: #000;
+        text-transform: uppercase;
+    }
+    .sidebar_part_two, 
+    .sidebar_part_three {
+        float: left;
+        width: 100%;
+        margin-top: 25px;
+        padding: 0px 20px;
+    }
+    .sidebar_part_two label,
+    .sidebar_part_three label {
+        font-size: 15px;
+        width: 100%;
+        float: left;
+        color: #000;
+        text-transform: uppercase;
+    }
+    .sidebar_part_two ul {
+        padding-left: 15px;
+        float: left;
+        width: 100%;
+    }
+    .sidebar_part_two li {
+        float: left;
+        width: 100%;
+        font-size: 14px;
+        color: #000;
+        list-style-type: disc;
+        line-height: 1.7em;
+        cursor: pointer;
+    }
+    .sidebar_part_two li.active {
+        color: #ddd;
+    }
+    .pullleft{
+        float: left;
+    }
+    .sidebar_part_three select{
+        margin-bottom: 10px;
+    }
+    .sidebar_part_four {
+        float: left;
+        width: 100%;
+        margin-top: 25px;
+        background-color: #14213D;
+        color: #fff;
+        padding: 15px;
+        font-size: 14px;
+    }
+    .sidebar_part_four label{
+        font-size: 15px;
+    }
+    .costing_tbl{
+        float: left;
+        width: 100%;
+        font-size: 12px;
+        line-height: 1.7em;
+    }
+    .costing_tbl tbody tr td:first-child{
+        color: #fff;
+        font-weight: normal;
+    }
+    .closeIconDiv {
+        position: absolute;
+        top: 0;
+        right: 10px;
+    }
+    a.closePartIcon {
+        font-size: 20px;
+        color: #999;
+    }
+    .main_title i.fas.fa-edit {
+        color: #FCA311;
+        cursor: pointer;
+    }
+    .repetedContentDiv{
+        float: left;
+        width: 100%;
+    }
+    .repetedContentDiv:first-child .main_title{
+        /*text-align: center;*/
+        padding-top: 0px;
+    }
+    .ele_hide{
+        display: none;
+    }
+    input.inputTitle {
+        width: 280px;
+        font-size: 17px;
+        padding: 5px;
+        height: calc(2.4925rem + 2px);
+        padding: 0.59rem 1rem;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #ffffff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+    }
+    .brw_bx.image_galller{
+        clear: both;
+    }
+    #cost:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content:"\f154";
+    }
+.cFCInclusionsCls input{
+    margin: 5px;
+}
+
+.contentPrototype{
+    float: left;
+    width: 100%;
+}
+.prototypebox {
+    float: left;
+    width: 100%;
+    padding: 15px;
+    box-shadow: 1px 1px 3px 0px #999;
+    min-height: 142px;
+    margin-bottom: 30px;
+}
+.prototypebox:hover,
+.prototypebox.active {
+    box-shadow: 1px 1px 3px 0px #FCA311;
+}
+.label_disabled {
+    float: left;
+    width: 100%;
+    color: #b7b7b7;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.prototypebox .label_text{
+    font-size: 15px;
+}
+.prototypeactiondiv{
+    float: left;
+    width: 100%;
+    margin-top: 15px;
+}
+.prototypebox a.prototypeaction {
+    color: #FCA311;
+    font-size: 16px;
+    padding-right: 25px;
+    display: inline-flex;
+}
+.dividedRow{
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.prototypebox .brw_plus{
+    padding-left: 0px;
+    line-height: 122px;
+    text-align: center;
+}
+#addFolderModal label{
+    color: #b7b7b7;
+    font-size: 14px;
+}
+#addFolderModal .modal-header {
+    border: none;
+    padding-bottom: 0px;
+}
+#addFolderModal .modal-footer {
+    border: none;
+    padding-top: 0px;
+}
+#addFolderModal .modal-header .btn{
+    font-size: 24px;
+}
+#addFolderModal .modal-header .btn:focus{
+    outline: none;
+}
+#addFolderModal .modal-footer .btn {
+    font-size: 14px;
+    padding: 6px 20px;
+    font-weight: bold;
+}
+#addFolderModal .modal-footer .btn.cancel {
+    background-color: #212529 !important;
+    border-color: #212529;
+}
+#addFolderModal .modal-footer .btn.create {
+    background-color: #FCA311 !important;
+    border-color: #FCA311;
+}
+#addFolderModal .modal-footer {
+    justify-content: flex-start;
+}
+.backBtnCls{
+    background: white !important;
+    color: #FCA311 !important;
+    border: 1px solid #FCA311 !important;
+}

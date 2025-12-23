@@ -1,0 +1,2767 @@
+@extends('layouts.front')
+
+@section('content')
+        <!-- PLUS SWIPER -->
+      <link rel="stylesheet" type="text/css" href="{{ asset('js/swiper/swiper.min.css') }}">
+    <script src="{{ asset('js/swiper/swiper.min.js') }}"></script>
+    <!-- ----------- -->
+
+    <!-- Sweet Alert -->
+    {{-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> --}}
+    <!-- ----------- -->
+
+    <!-- Sticky-kit -->
+    <script src="{{ asset('js/sweetalert.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.sticky-kit.min.js') }}"></script>
+    <!-- ----------- -->
+    <style type="text/css">
+      
+        .singlePropertyContainer .tabsContant .container .reviews .review_wrapper .driver_reviews .review .header .intro .rating .far{
+            font-size: 50px;
+            line-height: 50px;
+            color: #FCA311;
+            margin: 0 6px;
+        }
+        #image-viewer {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
+        }
+        #image-viewer .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        #image-viewer .modal-content { 
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+        @keyframes  zoom {
+            from {transform:scale(0)} 
+            to {transform:scale(1)}
+        }
+        #image-viewer .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        #image-viewer .close:hover,
+        #image-viewer .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @media  only screen and (max-width: 700px){
+            #image-viewer .modal-content {
+                width: 100%;
+            }
+        }
+.singlePropertyContainer .tabsContant .container .hotels .hotel .hotelsSwiper .swiper-container .swiper-pagination--buttons {
+	position: absolute;
+	bottom: 5px;
+	background: #FFF;
+	border-radius: 17px;
+	z-index: 1;
+}
+.singlePropertyContainer .tabsContant .container .hotels .hotel .hotelsSwiper .swiper-container .swiper-pagination--buttons .swiper-button-next {
+	right: 6px;
+}
+.singlePropertyContainer .tabsContant .container .hotels .hotel .hotelsSwiper .swiper-container .swiper-pagination--buttons .swiper-button-prev,
+.singlePropertyContainer .tabsContant .container .hotels .hotel .hotelsSwiper .swiper-container .swiper-pagination--buttons .swiper-button-next {
+	top: 50%;
+	bottom: auto;
+	transform: translateY(-50%);
+	width: 30px;
+	height: 30px;
+	margin-top: 0;
+}
+.singlePropertyContainer .tabsContant .container .hotels .hotel .hotelsSwiper .swiper-container .swiper-pagination {
+	z-index: 2;
+	background-color: white;
+	padding: 5px 23px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	border-radius: 15px;
+}
+.singlePropertyContainer .tabsContant .container .hotels .hotel .hotelsSwiper .swiper-container .swiper-pagination--buttons .swiper-pagination {
+	display: flex;
+	position: static;
+	background: none;
+	padding: 8px 50px 9px 50px;
+	width: auto;
+	border-radius: 0;
+}
+.singlePropertyContainer .tabsContant .container .hotels .hotel .hotelsSwiper .swiper-container .swiper-button-prev::after, .singlePropertyContainer .tabsContant .container .hotels .hotel .hotelsSwiper .swiper-container .swiper-button-next::after {
+	font-size: 12px;
+	color: #fff;
+	font-weight: 600;
+}
+.singlePropertyContainer .tabsContant .container .hotels .hotel .hotelsSwiper .swiper-container .swiper-pagination--buttons .swiper-button-prev {
+	left: 6px;
+}
+.singlePropertyContainer .tabsContant .container .hotels .hotel .hotelsSwiper .swiper-container .swiper-button-next, .singlePropertyContainer .tabsContant .container .hotels .hotel .hotelsSwiper .swiper-container .swiper-button-prev {
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #FCA311;
+}
+.singlePropertyContainer .tabsContant .container .hotels .hotel .hotelsSwiper .swiper-container .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+	opacity: 1;
+	text-decoration: underline;
+}
+.singlePropertyContainer .tabsContant .container .hotels .hotel .hotelsSwiper .swiper-container .swiper-pagination .swiper-pagination-bullet {
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	border-radius: unset;
+	background: unset;
+	opacity: .7;
+}
+.singlePropertyContainer .tabsContant .container .hotels .hotel .hotelsSwiper .swiper-container .swiper-pagination--buttons .swiper-pagination .swiper-pagination-bullet {
+	display: block;
+	width: auto;
+	height: auto;
+	font-size: 1.25rem;
+	font-weight: 600;
+	line-height: 1.25;
+	color: #14213D;
+	margin: 0 4px;
+	opacity: 1 !important;
+}
+.singlePropertyContainer .tabsContant .container .hotels .hotel .hotelsSwiper .swiper-container {
+	display: flex;
+	justify-content: center;
+    height: 600px !important;
+}
+.singlePropertyContainer .tabsContant .container .hotels .hotel .hotelsSwiper .swiper-container .swiper-slide a img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill !important;
+}
+/*bowlind css*/
+  .singlePropertyContainer .blueContentHolder {
+                background-color: #1C92D0 !important;
+                padding-top: 30px;
+                padding-bottom: 40px;
+            }
+    .singlePropertyContainer .blueContentHolder .container .infoPriceWrapper .left .miniBox {
+        width: 33.3334%;
+        border-bottom: 1px solid #50AADB;
+        border-right: 1px solid #50AADB;
+        padding-bottom: 20px;
+    }     
+    .singlePropertyContainer .blueContentHolder .container .infoPriceWrapper .left .miniBox .title {
+    position: relative;
+    display: block;
+    padding-left: 25px;
+    font-size: 1.5rem;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    font-weight: 600;
+    border-bottom: 1px solid #50AADB;
+}   
+.singlePropertyContainer .orangeTabsContainer {
+    position: relative;
+    background: #6AC0EC;
+    box-shadow: 0px 3px 6px #000 29;
+    margin-bottom: 70px;
+}
+
+.singlePropertyContainer .blueContentHolder .container .infoPriceWrapper .left .miniBox .title {
+    position: relative;
+    display: block;
+    padding-left: 25px;
+    font-size: 1.5rem;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    font-weight: 600;
+    border-bottom: 1px solid #50AADB;
+   
+}
+.singlePropertyContainer .blueContentHolder .container .infoPriceWrapper .right .priceBox .title {
+    display: block;
+    padding-left: 25px;
+    font-size: 1.5rem;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    font-weight: 600;
+    border-bottom: 1px solid #50AADB;
+}
+.singlePropertyContainer .blueContentHolder .container .infoPriceWrapper .left .miniBox .title {
+    position: relative;
+    display: block;
+    padding-left: 3px;
+    font-size: 1.5rem;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    font-weight: 600;
+    border-bottom: 1px solid #50AADB;
+}
+.singlePropertyContainer .blueContentHolder .container .infoPriceWrapper .left .miniBox .title:after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 1px;
+    right: -1px;
+    top: 0px;
+    background-color: #1C92D0 !important;
+    position: absolute;
+}
+.singlePropertyContainer .breadcrumbsHoleder .container .breadRow .right .socials {
+    margin-left: 16px;
+    font-size: 2rem;
+    color: #1C92D0;
+}
+.singlePropertyContainer .blueContentHolder .container .infoPriceWrapper .right .priceBox form .select2-container .select2-selection__arrow {
+    height: 40px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 40px;
+    background-color: #FFD334;
+}
+.singlePropertyContainer .blueContentHolder .container .infoPriceWrapper .left .miniBox .activityRow .rightA .activeBoxRow .filled {
+    background-color: #FFD334;
+}
+.singlePropertyContainer .blueContentHolder .container .infoPriceWrapper .left .miniBox .activityRow .rightA .activeBoxRow .iconHolder i {
+    font-size: 1.25rem;
+    color: #FFD334;
+    cursor: pointer;
+    transition: transform .3s ease-in-out, color .3s ease-in-out;
+    -moz-transition: transform .3s ease-in-out, color .3s ease-in-out;
+    -webkit-transition: transform .3s ease-in-out, color .3s ease-in-out;
+}
+.singlePropertyContainer .blueContentHolder .container .infoPriceWrapper .right .priceBox form .darkBlueHolder .actionsRow button {
+    height: 48px;
+    background: #FFD334;
+    border-radius: 5px;
+    opacity: 1;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+    </style>
+    <div class="notIndexContainer">
+
+        <div class="singlePropertyContainer">
+
+            <div class="firstSwiper">
+                <div class="home-swiper-container">
+                    <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                            <img src="https://tours-system-com.stackstaging.com/storage/experience_images/9K4S9jouxmrncH5Uzdl9KwU577Lw6jzuoPdOo75e.jpg" alt=" Bowling Tour ">
+                        </div>
+                                            </div>
+                </div>
+
+                <div class="headeingBlock">
+                    <div class="container">
+                        <h1>Bowling Tour</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="breadcrumbsHoleder">
+                <div class="container">
+                    <div class="breadRow">
+                        <div class="left">
+                            <a href="https://tours-system-com.stackstaging.com/search?view=grid">Tours</a>
+                            <span class="separator"><i class="fas fa-chevron-right"></i></span>
+                                                            <a href="https://tours-system-com.stackstaging.com/search?view=grid&experience_categories_id[]=6">Journeys</a>
+                                <span class="separator"><i class="fas fa-chevron-right"></i></span>
+                                                                <a href="https://tours-system-com.stackstaging.com/search?view=grid&experience_categories_id[]=6&country_areas_id[]=6">Wales</a>
+                                <span class="separator"><i class="fas fa-chevron-right"></i></span>
+                                <a href="https://tours-system-com.stackstaging.com/search?view=grid&experience_categories_id[]=6&country_areas_id[]=6">North</a>
+                                <span class="separator"><i class="fas fa-chevron-right"></i></span>
+                                                            <a href="">Bowling Tour</a>
+                        </div>
+                        <div class="right">
+                            <span class="shareText">Share with:</span>
+                            <a class="socials" href="https://www.facebook.com/Veenus-106768848279897"><i class="fab fa-facebook-square"></i></a>
+                            <a class="socials" href="https://twitter.com/"><i class="fa-brands fa-square-x-twitter"></i></a>
+                            <a class="socials" href="https://www.instagram.com/veenustravel/" ><i class="fab fa-instagram-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blueContentHolder">
+                <div class="container">
+                    <div class="infoPriceWrapper">
+                        <div class="left">
+                                                        <div class="miniBox">
+                                <div class="title">Fixtures</div>
+                                                                  <ul style="padding-left:0px">
+                                                                            <li style="padding-left:0px">
+                                            Fixture title 14 : Fixture text 1
+                                        </li>
+                                                                            <li style="padding-left:0px">
+                                            Fixture title 2 : Fixture text 2
+                                        </li>
+                                                                            <li style="padding-left:0px">
+                                            luigltk : Test
+                                        </li>
+                                                                    </ul>
+                                                                <ul>
+                                   
+                                    
+                                    
+                                    
+                                </ul>
+                            </div>
+                            
+                            
+                            
+                                                        <div class="miniBox">
+                                <div class="title">Hotel Details</div>
+                                <ul>
+                                    
+
+                                                                        <li style="padding-left: 45px;">
+                                        <i class="fas fa-theater-masks"></i> Daily excursions
+                                    </li>
+                                                                        <li style="padding-left: 45px;">
+                                        <i class="fas fa-wifi"></i> Welcome buffet
+                                    </li>
+                                                                        
+
+
+                                    
+                                    
+                                </ul>
+                            </div>
+                                                        <div class="miniBox">
+                                <div class="title">Reviews & Activity Level</div>
+                                <div class="activityRow">
+                                    <div class="leftA">
+                                        <i class="fas fa-walking"></i>
+                                    </div>
+                                    <div class="rightA">
+                                        <div class="textS">
+                                            Activity Level
+                                        </div>
+                                        <div class="activeBoxRow">
+                                            <div class="activeBox filled"></div>
+                                            <div class="activeBox "></div>
+                                            <div class="activeBox "></div>
+                                            <div class="activeBox "></div>
+                                            <div class="activeBox "></div>
+                                            <span class="iconHolder">
+                                                <i class="fas fa-info-circle"></i>
+                                                <div class="caption">
+                                                    <strong>Level 1</strong> – Minimal walking & very few steps</br>
+                                                    <strong>Level 2</strong> – Moderate walking & few steps</br>
+                                                    <strong>Level 3</strong> – Lots of steps and active walking, cobbled stones</br>
+                                                    <strong>Level 4</strong> – Active walking, lots of steps, narrow staircases and/or difficult terrains</br>
+                                                    <strong>Level 5</strong> – Long and intensive walking conditions (e.g. rambling)
+                                                </div>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="startsHolder">
+                                    <div class="textS">Tour average score is</div>
+                                    <p style="padding:20px;color:#ffffff;">No reviews found</p>                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="priceBox">
+                                                                <div class="title">Prices</div>
+                                <form id="addToCartForm1">
+                                    <input type="hidden" name="exp_id" value="105">
+                                                                      
+                                                                    <select name="experience_dates_id" class="dateSelect select2-hidden-accessible" id="dateSelect" tabindex="-1" aria-hidden="true">
+                                        <option value=""></option>
+                                                    <option data-night="5" value="71" selected="">Sat 01 Mar 25 - Thu 06 Mar 25 (5 nights)</option>
+                                                                                            
+                                    </select>
+                                   <div id="market_option_select" style="display: none;">
+                                       <select onchange="get_price();" style="padding:5px;width:100%;" class="form-control select_market_option collsSelect select2-hidden-accessible" name="market_option" id="select_market_option" fdprocessedid="gzl0w" tabindex="-1" aria-hidden="true"><option value="1">£</option><option value="2">€</option></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-select_market_option-container"><span class="select2-selection__rendered" id="select2-select_market_option-container" title="£">£</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                   </div>
+                                                                        <div class="darkBlueHolder mt-2">
+                                        <div class="prices" style="margin-bottom:15px;">
+                                                                                            <div class="priceL" style="font-size:4rem;"> <span id="priceL" style="letter-spacing: 3px">£365.00</span><small>pp</small></div>
+                                                <div class="priceS"> <span id="priceS" style="letter-spacing: 3px">£100.00</span><small>ss pp</small></div>
+                                                <div id="lenghtnight" style="color: #fff;font-size: 18px;font-weight: 500;">5 nights</div>
+                                                                                    </div>
+                                        <div class="actionsRow">
+                                            <button id="addToCart" fdprocessedid="2lt9sj"><i class="fas fa-cart-arrow-down"></i> Add to Cart</button>
+                                            
+                                            <a class="add2favorites" href="" style="background:lightgrey;pointer-events: none;"><i class="fas fa-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </form>
+                                <script>
+
+                                    $("#dateSelect").change(function(){
+                                       get_price();
+                                    });
+                                    function get_price(){
+                                        
+                                         var dates_id = $("#dateSelect").val();
+                                          var night_day = $('option:selected', '#dateSelect').attr('data-night');
+                                         var select_market_option = $("#select_market_option").val();
+                                        laravel.ajax.send({
+                                            url: "https://tours-system-com.stackstaging.com/experience/get-price",
+                                            type: 'post', //optional,
+                                            data:{
+                                                "id":  383 ,
+                                                "dates_id": dates_id
+                                            },
+                                            success: function(payload){ //optional - default is laravel.ajax.successHandler
+                                                //console.log(payload);
+                                                if(payload.currency == 3)
+                                                {
+                                                   /* var html ='';
+                                                    var html = ' <select  onchange="get_price();" style="padding:5px;width:100%;" class="form-control select_market_option"  name="market_option" id="select_market_option">';
+                                                    html += '<option value="1">UK</option>';
+                                                    html += '<option value="2">EU</option>';
+                                                    html += '</select>';
+                                                    $('#market_option_select').html(html);*/
+                                                    $('#market_option_select').show();
+                                                }
+                                                else
+                                                {
+                                                    $("#select_market_option").val('1');
+                                                    $('#market_option_select').hide();
+                                                }
+                                                if(select_market_option == 2)
+                                                {
+                                                    $("#priceL").html('€'+payload.price_euro);
+                                                    $("#priceS").html('€'+payload.price_ss_euro);
+                                                }
+                                                else
+                                                {
+                                                    $("#priceL").html(payload.currency_symbol+payload.priceL);
+                                                    $("#priceS").html(payload.currency_symbol+payload.priceS);
+                                                }
+                                                
+                                                var night_str = 'nights';
+                                                /*if(night_day ==  1)
+                                                {
+                                                    night_str = 'night';
+                                                }*/
+                                                $("#lenghtnight").html(night_day+' '+night_str);
+
+                                            },
+                                            error: function(event){ //optional - default is laravel.ajax.errorHandler
+                                                //console.log(event);
+                                                laravel.ajax.errorHandler.call(this,event); //calling super handler
+                                            }
+                                        });
+                                    }
+                                    $(document).ready(function () {
+                                        var dates_id = $("#dateSelect").val();
+                                        var night_day = $('option:selected', '#dateSelect').attr('data-night');
+                                        if(dates_id != ''){
+                                            laravel.ajax.send({
+                                                url: "https://tours-system-com.stackstaging.com/experience/get-price",
+                                                type: 'post', //optional,
+                                                data:{
+                                                    "id":  383 ,
+                                                    "dates_id": dates_id
+                                                },
+                                                success: function(payload){ //optional - default is laravel.ajax.successHandler
+                                                //console.log(payload);
+                                                if(payload.currency == 3)
+                                                {
+                                                   /* var html ='';
+                                                    var html = ' <select  onchange="get_price();" style="padding:5px;width:100%;" class="form-control select_market_option"  name="market_option" id="select_market_option">';
+                                                    html += '<option value="1">UK</option>';
+                                                    html += '<option value="2">EU</option>';
+                                                    html += '</select>';
+                                                    $('#market_option_select').html(html);*/
+                                                    $('#market_option_select').show();
+                                                }
+                                                else
+                                                {
+                                                    $("#select_market_option").val('1');
+                                                    $('#market_option_select').hide();
+                                                }
+                                                if(select_market_option == 2)
+                                                {
+                                                    $("#priceL").html('€'+payload.price_euro);
+                                                    $("#priceS").html('€'+payload.price_ss_euro);
+                                                }
+                                                else
+                                                {
+                                                    $("#priceL").html(payload.currency_symbol+payload.priceL);
+                                                    $("#priceS").html(payload.currency_symbol+payload.priceS);
+                                                }
+                                                var night_str = 'nights';
+                                                /*if(night_day ==  1)
+                                                {
+                                                    night_str = 'night';
+                                                }*/
+                                                $("#lenghtnight").html(night_day+' '+night_str);
+
+                                            },
+                                                error: function(event){ //optional - default is laravel.ajax.errorHandler
+                                                    //console.log(event);
+                                                    laravel.ajax.errorHandler.call(this,event); //calling super handler
+                                                }
+                                            });
+                                        }
+                                        $('#addToCart').on("click", function (e) {
+                                            e.preventDefault();
+                                            var experience_dates_id = $("#dateSelect").val();
+                                            var collsSelect = $(".collsSelect").val();
+                                            if(!collsSelect > 0 && typeof(collsSelect) != "undefined"){
+                                                swal({
+                                                    title: "Select a collaborator!",
+                                                    text: "Please select a collaborator for the experience.",
+                                                    icon: "warning",
+                                                });
+
+                                                return false;
+                                            }
+                                            $(this).html("Please wait ...");
+
+                                            $.ajaxSetup({ headers: {'X-CSRF-TOKEN': 'RnnHaGnubDtqPJnHBtjZC6knMgAQHQvLLQFDXPbs'}});
+                                            $.ajax({
+                                                type: "GET",
+                                                cache: false,
+                                                url: 'https://tours-system-com.stackstaging.com/add-to-cart-1',
+                                                data: $("#addToCartForm1").serializeArray(), // all form fields
+                                                success: function (data) {
+                                                    //console.log(data);
+                                                    $('#addToCart').html('<i class="fas fa-cart-arrow-down"></i> Add to Cart');
+                                                    // on success, post (preview) returned data in fancybox
+                                                    $.fancybox.open(data, {
+                                                        autoSize: false,
+                                                        fitToView : false,
+                                                        width: "70%",
+                                                        height: "90%",
+                                                        minWidth: 300,
+                                                        touch: false,
+                                                        afterLoad: function(){
+                                                        jQuery(document).on('click', '#addToCartForm2Submit', function (e) {
+                                                                var inputs = $(".option.selected");
+                                                                var ids = [];
+                                                                var rates = [];
+                                                                var srs = [];
+                                                                var currency = [];
+                                                                inputs.each(function(){ 
+                                                                    ids.push($(this).attr('data-id'));
+                                                                    rates.push($(this).attr('data-rate'));
+                                                                    srs.push($(this).attr('data-srs'));
+                                                                    currency.push($(this).attr('data-currency'));
+                                                                });
+                                                                $('#dates_rates_id').val(ids.toString());
+                                                                $('#basePrice').val(rates.toString());
+                                                                $('#basePriceSS').val(srs.toString());
+                                                                $('#currency').val(currency.toString());
+                                                           // $("#addToCartForm2Submit").click(function(е){
+                                                                //alert('test');
+                                                                e.preventDefault();
+                                                                var dates_rates_id = $("#dates_rates_id").val();
+                                                                if(!dates_rates_id > 0){
+                                                                    $("#error1").show().focus();
+                                                                    return false;
+                                                                }else(
+                                                                    $("#error1").hide()
+                                                                )
+                                                                $(this).html("Please wait ...");
+                                                                var hold_days = $('#hold_tour_days').val();
+
+                                                                $.ajaxSetup({ headers: {'X-CSRF-TOKEN': 'RnnHaGnubDtqPJnHBtjZC6knMgAQHQvLLQFDXPbs'}});
+                                                                $.ajax({
+                                                                    type: "POST",
+                                                                    cache: false,
+                                                                    url: 'https://tours-system-com.stackstaging.com/add-to-cart-3',
+                                                                    data: $("#addToCartForm2").serializeArray(), // all form fields
+                                                                    success: function (data2) {
+                                                                        $('#hold_tour_days').val('');
+                                                                        if(hold_days != '')
+                                                                        {
+                                                                             window.location.href = 'https://tours-system-com.stackstaging.com/hold-tours';
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                             window.location.href = 'https://tours-system-com.stackstaging.com/cart';
+                                                                        }
+                                                                       
+                                                                        //console.log(data);
+                                                                        // $('#addToCartForm2Submit').html('<i class="fas fa-cart-arrow-down"></i> Next');
+                                                                        // on success, post (preview) returned data in fancybox
+                                                                        /*$.fancybox.open(data2, {
+                                                                            autoSize: false,
+                                                                            fitToView : false,
+                                                                            width: "70%",
+                                                                            height: "90%",
+                                                                            minWidth: 300,
+                                                                            touch: false,
+                                                                            closeExisting: true,
+                                                                            afterLoad: function(){
+                                                                                // if($(".upscaleItem").length > 0){
+   
+                                                                                //     $(".upscaleItem").click(function(){
+                                                                                //         $(this).toggleClass("selected");
+
+                                                                                //         var hotelPrice = $("#hotelPrice").val();
+
+                                                                                //         //var selectedUpscalesIds = [];
+                                                                                //         var totalPrice = parseFloat(hotelPrice);
+                                                                                //         $(".upscales-ids-input").remove();
+                                                                                //         $(".upscaleItem.selected").each(function(){
+                                                                                //             //selectedUpscalesIds.push($(this).data("id"));
+                                                                                //             var currentUpscalesId = $(this).data("id");
+                                                                                //             $("#actionsRow").append('<input type="hidden" name="upscales_ids[]" class="upscales-ids-input" value="'+currentUpscalesId+'">');
+                                                                                //             var upscalePrice = $(this).find(".priceValue").html();
+                                                                                //             totalPrice += parseFloat(upscalePrice);
+                                                                                //         });
+                                                                                //         $("#totalPrice").html(totalPrice);
+                                                                                //         //$("#upscales_ids").val(selectedUpscalesIds);
+                                                                                //     });
+
+                                                                                //     $("#addToCartForm3Submit").click(function(ee){
+                                                                                //         ee.preventDefault();
+
+                                                                                //         $("#addToCartForm3").submit();
+                                                                                //     });
+                                                                                // }else{
+                                                                                    $("#addToCartForm3Submit").hide();
+                                                                                    // $("#addToCartForm3").submit();
+                                                                                // } 
+                                                                            }
+                                                                        });*/
+                                                                    },
+                                                                    error: function(err){
+                                                                        //console.log(err);
+                                                                    }
+                                                                });
+                                                            });
+                                                            jQuery(document).on('click', '.hotelItem', function () {
+
+                                                           // $(".hotelItem").click(function(){
+                                                                //console.log("click");
+                                                                var experiences_to_hotels_to_experience_dates_id = $(this).data("id");
+                                                                $("#experiences_to_hotels_to_experience_dates_id").val(experiences_to_hotels_to_experience_dates_id);
+                                                                $(".hotelItem").css('box-shadow', '0px 2px 5px 0px #ccc');
+                                                                $(this).css('border', '3px solid rgb(235, 146, 0);');
+                                                                var basePrice = $("#basePrice").val();
+                                                                var basePriceSS = $("#basePriceSS").val();
+                                                                var currentPrice = $(this).find('.priceValue').html();
+                                                                var currentPriceSS = $(this).find('.priceSSValue').html();
+                                                                if(currentPrice){
+                                                                    var totalPrice = parseFloat(basePrice) + parseFloat(currentPrice);
+                                                                }else{
+                                                                    var totalPrice = parseFloat(basePrice);
+                                                                }
+                                                                if(currentPriceSS){
+                                                                    var totalPriceSS = parseFloat(basePriceSS) + parseFloat(currentPriceSS);
+                                                                }else{
+                                                                    var totalPriceSS = parseFloat(basePriceSS);
+                                                                }
+                                                                $("#totalPrice").html(totalPrice);
+                                                                $("#totalPriceSS").html(totalPriceSS);
+
+                                                                $("#addToCartForm2Submit").focus();
+
+                                                            });
+                                                        }
+                                                    });
+                                                },
+                                                error: function(er){
+                                                    //console.log(er);
+                                                }
+                                            });
+                                        });
+                                    });
+                                </script>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="orangeTabsContainer">
+                <div class="container">
+                    <ul class="tabsList">
+                        
+                                                    <li class="active"><a href="" data-target="experiencesTab">Tour Details</a></li>
+                            <li class=""><a href="" data-target="fixtureTab">Fixtures</a></li>
+                                                                            <li><a href="" data-target="hotelTab">Hotel</a></li>
+                                                <li><a href="" data-target="galleryTab">Gallery</a></li>
+                        <li><a href="" data-target="mapTab" id="display_map">Map</a></li>
+                        <li><a href="" data-target="reviewsTab">Reviews</a></li>
+                        <li><a href="" data-target="brochureTab">Brochure View</a></li>
+                        <li><a href="" data-target="datesTab">Dates & Rates</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tabsContant" id="tabsContant">
+                
+
+                <div class="container" id="experiencesTab" style="display: block;">
+                    <div class="container" style="padding-left: 100px;">
+                        <h3>Tour Details</h3>
+                        <div class="subHeadingCls">Tour detail desc</div>
+                    </div>
+                                                                    <div class="experiences_wrapper">
+                            <div class="container experiences">
+                                <div class="left">
+                                                                            <div class="experiencesSwiper">
+                                            
+                                            <div class="swiper-container experiences-swiper-1">
+                                                <div class="swiper-wrapper">
+                                                                                                            <!-- <div class="swiper-slide"><a href=""><img src="https://tours-system-com.stackstaging.com/storage/attraction_images/lanpLQ72qVShtryRhImQkXOugE74G0EwCN2c5Ij6.jpeg" alt=" The Silverstone Experience " style="width: 100%;"></a></div> -->
+                                                        <div class="swiper-slide">
+                                                            <a href="javascript:void(0);" class="pop1" data-id="10" >
+                                                                <div class="imageBox1" data-fancybox="images">
+                                                                    <img src="https://tours-system-com.stackstaging.com/storage/attraction_images/lanpLQ72qVShtryRhImQkXOugE74G0EwCN2c5Ij6.jpeg" alt=" The Silverstone Experience " style="width: 100%;">
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                                                                            <!-- <div class="swiper-slide"><a href=""><img src="https://tours-system-com.stackstaging.com/storage/attraction_images/wb3HJx4QzaETGcF7CiMJ4FOwg0PqZZ7z1IAT483n.jpeg" alt=" The Silverstone Experience " style="width: 100%;"></a></div> -->
+                                                        <div class="swiper-slide">
+                                                            <a href="javascript:void(0);" class="pop1" data-id="11" >
+                                                                <div class="imageBox1" data-fancybox="images">
+                                                                    <img src="https://tours-system-com.stackstaging.com/storage/attraction_images/wb3HJx4QzaETGcF7CiMJ4FOwg0PqZZ7z1IAT483n.jpeg" alt=" The Silverstone Experience " style="width: 100%;">
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                                                                            <!-- <div class="swiper-slide"><a href=""><img src="https://tours-system-com.stackstaging.com/storage/attraction_images/qsZRDCepCXN9USMvnBjwDC5PJtNP2vJR4XqWKCkY.jpeg" alt=" The Silverstone Experience " style="width: 100%;"></a></div> -->
+                                                        <div class="swiper-slide">
+                                                            <a href="javascript:void(0);" class="pop1" data-id="9" >
+                                                                <div class="imageBox1" data-fancybox="images">
+                                                                    <img src="https://tours-system-com.stackstaging.com/storage/attraction_images/qsZRDCepCXN9USMvnBjwDC5PJtNP2vJR4XqWKCkY.jpeg" alt=" The Silverstone Experience " style="width: 100%;">
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                                                                        <!-- <a href="#" class="swiper-slide" style="background-image: url(https://tours-system-com.stackstaging.com/storage/attraction_images/qsZRDCepCXN9USMvnBjwDC5PJtNP2vJR4XqWKCkY.jpeg);"></a> -->
+                                                </div>
+
+                                                <div class="swiper-pagination--buttons">
+                                                    <div class="swiper-button-next swiper-button-next-1"></div>
+                                                    <div class="swiper-pagination swiper-pagination-ea-1"></div>
+                                                    <div class="swiper-button-prev swiper-button-prev-1"></div>
+                                                </div>
+
+                                            </div>
+                                            <style>
+                                                .pop1 .imageBox1{display:block !important;height: 100% !important;}
+                                                .imageBox1.fancybox-content{text-align:center!important;background:none !important;}
+                                            </style>
+                                            <script>
+                                                $(document).ready(function(){
+                                                    var swiperEa1 = new Swiper('.experiences-swiper-1', {
+                                                        observer: true,
+                                                        observeParents: true,
+                                                        pagination: {
+                                                            el: '.swiper-pagination-ea-1',
+                                                            clickable: true,
+                                                            //dynamicBullets: true,
+                                                            renderBullet: function (index, className) {
+                                                                return '<span class="' + className + '">' + (index + 1) + '</span>';
+                                                            },
+                                                        },
+                                                        navigation: {
+                                                            nextEl: '.swiper-button-next-1',
+                                                            prevEl: '.swiper-button-prev-1',
+                                                        },
+                                                    });
+                                                    $().fancybox({
+                                                        selector : '.pop1 .imageBox1',
+                                                        thumbs   : false,
+                                                        hash     : false,
+                                                        animationEffect : "fade",
+                                                      
+                                                    });
+                                                });
+                                            </script>
+                                            <div class="underInfo">
+                                                <div class="underElem">
+                                                    <img src="https://tours-system-com.stackstaging.com/images/v.png" alt="Veenus logo">
+                                                    <span class="label">Score:2/10</span>
+                                                </div>
+                                                <a href=" https://www.tripadvisor.co.uk/Attraction_Review-g499614-d19269913-Reviews-Silverstone_Interactive_Museum-Towcester_Northamptonshire_England.html " class="underElem" target="_blank">
+                                                    <i class="fab fa-tripadvisor"></i>
+                                                    <span class="label">Tripadvisor</span>
+                                                </a>
+                                                <div class="underElem">
+                                                    <div class="squares">
+                                                                                                                                                                            <div class="square filled"></div>
+                                                                                                                    <div class="square "></div>
+                                                                                                                    <div class="square "></div>
+                                                                                                                    <div class="square "></div>
+                                                                                                                    <div class="square "></div>
+                                                                                                                
+                                                    </div>
+                                                    <span class="label">Activity Level 1</span>
+                                                </div>
+                                                <a href=" https://www.silverstone-experience.co.uk " class="underElem" target="_blank">
+                                                    <i class="fas fa-link"></i>
+                                                    <span class="label">Website</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                                                    </div>
+                                <div class="right">
+                                    <h4>The Silverstone Experience</h4>
+                                    <div class="excerpt">The Silverstone Experience visitor attraction is an exciting 3 hour journey through the past, present and future of Silverstone and British motor racing. We have state of the art interactive displays, compelling stories and iconic cars and motorcycles. At the end of your visit, you can experience the thrill of speeding around Silverstone alongside racing heroes in a dramatic, immersive show - The ultimate lap of Silverstone, with commentary by Murray Walker.</div>
+                                    
+                                                                        <div class="inclusionsCont">
+                                        <h5>Inclusions</h5>
+                                        <ul class="inclusionsList">
+                                                                                            <li><i class="far fa-check-circle"></i>test</li>
+                                                                                                <li><i class="far fa-check-circle"></i>Test2</li>
+                                                                                        </ul>
+                                    </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                                                                                                                                                                                                                                    <div class="experiences_wrapper">
+                            <div class="container experiences">
+                                <div class="left">
+                                                                    </div>
+                                <div class="right">
+                                    <h4>ITV Daytime Studios Tour, Television Centre, London</h4>
+                                    <div class="excerpt"><p>In 2020 - ITV have launched a brand new behind-the-scenes guided tour around the iconic studio sets at London&rsquo;s Television Centre at White City, guaranteeing a true insider and unforgettable television experience. With ITV Daytime&rsquo;s favourite programmes such as Good Morning Britain, Lorraine, This Morning and Loose Women all broadcasting from the same building, the new ITV Daytime Studios Tour will immerse fans into the glamorous showbiz world. Guests can explore sets, get a sneak-peek of what lies behind and discover how the shows are brought to life on this 90-minute tour. As one of the busiest working studios in the UK, producing over 2000 hours of much talked about TV a year, guests have unprecedented access into the day-to-day operations of a live studio with stories and filming insights from the studio floors shared with them along the way. With the promise of plenty of picture and selfie opportunities on the well-loved and instantly recognisable sets, a wander down the production corridors where the green rooms, wardrobe departments, make-up areas and production offices are housed, as well as walking amongst industry producers and crew, each tour will be full of TV magic.</p></div>
+                                    
+                                                                        <div class="inclusionsCont">
+                                        <h5>Inclusions</h5>
+                                        <ul class="inclusionsList">
+                                                                                            <li><i class="far fa-check-circle"></i>90-minute tour</li>
+                                                                                        </ul>
+                                    </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                                                                                                                                                                                                                                    <div class="experiences_wrapper">
+                            <div class="container experiences">
+                                <div class="left">
+                                                                            <div class="experiencesSwiper">
+                                            
+                                            <div class="swiper-container experiences-swiper-103">
+                                                <div class="swiper-wrapper">
+                                                                                                            <!-- <div class="swiper-slide"><a href=""><img src="https://tours-system-com.stackstaging.com/storage/attraction_images/XYKpVDUWqhNIbYE31BejrVLOJUtcPaLV4sMIgjfO.jpeg" alt=" Leault Working Sheepdog Demonstration " style="width: 100%;"></a></div> -->
+                                                        <div class="swiper-slide">
+                                                            <a href="javascript:void(0);" class="pop103" data-id="195" >
+                                                                <div class="imageBox103" data-fancybox="images">
+                                                                    <img src="https://tours-system-com.stackstaging.com/storage/attraction_images/XYKpVDUWqhNIbYE31BejrVLOJUtcPaLV4sMIgjfO.jpeg" alt=" Leault Working Sheepdog Demonstration " style="width: 100%;">
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                                                                        <!-- <a href="#" class="swiper-slide" style="background-image: url(https://tours-system-com.stackstaging.com/storage/attraction_images/XYKpVDUWqhNIbYE31BejrVLOJUtcPaLV4sMIgjfO.jpeg);"></a> -->
+                                                </div>
+
+                                                <div class="swiper-pagination--buttons">
+                                                    <div class="swiper-button-next swiper-button-next-103"></div>
+                                                    <div class="swiper-pagination swiper-pagination-ea-103"></div>
+                                                    <div class="swiper-button-prev swiper-button-prev-103"></div>
+                                                </div>
+
+                                            </div>
+                                             <style>
+                                                .pop103 .imageBox103{display:block !important;}
+                                                .imageBox103.fancybox-content{text-align:center!important;background:none !important;}
+                                            </style>
+                                            <script>
+                                                $(document).ready(function(){
+                                                    var swiperEa103 = new Swiper('.experiences-swiper-103', {
+                                                        observer: true,
+                                                        observeParents: true,
+                                                        pagination: {
+                                                            el: '.swiper-pagination-ea-103',
+                                                            clickable: true,
+                                                            //dynamicBullets: true,
+                                                            renderBullet: function (index, className) {
+                                                                return '<span class="' + className + '">' + (index + 1) + '</span>';
+                                                            },
+                                                        },
+                                                        navigation: {
+                                                            nextEl: '.swiper-button-next-103',
+                                                            prevEl: '.swiper-button-prev-103',
+                                                        },
+                                                    });
+                                                     $().fancybox({
+                                                        selector : '.pop103 .imageBox103',
+                                                        thumbs   : false,
+                                                        hash     : false,
+                                                        animationEffect : "fade",
+                                                      
+                                                    });
+                                                });
+                                            </script>
+                                            <div class="underInfo">
+                                                <div class="underElem">
+                                                    <img src="https://tours-system-com.stackstaging.com/images/v.png" alt="Veenus logo">
+                                                    <span class="label">Score:4.75/10</span>
+                                                </div>
+                                                <a href=" https://www.tripadvisor.co.uk/Attraction_Review-g1182532-d1825754-Reviews-Working_Sheepdogs-Kincraig_Aviemore_and_the_Cairngorms_Scottish_Highlands_Scotla.html " class="underElem" target="_blank">
+                                                    <i class="fab fa-tripadvisor"></i>
+                                                    <span class="label">Tripadvisor</span>
+                                                </a>
+                                                <div class="underElem">
+                                                    <div class="squares">
+                                                                                                                                                                            <div class="square filled"></div>
+                                                                                                                    <div class="square filled"></div>
+                                                                                                                    <div class="square filled"></div>
+                                                                                                                    <div class="square "></div>
+                                                                                                                    <div class="square "></div>
+                                                                                                                
+                                                    </div>
+                                                    <span class="label">Activity Level 3</span>
+                                                </div>
+                                                <a href=" https://www.leaultworkingsheepdogs.co.uk/ " class="underElem" target="_blank">
+                                                    <i class="fas fa-link"></i>
+                                                    <span class="label">Website</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                                                    </div>
+                                <div class="right">
+                                    <h4>Leault Working Sheepdog Demonstration</h4>
+                                    <div class="excerpt"><p>A unique opportunity that will be the highlight of your holiday. Among beautiful Scottish scenery, see amazing sheepdogs at work on a real working farm, and admire as Neil masterfully directs his working border collies to herd and round the sheep. You may even get an opportunity to help with some sheep shearing (date dependent).</p></div>
+                                    
+                                                                        <div class="inclusionsCont">
+                                        <h5>Inclusions</h5>
+                                        <ul class="inclusionsList">
+                                                                                            <li><i class="far fa-check-circle"></i>1hr sheepdog demonstration</li>
+                                                                                        </ul>
+                                    </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                                                            </div>
+                <div class="container" id="fixtureTab" style="display: none;padding-left: 100px;">
+                    <h3>Fixtures</h3>
+                                                                                <h4>&nbsp;</h4>
+                                <h4 style="color: #14213D;font-size: 18px;font-weight: bold;">Fixture title 14</h4>
+                                <div class="details" style="color:#676A6C">Fixture text 1</div>
+                                                            <h4>&nbsp;</h4>
+                                <h4 style="color: #14213D;font-size: 18px;font-weight: bold;">Fixture title 2</h4>
+                                <div class="details" style="color:#676A6C">Fixture text 2</div>
+                                                            <h4>&nbsp;</h4>
+                                <h4 style="color: #14213D;font-size: 18px;font-weight: bold;">luigltk</h4>
+                                <div class="details" style="color:#676A6C">Test</div>
+                                                                </div>
+                
+                <div class="container" id="itineraryTab" style="display: none;">
+                    <h3>Itinerary</h3>
+                    <div class="daysCont">
+                        <div class="left">
+                            <div class="days">
+
+                            
+                            </div>
+                        </div>
+
+                        <div class="right">
+                                                    </div>
+
+                        <script>
+                            $(document).ready(function(){
+                                $(".daysCont .daysList .dayItem").click(function(e){
+                                    $(".daysCont .daysList .dayItem").removeClass("active");
+                                    $(this).addClass("active");
+                                    $(".daysCont .left .days .day").hide();
+                                    var targetId = $(this).data('target');
+                                    var targetDay = $('#'+targetId);
+                                    targetDay.fadeIn();
+                                    $('html, body').animate({
+                                        scrollTop: $('#tabsContant').offset().top
+                                    }, 500);
+                                });
+                            });
+                        </script>
+
+                    </div>
+                </div>
+
+                <div class="container" id="hotelTab" style="display: none;">
+                    <h3>Hotels</h3>
+
+                    <div class="hotels">
+
+                                                                               
+                                                                    <h5 class="bottomSpace">Angle Hotel Cardiff</h5>
+                                                                <div class="hotel">
+                                    <div class="heading">
+                                        <h4>Angel Hotel Cardiff</h4>
+                                                                                    <span class="starsCont">
+                                                                                                    <i class="fas fa-star"></i>
+                                                                                                    <i class="fas fa-star"></i>
+                                                                                                    <i class="fas fa-star"></i>
+                                                                                            </span>
+                                                                            </div>
+                                    <div class="infoRow">
+                                        <span><a href="https://www.angelhotelcardiffcity.co.uk/" target="_blank">Visit hotel website</a></span>
+                                        
+                                        <span><a href="tel:+44 29 2064 9200" target="_blank" class="tel">+44 29 2064 9200</a></span>
+                                        
+                                      <!--    -->
+                                        
+                                                                                <span><a href="https://www.google.com/maps/@51.480854,-3.1831216,15z" target="_blank">See on map</a></span>
+                                                                                                                         <span>
+                                                                                          
+                                                                                                      <a href="/storage/hotel_images/czFObSKYzeZBi0NRoIp6zoR4rO7piU1svSaWT8Zb.pdf" target="_blank"> Sample Menu </a>
+                                                                                                   
+                                                                                       
+                                        </span>
+                                                                            </div>
+                                    <div class="hotelsSwiper">
+                                        <div class="swiper-container hotels-swiper-30">
+                                            <div class="swiper-wrapper">
+                                                                                                  <!--   <div class="swiper-slide"><a href=""><img src="https://tours-system-com.stackstaging.com/storage/hotel_images/9rnLEdjO2uUdSQW7Yhw504G5oDtATdoeW4658jrg.webp" alt=" Angel Hotel Cardiff "></a></div> -->
+                                                    <div class="swiper-slide">
+                                                        
+                                                            <a href="javascript:void(0);" class="pop30" data-id="1295" >
+                                                                <div class="imageBox30" data-fancybox="images">
+                                                                    <img class="imageSource_1295" src="https://tours-system-com.stackstaging.com/storage/hotel_images/9rnLEdjO2uUdSQW7Yhw504G5oDtATdoeW4658jrg.webp" alt="1295">
+                                                                    
+                                                                    
+                                                                </div>
+                                                            </a>
+                                                        
+                                                    </div>
+                                                                                            </div>
+                                            <div class="swiper-pagination--buttons">
+                                                <div class="swiper-button-prev swiper-button-prev-eh-30"></div>
+                                                <div class="swiper-pagination swiper-pagination-eh-30"></div>
+                                                <div class="swiper-button-next swiper-button-next-eh-30"></div>
+                                            </div>
+                                        </div>
+                                        <style>
+                                            .pop30 .imageBox30{display:block !important;}
+                                            .imageBox30.fancybox-content{text-align:center!important;background:none !important;}
+                                        </style>
+                                        <script>
+                                            $(document).ready(function(){
+
+                                                var swiperEh30 = new Swiper('.hotels-swiper-30', {
+                                                    observer: true,
+                                                    observeParents: true,
+                                                    pagination: {
+                                                        el: '.swiper-pagination-eh-30',
+                                                        clickable: true,
+                                                        //dynamicBullets: true,
+                                                        renderBullet: function (index, className) {
+                                                            return '<span class="' + className + '">' + (index + 1) + '</span>';
+                                                        },
+                                                    },
+                                                    navigation: {
+                                                        nextEl: '.swiper-button-next-eh-30',
+                                                        prevEl: '.swiper-button-prev-eh-30',
+                                                    },
+                                                });
+                                                $().fancybox({
+                                                    selector : '.pop30 .imageBox30',
+                                                    thumbs   : false,
+                                                    hash     : false,
+                                                    animationEffect : "fade",
+                                                  
+                                                });
+                                            });
+                                        </script>
+
+                                    </div>
+
+
+                                    <div class="excerptCont">
+                                        <h5>About</h5>
+                                        <div class="excerpt">The Angel Hotel is a beautiful Victorian landmark right in the heart of Cardiff. Neatly positioned between the Principality Stadium and Cardiff Castle, it's the perfect location for city breaks in Cardiff and for exploring the beautiful countryside and beaches of South Wales. Find out about the city's history at The National Museum of Wales, admire the architecture of Llandaff Cathedral and enjoy shopping, dining and water sports at Cardiff Bay. With 102 modern, air conditioned bedrooms, restaurant and bar, the Angel Hotel Cardiff is the perfect place to stay when exploring this vibrant and historic city.</div>
+                                    </div>
+                                    
+                                    <div class="hotelFooter">
+                                                                                    <div class="amenitiesCont">
+                                                <h5>Amenities</h5>
+                                                <ul class="amenitiesList">
+                                                    <li><i class="far fa-check-circle"></i>Parking: On-site - subject to availability</li>
+                                                    <li><i class="far fa-check-circle"></i>Porterage: Included at a charge</li>
+                                                    <li><i class="far fa-check-circle"></i>Lift: Yes</li>
+                                                    <li><i class="far fa-check-circle"></i>Leisure:  No</li>
+                                                                                                    </ul>
+                                            </div>
+                                                                                <!--                                             <div class="amenitiesCont">
+                                                <h5>Amenities</h5>
+                                                <ul class="amenitiesList">
+                                                                                                            <li> <i class="far fa-check-circle"></i>   Dinner, Bed and Breakfast</li>
+                                                                                                            <li> <i class="far fa-check-circle"></i>   Porterage</li>
+                                                                                                    </ul>
+                                            </div>
+                                         -->
+                                                                            </div>
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                </div>
+                                                                        </div>
+
+                </div>
+
+                <div class="container" id="shipTab" style="display: none;">
+                    <h3>Ship</h3>
+
+                    <div class="ships">
+
+                                            </div>
+
+                </div>
+
+                <div class="container" id="galleryTab" style="display: none;">
+                    <h3>Gallery</h3>
+                        <h4>&nbsp;</h4>
+                                                            <div class="gallery">
+
+                                                                                             </div>
+                    <div class="gallery">
+                        <div class="galleryUploadCls">
+                            <h4>Have you been on any Veenus experiences? We'd love to see your photographs</h4>
+                                                </div>
+                    </div>
+
+                </div>
+                <div class="container" id="mapTab" style="display: none;">
+                    <h3>Map</h3>
+                    <div class="map">
+                        <h4>Tour Visualisation</h4>
+                        <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+                        <div class="mapCont">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m43!1m8!1m3!1d317093.7674975917!2d-3.412695!3d51.617804!3m2!1i1024!2i768!4f13.1!4m32!3e0!4m5!1s0x486e1cafc130fac1%3A0x155eea31ce00364d!2sThe%20Angel%20Hotel%20-%20part%20of%20The%20Cairn%20Collection%2C%20Castle%20St%2C%20Cardiff%20CF10%201SZ!3m2!1d51.4808941!2d-3.183203!4m5!1s0x486e11a05e2f6835%3A0x770009829cf6abaf!2sLlanerch%20Vineyard%20Hotel%2C%20Hensol%20Rd%2C%20Hensol%2C%20Pontyclun%20CF72%208GG!3m2!1d51.5075976!2d-3.3699866999999997!4m5!1s0x486e16b3b466614f%3A0x85aeac11e3267788!2sThe%20Royal%20Mint%20Experience%2C%20Heol-Y-Sarn%2C%20Ynysmaerdy%2C%20Pontyclun%20CF72%208YT!3m2!1d51.5542021!2d-3.3871200999999997!4m5!1s0x486e3a997adfef6b%3A0x5220881dfe75b995!2sBrecon%20Mountain%20Railway%2C%20Pontsticill%20Rd%2C%20Pant%20CF48%202DD!3m2!1d51.7781731!2d-3.364956!4m5!1s0x486e166b89909ffb%3A0x94abb9d53c769864!2sWelsh%20Mining%20Experience%2C%20Rhondda%20Heritage%20Park%2C%20Coedcae%20Rd%2C%20South%20Wales%20CF37%202NP!3m2!1d51.6105113!2d-3.3866571!4m0!5e0!3m2!1sen!2suk!4v" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            
+                            
+
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" id="reviewsTab" style="display: none;">
+
+                    <h3>
+                        Reviews
+                    </h3>
+                    
+                    <div class="reviews">
+
+                        <div class="review_wrapper" style="border:unset !important;">
+
+                            
+                            <!-- <div class="swiper-container driver_reviews" style="padding: 0;">
+                            <div class="swiper-wrapper"> -->
+
+                                                               <!--  </div>
+                                <div class="swiper-button-next swiper-button-next-main"></div>
+                                <div class="swiper-button-prev swiper-button-prev-main"></div>
+                            </div> -->
+                            
+                            <script>
+                                $(document).ready(function(){
+                                    var swiperExp = new Swiper('.driver_reviews', {
+                                        observer: true,
+                                        observeParents: true,
+                                        slidesPerView: 1,
+                                        spaceBetween: 0,
+                                        slidesPerGroup: 1,
+                                        loop: false,
+                                        loopFillGroupWithBlank: false,
+                                        // pagination: {
+                                        //     el: '.swiper-pagination-main',
+                                        //     clickable: true,
+                                        // },
+                                        navigation: {
+                                            nextEl: '.swiper-button-next-main',
+                                            prevEl: '.swiper-button-prev-main',
+                                        },
+                                    });
+                                });
+                            </script>
+                        </div>
+
+                        <!-- <div class="review_wrapper">
+
+                            <div class="heading">
+                                Guest reviews
+                            </div>
+
+                             <div class="guest_reviews">
+
+                                <div class="review">
+
+                                    <div class="name">
+                                        Stacey Blues
+                                    </div>
+
+                                    <div class="date">
+                                        29th February 2019
+                                    </div>
+
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+
+                                    <div class="excerpt">
+                                        <p>
+                                            Regal Scotland has completely surpassed our expectations. We have no regrets! Regal Scotland has got everything I need. Nice work on your tour. If you aren't sure, always go for Regal Scotland.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <div class="review">
+
+                                    <div class="name">
+                                        Stacey Blues
+                                    </div>
+
+                                    <div class="date">
+                                        29th February 2019
+                                    </div>
+
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+
+                                    <div class="excerpt">
+                                        <p>
+                                            Regal Scotland has completely surpassed our expectations. We have no regrets! Regal Scotland has got everything I need. Nice work on your tour. If you aren't sure, always go for Regal Scotland.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <div class="review">
+
+                                    <div class="name">
+                                        Stacey Blues
+                                    </div>
+
+                                    <div class="date">
+                                        29th February 2019
+                                    </div>
+
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+
+                                    <div class="excerpt">
+                                        <p>
+                                            Regal Scotland has completely surpassed our expectations. We have no regrets! Regal Scotland has got everything I need. Nice work on your tour. If you aren't sure, always go for Regal Scotland.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <div class="review">
+
+                                    <div class="name">
+                                        Stacey Blues
+                                    </div>
+
+                                    <div class="date">
+                                        29th February 2019
+                                    </div>
+
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+
+                                    <div class="excerpt">
+                                        <p>
+                                            Regal Scotland has completely surpassed our expectations. We have no regrets! Regal Scotland has got everything I need. Nice work on your tour. If you aren't sure, always go for Regal Scotland.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <div class="review">
+
+                                    <div class="name">
+                                        Stacey Blues
+                                    </div>
+
+                                    <div class="date">
+                                        29th February 2019
+                                    </div>
+
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+
+                                    <div class="excerpt">
+                                        <p>
+                                            Regal Scotland has completely surpassed our expectations. We have no regrets! Regal Scotland has got everything I need. Nice work on your tour. If you aren't sure, always go for Regal Scotland.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <div class="review">
+
+                                    <div class="name">
+                                        Stacey Blues
+                                    </div>
+
+                                    <div class="date">
+                                        29th February 2019
+                                    </div>
+
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+
+                                    <div class="excerpt">
+                                        <p>
+                                            Regal Scotland has completely surpassed our expectations. We have no regrets! Regal Scotland has got everything I need. Nice work on your tour. If you aren't sure, always go for Regal Scotland.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div> 
+
+                        </div> -->
+
+                    </div>
+
+                </div>
+
+                <div class="container" id="brochureTab" style="display: none;">
+                    <div class="container">
+                        <h3>Brochure View</h3>
+                        <div class="subHeadingCls">Visualise this tour in a brochure format</div>
+                    </div>
+
+                    <div class="brochure">
+
+                        <ul class="brochure_nav">
+                            <li><a href="#" class="active">Layout 1</a></li>
+                            <li><a href="#" style="background:lightgrey;pointer-events:none;border-color: lightgrey;">Layout 2</a></li>
+                            <li><a href="#" style="background:lightgrey;pointer-events:none;border-color: lightgrey;">Layout 3</a></li>
+                        </ul>
+
+
+                        <div class="brochure_view">
+
+                            <div class="banner"></div>
+
+                            <div class="page">
+
+                                <div class="header">
+
+                                    <div class="logo_wrapper">
+                                        <div class="logo">
+                                                                                        <img src="https://tours-system-com.stackstaging.com/images/logo2x.png">
+                                                                                    </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="body">
+
+                                    <div class="column">
+
+                                        <div class="image">
+                                            <img src="">
+                                            
+                                        </div>
+
+                                        <div class="heading">
+                                            Bowling Tour
+                                        </div>
+
+                                        <div class="price">
+                                            &pound; pp / &pound; SRS pp
+                                        </div>
+
+                                        <!-- <p class="large"> -->
+                                            
+                                        <!-- </p> -->
+
+                                            
+                                            
+
+                                        <div class="image">
+                                            <img src="" />
+                                            
+                                        </div>
+
+                                    </div>
+
+                                    <div class="column">
+
+                                        
+
+
+                                        <div class="image">
+                                            <img src="" />
+                                        </div>
+
+                                        
+
+                                        <div class="rating">
+                                                                                    </div>
+
+                                       
+
+                                        <div class="sub_heading">
+                                            What's Included
+                                        </div>
+
+                                        <ul class="inclusions_list">
+                                                                                            <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                                <li><i class="far fa-check-circle"></i></li>
+                                                                                        </ul>
+
+                                        <ul class="hotel_details">
+
+                                            <li>
+                                                <i class="far fa-calendar-alt"></i>
+                                                <br>                                            </li>
+
+                                            <li>
+                                                <i class="fas fa-utensils"></i>
+                                                
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="footer">
+                                    <div class="line blue"></div>
+                                    
+                                                                        <div class="line blue"></div>
+                                </div>
+
+                            </div>
+
+                            <div class="page_separator"></div>
+
+                            <div class="page"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container" id="datesTab" style="display: none;">
+                    <h3>Dates & Rates</h3>
+                    <div class="dates">
+                        <div class="datesCont">
+                                <h4>Available tour dates</h4>
+                                                           <h4>Not available</h4>
+                                                                                                                                                                                        
+                                                    </div>
+                    </div>
+                     <h4><a class="add_booking" id="t_link" style="color:#FCA311;" href="javascript:void(0)">Terms and Conditions</a></h4>
+                </div>
+
+            </div>
+
+            <script>
+                $(document).ready(function(){
+                    $(document).on('change', '.filesCls', function(e) {
+                        var selectId = $(this).attr('data-id');
+                        var files = e.target.files,
+                            filesLength = files.length;
+                        if(filesLength > 0){
+                            $('.experienceImageStoreSaveBtn').trigger('click');
+                        }
+                    });
+                    $(".orangeTabsContainer .tabsList li a").click(function(e){
+                        e.preventDefault();
+                        $(".orangeTabsContainer .tabsList li").removeClass("active");
+                        $(this).parent().addClass("active");
+                        $(".tabsContant > .container").fadeOut();
+                        var dataTarget = $(this).data('target');
+                        var targetTab = $('#'+dataTarget);
+                        targetTab.fadeIn();
+
+                        if(dataTarget == 'experiencesTab'){
+
+                    
+                    
+
+                    
+
+                    
+                    
+                        }
+                    });
+                });
+            </script>
+                     
+            <div class="similarProperties">
+                <div class="container">
+                   
+                    <h3>Other Collaborators who bought this, also bought</h3>
+                    <div class="thirdSwiperContainer" >   
+                        <div class="swiper-container third-swiper">
+                            <div class="swiper-wrapper">
+
+
+
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/O2yP5uwLLMUE4Eff3HCFUcxC7Rtvebnj4OmuE7jd.jpg" alt="">
+                                                <span class="price">£379.00</span>
+                                            </div>
+                                            <h2>Distinctively Stately Scotland</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/apb9W3EhjVBpDHIdk3JzOQ2kQf6nQgB7Dn32PMuG.jpeg" alt="">
+                                                <span class="price">£319.00</span>
+                                            </div>
+                                            <h2>Splendour and Scandal – A Bridgerton Tour</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/ytIEzz49haoUoI03mOcngOUZhUP3ruZre8sbxHAB.jpeg" alt="">
+                                                <span class="price">£575.00</span>
+                                            </div>
+                                            <h2>Spellbinding Highland Tales</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/apb9W3EhjVBpDHIdk3JzOQ2kQf6nQgB7Dn32PMuG.jpeg" alt="">
+                                                <span class="price">£399.00</span>
+                                            </div>
+                                            <h2>Big Skies from Coast to Countryside</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/MDB8hF8ffq0jwRCToReFct1HkPAKUFP2RDLPjabp.jpeg" alt="">
+                                                <span class="price">£325.00</span>
+                                            </div>
+                                            <h2>Mint, Mines &amp; Vines</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/5LpHDLKa0Aj5pJqd1DQmJH4ZyciZocSfWGlRdwxt.jpeg" alt="">
+                                                <span class="price">£349.00</span>
+                                            </div>
+                                            <h2>Majestic Magical Sights of the South Downs</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/3xUy2tqIukaZUVsBEHkeIwfQHctt51e6k9Gg5ARp.jpeg" alt="">
+                                                <span class="price">£325.00</span>
+                                            </div>
+                                            <h2>Extraordinary Experiences in the Home Counties</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/Z3NJcexPq1CpJdhgljqhnVo1RlrAO309Zxk6CQZI.jpeg" alt="">
+                                                <span class="price">£359.00</span>
+                                            </div>
+                                            <h2>Famous Sights and Fruity Delights - Garden of England</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/9JzXAUlgHcMigeqm6Hx9CaGaaS4V9AmFLcS4Eh3G.jpeg" alt="">
+                                                <span class="price">£319.00</span>
+                                            </div>
+                                            <h2>The Best of the Wondrous West Country</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/OIeQJWnWwjpyAIocHudqJiJyf4HFU2Q8r8WFmGbC.jpeg" alt="">
+                                                <span class="price">£315.00</span>
+                                            </div>
+                                            <h2>The Northern (De)Lights</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/JUPBb10zJDAeFUig1hydMUP9Z8uvYYyweYDwMlfk.jpeg" alt="">
+                                                <span class="price">£319.00</span>
+                                            </div>
+                                            <h2>Delectable Derbyshire and the Peak District</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/AulNiyjCR47geaSShctRlWaHSq6dCGcESGSCFIRV.jpeg" alt="">
+                                                <span class="price">£335.00</span>
+                                            </div>
+                                            <h2>A Cotswold Dream</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/QS2r7IP7oMD4k8J2sudgY7RhYOBnkmjNoAqSvZ7U.jpeg" alt="">
+                                                <span class="price">£383.00</span>
+                                            </div>
+                                            <h2>Treasure Trail of North Yorkshire</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/xFqnMGmTdPidg2kFW9IEvX2Ruo7WgRzmfPyszEka.jpeg" alt="">
+                                                <span class="price">£365.00</span>
+                                            </div>
+                                            <h2>As Scene In Lionhearted Leicestershire</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/Lb6frU5uc6Vk4UxNS544wwltqIMCctSQXF8p2EpV.jpeg" alt="">
+                                                <span class="price">£323.00</span>
+                                            </div>
+                                            <h2>Awe Inspiring Sights in the Heart of England</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/yluBHZCPf4f3u3mdZqUkFGFHW9G8EmCOGF9AGQ08.jpeg" alt="">
+                                                <span class="price">£365.00</span>
+                                            </div>
+                                            <h2>Wonders of the Weald</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/dg9tBDhwbcj6Whu4g6nIKczfdcoY7g2qCbml0SK7.jpeg" alt="">
+                                                <span class="price">£389.00</span>
+                                            </div>
+                                            <h2>Pennine Pleasures, Durham Dales &amp; Vales</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/aXtKSaAGAtuEjv0dqVnhgQLUmUgHstBRWWW9XbNV.jpeg" alt="">
+                                                <span class="price">£359.00</span>
+                                            </div>
+                                            <h2>Raise a Glass to the Stunning South Downs</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/dIxUrg7A2BbFNEV9kM6yZwUrQ6M30hP8Y6tI7z2S.jpeg" alt="">
+                                                <span class="price">£319.00</span>
+                                            </div>
+                                            <h2>Yorkshire Coast Yearnings – Scarborough</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/QmQ2YORDnVRTCizQjMNz7lToHT62rMFNjWIb66i0.jpeg" alt="">
+                                                <span class="price">£323.00</span>
+                                            </div>
+                                            <h2>Lincolnshire’s Hidden Gems and Taste Bud Tantalisation!</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/1BjUEEYM2tEG9GN5wIxFd061DlCT2LZpq7sUguQJ.jpeg" alt="">
+                                                <span class="price">£339.00</span>
+                                            </div>
+                                            <h2>South Devon Discovery - Majestic Moors to Charming Coasts</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/zi6h120dcpgIJAmzHG0RTk0WrcaTP0uUPB4ULudi.jpeg" alt="">
+                                                <span class="price">£355.00</span>
+                                            </div>
+                                            <h2>Breathtaking Brecon Beacons, South Wales</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/L4ZSysHsvfJt4HuzWaKHwwBfL6TLUNBdYqZASKp1.jpeg" alt="">
+                                                <span class="price">£425.00</span>
+                                            </div>
+                                            <h2>Sterling Scots, Lochs and Safaris</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/3335t2nlyPW4raxBiTjoocqCNXr0ifxZ9aaWQHvP.jpeg" alt="">
+                                                <span class="price">£499.00</span>
+                                            </div>
+                                            <h2>Granite City Gourmets, in Awe-inspiring Aberdeenshire</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/7HpWY1oiRfyKYNMhjIww1596B7CPphrrtJxeHFai.jpeg" alt="">
+                                                <span class="price">£355.00</span>
+                                            </div>
+                                            <h2>Sensational Scotland - Fascinating Feats and Grand Glamour</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/ab6tBVND4xbhJMk12aOqUa46CVpTnIwBj2htknct.jpeg" alt="">
+                                                <span class="price">£295.00</span>
+                                            </div>
+                                            <h2>A Spritz of Serenity in Surrey</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/VJdfgGZXTqa0J3opopHaQjZv8jDmVP65R12iPwBB.jpeg" alt="">
+                                                <span class="price">£403.00</span>
+                                            </div>
+                                            <h2>Norfolk&#039;s National Treasures &amp; Natural Wonders</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/ptwZSvXZqfPF6EXePS0BWuvVUgQ4tIbF8SX6fhSo.jpeg" alt="">
+                                                <span class="price">£595.00</span>
+                                            </div>
+                                            <h2>Regal Revelations in the Captivating Cairngorms</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/QTDobwIGHPq1nwddaY02aWBUJYnA4U1Eh21RF8Mo.jpeg" alt="">
+                                                <span class="price">£667.00</span>
+                                            </div>
+                                            <h2>Steam Powered Scottish Style - The Aberdonian 2023</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/PCfOpQqMkXi0PvaD8n7mx3pLCjweYf9Pmm8xGScM.jpeg" alt="">
+                                                <span class="price">£405.00</span>
+                                            </div>
+                                            <h2>A Sprinkle of Suffolk Stateliness</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/bLkiby53QYCjRe6IVXgqkhKvx1qCqS3gFIugzmGM.jpeg" alt="">
+                                                <span class="price">£365.00</span>
+                                            </div>
+                                            <h2>Gardens, Gallantry &amp; Glory of Lincolnshire</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/eATeN4HwEKF3voOdTaJD5QfgNECThlA9s1lcBE59.png" alt="">
+                                                <span class="price">£375.00</span>
+                                            </div>
+                                            <h2>Delights of the Rippling Ribble Valley</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/4USsAwHD4ZxGasbDXt63YOfY0r75C6c5nlfWwQTt.jpeg" alt="">
+                                                <span class="price">£375.00</span>
+                                            </div>
+                                            <h2>Wild North Wales: Epic Heights, Depths and Coasts</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/grRedXS1BUmq51xw5bkP7UFImczhKwPg1lZdw2dT.jpeg" alt="">
+                                                <span class="price">£355.00</span>
+                                            </div>
+                                            <h2>Brews and Bronte - Exploration of the Yorkshire Dales</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/mVKbL86AVnTbEWw0k9nP0Wn9x01gPmXjkOosRlVX.jpeg" alt="">
+                                                <span class="price">£389.00</span>
+                                            </div>
+                                            <h2>Fairy tale Fascinations on Boundless Scottish Borders</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/RQOqu5WevievcFjwjoJTHcFdHuwttXFP5HUfQzxX.jpeg" alt="">
+                                                <span class="price">£445.00</span>
+                                            </div>
+                                            <h2>Jewels of the Lake District</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/PGCYsH28JYMkOJ4IjARqp5L7j2gSpkx6nsqFCvmF.jpeg" alt="">
+                                                <span class="price">£285.00</span>
+                                            </div>
+                                            <h2>Legends of Sherwood - Majestic Merriment</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/CriAs80nf8FWzldcQVXZJGuyowbA8aQ9yOCLLh3w.jpeg" alt="">
+                                                <span class="price">£299.00</span>
+                                            </div>
+                                            <h2>A Southern Summer Spectacle</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/8ZBImEilPm9tGK49f3TEAqMLf5lX2l0977HvpzGs.jpeg" alt="">
+                                                <span class="price">£245.00</span>
+                                            </div>
+                                            <h2>Legendary Locomotives – Leicester’s Great Central Railway</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                 <!--                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/7NMdLgyAW7FmETSnPfCL64p3orcyr4tiL5avVPiy.jpeg" alt="">
+                                                <span class="price">£655.00</span>
+                                            </div>
+                                            <h2>Steam Powered Scottish Style - The Aberdonian 2023 (Lanarkshire)</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/5A6Vo7kYcpOKu6R0joVMVTItWH06M5k48ZS3FsNy.jpeg" alt="">
+                                                <span class="price">£350.00</span>
+                                            </div>
+                                            <h2>Cruising Coastal Charms</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/3VXoH7JUfheUMQ2g1pzW4Qrnvd7JTujHqouEbIFj.jpeg" alt="">
+                                                <span class="price">£363.00</span>
+                                            </div>
+                                            <h2>Majestic Malverns and the Midlands</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/fn2WBd3CfMa6fVCtFtYFu6hIQvs6kauFbUhyd6KM.jpeg" alt="">
+                                                <span class="price">£375.00</span>
+                                            </div>
+                                            <h2>Sunblessed Somerset Secrets</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/bck9JgJsdieN6QDB8e5VZnOma18jm6K0nFrYTPho.jpeg" alt="">
+                                                <span class="price">£585.00</span>
+                                            </div>
+                                            <h2>Spirit of Speyside</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/aaJVH9YWetOMEX71eqmNn1shHjBLSGPvK6b5ruUC.jpeg" alt="">
+                                                <span class="price">£375.00</span>
+                                            </div>
+                                            <h2>Outland Adventure to Tranquil Lochs &amp; Sacred Stones</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/WYdmNZr1SX9VKB6WDuEmvrMjpeXBvIeWI29Lmc5U.jpeg" alt="">
+                                                <span class="price">£335.00</span>
+                                            </div>
+                                            <h2>Myths, Marvels and Moors</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="">
+                                            <div class="imageBox">
+                                                <img src="https://tours-system-com.stackstaging.com/storage/experience_images/Oh8E2xQg1Vwy61x50hZl0l3UmSa0XnbyJNkQ3YHN.jpeg" alt="">
+                                                <span class="price">£359.00</span>
+                                            </div>
+                                            <h2>Steely Fascinations</h2>
+                                            <div class="footerRow">
+                                               
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div> -->
+                                
+
+
+                            </div>
+
+                            <div class="swiper-button-next swiper-button-next3"></div>
+                            <div class="swiper-button-prev swiper-button-prev3"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+<div class="modal fade bd-example-modal-lg" id="termModel" tabindex="-1" role="dialog" aria-labelledby="addFolderModalTitle" aria-hidden="true" style="overflow-y: auto;">
+    <div class="modal-dialog modal-lg" role="document" style="max-width: 1200px;">
+        <div class="modal-content">
+            <div class="" style="margin-bottom: 200px;">
+        
+            <div class="container">
+                <div class="aboutContainer" >
+                <a href="javascript:;" class="cta btn btn-primary" id="downloadPDFhc" style="width: auto;float: right;">
+                        Print
+                    </a>
+                    <div id="tobeprinted">
+                     <style>
+    p,div{font-size: 16px;}
+    .term_popup ul.main_list li{list-style: disc !important;margin-left: 20px;}
+    .term_popup ul.sub_list li{list-style: none !important;}
+     .aboutContainer .container .aboutWrapper .term_popup li {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.5;
+        color: #14213D;
+        margin-bottom: 25px;
+        list-style-type:disc !important;
+    }
+    .term_popup ul{margin-left: 20px;}
+    .term_popup ul li {
+        /* font-size: 20px;
+        font-weight: 600;
+        line-height: 1.5;
+        color: #14213D;
+        margin-bottom: 25px;*/
+        list-style-type: disc !important;
+    }
+</style>
+
+
+<h1 class="headingMainTitle">Terms</h1>
+<div class="headingTitleCls"></div>
+
+<div class="aboutWrapper">
+
+    <div class="aboutContent" style="max-width: 1700px; !important;">
+
+        <div class="heading" style="font-size: 33px;">
+        Veenus Limited Terms and Conditions - Experience Tour Confirmation
+        </div>
+        <p>
+        The terms of the agreement between Veenus Limited and you being the Collaborator are as follows;
+        </p>
+        </br>
+        <p>
+        <strong>INTERPRETATIONS AND DEFINITIONS</strong>
+        </p>
+        <ul>
+            <li> “Veenus”, “our”, “we” and “us” refer to Veenus Limited.</li>
+            
+            <li>“You”, “your” and “Collaborator” refer to your business as the Tour Operator. </li>
+            <li>“Platform”, “Veenus platform”, “Veenus system”, “Vega” refer to the Veenus Vega Platform on the Veenus.com website.</li>
+            <li>“Hotel” refers to any hotel or accommodation provider in respect of which Veenus books accommodation at your request.</li>
+            <li>“Experience” refers to any attraction or attraction/experience provider in respect of which Veenus books tickets, places, tours, meals and/or other services at your request.</li>
+            <li>“Train” refers to any train provider in respect of which Veenus books seats at your request. </li>
+            <li>“Cruise” refers to any river cruise provider in respect of which Veenus books cabins at your request.</li>
+            <li>“Services” refers to all services and goods (if any) including without limit, river cruise cabins, train bookings, ferry crossings, attractions/experiences or any other Service or booking which Veenus offers to supply in accordance with these Terms and Conditions.</li></br>
+            <li>“Contract” refers to the contract for the sale and purchase of the Services</li>
+            <li> “ETC” refers to the Experience Tour Confirmation which is issued by Veenus to you as a Tour Operator/Group Organiser. </li>
+            <li> Any additional services booked by Veenus (which are not part of these terms and conditions) may be subject to separate terms and conditions depending on the type of service performed by Veenus. </li>
+            <li> These terms and conditions take precedence over any terms and conditions, or other terms presented by you or your agents. In the case of any conflict between the provisions of these terms and conditions and any terms and conditions or other terms presented by you or your agents, the provisions of these terms and conditions shall prevail. </li>
+        </ul>
+       
+
+        <p>
+        </br></br>
+        <strong>BASIS OF CONTRACT WITH VEENUS </strong>
+        </p>
+        <ul>
+        <li>Veenus shall act as agent for sale of rooms by the Hotel, sale of tickets/entry by the Experience, sale of Cruise cabins, Train seats and/or any other Service in accordance with any quotation or order provided in writing or verbally by Veenus to you or via the Veenus website booking platform.</li>
+        <li>No variation to these Terms and Conditions shall be binding unless agreed in writing by a director of Veenus with your authorised representative. </li>
+        <li>In case any clause in these terms and conditions becomes invalid then the remaining clauses shall not be affected and will stay in full effect throughout    </li>
+        <li>Nothing in this agreement shall limit or exclude any liability for fraud.   </li>
+        <li>Any typographical, clerical, or other error or omission in any sales literature, quotation, price list,acceptance of offer, invoice or other document or information issued by us shall be subject to correction without any liability on our part.  </li>
+        </ul>  
+        
+        <P>
+        </br></br>
+        <strong>BOOKING PROCEDURE, ORDER AND SPECIFICATION </strong>
+        </p>
+        <ul>
+        <li> All stages of the booking procedure must be completed on Vega by the Collaborator unless otherwise specified by Veenus. </li>
+        <li> You are responsible for ensuring the accuracy of the terms of any confirmed booking and for providing us with any necessary information relating to the provision of the Services within such a time as is sufficient as per the ETC and/or these terms and conditions for Veenus to make the necessary arrangements for the contract to continue to be performed in accordance with its terms and as specified on Vega.</li>
+        <li> To confirm your reservation and to ensure that Veenus has the correct information for your booking you are requested to e-sign and submit the Experience Tour Confirmation document on VEGA by the date (usually but not always 7 days) specified. (If the ETC is received by email and not via VEGA then the specified date to sign and return the ETC by email is 72 hours unless otherwise specified.)
+        </li>
+        <li> Failure to return the signed ETC may result in the space being released. Please note if you do not comply with returning the signed ETC, this does not negate the booking and you will continue to be liable for all charges as set out in the ETC.
+        </li>
+        <li> Once purchased, evidence of promotion of the Veenus Experience on your website, by means of a Uniform Resource Locator (URL) link must be submitted onto Vega within 56 days of purchasing the Veenus Experience product.</li>
+        <li> For Hotel and Experience bookings:</br>
+            a) Sales updates must be submitted onto Vega at 100 days prior to arrival and 60 days prior to arrival.
+            </br>
+            b) A provisional guest list must be submitted to Vega not less than 60 days prior to the arrival date unless otherwise specified.
+            </br>
+            c) A final guest list must be submitted onto Vega not less than 35 days prior to the arrival date unless otherwise specified. On receipt of a final guest list, Veenus may instruct the Hotel/Experience/Cruise/Train and/or other Service providers to release all remaining unallocated hotel accommodation/bookings/tickets/seats.
+            </br>
+            d) After the cancellation deadline, if you still have Hotel/Experience/Cruise/Train and/or other Service accommodation/bookings/tickets/seats allocated and which you have not yet sold to your customers, Veenus will on request endeavour to hold such unsold hotel accommodation/bookings/tickets/seats, in addition to those sold to allow you maximum selling time. This must be agreed in writing or via Vega. You will be responsible for the charges for all unsold accommodation/bookings/tickets/seats on the original allocation not released back to Veenus by the specified deadline.
+            </br>
+            e) A tour pack for the booking will be released after payment has been received. </li>
+        <li> For River Cruise bookings:</br>
+            a) A provisional guest list must be submitted onto Vega not less than 180 days prior to the arrival date unless otherwise specified on Vega.</br>
+            b) An updated guest list must be submitted onto Vega not less than 140 days prior to the arrival date unless otherwise specified on Vega. Thereafter updated guest lists must be submitted onto Vega at regular monthly intervals until receipt of the final guest list.</br>
+            c) A final guest list must be submitted onto Vega not less than 100 days prior to the arrival date unless otherwise specified on Vega.</br>
+            d) Balance payment must be made by bank transfer not less than 100 days prior to the arrival date unless a request is made by Service providers for earlier payment.</br>
+            e) A tour pack for the booking will be released after payment has been received.</br>
+            f) These terms and conditions are subject to the ship and route booked and may be subject to change and variation. 
+        </li>
+        <li> For Train bookings:</br>
+            g) A provisional guest list must be submitted onto Vega not less than 270 days prior to the arrival date unless otherwise specified on Vega.</br>
+            h) An updated guest list must be submitted onto Vega not less than 140 days prior to the arrival date unless otherwise specified on Vega. Thereafter updated guest lists must be submitted onto Vega at regular monthly intervals until receipt of the final guest list.</br>
+            i) A final guest list must be submitted onto Vega not less than 90 days prior to the arrival date unless otherwise specified on Vega.</br>
+            j) Balance payment must be made by bank transfer not less than 90 days prior to the arrival date unless a request is made by Service providers for earlier payment.</br>
+            k) A tour pack for the booking will be issued after payment has been received.</br>
+            l) These terms and conditions are subject to the train and route booked and may be subject to change and variation. 
+        </li>
+        <li> If no final guest list is received by Veenus before the cancellation deadline or by the above deadlines prior to the date of departure, Veenus does not guarantee that such hotel
+        accommodation/bookings/tickets/seats originally booked or reserved as per the ETC or any other document or correspondence will remain available to you. Please note if you do not comply with sending the guest list, this does not negate the booking and you will continue to be liable for all charges as set out in the booking confirmation. </li>
+        </ul>
+        <p>
+        </br></br>
+        <strong>BOOKING AMENDMENT AND CANCELLATION</strong>
+        </p>
+
+        <ul>
+        <li> If any further hotel accommodation/bookings/tickets/seats are required after a final guest list has been submitted, you must request these from Veenus in writing or via VEGA. Veenus will endeavour, but not guarantee, to book such further hotel accommodation/bookings/tickets/seats. Any such amendments may be subject to amendment fees issued by Veenus, the Hotel/Experience/Cruise/Train and/or Service provider.</li>
+        <li>  All cancellations and booking amendments must be confirmed to Veenus via VEGA at least 35 days prior to arrival (180 days prior to departure date for river cruises and 270 days prior to departure date for train bookings) or as specified on the ETC, whichever is earlier.</li>
+        <li> The final numbers on the tour must be finalised by the cancellation deadline as specified on VEGA. Individual cancellations made after this deadline are likely to be liable for 100% cancellation charges.</li>
+        <li> If you fail to cancel the booking via Vega and received acknowledgement of the cancellation by Veenus/VEGA before the stipulated cancellation deadline then without prejudice to any other right or remedy available to Veenus, you will remain liable to Veenus Ltd for the full purchase price of all rooms/cabins/tickets/seats and/or other reservations booked.</li>
+        <li> If you fail to provide Veenus with the latest sales updates at 100, 60 and 40 days (180, 140 and 100 days for river cruise and 270, 140 and 90 days for train bookings) prior to the arrival date or as otherwise specified on the ETC, whichever is earlier, Veenus will either:</li>
+        <p>a) Release all bookings with the Hotel/Experience/Cruise/Train and/or other Service provider.
+        </br>
+        b) Confirm the most recent sales update provided by you on VEGA.
+        </br>
+        c) Confirm the allocation as agreed on the ETC.
+        </br>
+        d) In all instances you will remain liable to Veenus for the full purchase price of all rooms, cabins, tickets, seats and/or other bookings subsequently cancelled.
+        </br>
+        e) If any individual room/s, cabin/s, ticket/s, seat/s and/or other Services are released from the allocation or cancelled within 35 days of the arrival date (for river cruises, within 180 days if no deposit has been paid and 90 days if a deposit has been paid) or after the agreed cancellation deadline, whichever is earlier, without prior
+        written agreement with Veenus, then, without prejudice to any other right or remedy available to Veenus, you will remain liable to Veenus for the full purchase price of those.
+        </p>
+        </ul>
+        <p>
+        </br></br>
+        <strong>PRICE</strong>
+        </p>
+
+        <ul>
+        <li> All prices quoted are inclusive of VAT.</li>
+        <li> We reserve the right to give notice to you after issuing an ETC to increase the price of the Services to reflect an increase in our costs due to;
+        (a) Any changes in departure dates or specifications for the Services which are requested by you.
+        <r></br>
+        (b) Any delay caused by your failure to provide adequate information or instruction.
+        </br>
+        (c) Any factor beyond our control such as, without limitation, any foreign exchange fluctuation, currency regulation, or alteration of duties.
+        </br>
+        (d) Any changes in prices charged by the Hotel/Experience/Cruise/Train and/or other Service providers.
+        </li>
+       </ul>
+
+       <p>
+        </br></br>
+        <strong>TERMS OF PAYMENT</strong>
+        </p>
+        <ul>
+        <li> Veenus shall be entitled to invoice you for the price of the services at least 21 days (100 days for river cruises, train bookings and certain experience bookings) prior to the arrival date unless otherwise stipulated for example earlier payment requirements or deposits, and to be paid as per the invoice due date.
+        </li>
+        <li> All bookings that include a VIP experience/river cruise/train booking will require a minimum 10% nonrefundable deposit payment no later than 60 days (at time of booking for river cruises and 270 days for train bookings and certain experience bookings including but not restricted to theatre visits, Edinburgh Tattoo and special events) prior to the date of arrival, to secure the Hotel/Experience/Cruise/Train and/or other Service booked, unless otherwise stipulated. 
+        </li>
+        <li> Veenus will be entitled to invoice you for non-refundable administrative booking charges as required by the Hotel/Experience/Cruise/Train and/or other Service provider, which are to be paid as per the invoice due date.
+        </li>
+        <li> The balance payment is required a minimum of 21 days (100 days for Cruises and 90 days for Train bookings and/or other Services) prior to the date of arrival unless otherwise stipulated.
+        </li>
+        <li> If you fail to make payment on the date agreed (the amount of such a payment and the payment date being agreed either by means of further terms agreed in writing, or by default) then, without prejudice to any other right or remedy available to us, we shall be entitled to: </br>
+        
+        (a) Suspend performance of our contractual obligations until payment has been received.</br>
+        (b) Charge you interest on a daily basis on the amount unpaid, from the date of the invoice to the date the required payment is received at the rate of 5% above the base rate from time to time of HSBC.</br>
+        (c) In the event of invoices being outstanding for longer than 30 days, Veenus shall be entitled to cancel any future bookings and all outstanding invoices will become immediately due and payable in full. Payment must be made in sterling by bank transfer payable to Veenus Limited.</br>
+        (d) Not include certain Experiences or inclusions in your tour package, if these were subject to booking by a certain day/time on the Experience online platform. You will remain liable for the remainder of the tour inclusions including Hotel/Experiences/Cruise/Train and/or other Services.
+        </li>
+        <li> You are responsible for any additional costs incurred by you during the booking over and above those specified in the ETC and you must settle these directly with the Hotel/attraction/experience/river Cruise, train operator and/or other Service providers on their demand. 
+        </li>
+        </ul>
+
+       <p>
+        </br></br>
+        <strong>WARRANTIES, DISCLAIMER AND LIMITATION OF LIABILITY</strong>
+        </p>
+        
+        <ul>
+        <li> Veenus does not give any warranty or undertaking in respect of the standard of any of our Hotel/Experience/Cruise/Train and/or other Service providers. All warranties implied by statute or law in relation to the provision of the Services are excluded by Veenus to the maximum extent permitted by law.
+        </li>
+        <li> We will endeavour to update you with regard to any changes in the standard, quality and operation of our Hotel/Experience/Cruise/Train and/or other Service providers from the time of the booking to the date of departure provided that Veenus has been notified of the same by the Hotel/Experience/Cruise/Train and/or other Service providers including but not limited to type of ships, type of train, change of locomotive and train carriages, operation of the Experience/Cruise/Train or other Service, change to/from diesel or steam trains, instruction and terms by Network Rail, steam bans, travel times, routes and/or means
+        of transport which become necessary due to the special conditions affecting travel by ship, due to security reasons or weather conditions, and/or other governmental, environmental or health restrictions, hotel rooms, meal arrangements, attraction type and inclusions. In the event of any such changes of the Hotel/Experience/Cruise/Train and/or other Service we will endeavour to provide suitable alternatives which may be of a different type but of the same quality, and the rest of the booking will remain in place as per the ETC. Any change in provision of Hotel/Experience/Cruise/Train and/or other Service will not negate the booking and you will continue to be liable for all charges as set out in the booking confirmation.
+        </li>
+        <li> As such where any Hotel/Experience/Cruise/Train and/or other Service providers is not up to standard or there is a breach of warranty or an implied or express contractual term, or where there is any other breach or negligence by the Hotel/Experience/Cruise/Train and/or other Service providers you shall seek an indemnity from the Hotel/Experience/Cruise/Train and/or other Service providers and not from Veenus. If required by you, Veenus shall add its name to any action against such a Hotel/Experience/Cruise/Train and/or other Service providers provided that you keep Veenus fully and effectively indemnified (in advance) of all costs, expenses, and losses in relation to the same including (without limit) to damages resulting from a judgment or other decision.
+        </li>
+        <li> All complaints, that arise during your stay (or visit to) at the Hotel/Experience/Cruise/Train and/or other Service, must be communicated within 24 hours and while your group is on tour, and Veenus will endeavour in assisting with a reasonable resolution. Any comments made post tour will be treated as feedback and not a complaint, so no response will be provided.
+        </li>
+        <li> You are required by the terms and conditions of this agreement to agree and undertake not to deal with the hotel/attraction/experience/river cruise/train operator and/or other Service providers directly. Any dispute which may arise between you and the Hotel/Experience/Cruise/Train and/or other Service provider (whether in relation to service, bookings or otherwise) shall in the first instance be dealt with by Veenus. Thereafter, if you are not satisfied with our recommended reasonable alternative offering, Veenus shall be
+        absolved of any liability, and you shall take the matter up directly with the Hotel/Experience/Cruise/Train and/ or other Service provider. Any proceedings shall be issued against the Hotel/Attraction/Experience/River Cruise/Train operator and/or other Service providers and not Veenus. Veenus shall not be liable for any arrangements made between you and the Hotel/Experience/Cruise/Train and/or other Service providers directly and Veenus reserves the right to discharge the contract or suspend any bookings under the contract without liability to you.
+        </li>
+        <li> Except in respect of death or personal injury caused directly by us, Veenus shall not be liable for any defects in the Services, any failure to provide Services and any resulting consequences, any delay in performing, or any failure to perform, any of Veenus’ obligations in relation to the services, if the delay or failure was due to any cause beyond our reasonable control. The Tour Operator shall be responsible to the Service Provider for any damage caused to the Hotel and/or Service including but not restricted to the rooms, cabin furnishings, utensils and equipment therein generally by any act, default or neglect of the Tour Operator, employee, client or guest of the Tour Operator.
+        </li>
+        <li> In no event shall Veenus be liable to the Travel partner for consequential damages such as loss of production, loss of profit, loss of revenue, loss of contract, loss of or damage to goodwill or reputation, loss of claim or any indirect, special, punitive, incidental or consequential damages or losses whether such damages are (alleged as) a result of a breach of contract, tort or otherwise. All such damages and losses are hereby expressly waived and disclaimed.
+        </li>
+        <li> Each Party represents and warrants to the other Party that for the term of this Agreement it has the full corporate power and authority to enter into and perform its obligations under this Agreement.
+        </li>
+        </ul>
+
+       <p>
+        </br></br>
+        <strong>TERM, TERMINATION AND SUSPENSION </strong>
+        </p>
+        <ul>
+        <li> These terms and conditions take effect with your registration to Vega and stay in effect until you or us terminate your account.
+        </li>
+        <li> You may terminate your account at any time and for any reason; however, you agree to give us written notice of your intention to terminate your account.
+        </li>
+        <li> You agree that we may terminate or suspend your account for any length of time with immediate effect without notice if we consider you have breached any of our terms and conditions.
+        </li>
+        <li> Should your account be terminated, either by yourself or us, clauses which expressly state as much as well as clauses which by nature survive termination shall stay in effect in perpetuity.
+        </li>
+        <li> You agree to delete any personal data, in particular guests’ information, and confidential information to Veenus Limited and/or any third party within 30 days of the termination of your account.
+        </li>
+        </ul>
+
+       <p>
+        </br></br>
+        <strong>OWNERNSHIP AND RIGHTS RESERVED</strong>
+        </p>
+        <ul>
+        <li> You agree that Vega and contents therein are the exclusive property of Veenus and its licensors. All trademarks that appear on Vega are owned by Veenus or the third parties who provide them and you will not remove or alter them or claim ownership of them. For the avoidance of doubt, you are the owner or licensor of any content you upload to Vega (translations we make thereof are owned by us).
+        </li>
+        <li> You acknowledge that using any part of Vega or content therein for any other than their clear and obvious purpose is strictly prohibited unless you first gain our written consent.
+
+        </li>
+        <li> Refer to the Veenus privacy and website policy for further information.
+        </li>
+        </ul>
+
+       <p>
+        </br></br>
+        <strong>INDEMNIFICATION</strong>
+        </p>
+        <ul>
+        <li> You shall indemnify and hold Veenus harmless for damages and losses of any kind resulting from their breach of this Agreement, applicable laws, rules or regulations.
+        </li>
+        <li> Should either you or us face a claim from a third party the other has a separate agreement or understanding with, you and us will work together in good faith to defend the claim and protect your and our interests. In such a situation neither you nor us shall take any action without prior written consent from the other (which shall not be conditioned, delayed or withheld without good reason). You shall further indemnify and hold Veenus harmless against claims from third parties you have a separate agreement or
+        understanding with.
+        </li>
+        <li> To the maximum extent permitted by the Laws of England, you agree to assume all risks arising out of the use of Vega.
+        </li>
+       </ul>
+       <p>
+        </br></br>
+        <strong>CONFIDENTIALITY</strong>
+        </p>
+        <ul>
+        <li> Each party understands that by working together they may be exposed to confidential information of the other (including but not limited to the design, composition and pricing of Veenus’ experience tours, client booking patterns, tour portfolio and design of the Vega platform). You and us mutually agree to respect, protect and strictly treat as private any such confidential information.
+        </li>
+        <li> You and us also mutually agree that all confidential information remains the exclusive property of the disclosing party and shall only ever be used to perform the respective obligations under this agreement. Upon written request by either party, the other shall promptly return and destroy any record of confidential information.
+        </li>
+        <li> Each party agrees that it shall use prudent methods to ensure its employees, officers, agents and service providers maintain the security of the confidential information and do not copy, publish, or divulge the confidential information.
+        </li>
+        <li> Each party warrants that it will duly observe all its obligations under any relevant data protection and privacy legislation which arise in connection with this Agreement.
+        </li>
+       </ul>
+       </br></br>
+       <p>
+        </br></br>
+        <strong>INSOLVENCY</strong>
+        </p>
+        <ul>
+        <li> This clause shall apply if:</br>
+        a) You make any voluntary arrangement with your creditors or become subject to an administration order or (being an individual firm) you become bankrupt or being (a company) go into liquidation (otherwise than for the purposes of amalgamation or reconstruction), or
+        Updated December 2022
+        </br>
+        b) An encumbrancer takes possession, or a receiver is appointed, of any of your property, or assets, or Veenus reasonably apprehends that any of the events mentioned above is about to occur in relation to you.
+        </br>
+        c) If any part of this clause applies then, without prejudice to any other right or remedy available to Veenus, Veenus shall be entitled to discharge the Contract or suspend any bookings under the contract. If the Services have been delivered but not paid for the price shall become immediately due and payable notwithstanding any previous agreement or arrangement to the contrary.
+        </li>
+       </ul>
+       </br></br>
+       <p>
+        </br></br>
+        <strong>FORCE MAJEURE</strong>
+        </p>
+        <ul>
+        <li> Neither party shall be liable for failure to perform its obligations under this Agreement if such failure results from acts, events, omissions or happenings beyond its reasonable control including, without limitation, any Act of God, natural disaster, fire, insurrection, war or other hostilities, riots, civil commotion, pandemic/epidemic, embargoes, the requirements or regulations of any civil or military authority, explosion, accident, industrial dispute, difficulty in obtaining raw materials, labour or fuel, transportation or communication problems, adverse weather, sea , air, ice and river conditions (including high or low water levels lock closure, landslide, natural or nuclear disaster, fire, chemical or biological disaster), act of any government or other national or local authority including rail operators an authorities,,, deviation in order to rescue or to attempt to rescue human lives or goods, requests or regulations given by the government of any nation, orders issued by authorities for the protection of the health and safety of employees, crew and/or customers, the act(s) and/or omission(s) of a third party not connected with the provision of services and/or any incident which is similar in nature or effect to any of the foregoing (a "Force Majeure Event").
+        </li>
+        <li> In the event that a government imposes any legally binding control or measure imposed by any competent authority relating to the control of COVID-19 and/or any other pandemic or medical emergency and having the intention that the Hotel and/or Services cannot proceed as per the booking confirmation for any duration (“Restriction Period”), the booking shall be suspended until the Restriction Period has ended. Veenus is not liable for any losses incurred by the Tour Operator as a result of the Restriction Period.
+        </li>
+        <li> Veenus shall not be responsible for making any refunds, payment of compensation or reimbursement costs or expenses incurred by you and/or any Passenger(s) as a result of such change.
+        </li>
+        <li> Veenus will promptly notify the other party of the delay and/or failure and will take all reasonable steps to overcome the delay and/or failure.
+       </ul>
+       </br></br>
+       <p>
+        </br></br>
+        <strong>GOVERNING LAWS</strong>
+        </p>
+        <ul>
+        <li> This contract shall be governed by the Laws of England and Veenus agrees to submit any matter in relation to the interpretation and performance of this agreement to the Courts of England. 
+        </li>
+        
+       </ul>
+       </br></br>
+       <p style="font-style: italic; font-weight: bold;">Information updated Jan 2024</italic></p>
+    </div>
+
+
+</div>                    </div><!-- end print -->
+            </div>
+
+        </div>
+    </div>
+        </div>
+        </div>
+</div><!-- end model -->
+<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <!-- <h4 class="modal-title" id="myModalLabel">Image preview</h4> -->
+      </div>
+      <div class="modal-body">
+        <img src="" id="imagepreview" style="width: 600px; height: 400px;" >
+      </div>
+     <!--  <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+<div id="image-viewer">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="full-image">
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            // $(".pop").click(function(){
+            //      var id = $(this).data('id');
+            //   $("#full-image").attr("src", $('.imageSource_'+id).attr('src'));
+            //   $('#image-viewer').show();
+            // });
+
+            // $("#image-viewer .close").click(function(){
+            //   $('#image-viewer').hide();
+            // });
+
+           /* $(".pop").on("click", function() {
+                var id = $(this).data('id');
+               $('#imagepreview').attr('src', $('.imageSource_'+id).attr('src')); // here asign the image to the modal when the user click the enlarge link
+               $('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
+
+            });*/
+            $("#daysList").stick_in_parent();
+
+            var homeSwiper = new Swiper('.home-swiper-container', {
+                effect: 'fade',
+                centeredSlides: true,
+                autoplay: {
+                    delay: 5500,
+                    disableOnInteraction: false,
+                },
+                spaceBetween: 30,
+                loop: true,
+                slidesPerView: 1
+            });
+
+            var secondSwiper = new Swiper('.second-swiper', {
+                navigation: {
+                    nextEl: '.swiper-button-next1',
+                    prevEl: '.swiper-button-prev1',
+                },
+            });
+
+            var thirdSwiper = new Swiper('.third-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: '.swiper-button-next3',
+                    prevEl: '.swiper-button-prev3',
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 1,
+                        spaceBetween: 15,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                    1024: {
+                        slidesPerView: 5,
+                        spaceBetween: 30,
+                    },
+                }
+            });
+            <?php if(!empty($date_available) && $date_available == 'yes'){ ?>
+                $('.dateSelect').select2({
+                    minimumResultsForSearch: -1,
+                    placeholder: 'No date selected'
+                });
+            <?php }else{ ?>
+                $('.dateSelect').select2({
+                    minimumResultsForSearch: -1,
+                    placeholder: 'No available dates'
+                });
+            <?php } ?>
+            $('.collsSelect').select2({
+                minimumResultsForSearch: -1,
+                placeholder: 'No collaborator selected'
+            });
+        });
+
+        // MATCH HEIGHT
+
+        $(function() {
+            $('.infoPriceWrapper .title').matchHeight();
+            <?php 
+            if(!empty($map)){
+                ?>
+
+                $('#display_map').click();
+                <?php
+            }
+            ?>
+            });
+            $('#t_link').click(function(e){
+            $('#termModel').modal('show');
+        });
+    </script>
+    @endsection

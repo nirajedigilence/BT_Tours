@@ -1,0 +1,44 @@
+
+FTP :- tours-system-com.stackstaging.com
+
+ftp.stackcp.com
+tours-system.com
+98d1b2400c3a
+
+
+http://tours-system-com.stackstaging.com/
+Username: Tours-user
+Password: L3tM3L00k
+
+
+Superuser login:-
+devstewart07@gmail.com
+yh)93dhyuKRD
+
+Admin login:-
+stewart@webbagency.co.uk
+webb123
+
+Collaborator login:- 
+collaborators@veenus.com
+123456
+
+--------------------------------------
+Veenus.com (Live Site)
+cpanel:-
+https://sxb1plzcpnl448269.prod.sxb1.secureserver.net:2083
+
+username: duwt3i5b0oti
+password: DaX,z;@l0v.UY
+
+
+FTP deatails for LIVE site veenus.com
+
+92.204.218.88
+urvish@veenus.com
+Samurai@8112
+
+----------------
+Db changes
+: experience_dates_rates
+add twin_srs Field

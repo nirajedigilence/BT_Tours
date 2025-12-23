@@ -1,0 +1,7771 @@
+/*!/wp-content/themes/bowlingtours/assets/css/user-style.css*/
+* {
+    outline: none;
+    box-sizing: border-box
+}
+
+.custom_star {
+    margin: 0;
+    padding: 40px 0 80px
+}
+
+.user_title {
+    margin: 0 0 40px;
+    padding: 70px 80px;
+    background: #fbfbfb;
+    position: relative
+}
+
+.user_title label {
+    margin: 0;
+    padding: 0;
+    display: block;
+    color: #1d92d0;
+    font-size: 18px;
+    font-weight: 500!important
+}
+
+.user_title h3 {
+    margin: 0;
+    padding: 0;
+    color: #1d92d0;
+    font-size: 21px
+}
+
+.user_title .pn {
+    margin: 0;
+    padding: 28px 0;
+    color: #fff;
+    background: #fed333;
+    text-transform: uppercase;
+    text-align: center;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    position: absolute;
+    left: -50px;
+    top: 42px;
+    font-size: 40px;
+    font-weight: 700;
+    border: 1px solid #feca07
+}
+
+.user_menu {
+    margin: 0 0 40px;
+    padding: 0;
+    width: 100%;
+    background: #fbfbfb;
+    float: left
+}
+
+.user_menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none
+}
+
+.user_menu ul li {
+    margin: 0;
+    padding: 0;
+    display: inline-block
+}
+
+.user_menu ul li a {
+    margin: 0;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    text-transform: capitalize;
+    background: #fbfbfb;
+    font-weight: 500
+}
+
+.user_menu ul li a img {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    vertical-align: middle
+}
+
+.user_menu ul li a:hover,.user_menu ul li a.active {
+    color: #1d92d0
+}
+
+.user_menu ul li:last-child a {
+    background: #fff!important;
+    color: #1d92d0
+}
+
+.user_details {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    float: right;
+    font-size: 16px
+}
+
+.user_section_title {
+    margin: 0 0 30px;
+    padding: 0 0 10px;
+    border-bottom: 2px solid #9cd5f2;
+    font-size: 16px;
+    color: #1d92d0;
+    display: inline-block;
+    width: 100%
+}
+
+.section_title {
+    margin: 0;
+    padding: 0;
+    float: left;
+    color: #1d92d0;
+    font-weight: 500
+}
+
+.section_edit {
+    margin: 0;
+    padding: 0 0 0 12px;
+    float: right;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/edit.png) left center no-repeat
+}
+
+.section_edit a {
+    margin: 0;
+    padding: 0;
+    color: #1d92d0!important;
+    text-decoration: underline!important
+}
+
+.section_edit a:hover {
+    text-decoration: none!important
+}
+
+.user_details_info {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #000;
+    overflow: hidden;
+    float: left;
+    width: 100%
+}
+
+.user_details_info label {
+    margin: 0;
+    padding: 0 0 20px;
+    display: block
+}
+
+.user_details_info a {
+    text-decoration: none
+}
+
+.user_details_info a:hover {
+    color: #1d92d0
+}
+
+.user_details .tours_wrapper {
+    margin: 0;
+    padding: 0
+}
+
+.user_details .tours_listing_left {
+    margin: 0 24px
+}
+
+.user_details .owl-carousel .owl-item {
+    padding-top: 8px
+}
+
+.body_container .attract ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none
+}
+
+.body_container .attract ul li {
+    margin: 0 8px 0 0;
+    padding: 0 15px 0 20px;
+    text-decoration: none;
+    display: inline-block;
+    color: #6b6b6b;
+    font-size: 12px;
+    font-weight: 500;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/day-pic.png) left 3px no-repeat;
+    border-right: 1px solid dimgray
+}
+
+.body_container .attract ul li+li {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/calender-pic.png) left 1px no-repeat
+}
+
+.body_container .attract ul li+li+li {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/home-pic.png) left 1px no-repeat
+}
+
+.body_container .attract ul li:last-child {
+    padding-right: 0;
+    border: none
+}
+
+.club_info_left {
+    margin: 0;
+    padding: 0;
+    max-width: 300px;
+    float: left
+}
+
+.club_info_right {
+    margin: 0;
+    padding: 0;
+    max-width: 300px;
+    float: right
+}
+
+.view_club_profile {
+    margin: 10px 0 0;
+    padding: 0
+}
+
+.view_club_profile a {
+    margin: 0;
+    padding: 8px 0;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    background: #1d92d0;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid #007dc7;
+    transition: all .5s ease
+}
+
+.view_club_profile a:hover {
+    color: #fff;
+    background: #126fa1
+}
+
+.tour_short {
+    margin: 0 0 30px;
+    padding: 0;
+    text-align: right
+}
+
+.tour_pagination {
+    margin: 0;
+    padding: 0;
+    float: right
+}
+
+.tour_pagination ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none
+}
+
+.tour_pagination ul li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    background: none
+}
+
+.tour_pagination ul li a {
+    margin: 0;
+    padding: 2px 10px;
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+    display: block
+}
+
+.tour_pagination ul li a:hover,.tour_pagination ul li a.active {
+    color: #0070c2
+}
+
+.tour_list {
+    margin: 0 25px 0 0;
+    padding: 0;
+    float: right
+}
+
+.tour_list select {
+    margin: 0;
+    padding: 6px 20px;
+    color: #6c6c6c;
+    font-family: 'Poppins',sans-serif;
+    font-size: 16px;
+    background: #fff;
+    border: 1px solid #c3c3c3;
+    border-radius: 5px
+}
+
+.show_all_tour {
+    margin: 0;
+    padding: 0 0 10px;
+    position: relative
+}
+
+.show_all_tour table {
+    border-collapse: collapse;
+    text-align: center
+}
+
+.show_all_tour table tr th {
+    padding: 12px 10px;
+    border-right: 1px solid #f8fbfd;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff
+}
+
+.show_all_tour table tr td {
+    padding: 12px 10px;
+    font-size: 14px;
+    color: #000
+}
+
+.show_all_tour table tr th:nth-child(odd) {
+    background: #1d92d0
+}
+
+.show_all_tour table tr th:nth-child(even) {
+    background: #6ac0ec
+}
+
+.show_all_tour table tr td:first-child {
+    background: #1d92d0;
+    color: #fff
+}
+
+#all_outbound table tr td:nth-child(2) {
+    background: #1d92d0!important;
+    color: #fff!important
+}
+
+#all_outbound table tr td:first-child {
+    background: #fff;
+    color: #000!important
+}
+
+#latest_users table tr td:nth-child(2) {
+    background: #1d92d0!important;
+    color: #fff!important
+}
+
+#latest_users table tr td:first-child {
+    background: #fff;
+    color: #000!important
+}
+
+#latest_users table tr td a {
+    text-decoration: underline!important
+}
+
+#latest_clubs table tr td:nth-child(2) {
+    background: #1d92d0!important;
+    color: #fff!important
+}
+
+#latest_clubs table tr td:first-child {
+    background: #fff;
+    color: #000!important
+}
+
+#latest_clubs table tr td a {
+    text-decoration: underline!important
+}
+
+#latest_inquiries table tr td:nth-child(2) {
+    background: #1d92d0!important;
+    color: #fff!important
+}
+
+#latest_inquiries table tr td:first-child {
+    background: #fff;
+    color: #000!important
+}
+
+#latest_inquiries table tr td a {
+    text-decoration: underline!important
+}
+
+#latest_bookings table tr td:nth-child(2) {
+    background: #1d92d0!important;
+    color: #fff!important
+}
+
+#latest_bookings table tr td:first-child {
+    background: #fff;
+    color: #000!important
+}
+
+#latest_bookings table tr td a {
+    text-decoration: underline
+}
+
+#all_users table tr td:nth-child(2) {
+    background: #1d92d0!important;
+    color: #fff!important
+}
+
+#all_users table tr td:first-child {
+    background: #fff;
+    color: #000!important
+}
+
+#all_users table tr td a {
+    text-decoration: underline!important
+}
+
+#all_clubs table tr td:nth-child(2) {
+    background: #1d92d0!important;
+    color: #fff!important
+}
+
+#all_clubs table tr td:first-child {
+    background: #fff;
+    color: #000!important
+}
+
+#all_clubs table tr td a {
+    text-decoration: underline!important
+}
+
+#all_inquiry table tr td:nth-child(2) {
+    background: #1d92d0!important;
+    color: #fff!important
+}
+
+#all_inquiry table tr td:first-child {
+    background: #fff;
+    color: #000!important
+}
+
+#all_inquiry table tr td a {
+    text-decoration: underline!important
+}
+
+#all_booking table tr td:nth-child(2) {
+    background: #1d92d0!important;
+    color: #fff!important
+}
+
+#all_booking table tr td:first-child {
+    background: #fff;
+    color: #000!important
+}
+
+#all_booking table tr td a {
+    text-decoration: underline!important
+}
+
+.yellowbg {
+    background-color: lightgoldenrodyellow!important;
+    color: #000!important
+}
+
+.show_all_tour table tr {
+    border-bottom: 1px solid #eeeded
+}
+
+.text_red {
+    color: #c20000!important
+}
+
+.text_green {
+    color: #009b00!important
+}
+
+.admin_details {
+    margin: 0 0 60px;
+    padding: 0;
+    width: 100%;
+    font-size: 16px;
+    position: relative;
+    display: inline-block
+}
+
+.admin_details .section_edit {
+    background: none;
+    padding-left: 0
+}
+
+.admin_details .show_all_tour {
+    margin-bottom: 40px
+}
+
+.admin_enquiry {
+    margin: 0;
+    padding: 50px 20px 30px;
+    border: 1px solid #aaa;
+    box-shadow: inset 0 0 2px #aaa;
+    position: relative
+}
+
+.admin_enquiry_thumb {
+    margin: 0;
+    padding: 0;
+    position: relative
+}
+
+.admin_enquiry_thumb img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 290px;
+    display: block;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: 5
+}
+
+.admin_enquiry_thumb_title {
+    position: absolute;
+    z-index: 10;
+    bottom: 40px;
+    left: 30px;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 500
+}
+
+.admin_tour_log {
+    margin: 0;
+    padding: 20px 0
+}
+
+.admin_tour_log_left {
+    margin: 0;
+    padding: 0;
+    width: 40%;
+    float: left
+}
+
+.admin_tour_log_left p {
+    margin: 0;
+    padding: 0 0 5px;
+    color: #7c7c7c
+}
+
+.admin_tour_log_right {
+    margin: 0;
+    padding: 0;
+    width: 52%;
+    float: right
+}
+
+.admin_tour_log_right strong {
+    margin: 0;
+    padding: 0 0 20px;
+    display: block;
+    font-weight: 600;
+    font-size: 16px
+}
+
+.admin_tour_log_right strong a {
+    margin: 0;
+    padding: 0;
+    color: #3eade6;
+    text-decoration: underline
+}
+
+.admin_tour_log_right strong a:hover {
+    text-decoration: none
+}
+
+.admin_enquiry_step_box {
+    margin: 0 0 30px;
+    padding: 25px;
+    background: #f8f8f8
+}
+
+.admin_enquiry_step_box label {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 16px;
+    display: block;
+    font-weight: 400!important
+}
+
+.admin_enquiry_step_box label strong {
+    display: inline-block;
+    font-weight: 500
+}
+
+.border_bottom {
+    margin: 0;
+    padding: 30px 0;
+    border-bottom: 1px solid #e7e7e7
+}
+
+.section_half {
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 50%
+}
+
+.admin_enquiry_step_box h4 {
+    margin: 0;
+    padding: 0;
+    color: #191919;
+    font-size: 22px;
+    font-weight: 600
+}
+
+.admin_enquiry_step_box .gt_gap {
+    margin-bottom: 30px
+}
+
+.no_border {
+    border-bottom: none;
+    border-top: none
+}
+
+.admin_enquiry_step_box h4 span {
+    margin: 0;
+    padding: 0;
+    float: right
+}
+
+.admin_enquiry_step_box h4 a {
+    margin: 0;
+    padding: 0;
+    text-decoration: underline;
+    color: #1d92d0;
+    font-size: 16px;
+    font-weight: 500
+}
+
+.text_center {
+    text-align: center
+}
+
+.no_margin {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+.tour_quote_pr {
+    margin: 0;
+    padding: 30px 0;
+    border-bottom: 1px solid #e7e7e7
+}
+
+.tp_pr {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 330px
+}
+
+.tp_pr strong {
+    margin: 0;
+    padding: 0 0 10px;
+    color: #454545;
+    display: block;
+    font-weight: 600;
+    font-size: 15px
+}
+
+.tp_pr p {
+    margin: 0;
+    padding: 0;
+    color: #666;
+    display: block;
+    font-size: 15px
+}
+
+.tp_price {
+    margin: 0;
+    padding: 0 0 10px;
+    color: #1d92d0;
+    font-size: 42px;
+    font-weight: 600
+}
+
+.tp_pr_left {
+    margin: 0;
+    padding: 0;
+    width: 70px;
+    float: left
+}
+
+.tp_pr_right {
+    margin: 0;
+    padding: 0;
+    width: 260px;
+    float: right
+}
+
+.app_append {
+    margin: 0;
+    padding: 30px 0 0
+}
+
+.app_append a {
+    margin: 0;
+    padding: 8px 0;
+    color: #0071c3;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: none;
+    border: 1px solid #2b99d2;
+    border-radius: 6px;
+    box-shadow: 0 0 1px #2b99d2;
+    transition: all .5s ease
+}
+
+.app_append a.appd {
+    color: #fff;
+    background: #0071c3
+}
+
+.app_append a:hover {
+    color: #fff;
+    background: #0071c3
+}
+
+.app_submit {
+    margin: 0;
+    padding: 0;
+    width: 48%;
+    float: left
+}
+
+.amm_send {
+    margin: 0;
+    padding: 0;
+    width: 48%;
+    float: right
+}
+
+.info_pr {
+    position: relative
+}
+
+.info_pr:after {
+    content: "";
+    position: absolute;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/info.png) left center no-repeat;
+    width: 15px;
+    height: 15px;
+    top: 6px;
+    right: 0;
+    margin: 0 0 0 10px
+}
+
+.info_pr123 {
+    position: relative
+}
+
+.info_pr123:after {
+    content: "";
+    position: absolute;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/info.png) left center no-repeat;
+    width: 15px;
+    height: 15px;
+    top: 2px;
+    right: 0;
+    margin: 0 0 0 10px
+}
+
+.close {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    z-index: 10;
+    opacity: unset!important
+}
+
+.close img {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    display: inline-block;
+    cursor: pointer
+}
+
+.reward_table {
+    margin: 0 0 40px;
+    padding: 0
+}
+
+.reward_table table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse
+}
+
+.reward_table table tr td,.reward_table table tr th {
+    padding: 10px 10px
+}
+
+.reward_table table tr th:nth-child(odd) {
+    background: #1d92d0
+}
+
+.reward_table table tr th:nth-child(even) {
+    background: #6ac0ec
+}
+
+.reward_table table tr th {
+    color: #fff;
+    font-weight: 600
+}
+
+.reward_table table tr td {
+    color: #000
+}
+
+.reward_table table tr td:last-child {
+    color: #00af29
+}
+
+.reward_table table tr {
+    border-bottom: 1px solid #efefef
+}
+
+.reward_table table tr:last-child {
+    border-bottom: 1px solid #5b5b5b
+}
+
+.reward_table table tfoot tr {
+    border-bottom: none!important;
+    font-weight: 600
+}
+
+.reward_table table tfoot tr td,.reward_table table tfoot tr td:last-child {
+    color: #000
+}
+
+.offer_redemp {
+    margin: 0 0 40px;
+    padding: 0
+}
+
+.offer_redemp p {
+    margin: 0;
+    padding: 0 0 15px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500
+}
+
+select.redemp {
+    margin: 0 30px 0 0;
+    padding: 6px 20px;
+    width: 52%;
+    height: 40px;
+    font-family: 'Poppins',sans-serif;
+    color: #6c6c6c;
+    font-size: 16px;
+    background: #fff;
+    border: 1px solid #c3c3c3;
+    border-radius: 5px
+}
+
+.offer_redemp input[type="button"] {
+    margin: 0;
+    padding: 6px 30px;
+    height: 40px;
+    font-family: 'Poppins',sans-serif;
+    background: #1d92d0;
+    color: #fff;
+    border: 1px solid #0080c8;
+    font-size: 16px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all .5s ease
+}
+
+.offer_redemp input[type="button"]:hover {
+    background: #fff;
+    color: #1d92d0
+}
+
+.en_pay_details {
+    margin: 0;
+    padding: 0
+}
+
+.pay_info {
+    margin: 0 0 30px;
+    padding: 0
+}
+
+.en_pay_details p {
+    font-size: 16px
+}
+
+.pay_title_info {
+    margin: 0;
+    padding: 0;
+    width: 297px;
+    float: left
+}
+
+.pay_title_info span {
+    margin: 0 20px 0 0;
+    display: inline-block
+}
+
+.pay_title_info label {
+    margin: 0 4px;
+    padding: 0 8px;
+    border-radius: 2px;
+    display: inline-block;
+    color: #989898;
+    border: 1px solid #989898
+}
+
+.pay_date_info {
+    margin: 0;
+    padding: 0;
+    width: 360px;
+    float: right
+}
+
+.pay_date_info img {
+    margin: 0 0 0 20px;
+    padding: 0;
+    max-width: 100%;
+    vertical-align: top
+}
+
+.select_pay_account {
+    margin: 0 0 15px;
+    padding: 0
+}
+
+.pay_ref_code {
+    margin: 0 0 30px;
+    padding: 0
+}
+
+.pay_ref_code label {
+    display: inline-block
+}
+
+.pay_ref_code input[type="text"] {
+    margin: 0 0 0 20px;
+    padding: 5px 10px;
+    max-width: 120px;
+    font-family: 'Poppins',sans-serif;
+    color: #9d9d9d;
+    border-radius: 2px;
+    border: 1px solid #a9a9a9
+}
+
+.sands_quote {
+    margin: 0;
+    padding: 0;
+    text-align: right
+}
+
+.sands_quote input[type="submit"] {
+    margin: 0;
+    padding: 8px 30px;
+    border-radius: 6px;
+    background: #1d92d0;
+    color: #fff;
+    border: 1px solid #1d92d0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all .5s ease;
+    font-weight: 600;
+    font-family: 'Poppins',sans-serif
+}
+
+.sands_quote input[type="button"] {
+    margin: 0;
+    padding: 8px 30px;
+    border-radius: 6px;
+    background: #1d92d0;
+    color: #fff;
+    border: 1px solid #1d92d0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all .5s ease;
+    font-weight: 600;
+    font-family: 'Poppins',sans-serif
+}
+
+.sands_quote input[type="submit"]:hover {
+    color: #1d92d0;
+    background: #fff
+}
+
+.room_allocation {
+    margin: 0 0 20px;
+    padding: 0
+}
+
+.room_allocation_inpt {
+    margin: 0;
+    padding: 2px 0;
+    width: 50px;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #b0b0b0;
+    font-weight: 500;
+    border: 1px solid #b9b9b9;
+    font-family: 'Poppins',sans-serif;
+    text-align: center
+}
+
+.room_allocation label {
+    margin: 0 0 5px;
+    display: block;
+    font-weight: 400!important
+}
+
+.room_allocation label strong {
+    font-weight: 500
+}
+
+.room_allocation h4 {
+    margin: 0 0 20px;
+    padding: 0 20px 0 0;
+    color: #6abfea;
+    font-size: 15px;
+    font-weight: 500;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/change-arrow.png) right center no-repeat;
+    display: inline-block
+}
+
+.room_allocation h5 {
+    margin: 0 0 25px;
+    padding: 0 0 0 16px;
+    color: #1d92d0;
+    font-size: 15px;
+    font-weight: 500;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/plus-pic.png) left center no-repeat,url(/wp-content/themes/bowlingtours/assets/css/../images/devider4.png) left bottom no-repeat;
+    line-height: 16px
+}
+
+.room_allocation img {
+    margin: 0 0 0 16px;
+    padding: 0
+}
+
+.room_allocation_left {
+    margin: 0;
+    padding: 0;
+    width: 215px;
+    float: left
+}
+
+.room_allocation_left_text {
+    margin: 0;
+    padding: 0;
+    width: 215px;
+    float: left
+}
+
+.room_allocation_left_text p {
+    line-height: 35px
+}
+
+.room_allocation_middle {
+    margin: 0;
+    padding: 0;
+    width: 65px;
+    float: left
+}
+
+.room_allocation_right {
+    margin: 0;
+    padding: 0;
+    width: 170px;
+    float: right
+}
+
+.total_price_box {
+    margin: 0;
+    padding: 0;
+    text-align: right
+}
+
+.total_price_box h6 {
+    margin: 0;
+    padding: 0;
+    color: #1d92d0;
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 38px
+}
+
+.total_price_box h6 sup {
+    margin: 0 5px 0 0;
+    padding: 0;
+    color: #363737;
+    font-size: 15px;
+    font-weight: 600
+}
+
+.total_price_box h6 sub {
+    margin: 0 0 0 5px;
+    padding: 0;
+    color: #6f706f;
+    font-size: 15px;
+    font-weight: 600
+}
+
+.slct_date {
+    margin: 0 0 25px;
+    padding: 0
+}
+
+.slct_date h4 {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #363737;
+    font-size: 16px;
+    font-weight: 600;
+    background: none
+}
+
+.slct_date img {
+    margin: 0;
+    padding: 0;
+    display: block;
+    max-width: 100%
+}
+
+.slct_form_field {
+    margin: 0 0 25px;
+    padding: 0
+}
+
+.slct_form_field h4 {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #363737;
+    font-size: 16px;
+    font-weight: 600;
+    background: none;
+    display: block
+}
+
+.slct_form_field_select {
+    margin: 0;
+    padding: 6px 20px;
+    width: 100%;
+    color: #818281;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #d2d3d3;
+    border-radius: 6px;
+    font-family: 'Poppins',sans-serif
+}
+
+.slct_form_field_inpt {
+    margin: 0;
+    padding: 5px 20px;
+    width: 100%;
+    color: #818281;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #d2d3d3;
+    border-radius: 6px;
+    font-family: 'Poppins',sans-serif
+}
+
+.slct_form_field_btn {
+    margin: 0;
+    padding: 10px 0;
+    width: 180px;
+    background: #1d92d0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Poppins',sans-serif;
+    cursor: pointer;
+    display: block;
+    float: right
+}
+
+.slct_form_field_btn:hover {
+    background: #1f87be
+}
+
+.slct_hotel {
+    margin: 0 0 20px;
+    padding: 0;
+    width: 340px
+}
+
+.slct_hotel_left {
+    margin: 0 12px 20px 0;
+    padding: 0;
+    width: 155px;
+    float: left
+}
+
+.slct_hotel_right {
+    margin: 0 0 20px;
+    padding: 0;
+    width: 155px;
+    float: right
+}
+
+.dink_water {
+    margin: 0 0 20px;
+    padding: 40px;
+    background: #f7f8f7
+}
+
+.dink_water h4 {
+    margin: 0;
+    padding: 0;
+    color: #363737;
+    font-size: 16px;
+    font-weight: 600
+}
+
+.dink_water h5 {
+    margin: 0 0 15px;
+    padding: 0 0 0 30px;
+    color: #363737;
+    font-size: 15px;
+    font-weight: 600;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/bullet2.png) left 3px no-repeat
+}
+
+.dink_water_left {
+    margin: 0;
+    padding: 0;
+    float: left
+}
+
+.dink_water_right {
+    margin: 0;
+    padding: 0;
+    width: 280px;
+    float: right
+}
+
+.tour_apli_box {
+    margin: 0 0 0;
+    padding: 0
+}
+
+.tour_apli_box h4 {
+    margin: 0 0 15px;
+    padding: 0;
+    color: #363737;
+    font-size: 16px;
+    font-weight: 600
+}
+
+.tour_apli_box h5 {
+    margin: 0 0 20px;
+    padding: 0 0 13px 0;
+    color: #1d92d0;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 1px solid #1d92d0
+}
+
+.tour_apli_box p {
+    line-height: 28px
+}
+
+.tour_apli_box img {
+    margin: 0 0 0 20px;
+    padding: 0;
+    vertical-align: text-top
+}
+
+.tour_apli_box_radio_btn {
+    margin: 0 15px;
+    padding: 0
+}
+
+.tour_apli_box_left {
+    margin: 0 0 10px;
+    padding: 0;
+    width: 155px;
+    float: left
+}
+
+.tour_apli_box_right {
+    margin: 0 0 10px;
+    padding: 0;
+    width: 400px;
+    float: right
+}
+
+.make_btn {
+    margin: 0 0 20px;
+    padding: 0
+}
+
+.make_btn a {
+    margin: 0 15px 0 0;
+    padding: 6px 35px;
+    background: #1d92d0;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    text-decoration: none;
+    display: inline-block
+}
+
+.make_btn a:hover {
+    background: #0979b5;
+    color: #fff
+}
+
+.email_details_btn {
+    margin: 0 0 10px;
+    padding: 0
+}
+
+.email_details_btn a {
+    margin: 0 5px 12px 0;
+    padding: 7px 20px;
+    background: #1d92d0;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    text-decoration: none;
+    display: inline-block
+}
+
+.email_details_btn a:hover {
+    background: #0979b5;
+    color: #fff
+}
+
+.dwn_tour_btn {
+    margin: 0 0 15px;
+    padding: 0
+}
+
+.dwn_tour_btn a {
+    margin: 0;
+    padding: 9px 40px 9px 60px;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/download-icon.png) #1d92d0 38px 12px no-repeat;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    text-decoration: none;
+    display: inline-block
+}
+
+.dwn_tour_btn a:hover {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/download-icon.png) #0979b5 38px 12px no-repeat;
+    color: #fff
+}
+
+.dwn_tour_btn button {
+    margin: 0;
+    border: none;
+    float: right;
+    padding: 12px 40px 12px 40px;
+    background: #1d92d0;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    text-decoration: none;
+    display: inline-block
+}
+
+.voucher_field {
+    margin: 0;
+    padding: 0
+}
+
+.voucher_field_btn {
+    margin: 0;
+    padding: 9px 0;
+    width: 170px;
+    background: #ce202b;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    cursor: pointer;
+    border: none
+}
+
+.voucher_field_btn:hover {
+    background: #b51b25;
+    color: #fff
+}
+
+.voucher_field_left {
+    margin: 0 0 15px;
+    padding: 0;
+    width: 38%;
+    float: left
+}
+
+.voucher_field_left a {
+    margin: 0;
+    padding: 9px 0 9px 52px;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/download-icon.png) #1d92d0 30px 12px no-repeat;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    text-decoration: none;
+    display: block
+}
+
+.voucher_field_left a:hover {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/download-icon.png) #0979b5 30px 12px no-repeat;
+    color: #fff
+}
+
+.voucher_field_right {
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    float: right
+}
+
+.voucher_field_right_input {
+    margin: 0;
+    padding: 9px 20px;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #1d92d0;
+    font-weight: 500;
+    border: 1px solid #1d92d0;
+    font-family: 'Poppins',sans-serif
+}
+
+.voucher_field_righ_btn {
+    margin: -41px 0 0 0;
+    padding: 9px 0 9px 22px;
+    width: 170px;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/camera-pic.png) #1d92d0 38px 8px no-repeat;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    display: block;
+    font-family: 'Poppins',sans-serif;
+    cursor: pointer;
+    border: none;
+    float: right;
+    position: relative
+}
+
+.voucher_field_righ_btn:hover {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/camera-pic.png) #0979b5 38px 8px no-repeat;
+    color: #fff
+}
+
+.voucher_field ::-webkit-input-placeholder {
+    color: #1d92d0
+}
+
+.voucher_field :-ms-input-placeholder {
+    color: #1d92d0
+}
+
+.voucher_field ::-moz-placeholder {
+    color: #1d92d0;
+    opacity: 1
+}
+
+.voucher_field :-moz-placeholder {
+    color: #1d92d0;
+    opacity: 1
+}
+
+#custom_tour h3 {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/hand.png) top center no-repeat,url(/wp-content/themes/bowlingtours/assets/css/../images/devider.png) bottom center no-repeat
+}
+
+.tour_view {
+    margin: 0;
+    padding: 0;
+    background: #f1f1f1
+}
+
+.tour_view_container {
+    margin: 0 auto;
+    padding: 40px 15px;
+    max-width: 1165px;
+    width: 100%;
+    position: relative
+}
+
+.tour_view_info {
+    margin: 0;
+    padding: 0;
+    max-width: 705px
+}
+
+.view_tour_left {
+    margin: 0;
+    padding: 0;
+    width: 260px;
+    float: left
+}
+
+.view_tour_left ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none
+}
+
+.view_tour_left ul li {
+    margin: 0;
+    padding: 0 0 25px 50px;
+    font-size: 16px;
+    display: block;
+    background-size: 22px 26px
+}
+
+.view_tour_left ul li {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/time.png) left top no-repeat
+}
+
+.view_tour_left ul li+li {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/days.png) left top no-repeat
+}
+
+.view_tour_left ul li+li+li {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/attracvtion.png) left top no-repeat
+}
+
+.view_tour_right {
+    margin: 0;
+    padding: 0;
+    width: 440px;
+    float: right
+}
+
+.view_tour_right ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none
+}
+
+.view_tour_right ul li {
+    margin: 0;
+    padding: 0 0 15px 50px;
+    font-size: 16px;
+    display: block;
+    background-size: 22px 26px
+}
+
+.view_tour_right ul li:first-child {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/cal-tour.png) left top no-repeat
+}
+
+.tour_score {
+    margin: 0;
+    padding: 8px 0 10px;
+    border-top: 1px solid #bdbdbe;
+    border-bottom: 1px solid #bdbdbe;
+    text-align: center;
+    font-size: 16px
+}
+
+.tour_score label {
+    margin: 0 0 0 10px;
+    padding: 0 8px;
+    color: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    background: #373737;
+    border: 1px solid #171717;
+    position: relative;
+    width: 28px
+}
+
+.tour_score label:after {
+    content: "";
+    position: absolute;
+    border-top: 7px solid #373737;
+    border-left: 7px solid #fff0;
+    border-right: 7px solid #fff0;
+    bottom: -6px;
+    left: 7px
+}
+
+.tour_tab_wrapper {
+    margin: 0;
+    padding: 0;
+    background: #e6e6e6
+}
+
+.tour_tab_container {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1135px;
+    width: 100%
+}
+
+.tour_tab_list {
+    margin: 0;
+    padding: 0;
+    width: 705px
+}
+
+.custom_tour_left {
+    margin: 0;
+    padding: 0;
+    width: 705px;
+    float: left
+}
+
+.tour_tab_list ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none
+}
+
+.tour_tab_list ul li {
+    margin: 0;
+    padding: 0;
+    float: left
+}
+
+.tour_tab_list ul li a {
+    margin: 35px 0 20px;
+    padding: 0 24px 12px;
+    background-color: inherit;
+    display: block;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+    font-size: 17px;
+    box-sizing: border-box;
+    color: #373737;
+    font-weight: 600;
+    background: url(/wp-content/themes/bowlingtours/assets/css/) bottom center no-repeat;
+    text-decoration: none
+}
+
+.tour_tab_list ul li a:hover,.tour_tab_list ul li a.active {
+    color: #2c92d1;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/devider.png) bottom center no-repeat
+}
+
+.custom_tour_left h3 {
+    margin-bottom: 30px;
+    color: #373737
+}
+
+.custom_tour_left h3 span {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-size: 16px
+}
+
+.tour_day {
+    margin: 0 0 30px;
+    padding: 20px 20px;
+    background: #f4f4f4;
+    color: #0077c6
+}
+
+.tour_day span {
+    margin: 0 10px 0 0;
+    padding: 0;
+    color: #000
+}
+
+.tabcontent p {
+    margin-bottom: 30px
+}
+
+.tabcontent .da_t a {
+    background: #1d92d0
+}
+
+.tabcontent .da_t a:hover {
+    background: #1786c1
+}
+
+.custom_tour_right {
+    margin: 0;
+    padding: 0;
+    width: 360px;
+    position: absolute;
+    right: 0;
+    top: -511px;
+    z-index: 99
+}
+
+.custom_tour_right h3 {
+    margin: 0 0 10px;
+    padding: 0;
+    color: #373737;
+    font-size: 24px;
+    font-weight: 500
+}
+
+.person_price {
+    margin: 0 0 50px;
+    padding: 0;
+    box-shadow: 0 0 5px #ccc
+}
+
+.dark_top {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background: #1d92d0;
+    height: 50px
+}
+
+.from_tour_price {
+    margin: 0;
+    padding: 35px 20px;
+    text-align: center;
+    background: #6ac0ec;
+    font-size: 45px;
+    color: #fff
+}
+
+.from_tour_price label {
+    font-size: 19px
+}
+
+.from_book_tour {
+    margin: 0;
+    padding: 50px 10px 10px;
+    background: #fff;
+    text-align: center
+}
+
+.da_t a {
+    margin: 0 0 30px;
+    padding: 12px 20px;
+    font-size: 18px;
+    color: #fff;
+    background: #6ac0ec;
+    border-radius: 6px;
+    border: 1px solid #4fb5e8;
+    text-decoration: none;
+    text-transform: capitalize;
+    min-width: 260px;
+    display: inline-block;
+    text-align: center;
+    transition: all .5s ease
+}
+
+.da_t a:hover {
+    background: #4fb5e8
+}
+
+.da_t img {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.from_book_tour p {
+    margin: 0;
+    padding: 0 0 30px;
+    color: #959595;
+    font-size: 17px
+}
+
+.from_book_tour label {
+    margin: 0;
+    padding: 0;
+    color: #006fc0
+}
+
+.from_book_share {
+    margin: 0;
+    padding: 25px 0 10px;
+    border-top: 1px solid #efefef
+}
+
+.from_book_share a {
+    margin: 0 10px;
+    padding: 0;
+    min-width: auto;
+    background: none;
+    border: none
+}
+
+.from_book_share a:hover {
+    background: none
+}
+
+.from_book_share img {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    max-width: 100%;
+    transition: all .5s ease
+}
+
+.from_book_share img:hover {
+    margin: -5px 0 0
+}
+
+.download_tour {
+    margin: 0 0 30px;
+    padding: 50px 30px 30px;
+    background: #fff;
+    border-top: 1px solid #000;
+    box-shadow: 0 1px 5px #ccc;
+    text-align: center
+}
+
+.download_tour h3 {
+    margin: 0 0 20px;
+    padding: 0;
+    font-weight: 400
+}
+
+.download_tour .da_t {
+    margin-top: 20px
+}
+
+.download_tour .da_t a {
+    background: #1d92d0
+}
+
+.download_tour .da_t a:hover {
+    background: #1786c1
+}
+
+.tour_slider {
+    margin: 0 0 30px;
+    padding: 0
+}
+
+.tour_slider img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block
+}
+
+.slide_nav {
+    margin: 0 0 40px;
+    padding: 0;
+    text-align: center
+}
+
+.slide_nav img {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    display: inline-block
+}
+
+.miles_hotal {
+    margin: 0;
+    padding: 0
+}
+
+.fix_club_image {
+    margin: 0;
+    padding: 0;
+    width: 220px;
+    float: left
+}
+
+.fix_club_image img {
+    margin: 0 0 10px;
+    padding: 0;
+    width: 100%;
+    height: 155px;
+    object-fit: cover;
+    overflow: hidden
+}
+
+.fix_club_image a {
+    margin: 0;
+    padding: 8px 20px;
+    font-size: 18px;
+    color: #fff;
+    background: #6ac0ec;
+    border-radius: 6px;
+    border: 1px solid #4fb5e8;
+    text-decoration: none;
+    text-transform: capitalize;
+    display: block;
+    text-align: center;
+    transition: all .5s ease
+}
+
+.fix_club_image a:hover {
+    background: #4fb5e8
+}
+
+.fix_club_info {
+    margin: 0;
+    padding: 0;
+    width: 425px;
+    float: right
+}
+
+.fix_club_info p {
+    margin: 0;
+    padding: 0 0 25px
+}
+
+.tour_map {
+    margin: 0 0 20px;
+    padding: 0
+}
+
+.choose_fixture {
+    margin: 0;
+    padding: 40px;
+    border: 1px solid #a2d7f3;
+    border-radius: 40px;
+    text-align: center
+}
+
+.choose_fixture img {
+    margin: 0 0 10px;
+    padding: 0;
+    max-width: 100%
+}
+
+.choose_fixture h4 {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #1d92d0;
+    font-size: 28px;
+    font-weight: 400
+}
+
+.choose_fixture p {
+    margin: 0;
+    padding: 0 0 25px
+}
+
+.choose_fixture a {
+    margin: 0;
+    padding: 8px 15px;
+    background: #6ac0ec;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all .5s ease
+}
+
+.choose_fixture a:hover {
+    background: #57afdc
+}
+
+.tour_slider_popup_wrapper {
+    margin: 0;
+    padding: 0;
+    background: rgb(0 0 0 / .5);
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    top: 0;
+    bottom: 0
+}
+
+.tour_slider_popup_container {
+    margin: 0 auto;
+    padding: 0;
+    width: 1000px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center
+}
+
+.tour_slider_popup_container img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block
+}
+
+.slider_nav {
+    margin: 20px 0 0;
+    padding: 0
+}
+
+.slider_nav img {
+    width: auto;
+    max-width: 100%;
+    display: inline-block
+}
+
+.fixture_popup_wrapper {
+    margin: 0;
+    padding: 10px 0
+}
+
+.fixture_popup_container {
+    margin: 0 auto;
+    padding: 40px 40px;
+    background: #fff;
+    max-width: 1165px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative
+}
+
+.fixture_popup_container h3 {
+    margin: 0;
+    padding: 0 0 20px;
+    font-size: 24px;
+    color: #1b1b1b;
+    font-weight: 400
+}
+
+.fixture_popup_container h6 {
+    margin: 0;
+    padding: 0 0 20px;
+    color: #0787cb;
+    font-weight: 600;
+    font-size: 15px
+}
+
+.fixture_popup_container p {
+    margin: 0;
+    padding: 0 0 20px;
+    font-size: 15px
+}
+
+.fixture_top_section {
+    margin: 0;
+    padding: 0;
+    position: relative
+}
+
+.fixture_top_section_slider {
+    margin: 0;
+    padding: 0;
+    width: 650px;
+    float: left;
+    position: relative;
+    text-align: center
+}
+
+.fixture_slider {
+    margin: 0 0 20px;
+    padding: 0
+}
+
+.fixture_slider img {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    overflow: hidden
+}
+
+.fixture_top_section_right {
+    margin: 0 30px 0 0;
+    padding: 0;
+    width: 310px;
+    float: right;
+    text-align: center
+}
+
+.read_more {
+    margin: 0 0 30px;
+    padding: 0
+}
+
+.read_more a {
+    margin: 0;
+    padding: 0;
+    color: #2f2f2f
+}
+
+.fixture_top_section_right a:hover {
+    text-decoration: none
+}
+
+.link_this a {
+    margin: 0 0 30px;
+    padding: 6px 0;
+    font-size: 16px;
+    color: #fff;
+    background: #1d92d0;
+    border-radius: 6px;
+    border: 1px solid #138dce;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    transition: all .5s ease
+}
+
+.link_this a:hover {
+    background: #4fb5e8
+}
+
+.link_social {
+    margin: 0 auto;
+    padding: 0;
+    width: 220px
+}
+
+.fixture_top_section_right .from_book_share {
+    border-top: 0;
+    padding-top: 15px
+}
+
+.fixture_club_facility {
+    margin: 0;
+    padding: 0
+}
+
+.fixture_club_faclty {
+    margin: 0;
+    padding: 0 30px 0 0;
+    width: 630px;
+    border-right: 1px solid #dedede
+}
+
+.fixture_club_map {
+    margin: 0;
+    padding: 0;
+    width: 320px;
+    float: left
+}
+
+.fixture_club_faclty_list {
+    margin: 0;
+    padding: 0;
+    width: 230px;
+    float: right
+}
+
+.bt_tour_left {
+    margin: 0;
+    padding: 0;
+    width: 710px;
+    float: left
+}
+
+.bt_tour_left h3 {
+    color: #141414
+}
+
+.bt_tour_left h4 {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #373737;
+    font-size: 16px;
+    font-weight: 500
+}
+
+.bt_tour_left p {
+    font-weight: 400
+}
+
+.bt_tour_left p strong {
+    font-weight: 500
+}
+
+.bt_tour_left h6 {
+    margin: 0 0 20px;
+    padding: 0 20px 0 0;
+    color: #6abfea;
+    font-size: 15px;
+    font-weight: 500;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/change-arrow.png) right center no-repeat;
+    display: inline-block;
+    line-height: 24px
+}
+
+.book_btn {
+    margin: 10px 0 20px;
+    padding: 0
+}
+
+.book_btn a {
+    margin: 0 9px 0 0;
+    padding: 6px 11px;
+    border: 1px solid #1d92d0;
+    color: #1d92d0;
+    font-size: 16px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    text-decoration: none;
+    display: inline-block
+}
+
+.book_btn a:hover {
+    background: #0979b5;
+    color: #fff
+}
+
+.bt_tour_right {
+    margin: 0;
+    padding: 0;
+    width: 355px;
+    float: right
+}
+
+.bt_tour_right h3 {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #494949;
+    font-size: 20px;
+    font-weight: 600
+}
+
+.bt_tour_right h4 {
+    margin: 0 0 20px;
+    padding: 0 18px 0 0;
+    display: inline-block;
+    color: #373737;
+    font-size: 18px;
+    font-weight: 600;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/info2.png) right center no-repeat
+}
+
+.bt_tour_right label {
+    margin: 0;
+    padding: 0 0 15px;
+    color: #2b2b2b;
+    font-size: 15px;
+    font-weight: 400;
+    display: block
+}
+
+.bt_tour_right label strong {
+    margin: 0;
+    padding: 0;
+    color: #373737;
+    font-size: 15px;
+    font-weight: 600
+}
+
+.bt_tour_boxes {
+    margin: 0 0 25px;
+    padding: 40px 25px;
+    background: #f8f8f8;
+    min-height: 300px
+}
+
+.bt_calender {
+    margin: 0;
+    padding: 0
+}
+
+.bt_calender img {
+    margin: 0;
+    padding: 0;
+    display: block;
+    max-width: 100%
+}
+
+.expect_field {
+    margin: 0 0 20px;
+    padding: 0;
+    width: 250px
+}
+
+.expect_field_select {
+    margin: 0;
+    padding: 5px 10px;
+    width: 100%;
+    color: gray;
+    font-size: 15px;
+    font-weight: 400;
+    border: 1px solid #d3d4d4;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/admin-pic2.png) right 18px top 10px no-repeat;
+    -moz-appearance: none;
+    -webkit-appearance: none
+}
+
+.tour_smr_box {
+    margin: 0 0 25px;
+    padding: 0 0 10px;
+    border-bottom: 1px solid #e6e6e6
+}
+
+.tour_smr_box_left {
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    float: left
+}
+
+.tour_smr_box_right {
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    float: right
+}
+
+.book_btn2 {
+    margin: 10px 0 20px;
+    padding: 0
+}
+
+.book_btn2 a {
+    margin: 0 15px 0 0;
+    padding: 6px 35px;
+    border: 1px solid #1d92d0;
+    color: #1d92d0;
+    font-size: 16px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    text-decoration: none;
+    display: inline-block
+}
+
+.book_btn2 a:hover {
+    background: #0979b5;
+    color: #fff
+}
+
+.book_tour_listing {
+    margin: 0 0 15px;
+    padding: 0
+}
+
+.book_tour_listing_left {
+    margin: 0 30px 10px 0;
+    padding: 20px 15px;
+    width: 292px;
+    float: left;
+    text-align: center;
+    border-radius: 6px;
+    border: 2px solid #fff0
+}
+
+.book_tour_listing_left h4 {
+    margin: 0 0 10px;
+    padding: 0;
+    color: #363737;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 26px
+}
+
+.book_tour_listing_left h4 strong {
+    margin: 0;
+    padding: 0;
+    color: #6abfea;
+    font-size: 16px;
+    font-weight: 600
+}
+
+.book_tour_listing_left h4 a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    display: block;
+    color: #363737;
+    font-size: 19px;
+    font-weight: 600
+}
+
+.book_tour_listing_left h4 a:hover {
+    color: #6abfea
+}
+
+.book_tour_listing_thym {
+    margin: 0 0 25px;
+    padding: 0
+}
+
+.book_tour_listing_thym img {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover
+}
+
+.book_tour_listing_left:hover {
+    border: 2px solid #6abfea
+}
+
+.book_tour_listing_icon {
+    margin: 0;
+    padding: 0
+}
+
+.book_tour_listing_icon img {
+    margin: 0;
+    padding: 0;
+    max-width: 100%
+}
+
+.altn_box {
+    margin: 10px 0 0;
+    padding: 40px 15px;
+    border-radius: 6px;
+    border: 1px solid #d3d4d4
+}
+
+.altn_listing {
+    margin: 0 0 25px;
+    padding: 0
+}
+
+.altn_listing_left {
+    margin: 0;
+    padding: 15px;
+    width: 315px;
+    float: left;
+    border-radius: 5px;
+    border: 1px solid #1d92d0;
+    text-align: center
+}
+
+.altn_listing_left h4 {
+    margin: 0 0 10px;
+    padding: 0;
+    color: #363737;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px
+}
+
+.altn_listing_left h4 strong {
+    margin: 0;
+    padding: 0;
+    color: #6abfea;
+    font-size: 17px;
+    font-weight: 500
+}
+
+.altn_listing_left h4 a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    display: block;
+    color: #363737;
+    font-size: 20px;
+    font-weight: 500
+}
+
+.altn_listing_left h4 a:hover {
+    color: #6abfea
+}
+
+.altn_listing_right {
+    margin: 0;
+    padding: 0;
+    width: 315px;
+    float: right
+}
+
+.altn_listing_right iframe {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%
+}
+
+.altn_form_field {
+    margin: 0;
+    padding: 0
+}
+
+.altn_form_field_inpt {
+    margin: 0;
+    padding: 9px 20px;
+    width: 100%;
+    color: gray;
+    font-size: 15px;
+    font-weight: 400;
+    border: 1px solid #d3d4d4;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif
+}
+
+.altn_form_field_btn {
+    margin: 0 auto;
+    padding: 11px 0;
+    width: 205px;
+    background: #1d92d0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    cursor: pointer;
+    display: block
+}
+
+.altn_form_field_btn:hover {
+    background: #197aad
+}
+
+.altn_form_field_left {
+    margin: 0 0 20px;
+    padding: 0;
+    width: 49%;
+    float: left
+}
+
+.altn_form_field_right {
+    margin: 0 0 20px;
+    padding: 0;
+    width: 49%;
+    float: right
+}
+
+.prefrd_box {
+    margin: 0 0 5px;
+    padding: 0
+}
+
+.prefrd_box_left {
+    margin: 0 10px 25px 0;
+    padding: 0;
+    width: 23.5%;
+    float: left
+}
+
+.prefrd_box_left_inpt {
+    margin: 0;
+    padding: 6px 20px;
+    width: 100%;
+    color: gray;
+    font-size: 15px;
+    font-weight: 400;
+    border: 1px solid #d3d4d4;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif
+}
+
+.prefrd_box_left_btn {
+    margin: 0;
+    padding: 10px 35px;
+    width: 183px;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/play-icon.png) #a5a5a5 right 35px top 17px no-repeat;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    cursor: pointer;
+    text-align: left
+}
+
+.prefrd_box_left_btn:hover {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/play-icon.png) #858484 right 35px top 17px no-repeat
+}
+
+.book_btn3 {
+    margin: 10px 0 20px;
+    padding: 0
+}
+
+.book_btn3 a {
+    margin: 0;
+    padding: 9px 28px;
+    background: #1d92d0;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block
+}
+
+.book_btn3 a:hover {
+    background: #0979b5;
+    color: #fff
+}
+
+.day_box {
+    margin: 0;
+    padding: 40px 30px;
+    border-radius: 6px;
+    border: 1px solid #d3d4d4
+}
+
+.day_box label {
+    margin: 0;
+    padding: 0;
+    color: #2b2b2b;
+    font-size: 15px;
+    font-weight: 400;
+    display: block;
+    vertical-align: middle
+}
+
+.day_box_cheakbox {
+    margin: 0 15px 0 0;
+    padding: 0
+}
+
+.day_box_btn {
+    margin: 10px auto 0;
+    padding: 8px 0;
+    width: 205px;
+    background: #1d92d0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    cursor: pointer;
+    display: block
+}
+
+.day_box_btn:hover {
+    background: #197aad
+}
+
+.day_box_left {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    float: left
+}
+
+.day_box_right {
+    margin: 0;
+    padding: 0;
+    width: 255px;
+    float: right
+}
+
+.fxte_box {
+    margin: 0 0 20px;
+    padding: 0;
+    width: 35%;
+    float: left
+}
+
+.other_box {
+    margin: 0;
+    padding: 15px 15px 40px;
+    border-radius: 6px;
+    border: 1px solid #d3d4d4
+}
+
+.other_box .book_tour_listing_left {
+    margin: 0 16px 10px
+}
+
+.book_btn4 {
+    margin: 15px 0 0;
+    padding: 0;
+    text-align: center
+}
+
+.book_btn4 a {
+    margin: 0;
+    padding: 9px 28px;
+    background: #1d92d0;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block
+}
+
+.book_btn4 a:hover {
+    background: #0979b5;
+    color: #fff
+}
+
+.book_btn5 {
+    margin: 0 0 20px;
+    padding: 0
+}
+
+.book_btn5 a {
+    margin: 0;
+    padding: 9px 35px;
+    background: #1d92d0;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block
+}
+
+.book_btn5 a:hover {
+    background: #0979b5;
+    color: #fff
+}
+
+.flight_left {
+    margin: 0 0 10px;
+    padding: 0;
+    width: 50%;
+    float: left
+}
+
+.flight_left p {
+    line-height: 28px
+}
+
+.flight_text {
+    color: #fed333!important
+}
+
+.tour_esmte {
+    margin: 0;
+    padding: 30px 20px;
+    background: #f8f8f8
+}
+
+.tour_frome_box {
+    margin: 0 0 25px;
+    padding: 0 0 10px;
+    border-bottom: 1px solid #e6e6e6
+}
+
+.tour_frome_box label {
+    font-size: 14px
+}
+
+.tour_frome_box label strong {
+    font-size: 14px;
+    color: #707070
+}
+
+.tour_frome_box_left {
+    margin: 0;
+    padding: 0;
+    float: left
+}
+
+.tour_frome_box_right {
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    float: right
+}
+
+.tour_sbmt_btn_left {
+    margin: 0;
+    padding: 0;
+    width: 170px;
+    float: left;
+    text-align: center
+}
+
+.tour_sbmt_btn_left a {
+    margin: 0;
+    padding: 9px 0;
+    background: #1d92d0;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: block
+}
+
+.tour_sbmt_btn_left a:hover {
+    background: #0979b5;
+    color: #fff
+}
+
+.tour_sbmt_btn_right {
+    margin: 0;
+    padding: 0;
+    float: right;
+    text-align: right
+}
+
+.tour_sbmt_btn_right a {
+    margin: 0;
+    padding: 9px 0;
+    color: #373737;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: underline;
+    display: block
+}
+
+.tour_sbmt_btn_right a:hover {
+    color: #1d92d0
+}
+
+.book_btn6 {
+    margin: 10px 0 0;
+    padding: 0
+}
+
+.book_btn6 a {
+    margin: 0;
+    padding: 9px 30px 9px 50px;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/play-icon2.png) #1d92d0 30px 14px no-repeat;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block
+}
+
+.book_btn6 a:hover {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/play-icon2.png) #0979b5 30px 14px no-repeat;
+    color: #fff
+}
+
+.t_text_clr {
+    margin: 0 0 20px!important;
+    color: #1d92d0!important
+}
+
+.book_btn7 {
+    margin: 0;
+    padding: 0;
+    text-align: center
+}
+
+.book_btn7 a {
+    margin: 0;
+    padding: 8px 25px;
+    background: #1d92d0;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block
+}
+
+.book_btn7 a:hover {
+    background: #0979b5;
+    color: #fff
+}
+
+.plz_slct {
+    margin: 0;
+    padding: 0;
+    max-width: 330px
+}
+
+.plz_slct_select {
+    margin: 0;
+    padding: 6px 20px;
+    width: 100%;
+    color: gray;
+    font-size: 15px;
+    font-weight: 400;
+    border: 1px solid #d3d4d4;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    -moz-appearance: none;
+    -webkit-appearance: none
+}
+
+.plz_slct_inpt {
+    margin: 0 0 15px;
+    padding: 6px 20px;
+    width: 100%;
+    color: gray;
+    font-size: 15px;
+    font-weight: 400;
+    border: 1px solid #d3d4d4;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif
+}
+
+.flxbe_box {
+    margin: 25px 0 20px;
+    padding: 0
+}
+
+.flxbe_box h5 {
+    margin: 0;
+    padding: 0 0 0 30px;
+    color: #353535;
+    font-size: 15px;
+    font-weight: 400;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/bullet2.png) left 6px no-repeat
+}
+
+.customise_map {
+    margin: 0 0 25px;
+    padding: 0
+}
+
+.customise_map iframe {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%
+}
+
+.price_rating {
+    margin: 0 0 20px;
+    padding: 0
+}
+
+.price_rating img {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%
+}
+
+.cstms_box .book_tour_listing_left {
+    width: 310px
+}
+
+.cntct_info_field {
+    margin: 20px 0;
+    padding: 0;
+    max-width: 330px
+}
+
+.cntct_info_field_inpt {
+    margin: 0 0 20px;
+    padding: 6px 20px;
+    width: 100%;
+    color: gray;
+    font-size: 15px;
+    font-weight: 400;
+    border: 1px solid #d3d4d4;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif
+}
+
+.cntct_info_field img {
+    margin: 0 0 25px;
+    padding: 0;
+    display: block;
+    max-width: 100%
+}
+
+.customise_day_box {
+    margin: 0;
+    padding: 0
+}
+
+.customise_day_box label {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #282828;
+    font-size: 14px;
+    font-weight: 400;
+    display: block
+}
+
+.customise_day_box_checkbox_btn {
+    margin: 0 10px 0 0;
+    padding: 0;
+    vertical-align: middle
+}
+
+.customise_day_box_left {
+    margin: 0 0 10px;
+    padding: 0;
+    width: 270px;
+    float: left
+}
+
+.customise_day_box_right {
+    margin: 0 0 10px;
+    padding: 0;
+    width: 320px;
+    float: right
+}
+.about_caption h1 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 38px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.banner_inner:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    background: url(../images/contactus/user-banner-pattern.png) no-repeat bottom left / 100% 205px;
+    width: 100%;
+    height: 205px
+}
+
+.about_caption {
+    z-index: 9
+}
+
+.banner_inner img {
+    height: 205px;
+    object-fit: cover
+}
+
+.ni-img {
+    background: #1d92d0;
+}
+
+.mce-panel {
+    width: 100%!important
+}
+.look_form_field {
+    margin: 0;
+    padding: 0;
+    max-width: 505px
+}
+
+.look_form_field_inpt {
+    margin: 0 0 20px;
+    padding: 6px 20px;
+    width: 100%;
+    color: gray;
+    font-size: 15px;
+    font-weight: 400;
+    border: 1px solid #d3d4d4;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    cursor: pointer
+}
+
+.look_form_field_btn {
+    margin: 0;
+    padding: 7px 0;
+    width: 100%;
+    background: #1d92d0;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Poppins',sans-serif
+}
+
+.look_form_field_btn:hover {
+    background: #0979b5;
+    color: #fff
+}
+
+.look_form_field_left {
+    margin: 0;
+    padding: 0;
+    width: 325px;
+    float: left
+}
+
+.look_form_field_right {
+    margin: 102px 0 0 0;
+    padding: 0;
+    width: 160px;
+    float: right
+}
+
+.show_mrg {
+    margin: 0 0 0 300px
+}
+
+.sidebar_left_select {
+    margin: 0 0 20px;
+    padding: 8px 15px;
+    width: 100%;
+    color: #a5a5a5;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+    font-family: 'Poppins',sans-serif
+}
+
+.sidebar_left_inpt2 {
+    margin: 0 0 20px;
+    padding: 8px 40px;
+    width: 100%;
+    color: #a5a5a5;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+    font-family: 'Poppins',sans-serif;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/zoom.png) 12px 12px no-repeat
+}
+
+.news_listing_box {
+    margin: 0;
+    padding: 0
+}
+
+.news_listing_box_left {
+    margin: 0 32px 30px;
+    padding: 0;
+    width: 360px;
+    float: left;
+    text-align: center
+}
+
+.news_listing_box_left h4 {
+    margin: 0 0 10px;
+    padding: 0
+}
+
+.news_listing_box_left h4 span {
+    margin: 0;
+    padding: 0;
+    color: #a5a5a5;
+    font-size: 16px;
+    font-weight: 400
+}
+
+.news_listing_box_left h4 a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    display: block;
+    color: #6ac0ec;
+    font-size: 24px;
+    font-weight: 500
+}
+
+.news_listing_box_left h4 a:hover {
+    color: #369acd
+}
+
+.news_listing_box_thym {
+    margin: 0 auto 30px;
+    padding: 0;
+    width: 210px;
+    height: 210px
+}
+
+.news_listing_box_thym img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block
+}
+.home_body {
+    margin: 0 auto;
+    padding: 40px 15px;
+    max-width: 1165px;
+    width: 100%;
+}
+
+.community_box {
+    margin: 0;
+    padding: 20px 0
+}
+
+.community_box h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 15px
+}
+
+.community_box p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #cccbcb;
+    font-weight: 400;
+    letter-spacing: 1px
+}
+
+.community_box_left {
+    margin: 0;
+    padding: 0 30px;
+    width: 33.33%;
+    float: left;
+    border-right: 1px solid #f2f4f4
+}
+
+.community_left {
+    margin: 0 2% 0 0;
+    padding: 0;
+    width: 23%;
+    float: left
+}
+
+.community_left img {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    display: block
+}
+
+.community_right {
+    margin: 0;
+    padding: 0;
+    width: 75%;
+    float: left
+}
+
+.community_box_bdr {
+    border: none
+}
+.clr {
+    clear: both;
+}
+
+.location_add {
+    margin: 0 0 40px;
+    padding: 0;
+    text-align: center
+}
+
+.location_add_left {
+    margin: 0;
+    padding: 0;
+    width: 33.3%;
+    float: left;
+    border-right: 1px solid #f0f2f2
+}
+
+.location_add_left img {
+    margin: 0 0 10px;
+    padding: 0
+}
+
+.location_add_left p {
+    padding: 0;
+    color: #c4c4c4;
+    font-weight: 400
+}
+
+.location_add_left p a {
+    padding: 0;
+    color: #c4c4c4;
+    font-weight: 400
+}
+
+.location_add_left p a:hover {
+    color: #1d92d0
+}
+
+.location_add_left_child {
+    border-right: none
+}
+
+.contact_left {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    float: left;
+    text-align: center
+}
+
+.contact_left iframe {
+    margin: 0 0 25px;
+    padding: 0;
+    width: 100%;
+    display: block
+}
+
+.contact_left img {
+    margin: 0 15px;
+    padding: 0;
+    vertical-align: middle
+}
+
+.contact_right {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    float: right
+}
+
+.contact_right h4 {
+    color: #1d92d0
+}
+
+.contact_right_inpt {
+    margin: 0 0 25px;
+    padding: 8px 20px;
+    width: 100%;
+    color: gray;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+    font-family: 'Poppins',sans-serif
+}
+
+.contact_right_textarea {
+    margin: 0 0 25px;
+    padding: 8px 20px;
+    width: 100%;
+    color: gray;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+    font-family: 'Poppins',sans-serif;
+    height: 145px
+}
+
+.contact_right_btn {
+    margin: 0;
+    padding: 8px 0;
+    width: 100%;
+    background: #1d92d0;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins',sans-serif
+}
+
+.contact_right_btn:hover {
+    background: #0979b5;
+    color: #fff
+}
+
+.captch_left {
+    margin: 0;
+    padding: 0;
+    width: 210px;
+    float: left
+}
+
+.captch_left img {
+    margin: 0 0 20px 0;
+    padding: 0;
+    display: block;
+    width: 210px
+}
+
+.captch_btn_right {
+    margin: 0;
+    padding: 0;
+    width: 220px;
+    float: right
+}
+
+.captch_btn_right h5 {
+    margin: 0 0 8px;
+    padding: 0;
+    color: #7d7d7d;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Poppins',sans-serif!important
+}
+
+.captch_btn_right_chq {
+    margin: 0 10px 0 0;
+    padding: 0;
+    vertical-align: middle
+}
+
+.bontent_block_text {
+    margin: 0;
+    padding: 0
+}
+
+.bontent_block_text h2 {
+    margin: 0 0 15px;
+    font-size: 38px;
+    color: #1d92d0
+}
+
+.bontent_block_text h3 {
+    margin: 0 0 15px;
+    font-size: 30px;
+    color: #1d92d0
+}
+
+.bontent_block_text p {
+    font-weight: 400
+}
+
+.bontent_block_text_left {
+    margin: 0;
+    padding: 0;
+    width: 49%;
+    float: left
+}
+
+.bontent_block_text_right {
+    margin: 0;
+    padding: 0;
+    width: 49%;
+    float: right
+}
+
+.contact_box {
+    margin: 0;
+    padding: 0
+}
+
+.contact_box h3 {
+    color: #1d92d0
+}
+
+.bespoke_left {
+    margin: 0 0 35px;
+    padding: 0;
+    width: 655px;
+    float: left
+}
+
+.bespoke_left h3 {
+    margin: 0 0 15px;
+    font-size: 30px;
+    color: #1d92d0
+}
+
+.bespoke_left p {
+    font-weight: 400
+}
+
+.bespoke_left ul li {
+    padding: 1px 12px;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/bullet5.png) left 11px no-repeat
+}
+
+.bespoke_right {
+    margin: 0 0 35px;
+    padding: 0;
+    width: 340px;
+    float: right;
+    position: relative
+}
+
+.bespoke_right img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block
+}
+
+.bespoke_caption {
+    margin: 0 auto;
+    padding: 55px 0 0 0;
+    width: 285px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    text-align: center
+}
+
+.bespoke_caption h3 {
+    margin: 0 0 50px;
+    padding: 0;
+    font-size: 30px;
+    color: #fff;
+    font-weight: 400;
+    text-shadow: 0 1px 5px #505050
+}
+
+.bespoke_caption p {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400
+}
+
+.bespoke_btn {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    bottom: 50px;
+    text-align: center;
+    left: 0;
+    right: 0
+}
+
+.bespoke_btn a {
+    margin: 0;
+    padding: 9px 25px;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid #fff;
+    border-radius: 5px
+}
+
+.bespoke_btn a:hover {
+    color: #6ac0ec;
+    border: 1px solid #6ac0ec
+}
+
+.bespoke_field_left {
+    margin: 0;
+    padding: 0;
+    width: 245px;
+    float: left;
+    text-align: left
+}
+
+.bespoke_field_left_select {
+    margin: 0 0 25px;
+    padding: 6px 20px;
+    width: 100%;
+    color: gray;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #d3d4d4;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/arrow-icon.png) right 10px top 14px no-repeat
+}
+
+.bespoke_field_left_date {
+    margin: 0 0 30px;
+    padding: 6px 20px;
+    width: 100%;
+    color: gray;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #d3d4d4;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/calender-pic2.png) right 18px top 10px no-repeat;
+    -moz-appearance: none;
+    -webkit-appearance: none
+}
+
+.bespoke_field_left_select2 {
+    margin: 0 0 30px;
+    padding: 6px 20px;
+    width: 100%;
+    color: gray;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #d3d4d4;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/admin-pic2.png) right 18px top 10px no-repeat;
+    -moz-appearance: none;
+    -webkit-appearance: none
+}
+
+.bespoke_field_left h6 {
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 14px;
+    color: gray;
+    font-weight: 400;
+    float: left;
+    min-width: 215px;
+    width: 100%
+}
+
+.bespoke_field_left label {
+    padding: 0;
+    font-size: 14px;
+    color: gray;
+    font-weight: 400;
+    display: block;
+    float: left
+}
+
+.bespoke_field_left label span {
+    margin: 0 0 25px;
+    padding: 0;
+    font-size: 12px;
+    color: gray;
+    font-weight: 400
+}
+
+.bespoke_field_right {
+    margin: 0;
+    padding: 0;
+    width: 290px;
+    float: right;
+    text-align: left
+}
+
+.bespoke_field_right label {
+    margin: 8px 0 0;
+    padding: 0;
+    font-size: 14px;
+    color: gray;
+    font-weight: 400;
+    display: block
+}
+
+.bespoke_field_right_btn {
+    margin: 0 0 25px;
+    padding: 7px 0;
+    width: 100%;
+    background: none;
+    color: #1d92d0;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #1d92d0;
+    font-family: 'Poppins',sans-serif;
+    cursor: pointer
+}
+
+.bespoke_field_right_btn:hover {
+    background: #0979b5;
+    color: #fff
+}
+
+.bespoke_field_right_inpt {
+    margin: 0 0 25px;
+    padding: 8px 10px;
+    width: 100%;
+    color: gray;
+    font-size: 12px;
+    font-weight: 400;
+    border: 1px solid #d3d4d4;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif
+}
+
+.in_this_fix_left {
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 100%
+}
+
+.in_this_fix_right {
+    margin: 0;
+    padding: 0;
+    width: 170px;
+    display: inline-block
+}
+
+.in_this_btn {
+    margin: 0;
+    padding: 0;
+    width: 78px;
+    float: left
+}
+
+.in_this_btn2 {
+    margin: 0;
+    padding: 0;
+    width: 78px;
+    float: right
+}
+
+.stdrd_left {
+    margin: 0;
+    padding: 0;
+    width: 132px;
+    float: left
+}
+
+.stdrd_left_btn {
+    margin: 0 0 25px;
+    padding: 7px 0;
+    width: 100%;
+    background: none;
+    color: #1d92d0;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #1d92d0;
+    font-family: 'Poppins',sans-serif;
+    cursor: pointer
+}
+
+.stdrd_left_btn:hover {
+    background: #1d92d0;
+    color: #fff
+}
+
+.stdrd_right {
+    margin: 0;
+    padding: 0;
+    width: 132px;
+    float: left;
+    margin-left: 10px
+}
+
+.stdrd_right_btn {
+    margin: 0 0 25px;
+    padding: 7px 0;
+    width: 100%;
+    background: none;
+    color: #fed333;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #fed333;
+    font-family: 'Poppins',sans-serif;
+    cursor: pointer
+}
+
+.stdrd_right_btn:hover {
+    background: #fed333;
+    color: #fff
+}
+
+.stdtsrf_fild {
+    margin: 0 -10px 0 0;
+    padding: 0
+}
+
+.stdtsrf_fild_left {
+    margin: 0 10px 0 0;
+    padding: 0;
+    float: left
+}
+
+.srf_fild {
+    margin: 0 -10px 0 0;
+    padding: 0
+}
+
+.srf_fild_left {
+    margin: 0 10px 0 0;
+    padding: 0;
+    width: 90px;
+    float: left
+}
+
+.yes_no_btn {
+    margin: 0;
+    padding: 0;
+    width: 130px;
+    float: left
+}
+
+.yes_no_btn2 {
+    margin: 0;
+    padding: 0;
+    width: 130px;
+    float: left;
+    margin-left: 10px
+}
+
+.tour_banner {
+    margin: 0;
+    padding: 0;
+    position: relative
+}
+
+.tour_banner img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    overflow: hidden;
+    display: block
+}
+
+.tour_banner_caption {
+    margin: 0 auto;
+    padding: 0;
+    width: 1135px;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    position: absolute;
+    z-index: 10
+}
+
+.tour_banner_caption h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    color: #fff
+}
+
+#custom_tour h3 {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/hand.png) top center no-repeat,url(/wp-content/themes/bowlingtours/assets/css/../images/devider.png) bottom center no-repeat
+}
+
+.tour_view {
+    margin: 0;
+    padding: 0;
+    background: #f1f1f1
+}
+
+.tour_view_container {
+    margin: 0 auto;
+    padding: 40px 15px;
+    width: 100%;
+    max-width: 1600px;
+    position: relative
+}
+
+.tour_view_info {
+    margin: 0;
+    padding: 0;
+    max-width: 705px
+}
+
+.view_tour_left {
+    margin: 0;
+    padding: 0;
+    width: 260px;
+    float: left
+}
+
+.view_tour_left ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none
+}
+
+.view_tour_left ul li {
+    margin: 0;
+    padding: 0 0 25px 50px;
+    font-size: 16px;
+    display: block;
+    background-size: 22px 26px
+}
+
+.view_tour_left ul li {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/time.png) left top no-repeat
+}
+
+.view_tour_left ul li+li {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/days.png) left top no-repeat
+}
+
+.view_tour_left ul li+li+li {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/attracvtion.png) left top no-repeat
+}
+
+.view_tour_right {
+    margin: 0;
+    padding: 0;
+    width: 440px;
+    float: right
+}
+
+.view_tour_right ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none
+}
+
+.view_tour_right ul li {
+    margin: 0;
+    padding: 0 0 15px 50px;
+    font-size: 16px;
+    display: block;
+    background-size: 22px 26px
+}
+
+.view_tour_right ul li:first-child {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/cal-tour.png) left top no-repeat
+}
+
+.tour_score {
+    margin: 0;
+    padding: 8px 0 10px;
+    border-top: 1px solid #bdbdbe;
+    border-bottom: 1px solid #bdbdbe;
+    text-align: center;
+    font-size: 16px
+}
+
+.tour_score label {
+    margin: 0 0 0 10px;
+    padding: 0 8px;
+    color: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    background: #373737;
+    border: 1px solid #171717;
+    position: relative;
+    width: 38px
+}
+
+.tour_score label:after {
+    content: "";
+    position: absolute;
+    border-top: 7px solid #373737;
+    border-left: 7px solid #fff0;
+    border-right: 7px solid #fff0;
+    bottom: -6px;
+    left: 7px
+}
+
+.tour_tab_wrapper {
+    margin: 0;
+    padding: 0;
+    background: #e6e6e6
+}
+
+.tour_tab_container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1600px;
+    width: 100%
+}
+
+.tour_tab_list {
+    margin: 0;
+    padding: 0;
+    width: 780px
+}
+
+.custom_tour_left {
+    margin: 0;
+    padding: 0;
+    width: 705px;
+    float: left;
+    min-height: 700px
+}
+
+.tour_tab_list ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none
+}
+
+.tour_tab_list ul li {
+    margin: 0;
+    padding: 0;
+    float: left
+}
+
+.tour_tab_list ul li a {
+    margin: 35px 0 20px;
+    padding: 0 19px 12px;
+    background-color: inherit;
+    display: block;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: #373737;
+    font-weight: 600;
+    background: url(/wp-content/themes/bowlingtours/assets/css/) bottom center no-repeat;
+    text-decoration: none
+}
+
+.tour_tab_list ul li a:hover,.tour_tab_list ul li a.active {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/devider.png) bottom center no-repeat
+}
+
+.custom_tour_left h3 {
+    margin-bottom: 30px;
+    color: #373737
+}
+
+.custom_tour_left h3 span {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-size: 16px
+}
+
+.tour_day {
+    margin: 0 0 30px;
+    padding: 20px 20px;
+    background: #f4f4f4;
+    color: #0077c6
+}
+
+.tour_day span {
+    margin: 0 10px 0 0;
+    padding: 0;
+    color: #000
+}
+
+.tabcontent p {
+    margin-bottom: 30px
+}
+
+.tabcontent .da_t a {
+    background: #1d92d0
+}
+
+.tabcontent .da_t a:hover {
+    background: #1786c1
+}
+
+.custom_tour_right {
+    margin: 0;
+    padding: 0;
+    width: 360px;
+    position: absolute;
+    right: 0;
+    top: -511px;
+    z-index: 99
+}
+
+.custom_tour_right h3 {
+    margin: 0 0 10px;
+    padding: 0;
+    color: #373737;
+    font-size: 24px;
+    font-weight: 500
+}
+
+.person_price {
+    margin: 0 0 50px;
+    padding: 0;
+    box-shadow: 0 0 5px #ccc
+}
+
+.dark_top {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background: #1d92d0;
+    height: 50px
+}
+
+.from_tour_price {
+    margin: 0;
+    padding: 35px 20px;
+    text-align: center;
+    background: #6ac0ec;
+    font-size: 45px;
+    color: #fff
+}
+
+.from_tour_price label {
+    font-size: 19px
+}
+
+.from_book_tour {
+    margin: 0;
+    padding: 50px 10px 10px;
+    background: #fff;
+    text-align: center
+}
+
+.da_t a {
+    margin: 0 0 30px;
+    padding: 12px 20px;
+    font-size: 18px;
+    color: #fff;
+    background: #6ac0ec;
+    border-radius: 6px;
+    border: 1px solid #4fb5e8;
+    text-decoration: none;
+    text-transform: capitalize;
+    min-width: 260px;
+    display: inline-block;
+    text-align: center;
+    transition: all .5s ease
+}
+
+.da_t a:hover {
+    background: #4fb5e8
+}
+
+.da_t img {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.from_book_tour p {
+    margin: 0;
+    padding: 0 0 30px;
+    color: #959595;
+    font-size: 17px
+}
+
+.from_book_tour label {
+    margin: 0;
+    padding: 0;
+    color: #006fc0
+}
+
+.from_book_share {
+    margin: 0;
+    padding: 25px 0 10px;
+    border-top: 1px solid #efefef
+}
+
+.from_book_share a {
+    margin: 0 10px;
+    padding: 0;
+    min-width: auto;
+    background: none;
+    border: none
+}
+
+.from_book_share a:hover {
+    background: none
+}
+
+.from_book_share img {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    max-width: 100%;
+    transition: all .5s ease
+}
+
+.from_book_share img:hover {
+    margin: -5px 0 0
+}
+
+.download_tour {
+    margin: 0 0 30px;
+    padding: 50px 30px 30px;
+    background: #fff;
+    border-top: 1px solid #000;
+    box-shadow: 0 1px 5px #ccc;
+    text-align: center
+}
+
+.download_tour h3 {
+    margin: 0 0 20px;
+    padding: 0;
+    font-weight: 400
+}
+
+.download_tour .da_t {
+    margin-top: 20px
+}
+
+.download_tour .da_t a {
+    background: #1d92d0
+}
+
+.download_tour .da_t a:hover {
+    background: #1786c1
+}
+
+.tour_slider {
+    margin: 0 0 30px;
+    padding: 0
+}
+
+.tour_slider img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    height: auto!important;
+    max-width: 100%
+}
+
+.slide_nav {
+    margin: 0 0 40px;
+    padding: 0;
+    text-align: center
+}
+
+.slide_nav img {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    display: inline-block
+}
+
+.miles_hotal {
+    margin: 0;
+    padding: 0
+}
+
+.fix_club_image {
+    margin: 0;
+    padding: 0;
+    width: 220px;
+    float: left
+}
+
+.fix_club_image img {
+    margin: 0 0 10px;
+    padding: 0;
+    width: 100%;
+    height: 155px;
+    object-fit: cover;
+    overflow: hidden
+}
+
+.fix_club_image a {
+    margin: 0;
+    padding: 8px 20px;
+    font-size: 18px;
+    color: #fff;
+    background: #6ac0ec;
+    border-radius: 6px;
+    border: 1px solid #4fb5e8;
+    text-decoration: none;
+    text-transform: capitalize;
+    display: block;
+    text-align: center;
+    transition: all .5s ease
+}
+
+.fix_club_image a:hover {
+    background: #4fb5e8
+}
+
+.fix_club_info {
+    margin: 0;
+    padding: 0;
+    width: 425px;
+    float: right
+}
+
+.fix_club_info p {
+    margin: 0;
+    padding: 0 0 25px
+}
+
+.tour_map {
+    margin: 0 0 20px;
+    padding: 0
+}
+
+.choose_fixture {
+    margin: 0;
+    padding: 40px;
+    border: 1px solid #a2d7f3;
+    border-radius: 40px;
+    text-align: center
+}
+
+.choose_fixture img {
+    margin: 0 0 10px;
+    padding: 0;
+    max-width: 100%
+}
+
+.choose_fixture h4 {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #1d92d0;
+    font-size: 28px;
+    font-weight: 400
+}
+
+.choose_fixture p {
+    margin: 0;
+    padding: 0 0 25px
+}
+
+.choose_fixture a {
+    margin: 0;
+    padding: 8px 15px;
+    background: #6ac0ec;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all .5s ease
+}
+
+.choose_fixture a:hover {
+    background: #57afdc
+}
+
+.tour_slider_popup_wrapper {
+    margin: 0;
+    padding: 0;
+    background: rgb(0 0 0 / .5);
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    top: 0;
+    bottom: 0
+}
+
+.tour_slider_popup_container {
+    margin: 0 auto;
+    padding: 0;
+    width: 1000px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center
+}
+
+.tour_slider_popup_container img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block
+}
+
+.slider_nav {
+    margin: 20px 0 0;
+    padding: 0
+}
+
+.slider_nav img {
+    width: auto;
+    max-width: 100%;
+    display: inline-block
+}
+
+.fixture_popup_wrapper {
+    margin: 0;
+    padding: 10px 0
+}
+
+.fixture_popup_container {
+    margin: 0 auto;
+    padding: 40px 40px;
+    background: #fff;
+    max-width: 1135px;
+    width: 100%;
+    position: relative
+}
+
+.fixture_popup_container h3 {
+    margin: 0;
+    padding: 0 0 20px;
+    font-size: 23px;
+    color: #1b1b1b;
+    font-weight: 400
+}
+
+.fixture_popup_container h6 {
+    margin: 0;
+    padding: 0 0 20px;
+    color: #0787cb;
+    font-weight: 600;
+    font-size: 15px
+}
+
+.fixture_popup_container p {
+    margin: 0;
+    padding: 0 0 20px;
+    font-size: 15px
+}
+
+.fixture_top_section {
+    margin: 0 0 40px;
+    padding: 0;
+    position: relative
+}
+
+.fixture_top_section_slider {
+    margin: 0;
+    padding: 0;
+    width: 650px;
+    float: left;
+    position: relative;
+    text-align: center
+}
+
+.fixture_slider {
+    margin: 0 0 20px;
+    padding: 0
+}
+
+.fixture_slider img {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    overflow: hidden
+}
+
+.fixture_top_section_right {
+    margin: 0 30px 0 0;
+    padding: 0;
+    width: 310px;
+    float: right;
+    text-align: center
+}
+
+.read_more {
+    margin: 0 0 30px;
+    padding: 0
+}
+
+.read_more a {
+    margin: 0;
+    padding: 0;
+    color: #2f2f2f
+}
+
+.fixture_top_section_right a:hover {
+    text-decoration: none
+}
+
+.link_this a {
+    margin: 0 0 30px;
+    padding: 6px 0;
+    font-size: 16px;
+    color: #fff;
+    background: #1d92d0;
+    border-radius: 6px;
+    border: 1px solid #138dce;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    transition: all .5s ease
+}
+
+.link_this a:hover {
+    background: #4fb5e8
+}
+
+.link_social {
+    margin: 0 auto;
+    padding: 0;
+    width: 220px
+}
+
+.link_social small {
+    margin: 0 0 20px;
+    padding: 0 10px;
+    text-align: center;
+    display: block
+}
+
+.link_social small img {
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.fixture_top_section_right .from_book_share {
+    border-top: 0;
+    padding-top: 15px
+}
+
+.admin_details .fixture_club_faclty {
+    padding-right: 0!important
+}
+
+.admin_details .fixture_club_map {
+    margin: 0 0 15px 0
+}
+
+.fixture_club_facility {
+    margin: 0 0 40px;
+    padding: 0
+}
+
+.fixture_club_faclty {
+    margin: 0;
+    padding: 0 30px 0 0;
+    width: 650px;
+    float: left;
+    border-right: 1px solid #dedede
+}
+
+.fixture_club_map {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    float: left
+}
+
+.fixture_club_faclty_list {
+    margin: 0;
+    padding: 0 30px;
+    width: 50%;
+    float: right
+}
+
+.fixture_club_faclty_list ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none
+}
+
+.fixture_club_faclty_list ul li {
+    margin: 0;
+    padding: 0 0 16px 35px;
+    color: #393939;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/facility-yes.png) left top 6px no-repeat
+}
+
+.fixture_club_faclty_list ul li.no_facily {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/facility-no.png) left top 6px no-repeat
+}
+
+.fixture_review_list {
+    margin: 0 30px 0 0;
+    padding: 0;
+    float: right;
+    width: 310px
+}
+
+.fixture_review_box {
+    margin: 60px 0 0 0;
+    padding: 0 20px
+}
+
+.fixture_reviewer_name {
+    margin: 10px 0 30px;
+    padding: 0;
+    position: relative
+}
+
+.fixture_reviewer_name span {
+    margin: 0 0 0 10px;
+    padding: 0 8px;
+    color: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    background: #373737;
+    border: 1px solid #171717;
+    position: absolute;
+    z-index: 9;
+    width: 28px;
+    right: 0
+}
+
+.fixture_reviewer_name span:after {
+    content: "";
+    position: absolute;
+    border-top: 7px solid #373737;
+    border-left: 7px solid #fff0;
+    border-right: 7px solid #fff0;
+    bottom: -6px;
+    left: 7px;
+    z-index: 10
+}
+
+.fixture_review_nav {
+    margin: 0;
+    padding: 0;
+    text-align: center
+}
+
+.fixture_review_nav img {
+    margin: 0;
+    padding: 0;
+    max-width: 100%
+}
+
+.add_review {
+    margin: 30px 0 0;
+    padding: 0;
+    text-align: center
+}
+
+.add_review a {
+    margin: 0;
+    padding: 6px 35px;
+    color: #0380c8;
+    text-decoration: none;
+    background: #fff;
+    border: 2px solid #7cbfe4;
+    display: inline-block;
+    border-radius: 5px;
+    line-height: 24px;
+    transition: all .5s ease
+}
+
+.add_review a:hover {
+    background: #0380c8;
+    color: #fff
+}
+
+.fixture_calender {
+    margin: 0;
+    padding: 0;
+    text-align: center
+}
+
+.fixture_calender .tab {
+    overflow: hidden
+}
+
+.fixture_calender .tab button {
+    background-color: inherit;
+    display: inline-block;
+    border: 2px solid #63b4de;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 0;
+    width: 120px;
+    margin: 0 10px;
+    transition: 0.3s;
+    font-size: 17px;
+    border-radius: 5px;
+    color: #1b91cf;
+    font: caption!important
+}
+
+.fixture_calender .tab button:hover {
+    background-color: #1d92d0;
+    color: #fff
+}
+
+.fixture_calender .tab button.active {
+    background-color: #1d92d0;
+    color: #fff
+}
+
+.fixture_calender .tabcontent {
+    padding: 40px 35px 0;
+    border: none
+}
+
+.fix_cal_day {
+    overflow-x: scroll
+}
+
+.fix_cal_day table {
+    margin: 0;
+    padding: 0;
+    width: 1542px;
+    border-collapse: collapse;
+    text-align: center
+}
+
+.fix_cal_day table th {
+    padding: 8px 5px;
+    background: #1d92d0;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 500
+}
+
+.fix_cal_day table tr td {
+    padding: 8px 5px
+}
+
+.fix_cal_day table tr:nth-child(even) td:nth-child(odd),.fix_cal_day table tr:nth-child(odd) td:nth-child(even) {
+    background: #3cba5c
+}
+
+.fix_cal_day table tr td:first-child {
+    background: #1d92d0!important;
+    color: #fff!important
+}
+
+.fix_danger {
+    background: #d33640!important
+}
+
+.fix_white {
+    background: #fff!important
+}
+
+.all_days_tab {
+    margin: 0 0 50px;
+    padding: 0
+}
+
+.fixture_calender h3.caldr {
+    margin: 0 0 40px;
+    padding: 0 50px;
+    color: #1d92d0;
+    position: relative;
+    display: inline-block;
+    line-height: 1.4!important
+}
+
+.fixture_calender h3.caldr:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 10px;
+    height: 16px;
+    cursor: pointer
+}
+
+.fixture_calender h3.caldr:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 10px;
+    height: 16px;
+    cursor: pointer
+}
+
+.fix_bottom_sliders {
+    margin: 0;
+    padding: 0
+}
+
+.fix_left_news {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    float: left
+}
+
+.fix_news_slider {
+    margin: 0 auto;
+    padding: 0;
+    width: 310px
+}
+
+.fix_ns {
+    margin: 0;
+    padding: 0
+}
+
+.fix_news_slider_thumb {
+    margin: 0 0 10px;
+    padding: 0;
+    text-align: center
+}
+
+.fix_news_slider_thumb img {
+    margin: 0;
+    padding: 0;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%
+}
+
+.fix_news_slider span {
+    margin: 0 0 5px;
+    padding: 0;
+    color: #a5a5a5;
+    font-size: 14px
+}
+
+.fix_news_slider h4 {
+    margin: 0 0 10px;
+    padding: 0
+}
+
+.fix_news_slider h4 a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    display: block;
+    color: #1d92d0;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize
+}
+
+.fix_news_slider h4 a:hover {
+    color: #6ac0ec
+}
+
+.fix_tt_slider {
+    margin: 0 auto;
+    padding: 0;
+    width: 370px
+}
+
+.fix_left_news h3 {
+    margin: 0 0 35px;
+    padding: 25px 0 12px 0;
+    color: #1d92d0;
+    font-size: 21px;
+    font-weight: 500;
+    text-align: center
+}
+
+.fix_news_slider h3 {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/bowls-pic3.png) top center no-repeat,url(/wp-content/themes/bowlingtours/assets/css/../images/devider.png) bottom center no-repeat
+}
+
+.fix_tt_slider h3 {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/b-man.png) top center no-repeat,url(/wp-content/themes/bowlingtours/assets/css/../images/devider.png) bottom center no-repeat
+}
+
+.fix_tt_slider .tours_listing_left {
+    padding-top: 8px
+}
+
+.fix_tt_slider .view_right h6 {
+    color: #a5a5a5;
+    font-weight: 400
+}
+
+.tour_hotel_box {
+    margin: 0 0 40px;
+    padding: 0
+}
+
+.tour_hb_left {
+    margin: 0;
+    padding: 0;
+    width: 310px;
+    float: left;
+    text-align: center
+}
+
+.tour_hb_thumb {
+    margin: 0 0 30px;
+    padding: 0
+}
+
+.tour_hb_thumb img {
+    margin: 0;
+    padding: 0 5px 0 0;
+    display: block;
+    width: 100%;
+    height: 215px;
+    object-fit: cover;
+    overflow: hidden
+}
+
+.view_hotal a {
+    margin: 0;
+    padding: 8px 35px;
+    color: #fff;
+    background: #1d92d0;
+    border: 1px solid #0d8acd;
+    text-decoration: none;
+    text-transform: capitalize;
+    border-radius: 5px;
+    transition: all .5s ease;
+    display: inline-block
+}
+
+.view_hotal a:hover {
+    background: #1781b9
+}
+
+.tour_hb_right {
+    margin: 0;
+    padding: 0;
+    width: 340px;
+    float: right
+}
+
+.tour_hb_right small img {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: middle
+}
+
+.tour_hb_right small {
+    margin: 0;
+    padding: 0 10px;
+    display: block
+}
+
+.tour_hb_right p {
+    margin-bottom: 0
+}
+
+.tour_hb_right .tour_score {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    width: 70%
+}
+
+.custom_tour_left h3 label {
+    font-size: 20px
+}
+
+.sky_color {
+    color: #43b0e7
+}
+
+.yellow_color {
+    color: #fece17
+}
+
+.alt_travel_box {
+    margin: 0;
+    padding: 0;
+    width: 350px;
+    float: left
+}
+
+.alt_travel_box h4 {
+    color: #373737
+}
+
+.view_hotal a {
+    padding: 6px 30px;
+    font-size: 13px
+}
+
+.alt_tb_thumb {
+    margin: 0;
+    padding: 0;
+    width: 112px;
+    float: left
+}
+
+.alt_tb_thumb img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 112px;
+    overflow: hidden;
+    object-fit: cover
+}
+
+.alt_tb_sinfo {
+    margin: 0;
+    padding: 12px 0 0;
+    width: 220px;
+    float: right
+}
+
+.tour_tt_hotal {
+    margin: 0 auto;
+    padding: 0;
+    width: 750px;
+    text-align: center
+}
+
+.tour_tt_hotal .tours_listing_left {
+    padding-top: 8px
+}
+
+.tour_tt_hotal .view_right h6 {
+    color: #a5a5a5;
+    font-weight: 400
+}
+
+.tour_tt_hotal h3 {
+    margin: 0 0 35px;
+    padding: 25px 0 12px 0;
+    color: #1d92d0;
+    font-size: 21px;
+    font-weight: 500;
+    text-align: center;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/b-man.png) top center no-repeat,url(/wp-content/themes/bowlingtours/assets/css/../images/devider.png) bottom center no-repeat
+}
+
+.view_right h6 {
+    padding-bottom: 10px
+}
+
+.tour_review {
+    margin: 0 0 40px;
+    padding: 0
+}
+
+.tour_review table {
+    text-align: left;
+    border-collapse: collapse;
+    font-size: 14px;
+    width: 100%
+}
+
+.tour_review table th {
+    margin: 0;
+    padding: 10px 0;
+    color: #373737;
+    font-weight: 600
+}
+
+.tour_review table td {
+    padding: 5px 0;
+    vertical-align: middle
+}
+
+.tour_review table tr td:first-child {
+    color: #1d92d0
+}
+
+.tour_review table tr:nth-child(2) td:last-child {
+    padding: 0;
+    vertical-align: top;
+    font-size: 16px
+}
+
+.tour_review table th label {
+    margin: 0 0 0 10px;
+    padding: 2px 0;
+    background: #363737;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    border-radius: 3px;
+    width: 24px;
+    display: inline-block;
+    text-align: center
+}
+
+.tour_review table th label:after {
+    border-color: #363737 #fff0 #fff0;
+    border-style: solid;
+    border-width: 6px 4px;
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    right: 29%
+}
+
+.tour_review_hr {
+    margin: 0;
+    padding: 40px 0 0 0;
+    position: relative;
+    border-top: 1px solid #c7c7c7
+}
+
+.tour_review_hr_title {
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    float: left;
+    font-weight: 500;
+    font-size: 15px
+}
+
+.tour_review_hr_client {
+    margin: 0;
+    padding: 0 0 0 0;
+    width: 370px;
+    float: right
+}
+
+.tour_review_hr_client .owl-theme .owl-controls {
+    text-align: left
+}
+
+.tour_review_testimo {
+    margin: 0;
+    padding: 0 0 40px 30px
+}
+
+.tour_add_teview {
+    margin: 0;
+    padding: 0;
+    text-align: center
+}
+
+.tour_add_teview img {
+    margin: 0;
+    padding: 0 5px 0 0;
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.tour_add_teview a {
+    margin: 0;
+    padding: 5px 35px;
+    border: 1px solid #1d92d0;
+    border-radius: 4px;
+    color: #1d92d0;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500
+}
+
+#tour_review_cl.tours_wrapper {
+    padding: 0 0 40px
+}
+
+.login_review {
+    margin: 0 auto;
+    padding: 40px 40px 10px;
+    border: 1px solid #a5a5a5;
+    position: relative;
+    width: 70%;
+    background-color: #fff
+}
+
+.login_review h6 {
+    margin: 0;
+    padding: 0 0 45px;
+    color: #4b4b4b;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500
+}
+
+.login_review_form {
+    margin-bottom: 45px
+}
+
+.login_review input {
+    margin: 0 20px 0 0;
+    padding: 8px 15px;
+    color: #373737;
+    height: 40px;
+    font-family: 'Poppins',sans-serif;
+    border: 1px solid #ededed;
+    border-radius: 3px;
+    width: 238px;
+    float: left
+}
+
+.login_review input[type="submit"] {
+    margin: 0;
+    padding: 10px 25px;
+    border-radius: 4px;
+    color: #fff;
+    font-family: 'Poppins',sans-serif;
+    height: 40px;
+    cursor: pointer;
+    background: #6ac0ec;
+    width: 100px;
+    float: left
+}
+
+.login_review table {
+    margin: 0;
+    border-collapse: collapse;
+    width: 100%
+}
+
+.login_review table td {
+    padding: 6px 10px;
+    vertical-align: middle;
+    font-weight: 500
+}
+
+.login_review table td img {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%
+}
+
+.login_review table td label {
+    margin: 0 5px 0 0;
+    padding: 1px 8px;
+    border: 1px solid #b3b3b3;
+    display: inline-block;
+    width: 25%;
+    text-align: center
+}
+
+.login_review table tr td:first-child {
+    color: #2f9bd4;
+    font-size: 15px
+}
+
+.leave_review_table {
+    margin-bottom: 30px
+}
+
+.leave_review_quote {
+    margin-bottom: 40px;
+    text-align: center
+}
+
+.leave_review_quote textarea {
+    margin: 0 0 30px;
+    padding: 20px;
+    color: #373737;
+    font-family: 'Poppins',sans-serif;
+    border: 1px solid #ededed;
+    border-radius: 3px;
+    width: 100%;
+    height: 200px;
+    font-size: 16px;
+    font-weight: 500
+}
+
+.leave_review_quote input[type="submit"] {
+    float: none
+}
+
+.ind_com_review {
+    text-align: center
+}
+
+.ind_com_review strong {
+    margin: 0 0 40px;
+    padding: 0;
+    font-weight: 500;
+    display: block;
+    color: #383838
+}
+
+.ind_com_review div {
+    margin: 0 0 30px;
+    padding: 0
+}
+
+.ind_com_review a {
+    margin: 0;
+    padding: 0 18px 0 0;
+    text-decoration: none;
+    color: #2294d1;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/pre.png) right center no-repeat;
+    display: inline-block;
+    background-size: 8px auto
+}
+
+.ind_com_review a:hover {
+    color: #1b87c0
+}
+
+.ad_acc_contact_info {
+    margin: 0 0 15px;
+    padding: 0
+}
+
+.ad_acc_contact_info p a {
+    font-weight: 500
+}
+
+.ad_acc_contact_info p a:hover {
+    color: #0070c2
+}
+
+.ad_social_link p img {
+    margin: 0 10px 0 0;
+    padding: 0;
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.bottom_20 {
+    margin-bottom: 20px
+}
+
+.club_pr_show_image {
+    margin: 0 0 20px 0;
+    float: left;
+    width: 100%;
+    padding: 0;
+    height: auto
+}
+
+.club_pr_si_image {
+    margin: 0;
+    padding: 0;
+    width: 510px;
+    float: left;
+    position: relative
+}
+
+.club_pr_si_image img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 395px;
+    display: block;
+    object-fit: cover;
+    overflow: hidden
+}
+
+.club_pr_si_thumb_list {
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    float: right
+}
+
+.club_pr_si_thumb {
+    margin: 0 0 18px;
+    padding: 0;
+    position: relative
+}
+
+.club_pr_si_thumb img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 120px;
+    display: block;
+    object-fit: cover;
+    overflow: hidden
+}
+
+.zero_margin {
+    margin-bottom: 0px!important
+}
+
+.add_gallery {
+    float: right;
+    color: #0771c8;
+    text-decoration: underline;
+    font-size: 17px;
+    margin-right: 10px;
+    cursor: pointer
+}
+
+.img_upload {
+    margin: 0 0 20px;
+    float: left;
+    width: 100%;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 500
+}
+
+.img_upload label {
+    margin: 0;
+    padding: 0;
+    width: 122px;
+    display: inline-block;
+    font-weight: 500!important
+}
+
+.img_upload input {
+    margin: 0;
+    padding: 8px 15px;
+    color: #373737;
+    height: 40px;
+    font-family: 'Poppins',sans-serif;
+    border: 1px solid #ededed;
+    border-radius: 3px;
+    width: 60%
+}
+
+.club_details_info h6 {
+    margin: 0;
+    padding: 0 0 20px;
+    color: #1a1a1a;
+    font-size: 16px;
+    font-weight: 500
+}
+
+.club_details_left {
+    margin: 0;
+    padding: 0;
+    width: 48%;
+    float: left
+}
+
+.club_details_info input {
+    margin: 0 0 20px;
+    padding: 8px 15px;
+    color: #373737;
+    height: 40px;
+    font-family: 'Poppins',sans-serif;
+    border: 1px solid #ededed;
+    border-radius: 3px;
+    width: 100%
+}
+
+.club_details_info select {
+    margin: 0 0 20px;
+    padding: 8px 15px;
+    color: #373737;
+    height: 40px;
+    font-family: 'Poppins',sans-serif;
+    border: 1px solid #ededed;
+    border-radius: 3px;
+    width: 100%
+}
+
+.club_details_info button,.img_upload button {
+    margin: 0 0 20px;
+    padding: 8px 15px;
+    color: #fff;
+    background: #1d92d0;
+    height: 40px;
+    font-family: 'Poppins',sans-serif;
+    border: none;
+    border-radius: 3px;
+    width: 170px;
+    float: right;
+    cursor: pointer
+}
+
+.club_details_info button:hover,.img_upload button:hover {
+    background: #1485c0
+}
+
+.club_details_left input.pincode {
+    width: 195px;
+    float: left
+}
+
+.club_details_right {
+    margin: 0;
+    padding: 0;
+    width: 48%;
+    float: right
+}
+
+.customise_day_box h6 {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #373737;
+    font-size: 16px;
+    font-weight: 500
+}
+
+.customise_day_box h5 {
+    margin: 0;
+    padding: 0;
+    color: #1d92d0;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: underline;
+    display: inline-block
+}
+
+.clb_box {
+    margin: 0;
+    padding: 0
+}
+
+.clb_box h6 {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #373737;
+    font-size: 16px;
+    font-weight: 500
+}
+
+.clb_box_texrarea {
+    margin: 0 0 25px;
+    padding: 15px 20px;
+    width: 100%;
+    color: gray;
+    font-size: 15px;
+    font-weight: 400;
+    border: 1px solid #d3d4d4;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    height: 240px;
+    line-height: 24px
+}
+
+.clb_box_btn {
+    margin: 0;
+    padding: 7px 0;
+    width: 160px;
+    background: #1d92d0;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    cursor: pointer;
+    float: right
+}
+
+.clb_box_btn:hover {
+    background: #1a7fb5
+}
+
+.mbr_dtls_field {
+    margin: 0;
+    padding: 0
+}
+
+.mbr_dtls_field h4 {
+    margin: 0 0 25px;
+    padding: 0;
+    color: #373737;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center
+}
+
+.mbr_dtls_field h6 {
+    margin: 0 0 25px;
+    padding: 0;
+    color: #373737;
+    font-size: 16px;
+    font-weight: 500
+}
+
+.mbr_dtls_field h5 {
+    margin: 0 0 25px;
+    padding: 0;
+    color: #1d92d0;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: underline;
+    display: inline-block
+}
+
+.mbr_dtls_field input {
+    margin: 0 0 25px;
+    padding: 7px 20px;
+    color: #373737;
+    font-family: 'Poppins',sans-serif;
+    border: 1px solid #d3d4d4;
+    border-radius: 5px;
+    width: 100%
+}
+
+.mbr_dtls_field_btn {
+    margin: 0 auto;
+    padding: 8px 0;
+    color: #fff;
+    background: #1d92d0;
+    height: 38px;
+    font-family: 'Poppins',sans-serif;
+    border: none;
+    border-radius: 3px;
+    width: 160px;
+    cursor: pointer;
+    display: block
+}
+
+.mbr_dtls_field_btn:hover {
+    background: #1485c0
+}
+
+.mbr_dtls_field_left {
+    margin: 0;
+    padding: 0;
+    width: 47%;
+    float: left
+}
+
+.mbr_dtls_field_right {
+    margin: 0;
+    padding: 0;
+    width: 47%;
+    float: right
+}
+
+.mbr_dtls_field_right_btn {
+    margin: 0;
+    padding: 8px 0;
+    color: #fff;
+    background: #1d92d0;
+    height: 38px;
+    font-family: 'Poppins',sans-serif;
+    border: none;
+    border-radius: 3px;
+    width: 160px;
+    cursor: pointer;
+    float: right
+}
+
+.mbr_dtls_field_right_btn:hover {
+    background: #1485c0
+}
+
+.up_field_box {
+    margin: 0 0 30px;
+    padding: 20px 30px 30px;
+    border: 1px solid #a5a6a7;
+    position: relative
+}
+
+.tour_list_right {
+    margin: 0;
+    padding: 0;
+    width: 180px!important
+}
+
+.tour_list_right_inpt {
+    margin: 0;
+    padding: 7px 20px 7px 40px;
+    width: 100%;
+    color: #373737;
+    font-size: 16px;
+    font-family: 'Poppins',sans-serif;
+    border: 1px solid #d3d4d4;
+    border-radius: 5px;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/zoom.png) 15px 12px no-repeat
+}
+
+.fltr_box {
+    margin: 0 0 10px;
+    padding: 0
+}
+
+.fltr_box label {
+    margin: 0;
+    padding: 0 0 15px;
+    color: #282828;
+    font-size: 16px;
+    font-weight: 400;
+    vertical-align: middle;
+    display: inline-block
+}
+
+.fltr_box label strong {
+    margin: 0;
+    padding: 0;
+    color: #282828;
+    font-size: 16px;
+    font-weight: 500
+}
+
+.fltr_box label span {
+    margin: 0;
+    padding: 0;
+    color: #14b53a;
+    font-size: 16px;
+    font-weight: 400
+}
+
+.fltr_clr {
+    color: #ce1126!important
+}
+
+.fltr_box_chq {
+    margin: 0 17px;
+    padding: 0;
+    vertical-align: middle
+}
+
+.section_title ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none
+}
+
+.section_title ul li {
+    margin: 0;
+    padding: 0 4px 0 0;
+    text-decoration: none;
+    display: inline-block;
+    color: #1d92d0;
+    font-size: 16px;
+    font-weight: 600;
+    background: none
+}
+
+.section_title ul li a {
+    margin: 0;
+    padding: 0 0 0 12px;
+    text-decoration: none;
+    color: #6abfea;
+    font-size: 16px;
+    font-weight: 600;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/arrow2.png) left 8px no-repeat
+}
+
+.section_title ul li a:hover {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/arrow3.png) left 8px no-repeat;
+    color: #1d92d0
+}
+
+.admin_details .section_edit img {
+    margin: 0 7px 0 0;
+    padding: 0
+}
+
+.rwrd_box {
+    margin: 0;
+    padding: 0
+}
+
+.rwrd_box h4 {
+    margin: 0 0 15px;
+    color: #373737;
+    font-weight: 500;
+    font-size: 16px
+}
+
+.rwrd_box p {
+    font-weight: 400
+}
+
+.rwrd_box p strong {
+    color: #6ac0ec;
+    font-weight: 500
+}
+
+.rwrd_box label {
+    margin: 0;
+    padding: 0 0 12px;
+    color: #282828;
+    font-size: 16px;
+    font-weight: 400;
+    vertical-align: middle;
+    display: block
+}
+
+.rwrd_box label a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #282828;
+    font-size: 16px;
+    font-weight: 400
+}
+
+.rwrd_box label span {
+    margin: 0;
+    padding: 0 5px 0 0;
+    color: #282828;
+    font-size: 16px;
+    font-weight: 500;
+    vertical-align: top
+}
+
+.rwrd_box label strong {
+    margin: 0;
+    padding: 0;
+    color: #1d92d0;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 42px
+}
+
+.rwrd_box_chq {
+    margin: 0 15px 0 0;
+    padding: 0
+}
+
+.rwrd_box h5 {
+    margin: 0 0 15px 28px;
+    padding: 0;
+    text-decoration: underline;
+    color: #1d92d0;
+    font-size: 15px;
+    font-weight: 400
+}
+
+.rwrd_box_inpt {
+    margin: 0 5px;
+    padding: 0;
+    width: 35px;
+    color: #ababab;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Poppins',sans-serif;
+    border: 1px solid #ababab;
+    border-radius: 3px;
+    text-align: center;
+    height: 25px
+}
+
+.rwrd_box_btn {
+    margin: 0;
+    padding: 7px 35px;
+    color: #fff;
+    font-size: 16px;
+    background: #1d92d0;
+    font-family: 'Poppins',sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer
+}
+
+.rwrd_box_btn:hover {
+    background: #1485c0
+}
+
+.rwrd_box_left {
+    margin: 0 55px 15px 0;
+    padding: 0;
+    float: left
+}
+
+.admin_home_poppup_wrapper {
+    margin: 0;
+    padding: 0;
+    background: rgb(0 0 0 / .5)
+}
+
+.admin_home_poppup_container {
+    margin: 0 auto;
+    padding: 50px;
+    width: 100%;
+    background: #fff;
+    position: relative;
+    text-align: center
+}
+
+.admin_home_poppup_container h3 {
+    margin: 0 0 10px;
+    color: #373737;
+    font-weight: 500;
+    font-size: 24px
+}
+
+.admin_home_poppup_container h4 {
+    margin: 0 0 15px;
+    color: #373737;
+    font-weight: 500;
+    font-size: 17px
+}
+
+.admin_home_poppup_container h5 {
+    margin: 0 0 25px 0;
+    padding: 0;
+    text-decoration: underline;
+    color: #1d92d0;
+    font-size: 16px;
+    font-weight: 400
+}
+
+.admin_home_poppup_container p {
+    margin: 0;
+    padding: 0 0 20px;
+    color: #282828;
+    font-size: 16px;
+    font-weight: 400
+}
+
+.admin_home_poppup_container img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block
+}
+
+.admin_home_poppup_container input {
+    margin: 0 0 25px;
+    padding: 7px 20px;
+    color: #373737;
+    font-family: 'Poppins',sans-serif;
+    border: 1px solid #d3d4d4;
+    border-radius: 5px;
+    width: 100%;
+    text-align: left
+}
+
+.admin_home_poppup_container textarea {
+    margin: 0 0 25px;
+    padding: 7px 20px;
+    color: #373737;
+    font-family: 'Poppins',sans-serif;
+    border: 1px solid #d3d4d4;
+    border-radius: 5px;
+    width: 100%;
+    text-align: left;
+    height: 230px
+}
+
+.admin_home_poppup_container button {
+    margin: 0;
+    padding: 7px 0;
+    width: 115px;
+    color: #fff;
+    font-size: 15px;
+    background: #1d92d0;
+    font-family: 'Poppins',sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right
+}
+
+.admin_home_poppup_container button:hover {
+    background: #197aae
+}
+
+.admin_home_poppup_clr {
+    color: #6abfea!important
+}
+
+.admin_home_poppup_container_left {
+    margin: 0 66px 0 0;
+    padding: 0;
+    width: 300px;
+    float: left;
+    text-align: left
+}
+
+.admin_home_poppup_container_right {
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    float: right;
+    text-align: left
+}
+
+.admin_home_poppup_btn3 {
+    margin: 0 0 0;
+    padding: 0
+}
+
+.admin_home_poppup_btn3 a {
+    margin: 0;
+    padding: 8px 28px 8px 45px;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/play-icon2.png) #1d92d0 27px 14px no-repeat;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block
+}
+
+.admin_home_poppup_btn3 a:hover {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/play-icon2.png) #0979b5 27px 14px no-repeat
+}
+
+.reward_activity table {
+    margin: 0 0 20px;
+    width: 100%;
+    border-collapse: collapse;
+    vertical-align: middle;
+    text-align: center
+}
+
+.reward_activity table tr td {
+    padding: 10px 10px;
+    font-size: 15px;
+    color: #373737
+}
+
+.reward_activity table tr {
+    border-bottom: 1px solid #eeeded
+}
+
+.reward_activity table tr th {
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500
+}
+
+.reward_activity table tr th:nth-child(odd) {
+    background: #1d92d0
+}
+
+.reward_activity table tr th:nth-child(even) {
+    background: #6ac0ec
+}
+
+.reward_activity table tr:last-child {
+    border-bottom: none;
+    border-top: 1px solid #000
+}
+
+.reward_activity table tr:nth-last-child(2) {
+    border-bottom: none
+}
+
+.reward_activity table tr:last-child td {
+    font-size: 16px;
+    color: #373737;
+    font-weight: 600
+}
+
+.news_inner_listing {
+    margin: 0;
+    padding: 0
+}
+
+.news_inner_listing .news_listing_box_left {
+    margin: 0 auto 30px!important;
+    max-width: 317px;
+    position: relative;
+    width: 100%;
+    display: table;
+    float: none
+}
+
+.news_inner_listing h4 a {
+    font-size: 21px
+}
+
+.close2 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10
+}
+
+.close2 img {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    display: inline-block;
+    cursor: pointer
+}
+
+.drag_img_box {
+    margin: 0;
+    padding: 0
+}
+
+.drag_img_box ::-webkit-input-placeholder {
+    color: #6ac0ec
+}
+
+.drag_img_box :-ms-input-placeholder {
+    color: #6ac0ec
+}
+
+.drag_img_box ::-moz-placeholder {
+    color: #6ac0ec;
+    opacity: 1
+}
+
+.drag_img_box :-moz-placeholder {
+    color: #6ac0ec;
+    opacity: 1
+}
+
+.drag_img_box img {
+    margin: 0 0 30px;
+    padding: 0;
+    width: 100%;
+    display: block
+}
+
+.drag_img_box input {
+    margin: 0 0 25px;
+    padding: 3px 20px;
+    color: #6ac0ec;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Poppins',sans-serif;
+    border: 1px solid #d3d4d4;
+    border-radius: 5px;
+    width: 100%;
+    text-align: left
+}
+
+.drag_img_box input[type="submit"] {
+    margin-top: 6%;
+    text-align: center;
+    padding: 7px 0;
+    width: 160px;
+    color: #fff;
+    font-size: 15px;
+    background: #1d92d0;
+    font-family: 'Poppins',sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right
+}
+
+.drag_img_box input[type="submit"]:hover {
+    background: #1a77a8
+}
+
+.admin_home_poppup_btn4 {
+    margin: 30px 0 0;
+    padding: 0;
+    text-align: center
+}
+
+.admin_home_poppup_btn4 a {
+    margin: 0;
+    padding: 8px 40px;
+    background: #1d92d0;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block
+}
+
+.admin_home_poppup_btn4 a:hover {
+    background: #0979b5
+}
+
+.rom_field_left {
+    margin: 0 15px 25px 0;
+    padding: 0;
+    width: 160px;
+    float: left
+}
+
+.rom_field_left_inpt {
+    margin: 0;
+    padding: 5px 20px;
+    color: gray;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Poppins',sans-serif;
+    border: 1px solid #d3d4d4;
+    border-radius: 5px;
+    text-align: left
+}
+
+.rom_field_left_inpt:focus ::-webkit-input-placeholder {
+    color: #ce1126
+}
+
+.rom_field_left_inpt:focus :-ms-input-placeholder {
+    color: #ce1126
+}
+
+.rom_field_left_inpt:focus ::-moz-placeholder {
+    color: #ce1126;
+    opacity: 1
+}
+
+.rom_field_left_inpt:focus :-moz-placeholder {
+    color: #ce1126;
+    opacity: 1
+}
+
+.error_red {
+    margin: 0 0 30px;
+    padding: 0
+}
+
+.error_red h6 {
+    margin: 0;
+    padding: 0 0 0 35px;
+    color: #ce1126;
+    font-size: 16px;
+    font-weight: 400;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/error-pic.png) left top no-repeat
+}
+
+.error_red h6 a {
+    margin: 0;
+    padding: 0;
+    text-decoration: underline;
+    display: block;
+    color: #373737;
+    font-size: 16px;
+    font-weight: 400
+}
+
+.error_red h6 a:hover {
+    color: #ce1126;
+    text-decoration: none
+}
+
+.sngl_rm_box {
+    margin: 0 0 25px;
+    padding: 0
+}
+
+.sngl_rm_box_scl_inpt {
+    margin: 0;
+    padding: 5px 20px;
+    color: gray;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Poppins',sans-serif;
+    border: 1px solid #d3d4d4;
+    border-radius: 5px;
+    text-align: left
+}
+
+.sngl_rm_box_btn {
+    margin: 0;
+    padding: 8px 0;
+    width: 115px;
+    color: #fff;
+    font-size: 15px;
+    background: #1d92d0;
+    font-family: 'Poppins',sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer
+}
+
+.sngl_rm_box_btn:hover {
+    background: #1a77a8
+}
+
+.sngl_rm_box_left {
+    margin: 0 0 20px;
+    padding: 0;
+    width: 49%;
+    float: left
+}
+
+.sngl_rm_box_right {
+    margin: 0 0 20px;
+    padding: 0;
+    width: 49%;
+    float: right
+}
+
+.down_tour_box {
+    margin: 15px 0 0 0;
+    padding: 0
+}
+
+.down_tour_box_left {
+    margin: 0;
+    padding: 0;
+    width: 260px;
+    float: left
+}
+
+.down_tour_box_left a {
+    margin: 0;
+    padding: 8px 0 8px 50px;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/download.png) #1d92d0 25px 12px no-repeat;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: block
+}
+
+.down_tour_box_left a:hover {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/download.png) #0979b5 25px 12px no-repeat
+}
+
+.down_tour_box_right {
+    margin: 0 0 0 40px;
+    padding: 0;
+    width: 100px;
+    float: left
+}
+
+.down_tour_box_right_btn {
+    margin: 13px 0 0 0;
+    padding: 0;
+    background: none;
+    color: gray;
+    font-size: 16px;
+    text-decoration: underline;
+    font-weight: 400;
+    border: none;
+    background: none;
+    cursor: pointer
+}
+
+.down_tour_box_right_btn:hover {
+    color: #1d92d0;
+    text-decoration: none
+}
+
+.nmbr_box {
+    margin: 0 auto;
+    padding: 0;
+    width: 840px
+}
+
+.nmbr_box_btn {
+    margin: 0 auto;
+    padding: 7px 0;
+    width: 145px!important;
+    color: #fff!important;
+    font-size: 15px;
+    background: #1d92d0;
+    font-family: 'Poppins',sans-serif;
+    border: none!important;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center!important
+}
+
+.nmbr_box_btn:hover {
+    background: #197aae
+}
+
+.nmbr_box h3 {
+    margin: 0 0 15px;
+    padding: 0 0 0 32px;
+    color: #ce202b;
+    font-size: 22px;
+    font-weight: 500;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/error-pic.png) left center no-repeat;
+    display: inline-block
+}
+
+.nmbr_box_left {
+    margin: 0;
+    padding: 0;
+    width: 650px;
+    float: left;
+    text-align: left
+}
+
+.nmbr_box_field {
+    margin: 0 12px 0 0;
+    padding: 0;
+    width: 150px;
+    float: left;
+    text-align: left
+}
+
+.nmbr_box_right {
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    float: right;
+    text-align: left
+}
+
+.nmbr_box_right h4 {
+    font-size: 16px
+}
+
+.existing_member_list {
+    margin: 0 0 40px;
+    padding: 0
+}
+
+.existing_member_list table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse
+}
+
+.existing_member_list table tr th {
+    padding: 12px 10px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff
+}
+
+.existing_member_list table tr td {
+    padding: 12px 10px;
+    font-size: 14px;
+    color: #000
+}
+
+.existing_member_list table tr th:nth-child(odd) {
+    background: #1d92d0
+}
+
+.existing_member_list table tr th:nth-child(even) {
+    background: #6ac0ec
+}
+
+.existing_member_list table tr {
+    border-bottom: 1px solid #eeeded
+}
+
+.existing_member_list table tr td img {
+    max-width: 100%
+}
+
+.existing_member_list table tr td a {
+    margin: 0 10px;
+    display: inline-block
+}
+
+.attraction_custom_top .fixture_top_section_slider {
+    width: 60%
+}
+
+.attraction_custom_top .fixture_top_section_right {
+    width: 40%;
+    margin: 0;
+    padding: 0 30px
+}
+
+.attraction_custom_top .fixture_club_faclty {
+    width: 60%
+}
+
+.attraction_custom_top .fixture_review_list {
+    width: 40%;
+    margin: 0
+}
+
+.attraction_custom_top .fixture_club_faclty_list {
+    margin-bottom: 0;
+    width: 50%;
+    padding: 0 20px
+}
+
+.attraction_custom_top h3 {
+    color: #090909
+}
+
+.attraction_custom_top h6 {
+    margin: 0;
+    padding: 0 0 20px;
+    font-size: 15px;
+    color: #0787cb;
+    font-weight: 500
+}
+
+.attraction_custom .tabcontent {
+    padding: 40px 0 0
+}
+
+.attractions_day table {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center
+}
+
+.attractions_day table th {
+    padding: 8px 5px;
+    background: #1d92d0;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 500;
+    text-align: center!important
+}
+
+.attractions_day table tr td {
+    padding: 8px 5px
+}
+
+.attractions_day table tr:nth-child(even) td:nth-child(odd),.attractions_day table tr:nth-child(odd) td:nth-child(even) {
+    background: #e1e4e2
+}
+
+.attractions_day table tr td:first-child {
+    background: #1d92d0!important;
+    color: #fff!important
+}
+
+.attr_01 {
+    width: 99%
+}
+
+.att_hotal_info {
+    margin: 0 0 60px;
+    padding: 0
+}
+
+.att_hotal_info .fixture_club_faclty_list {
+    margin-bottom: 10px;
+    width: 33%;
+    float: left
+}
+
+.att_right {
+    margin: 0;
+    padding: 20px 15px;
+    width: 435px;
+    float: right;
+    border: 1px solid #bebebe;
+    position: relative
+}
+
+.att_hotal_info h4 {
+    font-size: 18px;
+    color: #090909;
+    text-align: center
+}
+
+.att_right input[type="text"],.att_right input[type="email"],.att_right textarea {
+    margin: 0 0 15px;
+    padding: 12px 15px;
+    font-family: 'Poppins',sans-serif;
+    width: 100%;
+    border: 1px solid #f3f3f3;
+    border-radius: 6px
+}
+
+.att_right textarea {
+    margin: 0 0 10px;
+    height: 130px
+}
+
+.att_right input[type="submit"] {
+    margin: 0 auto;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    background: #6ac0ec;
+    font-family: 'Poppins',sans-serif;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    text-transform: capitalize;
+    text-align: center
+}
+
+.score_hotel {
+    margin: 0 0 15px;
+    padding: 0;
+    vertical-align: middle;
+    color: #178fcf;
+    font-size: 14px
+}
+
+.score_hotel img {
+    margin: 0;
+    padding: 0;
+    float: right;
+    max-width: 100%;
+    display: inline-block
+}
+
+.saerch_fixture_wrapper {
+    margin: 0 0 70px;
+    padding: 0;
+    background: #ececec;
+    position: relative
+}
+
+.saerch_fixture_wrapper .banner_form_field_box:nth-child(3) {
+    border-right: 2px solid #d7d8d8;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/man.png) right 8px top 18px no-repeat
+}
+
+.saerch_fixture_wrapper .banner_form_field_box:nth-child(4) {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/calender-pic2.png) right 8px top 18px no-repeat
+}
+
+.saerch_fixture_wrapper .banner_form_field_box:last-child {
+    border: none
+}
+
+.saerch_fixture_wrapper .banner_form_field_box {
+    width: 25%
+}
+
+.saerch_fixture_wrapper .banner_form_field_box input {
+    margin: 0;
+    padding: 0 10px;
+    color: #a5a5a5;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    font-family: 'Poppins',sans-serif;
+    background: none
+}
+
+.margin_bottom40 {
+    margin-bottom: 40px
+}
+
+.membership_list {
+    margin: 0;
+    padding: 0
+}
+
+.membersship_box {
+    margin: 0;
+    padding: 0 20px;
+    width: 33.33%;
+    float: left;
+    text-align: center
+}
+
+.member_cat {
+    margin: 0 auto 40px;
+    padding: 95px 0 0;
+    text-align: center;
+    width: 230px;
+    height: 343px;
+    color: #69c0ec;
+    font-size: 24px;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/membership1.png) left top no-repeat;
+    background-size: 100%
+}
+
+.membersship_box:nth-child(2) .member_cat {
+    color: #1d92d0;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/membership2.png) left top no-repeat;
+    background-size: 100%
+}
+
+.membersship_box:nth-child(3) .member_cat {
+    color: #fed333;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/membership3.png) left top no-repeat;
+    background-size: 100%
+}
+
+.membership_form_wrapper {
+    margin: 60px 0 30px;
+    padding: 0
+}
+
+.membership_form_wrapper h3 {
+    margin: 0 0 20px;
+    padding: 0 0 20px;
+    color: #fff;
+    border-bottom: 1px solid #fff
+}
+
+.membership_left {
+    margin: 40px 0 0;
+    padding: 0 20px;
+    width: 48%;
+    float: left;
+    background: #fcd333;
+    border-radius: 8px;
+    transform: rotate(-3deg)
+}
+
+.membershib_bg_naviblue {
+    margin: -20px 0 0;
+    padding: 40px;
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    background: #6abfea;
+    transform: rotate(3deg)
+}
+
+.membership_right {
+    margin: 0;
+    padding: 20px;
+    width: 48%;
+    float: right;
+    background: #fcd333;
+    border-radius: 8px;
+    transform: rotate(-3deg)
+}
+
+.membershib_bg_blue {
+    margin: 0 0 0;
+    padding: 40px;
+    width: 101%;
+    display: block;
+    border-radius: 8px;
+    background: #1d92d0;
+    transform: rotate(3deg)
+}
+
+.membership_form_wrapper p {
+    color: #fff
+}
+
+.membership_form_wrapper h5 {
+    margin: 0 0 15px;
+    padding: 0;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400
+}
+
+.membership_form_wrapper h5 img {
+    margin: 0 0 0 5px;
+    padding: 0;
+    max-width: 100;
+    cursor: pointer;
+    vertical-align: middle
+}
+
+.membership_form_wrapper input[type="email"],.membership_form_wrapper input[type="password"],.membership_form_wrapper input[type="text"],.membership_form_wrapper input[type="tel"],.membership_form_wrapper input[type="url"],textarea {
+    margin: 0 0 15px;
+    padding: 8px 12px;
+    width: 100%;
+    color: #58b9e9;
+    font-size: 15px;
+    border: none;
+    background: #fff;
+    font-family: 'Poppins',sans-serif;
+    border-radius: 6px;
+    height: 40px
+}
+
+.membership_form_wrapper select {
+    margin: 0 0 6px;
+    padding: 8px 12px;
+    width: 100%;
+    color: #58b9e9;
+    font-size: 15px;
+    border: none;
+    background: #fff;
+    font-family: 'Poppins',sans-serif;
+    border-radius: 6px;
+    height: 40px
+}
+
+.membership_form_wrapper textarea {
+    height: 130px
+}
+
+.membership_form_wrapper input::-webkit-input-placeholder {
+    color: #58b9e9
+}
+
+.membership_form_wrapper input:-ms-input-placeholder {
+    color: #58b9e9
+}
+
+.membership_form_wrapper input::-moz-placeholder {
+    color: #58b9e9;
+    opacity: 1
+}
+
+.membership_form_wrapper input:-moz-placeholder {
+    color: #58b9e9;
+    opacity: 1
+}
+
+.membership_right input::-webkit-input-placeholder,.membership_right textarea::-webkit-input-placeholder {
+    color: #0f8bcd
+}
+
+.membership_right input:-ms-input-placeholder,.membership_right textarea:-ms-input-placeholder {
+    color: #0f8bcd
+}
+
+.membership_right input::-moz-placeholder,.membership_right textarea::-moz-placeholder {
+    color: #0f8bcd;
+    opacity: 1
+}
+
+.membership_right input:-moz-placeholder,.membership_right textarea:-moz-placeholder {
+    color: #0f8bcd;
+    opacity: 1
+}
+
+.membership_right select {
+    color: #0f8bcd
+}
+
+.forget_password {
+    float: left
+}
+
+.forget_password a {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-decoration: underline;
+    font-size: 15px;
+    line-height: 40px
+}
+
+.forget_password a:hover {
+    text-decoration: none
+}
+
+.member_subt {
+    float: right
+}
+
+.member_subt input[type="submit"] {
+    margin: 0;
+    padding: 8px 20px;
+    width: 175px;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+    background: #1d92d0;
+    font-family: 'Poppins',sans-serif;
+    border-radius: 6px;
+    height: 40px;
+    line-height: 18px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all .5s ease
+}
+
+.member_subt input[type="submit"]:hover {
+    background: #167eb5
+}
+
+.membership_right input[type="submit"] {
+    width: 200px;
+    background: #6ac0ec
+}
+
+.membership_right .register-club-btn {
+    width: 200px;
+    background: #6ac0ec;
+    padding: 9px 30px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px
+}
+
+.membership_right input[type="submit"]:hover {
+    background: #50abda
+}
+
+.membership_select_club {
+    margin: 0 0 20px;
+    padding: 0;
+    height: 41px;
+    border-radius: 6px;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/b-man.png) #fff right 10px center no-repeat;
+    background-size: 12px auto
+}
+
+.membership_select_club select {
+    width: 100%
+}
+
+.membership_select_club.amount {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/amount.png) #fff right 10px center no-repeat
+}
+
+.social_url a {
+    margin: 0 20px 0 0;
+    padding: 0;
+    float: left
+}
+
+.social_url a:last-child {
+    margin: 0
+}
+
+.social_url img {
+    display: block;
+    max-width: 100%
+}
+
+.postcode_club {
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    float: left
+}
+
+.lookup_coub {
+    margin: 0;
+    padding: 0;
+    float: right;
+    width: 35%
+}
+
+.lookup_coub button {
+    margin: 0;
+    padding: 12px 15px;
+    width: 100%;
+    color: #fff;
+    font-family: 'Poppins',sans-serif;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    background: #1d92d0;
+    height: 40px;
+    line-height: 16px;
+    cursor: pointer
+}
+
+.lookup_coub button:hover {
+    background: #1884bd
+}
+
+.have_club {
+    margin: 0 0 20px;
+    padding: 0
+}
+
+.have_club input[type="radio"] {
+    margin: 0;
+    padding: 0
+}
+
+.have_club label {
+    margin: 0 20px 0 10px;
+    padding: 0;
+    font-size: 13px;
+    line-height: 13px;
+    color: #fff;
+    display: inline-block
+}
+
+.membership_right .lookup_coub button {
+    background: #6ac0ec
+}
+
+.membership_right .lookup_coub button:hover {
+    background: #50abda
+}
+
+.down_temp {
+    margin: 0 0 20px;
+    padding: 0
+}
+
+.down_temp_info {
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    float: left;
+    color: #fff;
+    font-size: 13px
+}
+
+.download_temp {
+    margin: 0;
+    padding: 0;
+    width: 35%;
+    float: right
+}
+
+.download_temp a {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    text-align: center;
+    display: block;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all .5s ease
+}
+
+.download_temp a:hover {
+    background: #0083ca
+}
+
+.thanks_register {
+    margin: 40px auto;
+    padding: 0 0 0 9px;
+    max-width: 1060px;
+    background: #fcd333;
+    border-radius: 8px;
+    transform: rotate(-2deg)
+}
+
+.thanks_register_inner {
+    margin: 0;
+    padding: 40px 50px;
+    width: 101%;
+    display: block;
+    border-radius: 8px;
+    background: #6abfea;
+    transform: rotate(2deg)
+}
+
+.thanks_register_inner h3 {
+    margin: 0 0 20px;
+    padding: 0 10px 20px;
+    color: #fff;
+    border-bottom: 1px solid #fff
+}
+
+.thanks_register_inner p {
+    color: #fff
+}
+
+.thanks_register_inner img {
+    margin: 0 5px 0 0;
+    padding: 0;
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.gap {
+    height: 40px
+}
+
+.custom_reg_club {
+    margin-bottom: 20px
+}
+
+.modal-open {
+    position: fixed;
+    width: 100%;
+    height: 100%
+}
+
+.error {
+    color: red;
+    border-color: red!important
+}
+
+.success {
+    color: green
+}
+
+.hide {
+    display: none
+}
+
+.show {
+    display: block
+}
+
+.fa-li {
+    position: relative!important;
+    left: -2.35285714em!important;
+    width: 2.14285714em!important;
+    top: 0.622857em!important;
+    text-align: center!important;
+    color: #fff!important
+}
+
+.slider {
+    -webkit-appearance: none!important;
+    background: #ececeb!important;
+    outline: none!important;
+    opacity: 0.7!important;
+    -webkit-transition: .2s!important;
+    transition: opacity .2s!important;
+    width: 100%!important;
+    height: 29px!important;
+    border-radius: 5px!important
+}
+
+.slider:hover {
+    opacity: 1
+}
+
+input[type="range"] {
+    margin: auto;
+    -webkit-appearance: none;
+    position: relative;
+    overflow: hidden;
+    height: 30px;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 0
+}
+
+.slider::-webkit-slider-runnable-track {
+    background: #e7e7e7;
+    border-radius: 0 15px 15px 0
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 8px;
+    height: 30px;
+    border-radius: 0 15px 15px 0;
+    background: #1d92d0;
+    box-shadow: -100vw 0 0 100vw #6ac0ec;
+    border-collapse: collapse
+}
+
+.slider::-moz-range-track {
+    height: 30px;
+    border-radius: 0 15px 15px 0;
+    background: #1d92d0
+}
+
+.slider::-moz-range-thumb {
+    background: #1d92d0;
+    height: 30px;
+    width: 8px;
+    border-radius: 0 15px 15px 0;
+    box-shadow: -100vw 0 0 100vw dodgerblue;
+    box-sizing: border-box
+}
+
+.slider::-ms-fill-lower {
+    border-radius: 0 15px 15px 0;
+    background: #1d92d0
+}
+
+.slider::-ms-thumb {
+    height: 30px;
+    width: 8px;
+    border-radius: 0 15px 15px 0;
+    box-sizing: border-box
+}
+
+.slider::-ms-ticks-after {
+    display: none
+}
+
+.slider::-ms-ticks-before {
+    display: none
+}
+
+.slider::-ms-track {
+    background: #e7e7e7;
+    color: #fff0;
+    height: 30px;
+    width: 8px;
+    border-radius: 0 15px 15px 0
+}
+
+.slider::-ms-tooltip {
+    display: none
+}
+
+.rangeSlider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 20px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: .7;
+    -webkit-transition: .2s;
+    transition: opacity .2s
+}
+
+.rangeSlider:hover {
+    opacity: 1
+}
+
+.rangeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fed333;
+    cursor: pointer
+}
+
+.rangeSlider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fed333;
+    cursor: pointer
+}
+
+.login_review input[type=range] {
+    padding: 0!important;
+    margin: 0 135px 0 -60px!important
+}
+
+.login_review table td label.error,.leave_review_quote label.error {
+    margin: 0!important;
+    padding: 0!important;
+    border: none!important;
+    display: inline-block!important;
+    width: 60%!important;
+    position: relative!important;
+    display: block!important;
+    text-align: left!important;
+    color: #d44f4f!important;
+    font-size: 13px!important
+}
+
+.rat_cls {
+    background: #ececeb;
+    width: 100%;
+    border-radius: 5px
+}
+
+.rat_cls .rat_fill {
+    background: #6ac0ec;
+    padding: 14px;
+    border-radius: 5px
+}
+
+.daterangepicker th.month {
+    color: #6abfea!important;
+    font-weight: bold!important;
+    font-size: 16px!important
+}
+
+.fixture_loop {
+    width: 50%;
+    float: left
+}
+
+.book_tour_listing_left.selected {
+    border: 2px solid #6abfea
+}
+
+#map_canvas {
+    width: 100%!important;
+    height: 300px!important;
+    margin-left: 0!important;
+    margin-bottom: 15px;
+    position: relative!important
+}
+
+#map_canvas_ {
+    width: 61.5%!important;
+    height: 380px!important;
+    position: absolute!important
+}
+
+.new_check li {
+    background: none!important
+}
+
+.new_check li label {
+    cursor: pointer;
+    font-weight: 400!important
+}
+
+.new_check li label input[type=checkbox],.new_check li label input[type=radio] {
+    position: absolute;
+    left: 0
+}
+
+.archives_chk+label {
+    color: green
+}
+
+.loading {
+    position: fixed;
+    z-index: 999;
+    height: 11em;
+    overflow: show;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    text-align: center
+}
+
+.loading:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / .16)
+}
+
+.ui-slider-horizontal {
+    height: .1em!important
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+    top: -0.7em!important;
+    margin-left: -.6em!important
+}
+
+.ui-slider .ui-slider-handle {
+    width: 1.3em!important;
+    height: 1.3em!important;
+    border-radius: 50%!important
+}
+
+.left_amt {
+    float: left;
+    font-weight: 300;
+    margin-top: 5%
+}
+
+.right_amt {
+    float: right;
+    font-weight: 300;
+    margin-top: 5%
+}
+
+.single-review {
+    width: 35%;
+    float: right;
+    margin-bottom: 8px!important
+}
+
+.single-slider {
+    margin: 0 11px 0 13px!important;
+    height: 30px!important;
+    width: 235px!important
+}
+
+.comment-section .review_comment-error {
+    margin: 0 auto!important;
+    display: block!important;
+    text-align: center!important
+}
+
+.review-frm-input {
+    width: 32%;
+    float: right;
+    margin-right: 35px;
+    margin-bottom: 5px!important
+}
+
+.review-frm-input .review-button {
+    margin: 0;
+    padding: 10px 25px;
+    border-radius: 4px;
+    color: #fff;
+    font-family: 'Poppins',sans-serif;
+    height: 40px;
+    cursor: pointer;
+    background: #6ac0ec;
+    width: 100px;
+    display: initial!important
+}
+
+.membershib_bg_blue .error-exist-user {
+    color: #c11818
+}
+
+.membershib_bg_naviblue .error-exist-club {
+    color: #c11818
+}
+
+.membershib_bg_naviblue .error-exist-user {
+    color: #c11818
+}
+
+.membershib_bg_naviblue label {
+    font-weight: 300!important
+}
+
+.membershib_bg_naviblue .error {
+    color: #ab0404!important
+}
+
+.membership_right .error {
+    color: #ab0404!important
+}
+
+.membership_right label {
+    font-weight: 300!important
+}
+
+.have_club label.error {
+    font-weight: 300!important;
+    color: #ab0404!important;
+    margin: 0;
+    width: 100%
+}
+
+.filter_archives label a {
+    color: #373737!important
+}
+
+.club_details_info label.error {
+    font-weight: 300!important
+}
+
+.clb_box label.error {
+    font-weight: 300!important
+}
+
+.mbr_dtls_field_left label.error {
+    font-weight: 300!important
+}
+
+.facility_txt {
+    margin: 0 0 20px;
+    padding: 8px 15px;
+    color: #373737;
+    height: 40px;
+    font-family: 'Poppins',sans-serif;
+    border: 1px solid #ededed;
+    border-radius: 3px;
+    width: 75%
+}
+
+.mbr_dtls_field_right .remove {
+    float: right;
+    cursor: pointer;
+    color: #1d92d0;
+    margin-top: 6px
+}
+
+.add_new_guest_jq {
+    cursor: pointer
+}
+
+.add_facility_btn {
+    cursor: pointer
+}
+
+.mce-btn button {
+    width: 38px!important
+}
+
+.mce-flow-layout {
+    margin-left: 25px
+}
+
+.mce-btn.mce-disabled button,.mce-btn.mce-disabled:hover button {
+    opacity: 1!important
+}
+
+.mce-btn-group:not(:first-child) {
+    border: none!important
+}
+
+.mce-btn {
+    border: none!important
+}
+
+.mce-tinymce {
+    border-radius: 5px
+}
+
+.mce-container-body .mce-container {
+    background: #6ac0ec;
+    border-radius: 2px;
+    padding: 1px 0 1px 0
+}
+
+.mce-container-body .mce-container button {
+    background: #6ac0ec
+}
+
+.mce-container-body .mce-container button:hover {
+    background: #fff
+}
+
+.mce-btn {
+    background: #6ac0ec!important
+}
+
+.mce-edit-area {
+    border-width: 0!important
+}
+
+.mce-toolbar-grp .mce-flow-layout-item {
+    margin-left: 25px
+}
+
+.mce-content-body p {
+    padding: 10px!important;
+    font-size: 13px!important;
+    font-family: 'Poppins',sans-serif!important
+}
+
+.mce-panel {
+    border-top: none
+}
+
+#uploadfile span img.cloud_image {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    margin-top: 83px;
+    text-align: center;
+    margin-left: 49%
+}
+
+.upload-area {
+    width: 100%;
+    height: 200px;
+    border: 2px dashed #d4d4d4;
+    border-radius: 9px;
+    margin: 30px auto;
+    text-align: center;
+    overflow: auto
+}
+
+.upload-area:hover {
+    cursor: pointer
+}
+
+.upload-area h3 {
+    margin: 14% 0 0 0%;
+    font-size: 17px;
+    width: 100%;
+    padding: 10px;
+    color: #000;
+    font-weight: 400
+}
+
+#file {
+    display: none
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    padding: 2px;
+    border: 2px solid lightgray;
+    border-radius: 3px;
+    float: left;
+    margin: 5px
+}
+
+.size {
+    font-size: 12px
+}
+
+.like_thym {
+    cursor: pointer
+}
+
+#add_new_admin_frm label.error {
+    font-weight: 300!important
+}
+
+.review_cls p.success {
+    color: green
+}
+
+.review_cls p.error {
+    color: red
+}
+
+.tour_sbmt_btn_left .submit_book {
+    margin: 0;
+    padding: 9px 0;
+    background: #1d92d0;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: block;
+    border: none;
+    padding: 12px 18px
+}
+
+.tour_sbmt_btn_right .save_book {
+    margin: 0;
+    padding: 9px 0;
+    background: #f8f8f8;
+    border: none;
+    color: #373737;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: underline;
+    display: block
+}
+
+.different_hotel_box {
+    margin: 0 2% 2% 0;
+    width: 46%;
+    float: left
+}
+
+.different_hotel_box:nth-child(2n) {
+    margin-right: 0
+}
+
+.sidebar_box h4 a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    display: block;
+    color: #1d92d0;
+    font-size: 22px;
+    font-weight: 500
+}
+
+.accept_block {
+    padding: 35px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background: #efefef
+}
+
+.accept_block a:hover {
+    background-color: #1d92d0;
+    color: #fff
+}
+
+.accept_block a {
+    text-decoration: none;
+    background-color: inherit;
+    display: inline-block;
+    border: 2px solid #63b4de;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 0;
+    width: 170px;
+    margin: 0 10px;
+    transition: 0.3s;
+    font-size: 17px;
+    border-radius: 5px;
+    color: #1b91cf;
+    font: caption!important
+}
+
+.fltr_box label .fltr_box_chq {
+    margin: 0 17px;
+    padding: 0;
+    vertical-align: middle
+}
+
+.upload_new_fixture a {
+    width: 107px;
+    margin: 0 2px;
+    display: inline-block;
+    border: 2px solid #63b4de;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 10px;
+    width: 166px;
+    margin: 0 10px;
+    transition: 0.3s;
+    font-size: 17px;
+    border-radius: 5px;
+    color: #1b91cf;
+    font: caption!important;
+    text-decoration: none
+}
+
+.upload_new_fixture span {
+    color: #4a4949;
+    font-size: 18px
+}
+
+.upload_new_fixture .lookup_postcode .postcode_club .club_fixture_txt {
+    margin: 0 0 15px;
+    padding: 8px 12px;
+    width: 100%;
+    color: #58b9e9;
+    font-size: 15px;
+    background: #fff;
+    font-family: 'Poppins',sans-serif;
+    border-radius: 6px;
+    height: 40px;
+    border: 1px solid gray
+}
+
+.upload_new_fixture .lookup_postcode .lookup_coub button {
+    width: 43%!important
+}
+
+.rwrd_box label strong span.total_quote_pp {
+    margin: 0px!important;
+    padding: 0px!important;
+    color: #1d92d0!important;
+    font-size: 40px!important;
+    font-weight: 600!important;
+    line-height: 42px!important
+}
+
+.outbound_process_active a {
+    color: #1d92d0!important
+}
+
+.room_person_txt {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #b3afaf
+}
+
+.template_list {
+    margin-bottom: 30px;
+    float: left;
+    width: 100%
+}
+
+.template_list .template_name {
+    background: #b1b5b5;
+    padding: 5px 5px 5px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer
+}
+
+.template_list .template_editor {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 3%
+}
+
+.template_list .template_editor_add_new {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 3%
+}
+
+input.template_input {
+    padding: 6px 5px 6px 5px;
+    border: 1px solid #cacaca;
+    width: 49%;
+    height: 40px;
+    margin-bottom: 2%
+}
+
+.template_list .template_editor input[type=submit] {
+    margin-top: 15px;
+    background: #6ac0ec;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 6px;
+    border: none;
+    padding: 10px 36px;
+    float: right;
+    margin-right: 7px
+}
+
+.template_list .template_editor_add_new input[type=submit] {
+    margin-top: 15px;
+    background: #6ac0ec;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 6px;
+    border: none;
+    padding: 10px 36px;
+    float: right;
+    margin-right: 7px
+}
+
+.form-group label {
+    font-weight: 300!important
+}
+
+.contact_left .bespoke_field_right .selected {
+    background: #0979b5;
+    color: #fff
+}
+
+.wpcf7-sliding-captcha .bgSlider {
+    width: 120px!important;
+    height: 1px;
+    position: absolute!important;
+    top: 46.5px;
+    left: 80px
+}
+
+.wpcf7-sliding-captcha {
+    margin-top: 0;
+    display: inline-block
+}
+
+.wpcf7-form-control-wrap.slidingcaptcha-808,.wpcf7-form-control-wrap.slidingcaptcha-301 {
+    display: inline-block;
+    float: left;
+    height: 0
+}
+
+.TxtStatus {
+    display: none
+}
+
+@media only screen and (max-width: 479px) {
+    .wpcf7-sliding-captcha .bgSlider {
+        left:89px
+    }
+}
+
+.google_review {
+    margin-top: 0;
+    width: 100%;
+    margin-left: 0;
+    max-width: 280px;
+    display: table;
+    margin: 0 auto
+}
+
+.select2-container--default .select2-selection--multiple {
+    height: 41px!important
+}
+
+.google_review_2 {
+    margin-top: 0;
+    width: 100%;
+    margin-left: 0;
+    max-width: 280px;
+    display: table;
+    margin: 0 auto
+}
+
+.nav-tabs>li.active>a,.nav-tabs>li.active>a:focus,.nav-tabs>li.active>a:hover {
+    border: none!important;
+    background-color: #e6e6e6!important;
+    cursor: pointer!important;
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/devider.png) bottom center no-repeat;
+    color: #2c92d1!important
+}
+
+.tour_tab_list ul li.active a {
+    background: url(/wp-content/themes/bowlingtours/assets/css/../images/devider.png) bottom center no-repeat;
+    color: #2c92d1!important
+}
+
+.navigation ul li.sub_menu .mega-menu {
+    height: 235px;
+    border-radius: 0 8px 8px 0
+}
+
+.navigation ul li.sub_menu .mega-menu li a:hover,.navigation ul li.sub_menu .mega-menu li:hover {
+    color: #fff
+}
+
+.navigation ul li.sub_menu .mega-menu::before {
+    content: none!important
+}
+
+.mce-toolbar-grp.mce-container.mce-panel.mce-stack-layout-item.mce-first {
+    width: 100%!important
+}
+
+.mce-edit-area.mce-container.mce-panel.mce-stack-layout-item.mce-last {
+    width: 99.9%!important;
+    background: #fff0
+}
+
+.breadcrumb {
+    margin: 0 0 20px
+}
+
+.breadcrumb li,.breadcrumb li a {
+    text-decoration: none
+}
+
+.breadcrumb>li+li:before {
+    content: ""
+}
+
+.pay_title_info span.deposit_pp,.pay_title_info span.remaining_quote_pp {
+    margin: 0
+}

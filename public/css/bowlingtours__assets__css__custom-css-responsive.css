@@ -1,0 +1,4943 @@
+/*!/wp-content/themes/bowlingtours/assets/css/responsive.css*/
+#pull {
+    display: none
+}
+
+@media only screen and (min-width: 768px) and (max-width:1024px) {
+    .header_container {
+        width:100%;
+        padding: 0
+    }
+
+    .header_left {
+        padding: 15px 10px
+    }
+
+    .header_middle {
+        width: 100%!important
+    }
+
+    .mobile_respnsb {
+        display: block;
+        margin: 23px 10px 0 0
+    }
+
+    .banner_caption {
+        width: 98%
+    }
+
+    .banner_caption h1 {
+        margin: 0 0 20px
+    }
+
+    .banner_form_field_left {
+        width: 80%
+    }
+
+    .banner_form_field_right {
+        width: 20%
+    }
+
+    .banner_form_field_select {
+        padding: 0 15px
+    }
+
+    .tours_wrapper_nav {
+        margin: 0 0 25px
+    }
+
+    .tours_listing_left {
+        margin: 0 1% 25px
+    }
+
+    .dotted_box {
+        margin: 0 0 15px
+    }
+
+    .home_body {
+        width: 100%;
+        padding: 20px
+    }
+
+    .bowls_box_left {
+        width: 32%;
+        padding: 10px;
+        height: auto
+    }
+
+    .bowls_box_left_thym {
+        margin: 0
+    }
+
+    .bowls_box_left_thym img {
+        height: 325px;
+        transform: none
+    }
+
+    .bowls_box_caption {
+        width: 92%;
+        margin: 15px auto 0;
+        padding: 15px
+    }
+
+    .bowls_box_caption_box {
+        padding: 17px
+    }
+
+    .bowls_box_caption_box h3 {
+        font-size: 22px
+    }
+
+    .bowls_box_middle {
+        width: 32%;
+        margin: 50px 0 0 15px
+    }
+
+    .bowls_box_middle h3 {
+        font-size: 20px;
+        margin: 0 0 10px
+    }
+
+    .bowls_box_middle h4 {
+        font-size: 40px
+    }
+
+    .precent_off {
+        margin: 0 0 10px;
+        padding: 0 0 10px
+    }
+
+    .bowls_box_right {
+        width: 32%;
+        transform: none;
+        height: auto;
+        padding: 10px
+    }
+
+    .bowls_box_right_thym img {
+        margin: 0;
+        height: 325px;
+        transform: none
+    }
+
+    .popular_wrapper h3 {
+        margin: 0 0 25px
+    }
+
+    .popular_wrapper_left {
+        margin: 0 .7% 20px
+    }
+
+    .popular_wrapper_left img {
+        height: 180px
+    }
+
+    .bowls_club_left {
+        width: 98%;
+        margin: 0 0 40px 0
+    }
+
+    .bowls_club_thym {
+        width: 100%!important;
+        margin-left: 0!important
+    }
+
+    .bowls_club_thym img {
+        height: auto;
+        max-width: 100%!important;
+        width: 100%!important
+    }
+
+    .bowls_club_right {
+        width: 100%;
+        margin: 0
+    }
+
+    .bowls_club_right h3 {
+        line-height: 36px;
+        margin: 0 0 15px
+    }
+
+    .bowls_club_text {
+        width: 100%
+    }
+
+    .explore_btn a {
+        margin: 0 10px 0 0;
+        padding: 9px 30px
+    }
+
+    .our_logo img {
+        width: 17%;
+        margin: 0 1%
+    }
+
+    .bowls_video h3 {
+        font-size: 34px;
+        margin: 0 0 10px
+    }
+
+    .bowls_video_left img {
+        height: 320px;
+        object-fit: cover
+    }
+
+    .bowls_video_right {
+        width: 50%;
+        margin: 20px 0 0 -50px;
+        padding: 15px;
+        border-radius: 20px
+    }
+
+    .tour_news_listing h3 {
+        margin: 0 0 20px
+    }
+
+    .tour_news_listing_left {
+        margin: 0 .6% 15px
+    }
+
+    .looking_box {
+        margin: 0 0 30px;
+        height: auto
+    }
+
+    .looking_box_top {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        height: auto
+    }
+
+    .looking_box_top h3 {
+        font-size: 22px!important;
+        margin: 0 0 10px
+    }
+
+    .looking_box_top_left {
+        width: 74%
+    }
+
+    .looking_box_top_right {
+        width: auto;
+        margin: 10px 0 0 0
+    }
+
+    .community_box h4 {
+        font-size: 14px
+    }
+
+    .community_box_left {
+        width: 33%;
+        margin: 0 .1%;
+        border: none
+    }
+
+    .community_left {
+        width: 20%
+    }
+
+    .community_right {
+        width: 78%
+    }
+
+    .footer_container {
+        width: 98%;
+        padding: 70px 0 25px
+    }
+
+    .footer_container h4 img {
+        margin: 0 15px 0 0
+    }
+
+    .footer_top {
+        margin: 0 0 20px;
+        padding: 0 0 20px
+    }
+
+    .footer_left {
+        width: 38%
+    }
+
+    .footer_left p {
+        padding: 0 0 15px 25px
+    }
+
+    .footer_logo {
+        margin: 0 0 15px
+    }
+
+    .footer_right {
+        width: 59%
+    }
+
+    .footer_bottom_left {
+        width: 34%
+    }
+
+    .footer_bottom_right {
+        width: 64%;
+        margin: 0
+    }
+
+    .about_caption {
+        width: 98%;
+        top: 32%
+    }
+
+    .about_bowling {
+        width: 98%;
+        padding: 20px 0
+    }
+
+    .about_bowling h3 {
+        font-size: 34px;
+        margin: 0 0 10px
+    }
+
+    .about_bowling p {
+        font-size: 15px
+    }
+
+    .about_bowling_left {
+        width: 50%
+    }
+
+    .about_bowling_left img {
+        height: 485px
+    }
+
+    .about_bowling_right {
+        width: 53%;
+        margin: 20px 0 0 -25px;
+        padding: 20px 0 20px 20px;
+        border-radius: 20px
+    }
+
+    .our_vision {
+        width: 98%
+    }
+
+    .our_vision h3 {
+        font-size: 34px;
+        margin: 0 0 10px
+    }
+
+    .our_vision p {
+        font-size: 15px
+    }
+
+    .our_vision_left {
+        width: 52%;
+        margin: 20px -25px 0 0;
+        padding: 20px 20px 20px 0;
+        border-radius: 20px
+    }
+
+    .our_vision_right {
+        width: 51.3%
+    }
+
+    .our_vision_right img {
+        height: 486px
+    }
+
+    .tours_wrapper h3 {
+        margin: 0 0 30px
+    }
+
+    .body_container {
+        width: 100%;
+        padding: 20px 15px
+    }
+
+    .like_box {
+        padding: 20px 0
+    }
+
+    .item_box {
+        margin: 20px 0!important
+    }
+
+    .item_box_middle {
+        margin: 0 0 0 40px
+    }
+
+    .sidebar_left {
+        width: 28%
+    }
+
+    .sidebar_right {
+        width: 70%
+    }
+
+    .sidebar_right_listing {
+        width: 49%;
+        margin: 0 .5% 20px;
+        height: 446px
+    }
+
+    .sidebar_listing_caption {
+        padding: 55px 0 0 0;
+        height: 448px
+    }
+
+    .sidebar_listing_caption h3 {
+        font-size: 26px
+    }
+
+    .sidebar_listing_caption h3 br {
+        display: none
+    }
+
+    .view_left {
+        width: 95px
+    }
+
+    .sidebar_box {
+        padding: 0 10px
+    }
+
+    .sidebar_right h4 a {
+        font-size: 19px
+    }
+
+    #test1 {
+        color: green
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        .sidebar_listing_caption {
+            height:446px
+        }
+    }
+
+    .tour_news_listing {
+        margin: 0 0 20px
+    }
+
+    .about_mrg {
+        margin: -10px 0 20px
+    }
+
+    .user_details .tours_listing_left {
+        margin: 0 2%!important
+    }
+
+    .body_container .user_details_info {
+        margin: 0 0 10px
+    }
+
+    .body_container .user_details_info label {
+        padding: 0 0 10px
+    }
+
+    .body_container .user_section_title {
+        margin: 0 0 20px
+    }
+
+    .body_container .admin_details .show_all_tour {
+        margin-bottom: 20px
+    }
+
+    .body_container .tour_list {
+        margin: 0 15px 0 0
+    }
+
+    .body_container .tour_pagination ul li a {
+        padding: 2px 5px
+    }
+
+    .body_container .admin_enquiry {
+        margin: 0 0 25px
+    }
+
+    .body_container .admin_enquiry {
+        padding: 10px
+    }
+
+    .body_container .admin_tour_log {
+        padding: 20px 0
+    }
+
+    .body_container .admin_enquiry_step_box {
+        margin: 0 0 20px;
+        padding: 15px
+    }
+
+    .body_container .tour_quote_pr {
+        padding: 10px 0 20px
+    }
+
+    .body_container .app_append {
+        padding: 20px 0 0
+    }
+
+    .body_container .admin_tour_log_right strong {
+        padding: 0 0 10px
+    }
+
+    .body_container .reward_table {
+        margin: 0 0 15px
+    }
+
+    .body_container .offer_redemp {
+        margin: 0 0 20px
+    }
+
+    .body_container .pay_title_info {
+        width: 46%
+    }
+
+    .body_container .pay_date_info {
+        width: 52%
+    }
+
+    .body_container .pay_date_info img {
+        width: 60%
+    }
+
+    .body_container .pay_info {
+        margin: 0 0 20px
+    }
+
+    .body_container .pay_ref_code {
+        margin: 0 0 20px
+    }
+
+    .footer_newsletter_btn {
+        margin: -44px 0 0 0
+    }
+
+    .body_container .slct_date {
+        margin: 0 0 20px
+    }
+
+    .body_container .slct_hotel_left {
+        width: 24%;
+        margin: 0 6px 0 0
+    }
+
+    .body_container .slct_hotel_right {
+        width: 24%
+    }
+
+    .body_container .dink_water {
+        padding: 20px
+    }
+
+    .body_container .tour_apli_box_right {
+        width: 200px
+    }
+
+    .body_container .make_btn a {
+        margin: 0 5px 0 0;
+        padding: 6px 30px
+    }
+
+    .body_container .email_details_btn a {
+        margin: 0 0 10px;
+        padding: 7px 7px;
+        font-size: 14px
+    }
+
+    .tour_banner .tour_banner_caption {
+        width: 98%
+    }
+
+    .tour_view .tour_view_container {
+        width: 98%;
+        padding: 20px 0
+    }
+
+    .tour_tab_wrapper .tour_tab_container {
+        width: 98%
+    }
+
+    .tour_tab_wrapper .tour_tab_list {
+        width: 100%;
+        float: none
+    }
+
+    .body_container .custom_tour_left {
+        width: 49%
+    }
+
+    .body_container .custom_tour_right {
+        width: 49%;
+        top: 25px;
+        float: right;
+        position: relative
+    }
+
+    .body_container .person_price {
+        margin: 0 0 20px
+    }
+
+    .body_container .slide_nav {
+        margin: 0 0 20px
+    }
+
+    .body_container .custom_tour_left h3 {
+        margin-bottom: 15px
+    }
+
+    .body_container .fix_club_image {
+        width: 100%;
+        margin: 0 0 20px
+    }
+
+    .body_container .fix_club_info {
+        width: 100%
+    }
+
+    .body_container .fix_club_info p {
+        padding: 0 0 15px
+    }
+
+    .body_container .tabcontent p {
+        margin-bottom: 10px
+    }
+
+    .bt_tour_left {
+        width: 49%
+    }
+
+    .bt_tour_right {
+        width: 49%
+    }
+
+    .bt_tour_right h3 {
+        margin: 0 0 10px
+    }
+
+    .book_btn {
+        margin: 10px 0 10px
+    }
+
+    .book_btn a {
+        margin: 0 0 10px
+    }
+
+    .bt_tour_boxes {
+        margin: 0 0 20px;
+        padding: 15px
+    }
+
+    .tour_smr_box {
+        margin: 0 0 20px;
+        padding: 0 0 20px
+    }
+
+    .tour_smr_box_left {
+        width: 49%
+    }
+
+    .tour_smr_box_right {
+        width: 49%
+    }
+
+    .book_tour_listing_thym {
+        margin: 0 0 20px
+    }
+
+    .altn_box {
+        padding: 15px
+    }
+
+    .altn_listing_left {
+        width: 100%;
+        margin: 0 0 20px
+    }
+
+    .altn_listing_right {
+        width: 100%
+    }
+
+    .altn_form_field_left {
+        margin: 0 0 10px
+    }
+
+    .altn_form_field_right {
+        margin: 0 0 10px
+    }
+
+    .prefrd_box_left {
+        width: 47%;
+        margin: 0 10px 15px 0
+    }
+
+    .day_box {
+        padding: 15px
+    }
+
+    .day_box_left {
+        width: 100%
+    }
+
+    .day_box_right {
+        width: 100%
+    }
+
+    .other_box {
+        padding: 15px
+    }
+
+    .other_box .book_tour_listing_left {
+        margin: 0 6% 0
+    }
+
+    .flight_left {
+        width: 100%
+    }
+
+    .tour_esmte {
+        padding: 15px
+    }
+
+    .customise_day_box_left {
+        width: 100%
+    }
+
+    .customise_day_box_right {
+        width: 100%
+    }
+
+    .look_form_field_left {
+        width: 65%
+    }
+
+    .look_form_field_right {
+        width: 33%
+    }
+
+    .news_listing_box_left {
+        width: 46%;
+        margin: 0 2% 10px
+    }
+
+    .news_listing_box_thym {
+        margin: 0 auto 20px
+    }
+
+    .show_mrg {
+        margin: 0px!important
+    }
+
+    .location_add {
+        margin: 0 0 25px
+    }
+
+    .contact_left {
+        width: 49%
+    }
+
+    .contact_right {
+        width: 49%;
+        padding: 0 20px
+    }
+
+    .captch_left {
+        width: 49%
+    }
+
+    .captch_btn_right {
+        width: 100%
+    }
+
+    .bespoke_left {
+        width: 49%;
+        margin: 0 0 15px
+    }
+
+    .bespoke_field_left h6 {
+        margin: 0 0 25px
+    }
+
+    .bespoke_field_left label {
+        margin: 0 0 20px
+    }
+
+    .bespoke_right {
+        width: 49%;
+        margin: 0 0 15px
+    }
+
+    .bespoke_field_left {
+        width: 100%
+    }
+
+    .stdtsrf_fild_left {
+        width: 22.3%
+    }
+
+    .srf_fild_left {
+        width: 30.5%
+    }
+
+    .bespoke_field_right {
+        width: 100%
+    }
+
+    .tour_hotel_box {
+        margin: 0 0 10px
+    }
+
+    .tour_hb_left {
+        width: 100%;
+        margin: 0 0 20px
+    }
+
+    .tour_hb_right {
+        width: 100%
+    }
+
+    .tour_hb_thumb {
+        margin: 0 0 20px
+    }
+
+    .tour_hb_thumb img {
+        padding: 0
+    }
+
+    .fixture_popup_container {
+        width: 98%;
+        padding: 10px
+    }
+
+    .fixture_top_section {
+        margin: 0 0 20px
+    }
+
+    .fixture_top_section_slider {
+        width: 49%
+    }
+
+    .fixture_top_section_right {
+        width: 49%;
+        margin: 0
+    }
+
+    .fixture_club_facility {
+        margin: 0 0 20px
+    }
+
+    .fixture_club_faclty {
+        width: 49%
+    }
+
+    .fixture_club_map {
+        width: 100%
+    }
+
+    .fixture_club_faclty_list {
+        width: 100%!important;
+        padding: 0!important;
+        margin: 20px 0 0 0
+    }
+
+    .fixture_review_list {
+        width: 49%;
+        margin: 0
+    }
+
+    .fixture_calender h3.caldr {
+        margin: 0 0 15px;
+        padding: 0;
+        font-size: 18px
+    }
+
+    .fixture_day {
+        margin: 0 0 10px 0
+    }
+
+    .fixture_calender .tab button {
+        margin: 0 5px 10px!important
+    }
+
+    .fixture_calender .tabcontent {
+        padding: 0
+    }
+
+    .tour_slider_popup_container {
+        width: 98%;
+        top: 32%
+    }
+
+    .tour_review {
+        overflow-x: scroll;
+        margin: 0 0 15px
+    }
+
+    .tour_review table {
+        width: 680px
+    }
+
+    .tour_review_hr {
+        padding: 20px 0 0
+    }
+
+    .tour_review_hr_title {
+        width: 100%;
+        margin: 0 0 15px
+    }
+
+    #tour_review_cl.tours_wrapper {
+        padding: 0 0 10px
+    }
+
+    .tour_review_testimo {
+        padding: 0 0 10px
+    }
+
+    .tour_review_hr_client {
+        width: 100%
+    }
+
+    .login_review {
+        padding: 10px
+    }
+
+    .login_review_form {
+        margin-bottom: 20px
+    }
+
+    .leave_review_quote {
+        margin-bottom: 20px
+    }
+
+    .login_review input {
+        width: 100%;
+        margin: 0 0 10px
+    }
+
+    .leave_review_quote textarea {
+        margin: 0 0 20px
+    }
+
+    .login_review table {
+        width: 630px
+    }
+
+    .leave_review_table {
+        overflow-x: scroll;
+        margin-bottom: 20px
+    }
+
+    .ind_com_review strong {
+        margin-bottom: 20px
+    }
+
+    .ind_com_review div {
+        margin-bottom: 20px
+    }
+
+    .alt_travel_box {
+        margin: 0 0 10px
+    }
+
+    .tour_tt_hotal {
+        width: 100%
+    }
+}
+
+@media only screen and (min-width: 959px) and (max-width:1024px) {
+    .banner_form_field_select {
+        padding:0 20px
+    }
+
+    .bowls_box_left_thym img {
+        height: 305px
+    }
+
+    .bowls_box_right_thym img {
+        height: 305px
+    }
+
+    .bowls_box_middle {
+        margin: 30px 0 0 20px
+    }
+
+    .bowls_box_middle h3 {
+        font-size: 24px
+    }
+
+    .bowls_box_middle h4 {
+        font-size: 50px
+    }
+
+    .bowls_video_right {
+        width: 49%
+    }
+
+    .bowls_video_left img {
+        height: 295px
+    }
+
+    .looking_box {
+        height: 160px
+    }
+
+    .looking_box_top {
+        height: 160px
+    }
+
+    .looking_box_top_left {
+        width: 78%
+    }
+
+    .looking_box_top_right {
+        width: 19%
+    }
+
+    .community_box h4 {
+        font-size: 15px
+    }
+
+    .attract {
+        text-align: left
+    }
+
+    .footer_left {
+        width: 40%
+    }
+
+    .footer_right {
+        width: 52%
+    }
+
+    .footer_bottom_left {
+        width: 26%
+    }
+
+    .footer_bottom_right {
+        width: 74%
+    }
+
+    .about_bowling p {
+        font-size: 16px
+    }
+
+    .about_bowling_left img {
+        height: 440px
+    }
+
+    .about_bowling_right {
+        width: 52.4%
+    }
+
+    .our_vision p {
+        font-size: 15px
+    }
+
+    .our_vision_left {
+        width: 49.4%
+    }
+
+    .our_vision_right {
+        width: 53%
+    }
+
+    .our_vision_right img {
+        height: 420px
+    }
+
+    .item_box_middle {
+        margin: 0 0 0 100px
+    }
+
+    .sidebar_left {
+        width: 25%
+    }
+
+    .sidebar_right {
+        width: 73%
+    }
+
+    .sidebar_right_listing {
+        width: 48%;
+        margin: 0 1% 20px
+    }
+
+    .sidebar_listing_caption {
+        height: 448px
+    }
+
+    .sidebar_listing_caption {
+        padding: 50px 0 0
+    }
+
+    .sidebar_listing_caption h3 {
+        font-size: 30px
+    }
+
+    .sidebar_right h4 a {
+        font-size: 21px
+    }
+
+    .view_left {
+        width: 140px
+    }
+
+    #test1 {
+        color: green
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        .sidebar_listing_caption {
+            height:444px
+        }
+    }
+
+    .body_container .pay_date_info img {
+        width: 70%
+    }
+
+    .body_container .slct_hotel_left {
+        margin: 0 8px 0 0
+    }
+
+    .body_container .fix_club_image {
+        width: 49%
+    }
+
+    .body_container .fix_club_info {
+        width: 49%
+    }
+
+    .book_btn a {
+        font-size: 15px;
+        padding: 6px 14px
+    }
+
+    .book_tour_listing_left {
+        width: 49%;
+        margin: 0 4px 0 0
+    }
+
+    .altn_listing_left {
+        width: 49%;
+        margin: 0
+    }
+
+    .altn_listing_right {
+        width: 49%
+    }
+
+    .altn_listing_right iframe {
+        height: 305px
+    }
+
+    .prefrd_box_left {
+        width: 47.5%
+    }
+
+    .day_box_left {
+        width: 47%
+    }
+
+    .day_box_right {
+        width: 47%
+    }
+
+    .other_box .book_tour_listing_left {
+        margin: 0 .5% 0
+    }
+
+    .flight_left {
+        width: 50%
+    }
+
+    .cstms_box .book_tour_listing_left {
+        width: 49%
+    }
+
+    .customise_day_box_left,.customise_day_box_right {
+        width: 49%
+    }
+
+    .customise_day_box_checkbox_btn {
+        margin: 0 5px 0 0
+    }
+
+    .bespoke_caption {
+        padding: 100px 0 0 0
+    }
+
+    .bespoke_caption h3 {
+        margin: 0 0 100px
+    }
+
+    .stdtsrf_fild_left {
+        width: 22.9%
+    }
+
+    .srf_fild_left {
+        width: 31.2%
+    }
+
+    .fixture_calender .tab button {
+        margin: 0 7px 20px
+    }
+
+    .tour_slider_popup_container {
+        width: 98%;
+        top: 40%
+    }
+
+    .tour_tt_hotal {
+        width: 750px
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width:767px) {
+    .header_container {
+        width:100%;
+        padding: 0
+    }
+
+    .header_left {
+        padding: 15px 10px
+    }
+
+    .header_middle {
+        width: 100%!important
+    }
+
+    .mobile_respnsb {
+        display: block;
+        margin: 23px 10px 0 0;
+        width: 210px
+    }
+
+    .banner_caption {
+        width: 95%;
+        top: 48%
+    }
+
+    .banner_caption h1 {
+        margin: 0 0 20px
+    }
+
+    .banner_form_field {
+        display: none
+    }
+
+    .tours_wrapper_nav {
+        margin: 0 0 25px
+    }
+
+    .tours_wrapper_nav ul li {
+        padding: 0 6px
+    }
+
+    .tours_listing_left {
+        margin: 0 0 25px
+    }
+
+    .attract {
+        text-align: left
+    }
+
+    .dotted_box {
+        margin: 0 0 15px
+    }
+
+    .home_body {
+        width: 95%;
+        padding: 20px 0
+    }
+
+    .bowls_box_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px;
+        padding: 10px;
+        height: auto
+    }
+
+    .bowls_box_left_thym {
+        margin: 0
+    }
+
+    .bowls_box_left_thym img {
+        height: 245px;
+        transform: none;
+        object-fit: cover
+    }
+
+    .bowls_box_caption {
+        width: 92%;
+        margin: 15px auto 0;
+        padding: 15px
+    }
+
+    .bowls_box_caption_box {
+        padding: 17px
+    }
+
+    .bowls_box_caption_box h3 {
+        font-size: 22px
+    }
+
+    .bowls_box_middle {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px 0
+    }
+
+    .precent_off {
+        margin: 0 0 15px;
+        padding: 0 0 15px
+    }
+
+    .bowls_box_right {
+        width: 100%;
+        float: none;
+        transform: none;
+        height: auto;
+        padding: 10px
+    }
+
+    .bowls_box_right_thym img {
+        margin: 0;
+        height: 245px;
+        transform: none;
+        object-fit: cover
+    }
+
+    .popular_wrapper h3 {
+        margin: 0 0 25px
+    }
+
+    .popular_wrapper_left {
+        margin: 0 1% 10px
+    }
+
+    .popular_wrapper_left img {
+        height: 200px
+    }
+
+    .popular_dotted {
+        margin: 10px 0 0
+    }
+
+    .bowls_club_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px;
+        padding: 15px;
+        transform: none;
+        border-radius: 0
+    }
+
+    .bowls_club_thym {
+        width: 100%!important;
+        margin: 0;
+        transform: none
+    }
+
+    .bowls_club_thym img {
+        height: auto;
+        max-width: 100%!important;
+        width: 100%!important
+    }
+
+    .bowls_club_arrow {
+        margin: 0 0 5px
+    }
+
+    .bowls_club_right {
+        width: 100%;
+        float: none;
+        margin: 0;
+        padding: 0 15px
+    }
+
+    .bowls_club_right h3 {
+        line-height: 36px;
+        margin: 0 0 15px
+    }
+
+    .bowls_club_text {
+        width: 100%
+    }
+
+    .explore_btn a {
+        margin: 0 10px 0 0;
+        padding: 9px 30px
+    }
+
+    .our_logo img {
+        width: 28%;
+        margin: 0 2%
+    }
+
+    .bowls_video h3 {
+        font-size: 34px;
+        margin: 0 0 10px
+    }
+
+    .bowls_video_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px
+    }
+
+    .bowls_video_left img {
+        height: 310px;
+        object-fit: cover
+    }
+
+    .bowls_video_right {
+        width: 100%;
+        float: none;
+        margin: 0 auto 0;
+        padding: 0;
+        border-radius: 0
+    }
+
+    .tour_news_listing h3 {
+        margin: 0 0 20px
+    }
+
+    .tour_news_listing_left {
+        width: 100%;
+        margin: 0 0 20px
+    }
+
+    .tour_news_thym {
+        margin: 0 auto 25px
+    }
+
+    .looking_box {
+        margin: 0 0 30px;
+        height: auto
+    }
+
+    .looking_box_top {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        height: auto
+    }
+
+    .looking_box_top h3 {
+        font-size: 27px;
+        margin: 0 0 10px
+    }
+
+    .looking_box_top_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px;
+        text-align: center
+    }
+
+    .looking_box_top_right {
+        width: 50%;
+        margin: 0 auto;
+        float: none;
+        text-align: center
+    }
+
+    .community_box_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px;
+        border: none
+    }
+
+    .community_left {
+        width: 15%
+    }
+
+    .community_right {
+        width: 85%
+    }
+
+    .footer {
+        background: #2191cd
+    }
+
+    .footer_container {
+        width: 95%;
+        padding: 20px 0
+    }
+
+    .footer_top {
+        margin: 0 0 20px;
+        padding: 0 0 25px
+    }
+
+    .footer_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px
+    }
+
+    .footer_left p {
+        padding: 0 0 15px 25px
+    }
+
+    .footer_logo {
+        margin: 0 0 15px
+    }
+
+    .footer_right {
+        width: 100%;
+        float: none
+    }
+
+    .footer_bottom_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px;
+        text-align: center
+    }
+
+    .footer_bottom_left img {
+        margin: 0 auto
+    }
+
+    .footer_bottom_right {
+        width: 100%;
+        float: none;
+        margin: 0;
+        text-align: center
+    }
+
+    .banner_inner img {
+        height: 120px
+    }
+
+    .about_caption {
+        width: 95%;
+        top: 50%
+    }
+
+    .about_bowling {
+        width: 100%;
+        padding: 20px 15px
+    }
+
+    .about_bowling_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px
+    }
+
+    .about_bowling_left img {
+        height: 350px
+    }
+
+    .about_bowling_right {
+        width: 100%;
+        float: none;
+        margin: 0;
+        padding: 0;
+        border-radius: 0
+    }
+
+    .our_vision {
+        width: 95%
+    }
+
+    .our_vision_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px;
+        padding: 0;
+        border-radius: 0;
+        text-align: left
+    }
+
+    .our_vision_right {
+        width: 100%;
+        float: none
+    }
+
+    .our_vision_right img {
+        height: 350px
+    }
+
+    .tours_wrapper h3 {
+        margin: 0 0 30px
+    }
+
+    .body_container {
+        width: 95%;
+        padding: 20px 0
+    }
+
+    .like_box {
+        padding: 20px 0
+    }
+
+    .like_box img {
+        margin: 0 10px 7px 0
+    }
+
+    .item_box {
+        margin: 0 0 25px;
+        padding: 15px
+    }
+
+    .item_box_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px
+    }
+
+    .item_box_middle {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px 0
+    }
+
+    .show_field,.show_field2 {
+        width: 49%
+    }
+
+    .item_box_right {
+        width: 100%;
+        float: none;
+        margin: 0;
+        text-align: left
+    }
+
+    .sidebar_left {
+        width: 100%!important;
+        float: none;
+        margin: 0 0 15px
+    }
+
+    .sidebar_right {
+        width: 100%!important;
+        float: none
+    }
+
+    .sidebar_right_listing {
+        width: 100%;
+        margin: 0 0 20px;
+        height: 502px
+    }
+
+    .sidebar_listing_caption {
+        height: 501px
+    }
+
+    .bx-wrapper .bx-pager,.bx-wrapper .bx-controls-auto {
+        left: 0px!important;
+        right: 0;
+        margin: 0 auto;
+        width: 90%!important
+    }
+
+    .bx-wrapper .bx-viewport {
+        width: 98%!important
+    }
+
+    #test1 {
+        color: green
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        .sidebar_listing_caption {
+            height:494px
+        }
+    }
+
+    .tour_news_listing {
+        margin: 0 0 20px
+    }
+
+    .about_mrg {
+        margin: -10px 0 20px
+    }
+
+    .body_container .user_title {
+        margin: 0 0 20px;
+        padding: 40px 150px
+    }
+
+    .body_container .user_title .pn {
+        left: 25px;
+        top: 14px
+    }
+
+    .body_container .user_menu {
+        width: 100%;
+        float: none;
+        margin: 0 0 10px
+    }
+
+    .body_container .user_menu ul li a {
+        padding: 10px 10px
+    }
+
+    .body_container .user_details {
+        width: 100%;
+        float: none
+    }
+
+    .user_details .tours_listing_left {
+        width: 100%;
+        margin: 0 0!important
+    }
+
+    .body_container .user_details_info {
+        margin: 0 0 10px
+    }
+
+    .body_container .user_details_info label {
+        padding: 0 0 10px
+    }
+
+    .body_container .user_section_title {
+        margin: 0 0 20px
+    }
+
+    .body_container .admin_details {
+        width: 100%;
+        float: none;
+        margin: 0
+    }
+
+    .body_container .admin_details .show_all_tour {
+        margin-bottom: 20px
+    }
+
+    .body_container .club_info_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px
+    }
+
+    .body_container .club_info_right {
+        width: 100%;
+        float: none;
+        margin: 0
+    }
+
+    .body_container .tour_list {
+        margin: 0 15px 0 0
+    }
+
+    .body_container .admin_enquiry {
+        margin: 0 0 25px
+    }
+
+    .body_container .admin_enquiry {
+        padding: 10px;
+        margin: 0
+    }
+
+    .body_container .admin_tour_log {
+        padding: 20px 0
+    }
+
+    .body_container .admin_enquiry_step_box {
+        margin: 0 0 20px;
+        padding: 15px
+    }
+
+    .body_container .tour_quote_pr {
+        padding: 10px 0 20px
+    }
+
+    .body_container .app_append {
+        padding: 20px 0 0
+    }
+
+    .body_container .admin_tour_log_right strong {
+        padding: 0 0 10px
+    }
+
+    .body_container .reward_table {
+        margin: 0 0 15px
+    }
+
+    .body_container .offer_redemp {
+        margin: 0 0 20px
+    }
+
+    .body_container .pay_title_info {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px
+    }
+
+    .body_container .pay_date_info {
+        width: 100%;
+        float: none
+    }
+
+    .body_container .pay_info {
+        margin: 0 0 20px
+    }
+
+    .body_container .pay_ref_code {
+        margin: 0 0 20px
+    }
+
+    .body_container .room_allocation_left {
+        width: 170px
+    }
+
+    .room_allocation_left_text {
+        width: 49%
+    }
+
+    .body_container .room_allocation_right {
+        width: 40%
+    }
+
+    .body_container .slct_date {
+        margin: 0 0 20px
+    }
+
+    .body_container .slct_hotel_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 10px 0
+    }
+
+    .body_container .slct_hotel_right {
+        width: 100%;
+        float: none
+    }
+
+    .body_container .slct_hotel {
+        width: 100%
+    }
+
+    .body_container .dink_water {
+        padding: 15px
+    }
+
+    .body_container .tour_apli_box_right {
+        width: 200px
+    }
+
+    .body_container .make_btn a {
+        margin: 0 5px 0 0;
+        padding: 6px 19px
+    }
+
+    .body_container .email_details_btn a {
+        margin: 0 2px 10px;
+        padding: 7px 9px;
+        font-size: 14px
+    }
+
+    .body_container .voucher_field_left {
+        width: 100%
+    }
+
+    .body_container .voucher_field_right {
+        width: 100%;
+        margin: 0 0 15px
+    }
+
+    .tour_banner .tour_banner_caption {
+        width: 95%
+    }
+
+    .tour_banner img {
+        height: 300px
+    }
+
+    .tour_view .tour_view_container {
+        width: 95%;
+        padding: 20px 0
+    }
+
+    .tour_view .view_tour_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 10px
+    }
+
+    .tour_view .view_tour_right {
+        width: 100%;
+        float: none
+    }
+
+    .tour_tab_wrapper .tour_tab_container {
+        width: 98%
+    }
+
+    .tour_tab_wrapper .tour_tab_list {
+        width: 100%;
+        float: none
+    }
+
+    .tour_tab_wrapper .tour_tab_list ul li a {
+        margin: 15px 0 15px;
+        padding: 0 19px 10px
+    }
+
+    .body_container .custom_tour_left {
+        width: 100%;
+        float: none
+    }
+
+    .body_container .custom_tour_right {
+        margin: 0 auto;
+        top: 0;
+        float: none;
+        position: relative
+    }
+
+    .body_container .person_price {
+        margin: 0 0 20px
+    }
+
+    .body_container .slide_nav {
+        margin: 0 0 20px
+    }
+
+    .body_container .custom_tour_left h3 {
+        margin-bottom: 15px
+    }
+
+    .body_container .fix_club_image {
+        width: 100%;
+        margin: 0 0 20px
+    }
+
+    .body_container .fix_club_info {
+        width: 100%
+    }
+
+    .body_container .fix_club_info p {
+        padding: 0 0 15px
+    }
+
+    .body_container .tabcontent p {
+        margin-bottom: 15px
+    }
+
+    .about_caption h2 {
+        font-size: 23px
+    }
+
+    .bt_tour_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px
+    }
+
+    .bt_tour_right {
+        width: 100%;
+        float: none
+    }
+
+    .bt_tour_right h3 {
+        margin: 0 0 10px
+    }
+
+    .book_btn {
+        margin: 10px 0 10px
+    }
+
+    .book_btn a {
+        margin: 0 0 10px
+    }
+
+    .bt_tour_boxes {
+        margin: 0 0 20px;
+        padding: 15px
+    }
+
+    .tour_smr_box {
+        margin: 0 0 20px;
+        padding: 0 0 20px
+    }
+
+    .tour_smr_box_left {
+        width: 49%
+    }
+
+    .tour_smr_box_right {
+        width: 49%
+    }
+
+    .book_tour_listing_left {
+        width: 49%;
+        margin: 0 2px 10px;
+        padding: 10px
+    }
+
+    .book_tour_listing_thym {
+        margin: 0 0 20px
+    }
+
+    .altn_box {
+        padding: 15px
+    }
+
+    .altn_listing_left {
+        width: 100%;
+        margin: 0 0 20px
+    }
+
+    .altn_listing_right {
+        width: 100%
+    }
+
+    .altn_form_field_left {
+        margin: 0 0 10px
+    }
+
+    .altn_form_field_right {
+        margin: 0 0 10px
+    }
+
+    .prefrd_box_left {
+        width: 48%;
+        margin: 0 1% 15px
+    }
+
+    .day_box {
+        padding: 15px
+    }
+
+    .day_box_left {
+        width: 100%
+    }
+
+    .day_box_right {
+        width: 100%
+    }
+
+    .other_box {
+        padding: 10px 10px 20px
+    }
+
+    .other_box .book_tour_listing_left {
+        margin: 0 .5% 10px
+    }
+
+    .flight_left {
+        width: 100%
+    }
+
+    .tour_esmte {
+        padding: 15px
+    }
+
+    .cstms_box .book_tour_listing_left {
+        width: 49%
+    }
+
+    .customise_day_box_left {
+        width: 100%
+    }
+
+    .customise_day_box_right {
+        width: 100%
+    }
+
+    .look_form_field_left {
+        width: 65%
+    }
+
+    .look_form_field_right {
+        width: 33%
+    }
+
+    .news_listing_box_left {
+        width: 50%!important;
+        margin: 0 0 20px!important
+    }
+
+    .news_listing_box_thym {
+        margin: 0 auto 20px!important
+    }
+
+    .show_mrg {
+        margin: 0 0 15px!important
+    }
+
+    .location_add {
+        margin: 0 0 10px
+    }
+
+    .location_add_left {
+        width: 100%;
+        border: none;
+        margin: 0 0 20px
+    }
+
+    .contact_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px
+    }
+
+    .contact_right {
+        width: 100%;
+        float: none;
+        padding: 0
+    }
+
+    .bontent_block_text_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 10px
+    }
+
+    .bontent_block_text_right {
+        width: 100%;
+        float: none
+    }
+
+    .bespoke_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px
+    }
+
+    .bespoke_field_left h6 {
+        margin: 0 0 25px
+    }
+
+    .bespoke_field_left label {
+        margin: 0 0 20px
+    }
+
+    .bespoke_right {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px
+    }
+
+    .bespoke_caption {
+        padding: 120px 0 0
+    }
+
+    .bespoke_field_left {
+        width: 100%
+    }
+
+    .bespoke_field_left_date,.bespoke_field_left_select2 {
+        margin: 0 0 25px
+    }
+
+    .stdtsrf_fild {
+        margin: 0
+    }
+
+    .stdtsrf_fild_left {
+        width: 23%;
+        margin: 0 1%
+    }
+
+    .srf_fild {
+        margin: 0
+    }
+
+    .srf_fild_left {
+        width: 31.3%;
+        margin: 0 1%
+    }
+
+    .bespoke_field_right {
+        width: 100%
+    }
+
+    .tour_hotel_box {
+        margin: 0 0 10px
+    }
+
+    .tour_hb_left {
+        width: 100%;
+        margin: 0 0 20px;
+        float: none
+    }
+
+    .tour_hb_right {
+        width: 100%;
+        float: none
+    }
+
+    .tour_hb_thumb {
+        margin: 0 0 20px
+    }
+
+    .tour_hb_thumb img {
+        padding: 0
+    }
+
+    .fixture_popup_container {
+        width: 98%;
+        padding: 10px
+    }
+
+    .fixture_top_section {
+        margin: 0 0 20px
+    }
+
+    .fixture_top_section_slider {
+        width: 100%!important;
+        float: none;
+        margin: 0 0 20px
+    }
+
+    .fixture_top_section_right {
+        width: 100%!important;
+        float: none;
+        margin: 0
+    }
+
+    .fixture_club_facility {
+        margin: 0 0 20px
+    }
+
+    .fixture_club_faclty {
+        width: 100%!important;
+        float: none;
+        margin: 0 0 20px;
+        padding: 0;
+        border: none
+    }
+
+    .fixture_club_map {
+        width: 100%!important
+    }
+
+    .fixture_club_faclty_list {
+        width: 100%!important;
+        padding: 0!important;
+        margin: 20px 0 0 0
+    }
+
+    .fixture_review_list {
+        width: 100%!important;
+        float: none;
+        margin: 0px!important
+    }
+
+    .fixture_calender h3.caldr {
+        margin: 0 0 15px;
+        padding: 0;
+        font-size: 18px
+    }
+
+    .fixture_calender .tab button {
+        margin: 0 5px 10px!important
+    }
+
+    .fixture_calender .tabcontent {
+        padding: 0
+    }
+
+    .fix_left_news {
+        width: 100%
+    }
+
+    .tour_slider_popup_container {
+        width: 95%;
+        top: 50%
+    }
+
+    .tour_review {
+        overflow-x: scroll;
+        margin: 0 0 15px
+    }
+
+    .tour_review table {
+        width: 680px
+    }
+
+    .tour_review_hr {
+        padding: 20px 0 0
+    }
+
+    .tour_review_hr_title {
+        width: 100%;
+        margin: 0 0 15px
+    }
+
+    #tour_review_cl.tours_wrapper {
+        padding: 0 0 10px
+    }
+
+    .tour_review_testimo {
+        padding: 0 0 10px
+    }
+
+    .tour_review_hr_client {
+        width: 100%
+    }
+
+    .tour_add_teview {
+        margin: 0 0 30px
+    }
+
+    .login_review {
+        padding: 10px
+    }
+
+    .login_review_form {
+        margin-bottom: 20px
+    }
+
+    .leave_review_quote {
+        margin-bottom: 20px
+    }
+
+    .login_review input {
+        width: 100%;
+        margin: 0 0 10px
+    }
+
+    .leave_review_quote textarea {
+        margin: 0 0 20px
+    }
+
+    .login_review table {
+        width: 630px
+    }
+
+    .leave_review_table {
+        overflow-x: scroll;
+        margin-bottom: 20px
+    }
+
+    .ind_com_review strong {
+        margin-bottom: 20px
+    }
+
+    .ind_com_review div {
+        margin-bottom: 20px
+    }
+
+    .alt_travel_box {
+        margin: 0 0 10px
+    }
+
+    .tour_tt_hotal {
+        width: 88%
+    }
+}
+
+@media only screen and (min-width: 640px) and (max-width:767px) {
+    .banner_caption {
+        width:98%;
+        top: 38%
+    }
+
+    .banner_caption h1 {
+        font-size: 32px
+    }
+
+    .banner_form_field {
+        display: block
+    }
+
+    .banner_form_field_select {
+        padding: 0 13px 0 10px
+    }
+
+    .banner_form_field_box {
+        background: url(/wp-content/themes/bowlingtours/assets/css/../images/icon.png) right 5px top 16px no-repeat
+    }
+
+    .banner_form_field_box:nth-child(2) {
+        background: url(/wp-content/themes/bowlingtours/assets/css/../images/icon2.png) right 8px top 16px no-repeat
+    }
+
+    .banner_form_field_box:nth-child(3) {
+        background: url(/wp-content/themes/bowlingtours/assets/css/../images/icon3.png) right 8px top 16px no-repeat
+    }
+
+    .banner_form_field_left {
+        width: 80%
+    }
+
+    .banner_form_field_right {
+        width: 20%
+    }
+
+    .tours_wrapper_nav ul li {
+        padding: 0 15px
+    }
+
+    .tours_listing_left {
+        margin: 0 1% 25px
+    }
+
+    .attract ul li {
+        padding: 0 9px 0 20px
+    }
+
+    .bowls_video_left img {
+        height: 350px
+    }
+
+    .community_box_left {
+        width: 49%;
+        float: left;
+        height: 45px
+    }
+
+    .community_left {
+        width: 17%
+    }
+
+    .community_right {
+        width: 79%
+    }
+
+    .banner_inner img {
+        height: 150px
+    }
+
+    .like_box img {
+        margin: 0 15px 0 0
+    }
+
+    .sidebar_right_listing {
+        height: 575px
+    }
+
+    .sidebar_listing_caption {
+        padding: 100px 0 0;
+        height: 574px
+    }
+
+    .bx-wrapper .bx-pager,.bx-wrapper .bx-controls-auto {
+        left: 0px!important;
+        right: 0;
+        margin: 0 auto;
+        width: 90%!important
+    }
+
+    .bx-wrapper .bx-viewport {
+        width: 98%!important
+    }
+
+    #test1 {
+        color: green
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        .sidebar_listing_caption {
+            height:567px
+        }
+    }
+
+    .user_details .tours_listing_left {
+        width: 94%;
+        margin: 0 2%!important
+    }
+
+    .body_container .club_info_left {
+        width: 49%;
+        float: left;
+        margin: 0
+    }
+
+    .body_container .club_info_right {
+        width: 49%;
+        float: right;
+        margin: 0
+    }
+
+    .body_container .room_allocation_left {
+        width: 40%
+    }
+
+    .body_container .room_allocation_right {
+        width: 30%
+    }
+
+    .body_container .make_btn a {
+        margin: 0 10px 0 0;
+        padding: 6px 35px
+    }
+
+    .body_container .email_details_btn a {
+        margin: 0 5px 10px 0;
+        padding: 6px 25px
+    }
+
+    .body_container .voucher_field_left {
+        width: 43%
+    }
+
+    .body_container .fix_club_image {
+        width: 49%
+    }
+
+    .body_container .fix_club_info {
+        width: 49%
+    }
+
+    .tour_tab_wrapper .tour_tab_list ul li a {
+        padding: 0 16px 10px
+    }
+
+    .book_btn {
+        margin: 10px 0 20px
+    }
+
+    .book_btn a {
+        margin: 0 10px 0 0;
+        font-size: 16px
+    }
+
+    .book_tour_listing_left {
+        margin: 0 .5% 10px
+    }
+
+    .altn_listing_left {
+        width: 49%;
+        margin: 0
+    }
+
+    .altn_listing_right {
+        width: 49%
+    }
+
+    .altn_listing_right iframe {
+        height: 315px
+    }
+
+    .day_box_left {
+        width: 49%
+    }
+
+    .day_box_right {
+        width: 49%
+    }
+
+    .flight_left {
+        width: 50%
+    }
+
+    .tour_frome_box_left {
+        width: 49%
+    }
+
+    .tour_frome_box_right {
+        width: 49%
+    }
+
+    .customise_day_box_left {
+        width: 49%
+    }
+
+    .customise_day_box_right {
+        width: 49%
+    }
+
+    .bespoke_left h3 {
+        font-size: 28px
+    }
+
+    .bespoke_caption {
+        padding: 60px 0 0
+    }
+
+    .bespoke_right {
+        width: 340px;
+        margin: 0 auto 20px
+    }
+
+    .tour_slider_popup_container {
+        width: 95%;
+        top: 53%
+    }
+
+    .alt_travel_box {
+        width: 48%;
+        margin: 0 1% 20px
+    }
+
+    .alt_tb_sinfo {
+        width: 59%
+    }
+
+    .view_hotal a {
+        display: block;
+        padding: 6px 0;
+        text-align: center
+    }
+
+    .tour_tt_hotal {
+        width: 100%
+    }
+}
+
+@media(max-width: 1280px) {
+    .user_title {
+        margin:0 0 20px;
+        padding: 20px 100px
+    }
+
+    .user_title .pn {
+        width: 70px;
+        height: 70px;
+        left: 10px;
+        top: 6px;
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0
+    }
+
+    .user_title label {
+        font-size: 15px
+    }
+
+    .user_title h3 {
+        font-size: 18px
+    }
+
+    .looking_box_top {
+        padding: 35px
+    }
+
+    .looking_box_top h3 {
+        font-size: 28px
+    }
+
+    .looking_box_top_left {
+        width: 100%
+    }
+
+    .about_caption h1 {
+        font-size: 30px
+    }
+
+    .add_gallery {
+        font-size: 14px
+    }
+
+    .upload_new_fixture span {
+        margin: 0 0 10px 0;
+        display: inline-block;
+        font-size: 15px
+    }
+}
+
+@media(max-width: 1199px) {
+    .header_middle {
+        width:555px
+    }
+
+    .header_right {
+        width: 180px;
+        margin: 11px 0 0 15px
+    }
+
+    .navigation ul li {
+        padding: 0 12px 0 12px
+    }
+
+    .sidebar_left {
+        margin: 0 2% 0 0;
+        width: 23%
+    }
+
+    .sidebar_right {
+        width: 75%
+    }
+
+    .sidebar_right_listing {
+        width: 50%;
+        float: left;
+        margin: 0 0 30px 0;
+        padding: 0 15px;
+        height: auto;
+        position: relative
+    }
+
+    .sidebar_right_listing .tours_listing_thym img {
+        width: 100%!important
+    }
+
+    .tours_listing_box p {
+        font-size: 14px
+    }
+
+    .body_container h2 {
+        font-size: 22px
+    }
+
+    .body_container iframe {
+        width: 100%!important;
+        height: 450px
+    }
+
+    .membership_form_wrapper {
+        margin: 30px 0 30px
+    }
+
+    .membership_left {
+        width: 49%
+    }
+
+    .membership_left,.membershib_bg_naviblue {
+        transform: inherit;
+        margin: 0;
+        padding: 20px
+    }
+
+    .membership_right {
+        width: 49%
+    }
+
+    .membership_right,.membershib_bg_blue {
+        transform: inherit;
+        padding: 20px
+    }
+
+    .news_listing_box_left h4 a {
+        font-size: 18px
+    }
+
+    .img_upload input {
+        width: 100%
+    }
+
+    .img_upload:first-child input {
+        width: 60%
+    }
+
+    .img_upload button {
+        margin: 20px 0
+    }
+
+    #uploadfile span img.cloud_image {
+        left: 0;
+        right: 0;
+        display: table;
+        margin: 50px auto 0
+    }
+
+    .tour_pagination.all-inquiry_pagination {
+        width: 100%;
+        margin: 0 0 15px 0
+    }
+}
+
+@media(max-width: 900px) {
+    .top_tab_content .owl-carousel .item {
+        width:100%;
+        margin: 0;
+        padding: 0 10px
+    }
+
+    .top_tab_content .tours_listing_left {
+        width: 100%
+    }
+
+    .sidebar_left ul li {
+        padding: 0 0 0 20px
+    }
+
+    .bespoke_caption h3 {
+        font-size: 22px!important
+    }
+
+    .sidebar_box h4 a {
+        font-size: 17px!important
+    }
+
+    .sidebar_nav ul li {
+        margin: 0 4px 0 0;
+        padding: 0 5px 0 17px;
+        font-size: 10px
+    }
+
+    .bespoke_caption p {
+        font-size: 14px!important
+    }
+
+    .member_cat {
+        width: 180px;
+        height: 283px;
+        margin: 0 auto 15px;
+        padding: 70px 0 0 0;
+        font-size: 20px
+    }
+}
+
+@media(max-width: 767px) {
+    .tours_wrapper_nav {
+        margin:0 0 15px
+    }
+
+    .tours_wrapper {
+        padding: 20px 15px
+    }
+
+    .home_body {
+        width: 100%;
+        padding: 15px
+    }
+
+    .bowls_box {
+        flex-direction: column;
+        margin-bottom: 20px;
+        flex-wrap: wrap!important
+    }
+
+    .bowls_box .bowls_box_right,.bowls_box .bowls_box_left {
+        margin-bottom: 20px
+    }
+
+    .bowls_box_caption {
+        width: 74%;
+        margin: 15px auto;
+        padding: 15px
+    }
+
+    .popular_wrapper {
+        padding: 20px 15px
+    }
+
+    .bowls_club {
+        margin: 0
+    }
+
+    .our_logo {
+        padding: 0
+    }
+
+    .bowls_video_right {
+        margin: 0!important
+    }
+
+    .bowls_club_right h3 {
+        font-size: 22px;
+        line-height: 30px;
+        margin: 0 0 10px 0
+    }
+
+    .bowls_club_right p {
+        font-size: 14px
+    }
+
+    .attract ul li {
+        padding: 0 5px 0 19px;
+        margin: 0
+    }
+
+    .google_review_2 {
+        margin-top: 0!important;
+        width: 100%!important;
+        margin-left: 0!important
+    }
+
+    .banner_inner:after {
+        display: none
+    }
+
+    .about_bowling p {
+        font-size: 15px;
+        margin: 0 0 10px 0
+    }
+
+    .about_bowling .h4,.about_bowling h4 {
+        font-size: 16px
+    }
+
+    .add_review {
+        margin: 0
+    }
+
+    #login_form {
+        margin: 0!important
+    }
+
+    .form_cls h6 {
+        float: left;
+        width: 100%!important
+    }
+
+    .review-frm-input {
+        width: 100%!important;
+        margin-right: 0;
+        margin-bottom: 10px!important
+    }
+
+    .body_container iframe {
+        width: 100%!important;
+        height: 350px
+    }
+
+    .membership_left {
+        width: 100%;
+        margin: 0 0 20px 0!important
+    }
+
+    .membership_right {
+        width: 100%
+    }
+
+    .about_caption h1 {
+        font-size: 25px
+    }
+
+    .membersship_box {
+        width: 100%;
+        padding: 0;
+        margin: 0 0 10px 0
+    }
+
+    .news_listing_box_thym {
+        margin: 0 auto
+    }
+
+    .news_listing_box_left h4 span {
+        font-size: 14px;
+        margin: 0 0 5px 0;
+        display: inline-block
+    }
+
+    .user_details {
+        width: 100%
+    }
+
+    .all_days_tab {
+        margin: 0 0 20px
+    }
+
+    .fixture_review_box {
+        margin: 0;
+        padding: 0
+    }
+
+    .all-club-news .news_listing_box_left .news_listing_box_thym {
+        margin: 0 auto 20px
+    }
+
+    .upload-area h3 {
+        font-size: 14px
+    }
+
+    .reg_sam .gap {
+        display: none
+    }
+
+    .thanks_register_inner {
+        padding: 20px
+    }
+
+    .thanks_register_inner h3 {
+        font-size: 20px
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .saerch_fixture_wrapper {
+        margin:0 0 30px
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .header_container {
+        width:100%;
+        padding: 0
+    }
+
+    .header_left {
+        padding: 40px 10px 15px;
+        width: 100%;
+        float: none
+    }
+
+    .header_left img {
+        margin: 0 auto;
+        max-width: 70%
+    }
+
+    .header_middle {
+        width: 100%;
+        float: none
+    }
+
+    .mobile_respnsb {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        padding: 0 10px 15px;
+        float: none;
+        text-align: center
+    }
+
+    .banner_caption {
+        width: 95%;
+        top: 50%
+    }
+
+    .banner_caption h1 {
+        font-size: 18px;
+        margin: 0;
+        line-height: 26px
+    }
+
+    .static_back {
+        margin-bottom: 15px
+    }
+
+    .banner_form_field {
+        display: none
+    }
+
+    .tours_wrapper_nav ul li {
+        margin: 0 0 15px;
+        display: block
+    }
+
+    .tours_listing_left {
+        margin: 0 0 10px
+    }
+
+    .attract {
+        text-align: left
+    }
+
+    .dotted_box {
+        margin: 0 0 15px
+    }
+
+    .bowls_box_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px;
+        padding: 10px;
+        height: auto
+    }
+
+    .bowls_box_left_thym {
+        margin: 0
+    }
+
+    .bowls_box_left_thym img {
+        height: 270px;
+        transform: none;
+        object-fit: cover
+    }
+
+    .bowls_box_caption {
+        width: 74%;
+        margin: 15px auto;
+        padding: 15px
+    }
+
+    .bowls_box_caption_box {
+        padding: 17px
+    }
+
+    .bowls_box_caption_box h3 {
+        font-size: 22px
+    }
+
+    .bowls_box_middle {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px 0
+    }
+
+    .precent_off {
+        margin: 0 0 15px;
+        padding: 0 0 15px
+    }
+
+    .bowls_box_middle h4 {
+        font-size: 52px
+    }
+
+    .bowls_box_middle h3 {
+        font-size: 25px
+    }
+
+    .bowls_box_right {
+        width: 100%;
+        float: none;
+        transform: none;
+        height: auto;
+        padding: 10px
+    }
+
+    .bowls_box_right_thym img {
+        margin: 0;
+        height: 270px;
+        transform: none;
+        object-fit: cover
+    }
+
+    .popular_wrapper h3 {
+        margin: 0 0 25px;
+        font-size: 18px
+    }
+
+    .popular_wrapper_left {
+        width: 100%;
+        margin: 0 0 15px
+    }
+
+    .popular_dotted {
+        margin: 10px 0 0
+    }
+
+    .bowls_club_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px;
+        padding: 15px;
+        transform: none;
+        border-radius: 0
+    }
+
+    .bowls_club_thym {
+        width: 100%!important;
+        margin: 0;
+        transform: none
+    }
+
+    .bowls_club_thym img {
+        height: auto;
+        max-width: 100%!important;
+        width: 100%!important
+    }
+
+    .bowls_club_arrow {
+        margin: 0 0 5px
+    }
+
+    .bowls_club_right {
+        width: 95%;
+        float: none;
+        margin: 0 auto
+    }
+
+    .bowls_club_text {
+        width: 100%
+    }
+
+    .explore_btn a {
+        margin: 0 0 10px 0;
+        padding: 9px 30px;
+        display: block
+    }
+
+    .our_logo img {
+        margin: 0 0 10px
+    }
+
+    .bowls_video h3 {
+        font-size: 20px;
+        margin: 0 0 10px
+    }
+
+    .bowls_video p {
+        font-size: 14px
+    }
+
+    .more_about_btn {
+        text-align: center
+    }
+
+    .more_about_btn a {
+        display: block
+    }
+
+    .bowls_video_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px
+    }
+
+    .bowls_video_left img {
+        height: 250px;
+        object-fit: cover
+    }
+
+    .bowls_video_right {
+        width: 100%;
+        float: none;
+        margin: 0 auto 0;
+        padding: 0;
+        border-radius: 0
+    }
+
+    .tour_news_listing h3 {
+        margin: 0 0 20px
+    }
+
+    .tour_news_listing_left {
+        width: 100%;
+        margin: 0 0 20px
+    }
+
+    .tour_news_listing h4 a {
+        font-size: 19px
+    }
+
+    .tour_news_thym {
+        margin: 0 auto 25px
+    }
+
+    .tour_news_listing {
+        margin: 0 0 20px
+    }
+
+    .looking_box {
+        margin: 0 0 25px;
+        height: auto;
+        width: 98%
+    }
+
+    .looking_box_top {
+        width: 100%;
+        margin: 0;
+        padding: 20px 15px;
+        height: auto
+    }
+
+    .looking_box_top h3 {
+        font-size: 20px;
+        margin: 0 0 10px;
+        line-height: 32px
+    }
+
+    .looking_box_top_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px;
+        text-align: center
+    }
+
+    .looking_box_top_right {
+        width: 100%;
+        margin: 0;
+        float: none;
+        text-align: center
+    }
+
+    .community_box_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px;
+        border: none;
+        padding: 0
+    }
+
+    .community_left {
+        width: 18%
+    }
+
+    .community_right {
+        width: 78%
+    }
+
+    .footer {
+        background: #2191cd
+    }
+
+    .footer_container {
+        width: 100%;
+        padding: 20px 15px
+    }
+
+    .footer_container h3 {
+        margin: 0 0 10px
+    }
+
+    .footer_container h4 img {
+        margin: 0 0 0 15px
+    }
+
+    .footer_top {
+        margin: 0 0 20px;
+        padding: 0 0 25px
+    }
+
+    .footer_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px
+    }
+
+    .footer_left p {
+        padding: 0 0 15px 25px
+    }
+
+    .footer_logo {
+        margin: 0 0 15px
+    }
+
+    .footer_right {
+        width: 100%;
+        float: none
+    }
+
+    .footer_nav {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px
+    }
+
+    .footer_newsletter {
+        width: 100%;
+        float: none
+    }
+
+    .footer_bottom_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px;
+        text-align: center
+    }
+
+    .footer_bottom_left img {
+        margin: 0 auto
+    }
+
+    .footer_bottom_right {
+        width: 100%;
+        float: none;
+        margin: 0;
+        text-align: center
+    }
+
+    .owl-theme .owl-controls {
+        margin: 0 0 20px 0!important
+    }
+
+    .owl-theme .owl-controls .owl-page span {
+        width: 8px!important;
+        height: 8px!important;
+        margin: 0 4px!important
+    }
+
+    .google_review_2 {
+        margin-top: 0!important;
+        width: 100%!important;
+        margin-left: 0!important
+    }
+
+    .banner_inner img {
+        height: 150px!important
+    }
+
+    .about_caption {
+        width: 95%;
+        top: 50%
+    }
+
+    .about_caption h1 {
+        font-size: 20px
+    }
+
+    .about_bowling {
+        width: 100%;
+        padding: 20px 15px
+    }
+
+    .about_bowling h3 {
+        font-size: 20px;
+        margin: 0 0 10px
+    }
+
+    .about_bowling_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px
+    }
+
+    .about_bowling_left img {
+        height: 250px
+    }
+
+    .about_bowling_right {
+        width: 100%;
+        float: none;
+        margin: 0;
+        padding: 0;
+        border-radius: 0
+    }
+
+    .our_vision {
+        width: 100%;
+        padding: 0 15px
+    }
+
+    .our_vision h3 {
+        font-size: 20px;
+        margin: 0 0 10px
+    }
+
+    .our_vision_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px;
+        padding: 0;
+        border-radius: 0;
+        text-align: left
+    }
+
+    .our_vision_right {
+        width: 100%;
+        float: none
+    }
+
+    .our_vision_right img {
+        height: 250px
+    }
+
+    .google_review .h2,.google_review h2 {
+        font-size: 20px!important
+    }
+
+    .tours_wrapper h3 {
+        margin: 0 0 30px
+    }
+
+    .map iframe {
+        height: 250px
+    }
+
+    .body_container {
+        width: 100%;
+        padding: 20px 15px
+    }
+
+    .like_box {
+        padding: 20px 0
+    }
+
+    .like_box img {
+        margin: 0 10px 7px 0
+    }
+
+    .item_box {
+        margin: 20px 0!important;
+        padding: 15px
+    }
+
+    .item_box_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px
+    }
+
+    .item_box_middle {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px 0
+    }
+
+    .show_field {
+        width: 100%;
+        float: none;
+        margin: 0 0 10px
+    }
+
+    .show_field2 {
+        width: 100%;
+        float: none
+    }
+
+    .item_box_right {
+        width: 100%;
+        float: none;
+        margin: 0;
+        text-align: left
+    }
+
+    .sidebar_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px
+    }
+
+    .sidebar_right {
+        width: 100%;
+        float: none
+    }
+
+    .sidebar_nav ul li {
+        font-size: 12px;
+        margin: 0 6px 0 0;
+        padding: 0 7px 0 21px
+    }
+
+    .sidebar_right_listing {
+        width: 100%!important;
+        margin: 0 0 20px;
+        height: auto;
+        padding: 0
+    }
+
+    .sidebar_listing_caption {
+        padding: 55px 0 0 0;
+        height: 451px
+    }
+
+    .sidebar_listing_caption h3 {
+        font-size: 28px
+    }
+
+    .sidebar_listing_caption h3 br {
+        display: none
+    }
+
+    .bx-wrapper .bx-pager,.bx-wrapper .bx-controls-auto {
+        left: 0px!important;
+        right: 0;
+        margin: 0 auto;
+        width: 90%!important
+    }
+
+    .bx-wrapper .bx-viewport {
+        width: 98%!important
+    }
+
+    #test1 {
+        color: green
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        .sidebar_listing_caption {
+            height:444px
+        }
+    }
+
+    .about_mrg {
+        margin: -10px 0 20px
+    }
+
+    .sidebar_left ul {
+        float: left;
+        width: 100%
+    }
+
+    .sidebar_left ul li {
+        width: 50%;
+        float: left
+    }
+
+    .tours_wrapper {
+        padding: 0 15px 20px
+    }
+
+    .body_container .user_menu {
+        width: 100%;
+        float: none;
+        margin: 0 0 10px
+    }
+
+    .body_container .user_menu ul li a {
+        padding: 10px 10px
+    }
+
+    .body_container .user_details {
+        width: 100%;
+        float: none
+    }
+
+    .user_details .tours_listing_left {
+        width: 100%;
+        margin: 0 0px!important
+    }
+
+    .body_container .user_details_info {
+        margin: 0 0 10px
+    }
+
+    .body_container .user_details_info label {
+        padding: 0 0 10px
+    }
+
+    .body_container .user_section_title {
+        margin: 20px 0 20px
+    }
+
+    .body_container .admin_details {
+        width: 100%;
+        float: none;
+        margin: 0
+    }
+
+    .body_container .admin_details .show_all_tour {
+        margin-bottom: 20px
+    }
+
+    .body_container .club_info_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px
+    }
+
+    .body_container .club_info_right {
+        width: 100%;
+        float: none;
+        margin: 0
+    }
+
+    .body_container .tour_short {
+        margin: 0 0 20px 0;
+        text-align: left
+    }
+
+    .body_container .tour_list {
+        width: 100%;
+        margin: 0 0 10px
+    }
+
+    .body_container .tour_list select {
+        width: 100%
+    }
+
+    .body_container. .tour_pagination {
+        width: 100%;
+        text-align: left
+    }
+
+    .body_container .admin_enquiry {
+        margin: 0 0 25px
+    }
+
+    .body_container .admin_enquiry {
+        padding: 10px;
+        margin: 0
+    }
+
+    .body_container .admin_tour_log {
+        padding: 20px 0
+    }
+
+    .body_container .admin_enquiry_step_box {
+        margin: 0 0 20px;
+        padding: 10px
+    }
+
+    .body_container .tour_quote_pr {
+        padding: 10px 0 20px
+    }
+
+    .body_container .app_append {
+        padding: 20px 0 0
+    }
+
+    .body_container .admin_enquiry_thumb_title {
+        font-size: 26px;
+        bottom: 12px;
+        left: 15px
+    }
+
+    .body_container .admin_tour_log_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 10px
+    }
+
+    .body_container .admin_tour_log_right {
+        width: 100%;
+        float: none
+    }
+
+    .body_container .admin_tour_log_right strong {
+        padding: 0 0 10px
+    }
+
+    .body_container .border_bottom {
+        padding: 15px 0 10px
+    }
+
+    .body_container .section_half {
+        width: 100%;
+        float: none;
+        margin: 0 0 10px
+    }
+
+    .body_container .admin_enquiry_step_box h4 {
+        font-size: 14px;
+        width: 50%!important
+    }
+
+    .info_pr:after {
+        top: 0
+    }
+
+    .tp_price {
+        font-size: 30px
+    }
+
+    .admin_home_poppup_btn4 a {
+        padding: 8px 20px
+    }
+
+    .body_container .app_submit {
+        width: 100%;
+        float: none;
+        margin: 0 0 10px
+    }
+
+    .body_container .amm_send {
+        width: 100%;
+        float: none
+    }
+
+    .body_container .reward_table {
+        margin: 0 0 15px
+    }
+
+    .body_container .offer_redemp {
+        margin: 0 0 20px
+    }
+
+    .body_container .pay_title_info {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px
+    }
+
+    .body_container .pay_date_info {
+        width: 100%;
+        float: none
+    }
+
+    .body_container .pay_info {
+        margin: 0 0 20px
+    }
+
+    .body_container .pay_ref_code {
+        margin: 0 0 20px
+    }
+
+    .body_container select.redemp {
+        width: 100%;
+        margin: 0 0 10px
+    }
+
+    .body_container .offer_redemp input[type="button"] {
+        width: 100%
+    }
+
+    .body_container .pay_date_info img {
+        width: 100%;
+        margin: 10px 0 0 0
+    }
+
+    .body_container .pay_ref_code input[type="text"] {
+        width: 100%;
+        max-width: 100%;
+        margin: 10px 0 0
+    }
+
+    .body_container .sands_quote input[type="button"] {
+        width: 100%
+    }
+
+    .body_container .room_allocation_left {
+        width: 100%;
+        margin: 0 0 15px
+    }
+
+    .body_container .room_allocation_middle {
+        width: 100%;
+        margin: 0 0 15px
+    }
+
+    .body_container .room_allocation_right {
+        width: 100%;
+        margin: 0 0 15px
+    }
+
+    .body_container .room_allocation_left_text {
+        width: 100%
+    }
+
+    .body_container .room_allocation h5 {
+        margin: 0 0 5px
+    }
+
+    .body_container .slct_date {
+        margin: 0 0 20px
+    }
+
+    .body_container .slct_hotel_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 10px 0
+    }
+
+    .body_container .slct_hotel_right {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px 0
+    }
+
+    .body_container .slct_hotel {
+        width: 100%
+    }
+
+    .body_container .slct_form_field_btn {
+        width: 100%
+    }
+
+    .body_container .dink_water {
+        padding: 15px
+    }
+
+    .body_container .dink_water_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px
+    }
+
+    .body_container .dink_water_right {
+        width: 100%;
+        float: none
+    }
+
+    .body_container .tour_apli_box_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 10px
+    }
+
+    .body_container .tour_apli_box_right {
+        width: 100%;
+        float: none
+    }
+
+    .body_container .tour_apli_box img {
+        margin: 0;
+        width: 100%
+    }
+
+    .body_container .tour_apli_box_radio_btn {
+        margin: 0 7px
+    }
+
+    .body_container .make_btn a {
+        display: block;
+        margin: 0 0 10px 0;
+        padding: 6px 19px;
+        text-align: center
+    }
+
+    .body_container .email_details_btn a {
+        margin: 0 0 10px;
+        padding: 7px 9px;
+        display: block;
+        text-align: center
+    }
+
+    .body_container .dwn_tour_btn a {
+        display: block;
+        text-align: center
+    }
+
+    .body_container .voucher_field_left {
+        width: 100%
+    }
+
+    .body_container .voucher_field_right {
+        width: 100%;
+        margin: 0 0 15px
+    }
+
+    .body_container .voucher_field_right_input {
+        margin: 0 0 10px
+    }
+
+    .body_container .voucher_field_righ_btn {
+        margin: 0
+    }
+
+    .tour_banner .tour_banner_caption {
+        width: 95%;
+        bottom: 15px
+    }
+
+    .tour_banner_caption h1 {
+        font-size: 26px
+    }
+
+    .tour_banner img {
+        height: 150px
+    }
+
+    .tour_view .tour_view_container {
+        width: 95%;
+        padding: 20px 0
+    }
+
+    .tour_view .view_tour_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 10px
+    }
+
+    .tour_view .view_tour_left ul li {
+        padding: 0 0 15px 35px
+    }
+
+    .view_tour_right ul li:first-child {
+        padding: 0 0 15px 35px
+    }
+
+    .tour_view .view_tour_right {
+        width: 100%;
+        float: none
+    }
+
+    .view_tour_right ul li {
+        padding: 0 0 15px 35px
+    }
+
+    .tour_tab_wrapper .tour_tab_container {
+        width: 98%
+    }
+
+    .tour_tab_wrapper .tour_tab_list {
+        width: 100%;
+        float: none;
+        padding: 20px 0 0
+    }
+
+    .tour_tab_wrapper .tour_tab_list ul li a {
+        margin: 0 0 15px;
+        padding: 0 12px 10px
+    }
+
+    .body_container .custom_tour_left {
+        width: 100%;
+        float: none
+    }
+
+    .body_container .custom_tour_right {
+        width: 100%;
+        margin: 0;
+        top: 0;
+        float: none;
+        position: relative
+    }
+
+    .body_container .person_price {
+        margin: 0 0 20px
+    }
+
+    .body_container .slide_nav {
+        margin: 0 0 20px
+    }
+
+    .body_container .custom_tour_left h3 {
+        margin-bottom: 15px
+    }
+
+    .body_container .fix_club_image {
+        width: 100%;
+        margin: 0 0 20px
+    }
+
+    .body_container .fix_club_info {
+        width: 100%
+    }
+
+    .body_container .fix_club_info p {
+        padding: 0 0 15px
+    }
+
+    .body_container .tabcontent p {
+        margin-bottom: 15px;
+        padding: 0
+    }
+
+    .custom_tour_right .download_tour {
+        padding: 20px
+    }
+
+    .custom_tour_right .download_tour h3 {
+        margin: 0
+    }
+
+    .custom_tour_right .download_tour .da_t {
+        margin: 0
+    }
+
+    .custom_tour_right .download_tour .da_t a {
+        min-width: 100%;
+        margin: 0;
+        padding: 10px 0
+    }
+
+    .tour_day {
+        margin: 0 0 10px;
+        padding: 10px
+    }
+
+    .from_tour_price {
+        padding: 20px;
+        font-size: 22px
+    }
+
+    .from_book_tour {
+        padding: 15px
+    }
+
+    .from_book_tour span {
+        margin: 0 0 10px 0;
+        padding: 0 0 10px 0
+    }
+
+    .about_caption h2 {
+        font-size: 15.5px
+    }
+
+    .bt_tour_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px
+    }
+
+    .bt_tour_left h6 {
+        font-size: 13px
+    }
+
+    .bt_tour_right {
+        width: 100%;
+        float: none
+    }
+
+    .bt_tour_right h3 {
+        margin: 0 0 10px
+    }
+
+    .book_btn {
+        margin: 10px 0 10px
+    }
+
+    .book_btn a {
+        margin: 0 0 10px;
+        display: block;
+        text-align: center
+    }
+
+    .bt_tour_boxes {
+        margin: 0 0 20px;
+        padding: 10px;
+        min-height: 200px
+    }
+
+    .tour_smr_box {
+        margin: 0 0 20px;
+        padding: 0 0 20px
+    }
+
+    .tour_smr_box_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px
+    }
+
+    .tour_smr_box_right {
+        width: 100%;
+        float: none
+    }
+
+    .expect_field {
+        width: 100%
+    }
+
+    .book_btn2 a {
+        display: block;
+        text-align: center;
+        margin: 0 0 10px
+    }
+
+    .book_tour_listing_left {
+        width: 100%;
+        margin: 0 0 10px 0;
+        padding: 10px
+    }
+
+    .book_tour_listing_thym {
+        margin: 0 0 20px
+    }
+
+    .altn_box {
+        padding: 10px
+    }
+
+    .altn_listing_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px;
+        padding: 10px
+    }
+
+    .altn_listing_right {
+        width: 100%;
+        float: none
+    }
+
+    .altn_form_field_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px
+    }
+
+    .altn_form_field_right {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px
+    }
+
+    .prefrd_box_left {
+        width: 100%;
+        margin: 0 0 15px
+    }
+
+    .book_btn3 a {
+        display: block;
+        text-align: center;
+        padding: 8px 0
+    }
+
+    .day_box {
+        padding: 15px
+    }
+
+    .day_box_left {
+        width: 100%;
+        float: none
+    }
+
+    .day_box_right {
+        width: 100%;
+        float: none
+    }
+
+    .other_box {
+        padding: 10px 10px 20px
+    }
+
+    .other_box .book_tour_listing_left {
+        margin: 0 0 0
+    }
+
+    .flight_left {
+        width: 100%
+    }
+
+    .tour_esmte {
+        padding: 15px
+    }
+
+    .tour_frome_box_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 10px
+    }
+
+    .tour_frome_box_right {
+        width: 100%;
+        float: none
+    }
+
+    .cstms_box .book_tour_listing_left {
+        width: 100%
+    }
+
+    .customise_day_box_left {
+        width: 100%;
+        float: none
+    }
+
+    .customise_day_box_right {
+        width: 100%;
+        float: none
+    }
+
+    .look_form_field_left {
+        width: 100%;
+        float: none
+    }
+
+    .look_form_field_right {
+        width: 100%;
+        float: none;
+        margin: 0
+    }
+
+    .cntct_info_field img {
+        width: 100%
+    }
+
+    .news_listing_box_left {
+        width: 100%!important;
+        margin: 0 0 10px!important
+    }
+
+    .news_listing_box_left h4 a {
+        font-size: 20px!important
+    }
+
+    .show_mrg {
+        margin: 0 0 15px!important
+    }
+
+    .location_add {
+        margin: 0 0 10px
+    }
+
+    .location_add_left {
+        width: 100%;
+        border: none;
+        margin: 0 0 20px
+    }
+
+    .contact_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px
+    }
+
+    .contact_left iframe {
+        height: 280px
+    }
+
+    .contact_left img {
+        margin: 0 8px
+    }
+
+    .contact_right {
+        width: 100%;
+        float: none;
+        padding: 0
+    }
+
+    .captch_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px
+    }
+
+    .captch_btn_right {
+        width: 100%;
+        float: none
+    }
+
+    .bontent_block_text_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 10px
+    }
+
+    .bontent_block_text_right {
+        width: 100%;
+        float: none
+    }
+
+    .contact_box h3 {
+        font-size: 20px
+    }
+
+    .bespoke_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px
+    }
+
+    .bespoke_left h3 {
+        font-size: 20px
+    }
+
+    .bespoke_field_left h6 {
+        margin: 0 0 25px
+    }
+
+    .bespoke_field_left label {
+        margin: 0 0 20px
+    }
+
+    .bespoke_right {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px
+    }
+
+    .bespoke_caption {
+        padding: 50px 0 0
+    }
+
+    .bespoke_caption h3 {
+        margin: 0 0 40px
+    }
+
+    .bespoke_field_left {
+        width: 100%
+    }
+
+    .bespoke_field_left_date,.bespoke_field_left_select2 {
+        margin: 0 0 25px
+    }
+
+    .stdtsrf_fild {
+        margin: 0
+    }
+
+    .stdtsrf_fild_left {
+        width: 100%;
+        margin: 0
+    }
+
+    .srf_fild {
+        margin: 0
+    }
+
+    .srf_fild_left {
+        width: 100%;
+        margin: 0
+    }
+
+    .bespoke_field_right {
+        width: 100%
+    }
+
+    .bespoke_field_right_inpt {
+        margin: 0 0 15px
+    }
+
+    .bespoke_field_right_btn {
+        margin: 0 0 15px
+    }
+
+    .bespoke_field_right label {
+        margin: 5px 0 0
+    }
+
+    .yes_no_btn,.yes_no_btn2 {
+        width: 48%
+    }
+
+    .in_this_fix_right {
+        width: 60%
+    }
+
+    .in_this_btn,.in_this_btn2 {
+        width: 48%
+    }
+
+    .stdrd_left,.stdrd_right {
+        width: 48%
+    }
+
+    .stdrd_left_btn,.stdrd_right_btn {
+        margin: 0 0 15px
+    }
+
+    .tour_hotel_box {
+        margin: 0 0 10px
+    }
+
+    .tour_hb_left {
+        width: 100%;
+        margin: 0 0 20px;
+        float: none
+    }
+
+    .tour_hb_right {
+        width: 100%;
+        float: none
+    }
+
+    .tour_hb_thumb {
+        margin: 0 0 20px
+    }
+
+    .tour_hb_thumb img {
+        padding: 0
+    }
+
+    .tour_hb_right .tour_score {
+        width: 100%
+    }
+
+    .fixture_popup_container {
+        width: 95%;
+        padding: 10px
+    }
+
+    .fixture_slider img {
+        height: 300px
+    }
+
+    .fixture_top_section {
+        margin: 0 0 20px
+    }
+
+    .fixture_top_section_slider {
+        width: 100%!important;
+        float: none;
+        margin: 0 0 20px
+    }
+
+    .fixture_top_section_right {
+        width: 100%!important;
+        float: none;
+        margin: 0;
+        padding: 0!important
+    }
+
+    .fixture_club_facility {
+        margin: 0 0 20px
+    }
+
+    .fixture_club_faclty {
+        width: 100%!important;
+        float: none;
+        margin: 0 0 20px;
+        padding: 0;
+        border: none
+    }
+
+    .fixture_club_map {
+        width: 100%!important
+    }
+
+    .fixture_club_faclty_list {
+        width: 100%!important;
+        padding: 0!important;
+        margin: 15px 0 0 0
+    }
+
+    .fixture_review_list {
+        width: 100%!important;
+        float: none;
+        margin: 0px!important
+    }
+
+    .fixture_calender h3.caldr {
+        margin: 0 0 20px;
+        padding: 0 20px;
+        font-size: 13px
+    }
+
+    .fixture_calender .tab button {
+        margin: 0 5px 10px!important
+    }
+
+    .fixture_calender .tabcontent {
+        padding: 0
+    }
+
+    .fix_left_news {
+        width: 100%
+    }
+
+    .fix_news_slider h4 a {
+        font-size: 18px
+    }
+
+    .fix_news_slider {
+        width: 285px
+    }
+
+    .fix_tt_slider {
+        width: 275px
+    }
+
+    .attraction_custom_top h3 {
+        font-size: 20px!important
+    }
+
+    .tour_slider_popup_container {
+        width: 95%;
+        top: 53%
+    }
+
+    .tour_review {
+        overflow-x: scroll;
+        margin: 0 0 15px
+    }
+
+    .tour_review table {
+        width: 680px
+    }
+
+    .tour_review_hr {
+        padding: 20px 0 0
+    }
+
+    .tour_review_hr_title {
+        width: 100%;
+        margin: 0 0 15px
+    }
+
+    #tour_review_cl.tours_wrapper {
+        padding: 0 0 10px
+    }
+
+    .tour_review_testimo {
+        padding: 0 0 10px
+    }
+
+    .tour_review_hr_client {
+        width: 100%
+    }
+
+    .tour_add_teview {
+        margin: 0 0 30px
+    }
+
+    .login_review {
+        padding: 10px
+    }
+
+    .login_review_form {
+        margin-bottom: 20px
+    }
+
+    .leave_review_quote {
+        margin-bottom: 20px
+    }
+
+    .login_review input {
+        width: 100%;
+        margin: 0 0 10px
+    }
+
+    .leave_review_quote textarea {
+        margin: 0 0 20px
+    }
+
+    .login_review table {
+        width: 630px
+    }
+
+    .leave_review_table {
+        overflow-x: scroll;
+        margin-bottom: 20px
+    }
+
+    .ind_com_review strong {
+        margin-bottom: 20px
+    }
+
+    .ind_com_review div {
+        margin-bottom: 20px
+    }
+
+    .close {
+        top: 12px;
+        right: 5px
+    }
+
+    .alt_travel_box {
+        width: 100%;
+        margin: 0 0 20px
+    }
+
+    .alt_tb_sinfo {
+        width: 58%
+    }
+
+    .view_hotal a {
+        display: block;
+        padding: 6px 0;
+        text-align: center
+    }
+
+    .body_container .custom_tour_left h3 {
+        font-size: 18px
+    }
+
+    .tour_tt_hotal {
+        width: 100%;
+        height: auto!important;
+        display: inline-block
+    }
+
+    .attractions_day {
+        width: 100%!important;
+        overflow-x: auto!important;
+        padding-bottom: 20px!important
+    }
+
+    .attractions_day table {
+        width: 500px!important
+    }
+
+    .google_review {
+        margin-top: 0;
+        width: 100%!important;
+        margin-left: 0!important;
+        margin-right: 0
+    }
+
+    .club_details_right,.club_details_left {
+        width: 100%!important
+    }
+
+    .tour_slider {
+        margin: 0
+    }
+
+    .body_container h2 {
+        font-size: 18px
+    }
+
+    .body_container iframe {
+        width: 100%!important;
+        height: 200px
+    }
+
+    .membership_left,.membershib_bg_naviblue,.membership_right,.membershib_bg_blue {
+        padding: 10px
+    }
+
+    .postcode_club {
+        width: 100%
+    }
+
+    .lookup_coub {
+        width: 100%!important;
+        margin: 0 0 15px 0
+    }
+
+    .down_temp_info {
+        width: 100%;
+        margin: 0 0 15px 0
+    }
+
+    .download_temp {
+        width: 100%
+    }
+
+    .download_temp a {
+        padding: 8px
+    }
+
+    .member_subt {
+        width: 100%
+    }
+
+    .membership_right input[type="submit"] {
+        width: 100%
+    }
+
+    .body_container h4 {
+        font-size: 18px
+    }
+
+    .membership_right .register-club-btn {
+        width: 100%;
+        display: block;
+        text-align: center
+    }
+
+    .member_subt input[type="submit"] {
+        width: 100%
+    }
+
+    .body_container h3 {
+        font-size: 18px
+    }
+
+    .membership_form_wrapper h3 {
+        padding: 0 0 10px;
+        margin: 0 0 10px
+    }
+
+    .user_title {
+        padding: 10px 10px 10px 70px
+    }
+
+    .user_title .pn {
+        width: 50px;
+        height: 50px;
+        font-size: 15px
+    }
+
+    .modal-footer .btn {
+        margin: 0 0 10px 0
+    }
+
+    .tour_list_right {
+        width: 100%!important
+    }
+
+    .upload-area h3 {
+        font-size: 14px;
+        margin: 28% 0 0 0!important
+    }
+
+    #add_new_admin_frm select.form-control {
+        width: 100%!important
+    }
+
+    .mbr_dtls_field_left,.mbr_dtls_field_right {
+        width: 100%
+    }
+
+    .block .mbr_dtls_field_btn,.mbr_dtls_field .mbr_dtls_field_btn {
+        margin: 0 0 20px 0!important;
+        width: 100%!important
+    }
+
+    .user_section_title {
+        width: 100%;
+        display: table
+    }
+
+    .club_text_view .clear_left {
+        width: 100%;
+        margin-bottom: 15px
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .subclick {
+        height:40px;
+        padding-top: 0px!important;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 0;
+        width: 50px;
+        line-height: 40px;
+        z-index: 999
+    }
+
+    .subclick:after {
+        content: url(/wp-content/themes/bowlingtours/assets/css/arrow.png)
+    }
+
+    .sub-open .sub-menu {
+        display: block!important;
+        background: none!important
+    }
+
+    .sub-menu {
+        margin: 0 0;
+        padding: 0 0;
+        background-color: #353536!important;
+        border-top: 0 none;
+        position: relative!important;
+        top: 0px!important;
+        visibility: inherit!important;
+        width: 100%!important
+    }
+
+    .navigation nav {
+        width: 100%;
+        margin: 0 0 0 0;
+        padding: 0 0;
+        background: #6ac0ec;
+        float: left
+    }
+
+    .navigation nav ul {
+        margin: 0 0;
+        padding: 0 0;
+        list-style-type: none;
+        width: 100%
+    }
+
+    .navigation nav ul li {
+        margin: 0 0;
+        padding: 0 0;
+        line-height: normal;
+        display: block;
+        float: none;
+        width: auto;
+        height: auto;
+        text-transform: uppercase;
+        border-top: 1px solid #1b90a7;
+        border-bottom: 1px solid #61ddff
+    }
+
+    .navigation nav ul li a {
+        margin: 0 0;
+        padding: 10px 0;
+        display: inline-block;
+        height: auto;
+        line-height: normal;
+        font-size: 15px;
+        color: #FFF;
+        height: auto;
+        width: auto;
+        border-radius: 0;
+        font-weight: 400
+    }
+
+    .navigation nav ul li a:hover {
+        color: #000
+    }
+
+    .navigation nav ul li.current-menu-item>a,.navigation nav ul li.current-menu-ancestor>a,.navigation nav ul li.current_page_item>a,.navigation nav ul li.current_page_ancestor>a {
+        color: #000
+    }
+
+    .navigation nav a {
+        text-align: left;
+        width: 100%;
+        text-indent: 10px;
+        text-decoration: none;
+        font-size: 17px;
+        color: #FFF
+    }
+
+    .navigation nav a:hover {
+        color: #fff;
+        text-decoration: none
+    }
+
+    .navigation nav ul {
+        display: none;
+        height: auto
+    }
+
+    .navigation nav a#pull {
+        display: block;
+        width: 100%;
+        position: relative;
+        background: #1d92d0;
+        margin: 0 0;
+        color: #FFF;
+        text-transform: uppercase;
+        font-weight: 600;
+        line-height: 40px
+    }
+
+    .navigation nav a#pull:after {
+        content: "";
+        background: url(/wp-content/themes/bowlingtours/assets/css/../images/nav-icon.png) no-repeat;
+        width: 22px;
+        height: 20px;
+        display: inline-block;
+        position: absolute;
+        right: 9px;
+        top: 10px
+    }
+
+    .navigation nav ul ul:before {
+        border: none
+    }
+
+    .navigation nav ul ul {
+        width: 100%!important;
+        float: none;
+        position: relative;
+        left: auto;
+        background: none;
+        position: static;
+        display: none
+    }
+
+    .navigation nav ul li {
+        float: left;
+        width: 100%;
+        position: relative;
+        text-align: left
+    }
+
+    .navigation nav ul ul li {
+        margin: 0 0;
+        padding: 0 0;
+        line-height: normal;
+        display: block;
+        float: none;
+        width: auto;
+        height: auto;
+        text-transform: uppercase;
+        border-top: 1px solid #1b90a7;
+        border-bottom: 1px solid #61ddff
+    }
+
+    .navigation nav ul ul li a {
+        margin: 0 0;
+        padding: 10px 15px!important;
+        display: block;
+        height: auto;
+        line-height: normal;
+        font-size: 15px;
+        color: #FFF!important;
+        height: auto;
+        width: auto
+    }
+
+    .navigation nav ul ul ul {
+        width: 100%!important;
+        top: 0;
+        display: none
+    }
+
+    .navigation nav ul li:hover ul,.navigation nav ul ul li:hover ul {
+        display: none
+    }
+
+    .navigation nav ul li ul li a:hover {
+        color: #000
+    }
+
+    .navigation nav ul ul li.current-menu-item>a,.navigation nav ul ul li.current-menu-ancestor>a,.navigation nav ul ul li.current_page_item>a,.navigation nav ul ul li.current_page_ancestor>a {
+        color: #000
+    }
+
+    .navigation ul li.sub_menu {
+        background: url(/wp-content/themes/bowlingtours/assets/css/../images/arrow_drop.png) right 13px top 17px no-repeat
+    }
+
+    .navigation ul ul li.sub_menu {
+        padding: 0px!important
+    }
+
+    .navigation {
+        width: 100%;
+        float: none
+    }
+
+    .navigation ul ul li a:hover {
+        color: #000!important
+    }
+
+    .navigation nav ul ul ul li a {
+        padding: 10px 35px!important
+    }
+
+    .navigation ul ul li.sub_menu {
+        background: url(/wp-content/themes/bowlingtours/assets/css/../images/arrow_drop.png) right 13px top 17px no-repeat
+    }
+
+    .navigation ul li a:hover {
+        background: none;
+        color: #000
+    }
+
+    .header_right {
+        display: none
+    }
+
+    .bowls_video {
+        width: 95%
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .nav ul li a {
+        transition:margin 1s;
+        -webkit-transition: margin 1s;
+        -moz-transition: margin 1s;
+        -o-transition: margin 1s
+    }
+
+    .nav ul li a:hover {
+        color: #e34c4c!important
+    }
+}

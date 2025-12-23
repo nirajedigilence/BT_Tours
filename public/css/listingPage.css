@@ -1,0 +1,108 @@
+.addProductBtn {
+    width: 11%;
+    height: 48px;
+    background: #FCA311;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    font-size: 1.125;
+    border-radius: 5px;
+}
+
+.checkbox_div {
+    color: #14213D;
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.custom_chkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: 1px solid #999;
+}
+
+.checkbox_div:hover input~.checkmark,
+.custom_chkbox:checked~.checkmark {
+    background-color: #FCA311;
+    border-color: #FCA311;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom_chkbox:checked~.checkmark:after {
+    display: block;
+}
+
+.checkbox_div .checkmark:after {
+    left: 8px;
+    top: 1px;
+    width: 8px;
+    height: 16px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.fl_w {
+    float: left;
+    width: 100%;
+}
+
+.checkarea_part {
+    float: left;
+    width: 25%;
+    display: inline-block;
+}
+
+.topBox.customchkmain {
+    float: left;
+    width: 100%;
+}
+
+.accountContainer .accountRow .middleCol .contentBooking .hiddenFilteres .topBox.customchkmain .heading {
+    margin-bottom: 10px;
+}
+
+.topBox.customchkmain .check_row {
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.rightSidebarDiv .labelCls {
+    color: #9A9898
+}
+
+.accountContainer .accountRow .middleCol .contentBooking .tableWrapper table td {
+    padding-left: 20px;
+    padding-right: 20px;
+}

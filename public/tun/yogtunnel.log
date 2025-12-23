@@ -1,0 +1,13 @@
+
+
+
+
+Enter aremodulesinstalled
+Exit aremodulesinstalled
+Enter processquery
+Trying to get php://input
+Got php://input!
+Called from browser.
+Enter showaccesserror
+Exit showaccesserror
+xmlrecvd is blank
