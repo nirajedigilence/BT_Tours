@@ -2684,7 +2684,7 @@ DB::connection('mysql')->table('countries')->where('id', $row->countryAreas[0]->
                                         <div class="form-div">
                                             <div class="row g-3 date_div">
                                                 <div class="col-md-12">
-                                                    <input type="hidden" name="date_from1" class="form-control dateChangeCls" id="date_from" placeholder="">
+                                                    <input type="hidden" name="date_from1" autocomplete="off" class="form-control dateChangeCls" id="date_from" placeholder="">
                                                     <input type="hidden" name="date_to" class="form-control dateChangeCls" id="date_to" placeholder=")">
                                                     <input type="hidden" readonly name="nights" class="form-control" id="nights" placeholder="">
                                                 <label for="date" class="form-label">Date From *</label>
@@ -2942,7 +2942,7 @@ DB::connection('mysql')->table('countries')->where('id', $row->countryAreas[0]->
   background-color: #f1f8ff;
 }
 .fw-bold {
-	font-weight: bold;
+    font-weight: bold;
 }
 .fixturebtn{
     font-weight: bolder;font-size: 16px;width: 40px;height: 40px;border: 1px solid #ddd;
@@ -3423,24 +3423,101 @@ img {
                 <div class="enquiry-container">
                   <!-- LEFT: General Information + Tour Length -->
                   <div class="enquiry-left">
-                    <div class="page1">
+                    <div class="page1" style="padding: 10px;">
                         <h4 class="section-title">General Information</h4>
+                        
+                        @if ($row->ExperienceHotels->count() > 0)
+                            @foreach($row->ExperienceHotels as $k => $hotel)
+                            <div class="hotelDiv hotal_{{$k}}" style="<?=($k !=0)?'display:none;':''?>" >
+                                <div class="form-group">
+                                        <label>Select a hotel</label>
+                                        <select name="hotel[]" class="form-control select-hotel">
+                                            <option value="">Select a hotel</option>
+                                             @if ($row->ExperienceHotels->count() > 0)
+                                                     @foreach($row->ExperienceHotels as $k1 => $hotel1)
+                                                        <option data-cost="{{$hotel1->estimated_cost}}" value="{{ $hotel1->id }}">{{ $hotel1->name }}</option>
+                                                    @endforeach
+                                                @endif
+                                        </select>
+                                        <input type="hidden" class="form-control hotel_rate" readonly name="hotel_rate[]" value="">   
+                                        <input type="hidden" class="fixture_cnt fixtures_{{$k}}" name="fixtures[]" value="" >
+                                </div>
+                                <div class="card-section">
+                                  <h4 class="section-title">Tour Length</h4>
+                                  <table class="table tour-table" id="nightsRow">
+                                      <thead>
+                                        <tr>
+                                          <th>Tour Length</th>
+                                          <th>No. of Fixtures</th>
+                                          <th>Estimated Cost</th>
+                                          <th>Select</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr data-nights="3" data-days="4" class="price-option">
+                                          <td>3 nights<br><small>4 days</small></td>
+                                          <td>
+                                            <div class="fixture-control">
+                                              <button type="button" class="btn-down">▼</button>
+                                              <span class="fixture-count"></span>
+                                              <button type="button" class="btn-up">▲</button>
+                                            </div>
+                                          </td>
+                                          <td>£<span class="profit_margin">0</span></td>
+                                          <td><input type="radio" class="nights" name="nights_{{$k}}" value="3" checked></td>
+                                        </tr>
+                                        <tr data-nights="4" data-days="5" class="price-option">
+                                          <td>4 nights<br><small>5 days</small></td>
+                                          <td>
+                                            <div class="fixture-control">
+                                              <button type="button" class="btn-down">▼</button>
+                                              <span class="fixture-count"></span>
+                                              <button type="button" class="btn-up">▲</button>
+                                            </div>
+                                          </td>
+                                          <td>£<span class="profit_margin">0</span></td>
+                                          <td><input type="radio" class="nights" name="nights_{{$k}}" value="4"></td>
+                                        </tr>
+                                        <tr data-nights="5" data-days="6" class="price-option">
+                                          <td>5 nights<br><small>6 days</small></td>
+                                          <td>
+                                            <div class="fixture-control">
+                                              <button type="button" class="btn-down">▼</button>
+                                              <span class="fixture-count"></span>
+                                              <button type="button" class="btn-up">▲</button>
+                                            </div>
+                                          </td>
+                                          <td>£<span class="profit_margin">0</span></td>
+                                          <td><input type="radio" class="nights" name="nights_{{$k}}" value="5"></td>
+                                        </tr>
+                                        <tr data-nights="6" data-days="7" class="price-option">
+                                          <td>6 nights<br><small>7 days</small></td>
+                                          <td>
+                                            <div class="fixture-control">
+                                              <button type="button" class="btn-down">▼</button>
+                                              <span class="fixture-count"></span>
+                                              <button type="button" class="btn-up">▲</button>
+                                            </div>
+                                          </td>
+                                          <td>£<span class="profit_margin">0</span></td>
+                                          <td><input type="radio" class="nights" name="nights_{{$k}}" value="6"></td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                </div>
+                                @if($row->ExperienceHotels->count() != ($k+1))
+                                <div class="form-group">
+                                    <input type="button" name="add_more" data-key="{{($k+1)}}" value="Add Additional Hotel" class="btn btn-primary add_hotel" style="display:none;">
+                                </div>
+                                @endif
+                            </div>
+                            
+                            @endforeach
+                        @endif
+                        
                         <div class="card-section">
                           
-                            <div class="form-group">
-                                <label>Select a hotel</label>
-                                <select name="hotel" class="form-control">
-                                    <option selected>Select a hotel</option>
-                                     @if ($row->ExperienceHotels->count() > 0)
-                                        @foreach($row->ExperienceHotels as $hotel)
-                                        <option data-cost="{{$hotel->estimated_cost}}" value="{{ $hotel->id }}">{{ $hotel->name }}</option>
-                                        @endforeach
-                                    @endif
-                                </select>
-                                <input type="hidden" name="coach_hire_cost" id="coach_hire_cost" value="{{$row->coach_hire_cost}}">
-                                <input type="hidden" name="avg_cost_fixture" id="avg_cost_fixture" value="{{$row->avg_cost_fixture}}">
-                                <input type="hidden" class="form-control" readonly id="hotel_rate" name="hotel_rate" value="">   
-                           </div>
+                           
                            <!-- <div class="form-group">
                                 <label >Hotel rate</label>
                                 <input type="text" class="form-control" readonly id="hotel_rate" name="hotel_rate" value="">                         
@@ -3449,8 +3526,12 @@ img {
                           <div class="form-group">
                             <label>Approximate tour start date</label>
                             <div style="position: relative;">
+                                <input type="hidden" name="coach_hire_cost" id="coach_hire_cost" value="{{$row->coach_hire_cost}}">
+                                <input type="hidden" name="nights" id="nights" value="">
+                                <input type="hidden" name="avg_cost_fixture" id="avg_cost_fixture" value="{{$row->avg_cost_fixture}}">
+                                
                                 <input type="text" id="mainInput"  name="date_from" class="form-control">
-                                <span style="position: absolute;right: 0;padding: 5px 10px;top: 0;"><i class="fa fa-calendar-alt"></i></span>
+                                <span id="mainIcon" style="cursor: pointer; position: absolute;right: 0;padding: 5px 10px;top: 0;"><i class="fa fa-calendar-alt"></i></span>
                             </div>
                             <!-- Popup with Tabs -->
                             <div id="calendarPopup" class="popup">
@@ -3490,71 +3571,6 @@ img {
                             </select>
                           </div>
                         </div>
-
-                        <div class="card-section">
-                          <h4 class="section-title">Tour Length</h4>
-                          <table class="table tour-table" id="nightsRow">
-                              <thead>
-                                <tr>
-                                  <th>Tour Length</th>
-                                  <th>No. of Fixtures</th>
-                                  <th>Estimated Cost</th>
-                                  <th>Select</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr data-nights="3" data-days="4" class="price-option">
-                                  <td>3 nights<br><small>4 days</small></td>
-                                  <td>
-                                    <div class="fixture-control">
-                                      <button type="button" class="btn-down">▼</button>
-                                      <span class="fixture-count"></span>
-                                      <button type="button" class="btn-up">▲</button>
-                                    </div>
-                                  </td>
-                                  <td>£<span class="profit_margin"></span></td>
-                                  <td><input type="radio" name="nights" value="3" checked></td>
-                                </tr>
-                                <tr data-nights="4" data-days="5" class="price-option">
-                                  <td>4 nights<br><small>5 days</small></td>
-                                  <td>
-                                    <div class="fixture-control">
-                                      <button type="button" class="btn-down">▼</button>
-                                      <span class="fixture-count"></span>
-                                      <button type="button" class="btn-up">▲</button>
-                                    </div>
-                                  </td>
-                                  <td>£<span class="profit_margin"></span></td>
-                                  <td><input type="radio" name="nights" value="4"></td>
-                                </tr>
-                                <tr data-nights="5" data-days="6" class="price-option">
-                                  <td>5 nights<br><small>6 days</small></td>
-                                  <td>
-                                    <div class="fixture-control">
-                                      <button type="button" class="btn-down">▼</button>
-                                      <span class="fixture-count"></span>
-                                      <button type="button" class="btn-up">▲</button>
-                                    </div>
-                                  </td>
-                                  <td>£<span class="profit_margin"></span></td>
-                                  <td><input type="radio" name="nights" value="5"></td>
-                                </tr>
-                                <tr data-nights="6" data-days="7" class="price-option">
-                                  <td>6 nights<br><small>7 days</small></td>
-                                  <td>
-                                    <div class="fixture-control">
-                                      <button type="button" class="btn-down">▼</button>
-                                      <span class="fixture-count"></span>
-                                      <button type="button" class="btn-up">▲</button>
-                                    </div>
-                                  </td>
-                                  <td>£<span class="profit_margin"></span></td>
-                                  <td><input type="radio" name="nights" value="6"></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                        </div>
-
                         <!-- Attractions Section (Blade ready) -->
                         <!-- Attractions Section -->
                         <div class="card-section mt-4">
@@ -3695,7 +3711,7 @@ img {
                         </div>
                         <div class="summery p-3">
                             <button  type="button" class="btn btn-warning w-100 fw-bold py-2" id="continue" style="
-    height: 70px; color: #fff;">Continue</button>
+            height: 70px; color: #fff;">Continue</button>
                             <button  type="submit" class="btn btn-warning w-100 fw-bold py-2" id="enquiryNow" style="display:none;height: 70px; color: #fff;">Enquire Now</button>
                             <button type="button" id="backPage" class="btn btn-outline-dark w-100 fw-bold mt-3" style="display:none;"><i class="fas fa-arrow-left"></i> Go Back</button>
                         </div>
@@ -3735,7 +3751,76 @@ img {
   <span class="close">&times;</span>
   <img class="modal-content" id="full-image">
 </div>
+<!-- Bowling clubs -->
 <script>
+    //const clubFieldsContainer = $('#clubFields');
+      const skipStep = $('#skipStep');
+      const noPreference = $('#noPreference');
+      const selectClubs = $('#selectClubs');
+
+      // safe guard
+    // create preferred club inputs (count = number)
+     const clubFieldsContainer = document.getElementById('clubFields');
+
+    function renderClubInputs() {
+      clubFieldsContainer.innerHTML = '';
+
+      document.querySelectorAll('.hotelDiv').forEach(hotelDiv => {
+
+        // skip hidden hotel blocks
+        if (hotelDiv.style.display === 'none') return;
+
+        const hotelSelect = hotelDiv.querySelector('select[name="hotel[]"]');
+        if (!hotelSelect || !hotelSelect.value) return;
+
+        const hotelName =
+          hotelSelect.options[hotelSelect.selectedIndex].text;
+
+        // get selected nights row for THIS hotel
+        const selectedRow = hotelDiv
+          .querySelector('.price-option input.nights:checked')
+          ?.closest('.price-option');
+
+        if (!selectedRow) return;
+
+        const fixtureCount = parseInt(
+          selectedRow.querySelector('.fixture-count')?.textContent || 0,
+          10
+        );
+
+        if (fixtureCount <= 0) return;
+
+        // limit max fixtures to 8
+        const max = Math.min(fixtureCount, 8);
+
+        // ---- HOTEL TITLE ----
+        const titleCol = document.createElement('div');
+        titleCol.className = 'col-12';
+        titleCol.innerHTML = `<h5 class="mt-3 mb-2">${hotelName}</h5>`;
+        clubFieldsContainer.appendChild(titleCol);
+
+        // ---- FIXTURE INPUTS ----
+        for (let i = 1; i <= max; i++) {
+          const col = document.createElement('div');
+          col.className = 'col-md-6';
+
+          col.innerHTML = `
+            <div class="mb-3">
+              <label class="form-label">Fixture ${i} </label>
+              <input
+                type="text"
+                name="preferred_club[]"
+                class="form-control"
+                placeholder="Club Name"
+              >
+            </div>
+          `;
+
+          clubFieldsContainer.appendChild(col);
+        }
+      });
+    }
+
   document.getElementById('skipStep').addEventListener('click', function (e) {
     e.preventDefault();
     document.getElementById('clubInputs').classList.add('d-none');
@@ -3749,7 +3834,7 @@ img {
      const selectedNightRow = document.querySelector('#nightsRow .price-option input[name="nights"]:checked')?.closest('.price-option');
         const fixtures = selectedNightRow?.querySelector('.fixture-count')?.textContent || '0';
 
-        renderClubInputs(fixtures);
+        renderClubInputs();
   });
 </script>
 
@@ -3932,7 +4017,7 @@ img {
         ?>
         
         });
-      $('#enquiry_link').click(function(e){
+        $('#enquiry_link').click(function(e){
        
             $('#enquiryModel').modal('show');
         });
@@ -3940,173 +4025,7 @@ img {
        
             $('#enqModal').modal('show');
         });
-      /*$('.btn-outline-primary').click(function(){
-        var id = $(this).attr('data-id');
-        $('.btn-outline-primary').removeClass('active');
-        $(this).addClass('active');
-        $('#fixture').val(id);
-        calculate_score();
-      })
-      $('#daterange').daterangepicker({
-        startDate: '01/01/2025',
-        endDate: '01/15/2025',
-        locale: {
-            format: 'MM/DD/YYYY'
-        }
-    },
-      function (start, end) {
-         const startDate = moment(start);
-          const endDate = moment(end);
-
-          // Calculate the difference in days
-          const dateDifference = endDate.diff(startDate, 'days');
-        var dd = start.format("DD-MMM-YY'")+' - '+end.format("DD-MMM-YY'")+' ( '+dateDifference+' nights)';
-        $('.date_range').html(dd);
-         $('.date_error').css('color', '#000000');
-        $('#date_from').val(start.format("YYYY-MM-DD'"))
-        $('#date_to').val(end.format("YYYY-MM-DD'"))
-        $('#nights').val(dateDifference)
-        //$('.date_error').hide();
-         calculate_score()
-
-        
-      });
-      $('#t_link').click(function(e){
-        $('#termModel').modal('show');
-    });
-      $('body').on('blur', '.dateChangeCls', function() {
-            var ids = $(this).attr('data-id');
-            
-            var fromDate = $('#date_from').val();
-            var toDate = $('#date_to').val();
-            // console.log(fromDate);
-            // console.log(toDate);
-
-            // from = moment(fromDate, 'DD/MM/YYYY'); 
-            // to = moment(toDate, 'DD/MM/YYYY'); 
-
-            // console.log(from);
-            // console.log(to);
-
-            const date1 = new Date(fromDate);
-            const date2 = new Date(toDate);
-            const diffTime = Math.abs(date2 - date1);
-            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
-            if(diffDays > 0){
-                $('#nights').val(diffDays);
-                $('.date_div').trigger('click');
-                
-            }else{
-                var diffDays1 = '0';
-                $('#nights').val(diffDays1);
-                $('.date_div').trigger('click');
-            }
-            calculate_score();
-        });
-      $('.attraction').click(function()
-      {
-        calculate_score();
-      });
-      $('.extras').click(function()
-      {
-        calculate_score();
-      });
-      $('.coach_required').click(function()
-      {
-        calculate_score();
-      });
-      $('#groupNumber').change(function()
-      {
-        calculate_score();
-      });
-      function calculate_score()
-      {
-        var base_price = $('#enquiry_rate').val();
-        var percentage_rate = $('#percentage_rate').val();
-        var fixture_rate = $('#fixture_rate').val();
-        
-        var fixture = $('#fixture').val();
-        var nights = $('#nights').val();
-        var groupNumber = $('#groupNumber').val();
-        if(nights == '' || nights == '0' || nights == 'NaN')
-        {
-            nights = 0;
-        }
-        console.log('groupNumber f'+groupNumber)
-        console.log('fixture_rate'+fixture_rate)
-        if(groupNumber == 'Select number' || groupNumber == 'NaN')
-        {
-            groupNumber = 1;
-        }
-        if(base_price == '' || base_price == 'NaN')
-        {
-            base_price = 0;
-        }
-        if(fixture == '' || fixture == 'NaN')
-        {
-            fixture = 0;
-        }
-        var fixture_amount = fixture * parseFloat(fixture_rate);
-        var attraction = 0;
-        var extra = 0;
-        var coach_required_yes = 0;
-        $('.attraction:checked').each(function() {
-            // Get the value of the checked checkbox
-            var cost = $(this).attr('data-cost');
-            attraction = parseFloat(attraction) + parseFloat(cost);
-            
-        });
-        attraction = attraction * parseInt(groupNumber);
-        $('.extras:checked').each(function() {
-            // Get the value of the checked checkbox
-            var cost1 = $(this).attr('data-cost');
-            
-            extra = parseFloat(extra) + parseFloat(cost1);
-            
-        });
-        extra = extra * parseInt(groupNumber);
-        $('#coach_required_yes:checked').each(function() {
-            // Get the value of the checked checkbox
-            var coach_required_yes = $('#coach_cost').val();
-            
-            
-        });
-        if ($('#coach_required_yes').is(':checked')) {
-            var coach_required_yes = $('#coach_cost').val();
-        } 
-        console.log('attraction'+attraction)
-        console.log('percentage_rate'+percentage_rate)
-        console.log('extra'+extra)
-        console.log('base_price'+base_price)
-        console.log('nights'+nights)
-        console.log('groupNumber'+groupNumber)
-        console.log('fixture'+fixture)
-        
-        var baseCost = (parseFloat(base_price) * parseInt(groupNumber));
-        var baseCost = (parseFloat(baseCost) + fixture_amount);
-        console.log('baseCost'+baseCost)
-        // Total calculation
-        var totalCost = (parseFloat(attraction) + parseFloat(extra) + parseFloat(coach_required_yes));
-        console.log('totalCost'+totalCost)
-        var estimate_cost =  baseCost + totalCost;
-        var percentage_rate_amount = (parseFloat(estimate_cost)*parseInt(percentage_rate))/100;
-        console.log('percentage_rate_amount'+percentage_rate_amount)
-        var final_cost = (parseFloat(estimate_cost) + parseFloat(percentage_rate_amount)) * parseInt(nights);
-        final_cost = final_cost.toFixed(2);
-        //alert('final_cost'+final_cost)
-        var pp_cost = (final_cost/groupNumber);
-        
-        pp_cost = pp_cost.toFixed(2);
-        console.log('pp_cost'+pp_cost)
-        if(pp_cost == 'NaN')
-        {
-            pp_cost = 0;
-        }
-        
-       $('#est_cost').html('£'+final_cost+' pp');
-       $('#per_est_cost').html('£'+pp_cost+' pp');
-       $('#final_cost').val(final_cost);
-      }*/
+     
         <?php if(Session::has('success')){ ?> 
        
             toastSuccess('Enquiry added successfully.');
@@ -4114,7 +4033,7 @@ img {
 
         <?php Session::forget('success'); } ?>
 </script>
-
+<!-- calander -->
 <script>
     const popup = document.getElementById('calendarPopup');
     const mainInput = document.getElementById('mainInput');
@@ -4269,461 +4188,324 @@ img {
       }
     });
   </script>
+<!-- calculate final rate -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const MIN_FIXTURES = 1;
-  const MAX_FIXTURES = 8;
 
-  document.querySelectorAll(".tour-table tbody tr").forEach((row) => {
-    const nights = parseInt(row.dataset.nights);
-    const fixtureCountEl = row.querySelector(".fixture-count");
-    const btnUp = row.querySelector(".btn-up");
-    const btnDown = row.querySelector(".btn-down");
-
-    // Default fixtures = nights - 1
-    let fixtures = Math.max(MIN_FIXTURES, nights - 1);
-    fixtureCountEl.textContent = fixtures;
-
-    // Update button visual states
-    function updateButtons() {
-      btnDown.classList.toggle("disabled-btn", fixtures <= MIN_FIXTURES);
-      btnUp.classList.toggle("disabled-btn", fixtures >= MAX_FIXTURES);
-       updateProfitMargins();
-        updateFinalRate();
-    }
-
-    updateButtons();
-
-    btnUp.addEventListener("click", () => {
-      if (fixtures < MAX_FIXTURES) {
-        fixtures++;
-        fixtureCountEl.textContent = fixtures;
-        updateButtons();
-      }
-    });
-
-    btnDown.addEventListener("click", () => {
-      if (fixtures > MIN_FIXTURES) {
-        fixtures--;
-        fixtureCountEl.textContent = fixtures;
-        updateButtons();
-      }
-    });
-  });
-
-  // Highlight selected row
-  const radios = document.querySelectorAll('input[name="tour"]');
-  radios.forEach((radio) => {
-    radio.addEventListener("change", () => {
-      document.querySelectorAll(".tour-table tr").forEach((tr) => tr.classList.remove("selected"));
-      radio.closest("tr").classList.add("selected");
-    });
-  });
-});
-
-</script>
-  <!-- fixture -->
-<script>
-    (function () {
-      // helpers
-      function $(sel, ctx=document) { return ctx.querySelector(sel); }
-      function $$(sel, ctx=document) { return Array.from(ctx.querySelectorAll(sel)); }
-
-      // DOM elements
-      const hotelRate = $$('input[name="hotel_rate"]');
-      const coachHireCost = $$('input[name="coach_hire_cost"]');
-      const avgCostFixture = $$('input[name="avg_cost_fixture"]');
-      const nightsInputs = $$('input[name="nights"]');
-      const nightsLabels = $$('#nightsRow .price-option');
-      const fixtureInputs = $$('input[name="fixtures"]');
-      const fixtureLabels = $$('#fixturesRow .fixturebtn');
-      const clubFieldsContainer = $('#clubFields');
-      const skipStep = $('#skipStep');
-      const noPreference = $('#noPreference');
-      const selectClubs = $('#selectClubs');
-
-      // safe guard
-      if (!clubFieldsContainer) return;
-
-      // create preferred club inputs (count = number)
-      function renderClubInputs(count) {
-
-        clubFieldsContainer.innerHTML = '';
-        if (!count || count <= 0) return;
-        // limit max to 8 to match "8+"
-        const max = Math.min(count, 8);
-        for (let i = 1; i <= max; i++) {
-          const col = document.createElement('div');
-          col.className = 'col-md-6';
-          col.innerHTML = `
-            <div class="mb-3">
-              <label class="form-label">Fixture ${i}</label>
-              <input type="text" name="preferred_club[]" class="form-control" placeholder="Club Name">
-            </div>
-          `;
-          clubFieldsContainer.appendChild(col);
-        }
-      }
-
-      // set fixture radio that matches n (if exists)
-      function setFixtureForNights(n) {
-        // try to find exact match
-        const match = fixtureInputs.find(fi => parseInt(fi.value,10) === n);
-        if (match) {
-          match.checked = true;
-          match.dispatchEvent(new Event('change', { bubbles: true }));
-          return;
-        }
-        // fallback: if n > 7 -> check 8+ (value 8)
-        if (n > 7) {
-          const plus = fixtureInputs.find(fi => parseInt(fi.value,10) === 8);
-          if (plus) { plus.checked = true; plus.dispatchEvent(new Event('change', { bubbles: true })); }
-        } else {
-          // otherwise uncheck all
-          fixtureInputs.forEach(fi => fi.checked = false);
-          fixtureInputs[0] && fixtureInputs[0].dispatchEvent(new Event('change', { bubbles: true }));
-        }
-      }
-
-      // update when nights input changes
-      function onNightsChange(n) {
-         const selectedNightRow = document.querySelector('#nightsRow .price-option input[name="nights"]:checked')?.closest('.price-option');
-        const fixtures = selectedNightRow?.querySelector('.fixture-count')?.textContent || '0';
-        renderClubInputs(fixtures);
-        setFixtureForNights(n);
-      }
-      
-      // wire change on nights inputs
-      nightsInputs.forEach(input => {
-        input.addEventListener('change', function () {
-          const n = parseInt(this.value, 10) || 0;
-          onNightsChange(n);
-        });
-      });
-
-      // in case labels are clicked (some environments don't toggle hidden inputs reliably),
-      // attach label click handlers that explicitly set the corresponding input.
-      // Click event for labels
-       // Handle clicks on nights labels
-        nightsLabels.forEach(label => {
-          label.addEventListener('click', function (ev) {
-            ev.preventDefault();
-
-            // Remove active from all price-option rows
-            nightsLabels.forEach(l => l.classList.remove('active'));
-
-            // Add active to clicked row
-            this.classList.add('active');
-
-            // ✅ Select the radio inside clicked row
-            const radio = this.querySelector('input[name="nights"]');
-            if (radio) {
-              radio.checked = true;
-              radio.dispatchEvent(new Event('change', { bubbles: true }));
-            }
-
-            // ✅ Get its night count (for fixtures group mapping)
-            const n = this.getAttribute('data-nights');
-
-            // ✅ Find matching fixture input
-           /* const fixtureInput = document.getElementById(`fixture${n}`);
-            if (fixtureInput) {
-              // Remove active from all fixtures
-              document.querySelectorAll('input[name="fixtures"]').forEach(fi => {
-                fi.checked = false;
-                const prevLabel = fi.nextElementSibling;
-                if (prevLabel && prevLabel.classList.contains('fixturebtn')) {
-                  prevLabel.classList.remove('active');
-                }
-              });
-
-              // Check correct fixture
-              fixtureInput.checked = true;
-              fixtureInput.dispatchEvent(new Event('change', { bubbles: true }));
-
-              const fixtureLabel = fixtureInput.nextElementSibling;
-              if (fixtureLabel && fixtureLabel.classList.contains('fixturebtn')) {
-                fixtureLabel.classList.add('active');
-              }
-            }*/
-
-            // ✅ Recalculate everything
-            updateFinalRate();
-            updateSummary();
-          });
-        });
-
-
-
-      // when fixtures change manually, update club inputs to fixture count
-      /*fixtureInputs.forEach(input => {
-          input.addEventListener('change', function () {
-            const fixtures = parseInt(this.value, 10) || 0;
-
-            // --- Remove active class from all fixture labels ---
-            document.querySelectorAll('.fixturebtn.active').forEach(lbl => {
-              lbl.classList.remove('active');
-            });
-
-            // --- Add active class to the selected fixture’s label ---
-            const selectedLabel = this.nextElementSibling; // if label is before input
-            // OR use nextElementSibling if your HTML places label after input
-            if (selectedLabel && selectedLabel.classList.contains('fixturebtn')) {
-              selectedLabel.classList.add('active');
-            }
-
-            // --- Your existing logic ---
-            renderClubInputs(fixtures);
-
-            // Sync with nights
-            const nightMatch = nightsInputs.find(
-              ninp => parseInt(ninp.value, 10) === fixtures
-            );
-            if (nightMatch) {
-              nightMatch.checked = true;
-              nightMatch.dispatchEvent(new Event('change', { bubbles: true }));
-            }
-          });
-        });*/
-
-      // label clicks for fixtures (defensive)
-      fixtureLabels.forEach(label => {
-        label.addEventListener('click', function (ev) {
-          ev.preventDefault();
-          const data = this.getAttribute('data-fixtures');
-          const n = parseInt(data,10);
-          const targetInput = fixtureInputs.find(i => parseInt(i.value,10) === n);
-          if (targetInput) {
-            targetInput.checked = true;
-            targetInput.dispatchEvent(new Event('change', { bubbles: true }));
-          }
-        });
-      });
-
-      // Skip / Select toggles
-      skipStep && skipStep.addEventListener('click', function (e) {
-        e.preventDefault();
-        $('#clubInputs').classList.add('d-none');
-        noPreference.classList.remove('d-none');
-        // clear any club fields
-       // clubFieldsContainer.innerHTML = '';
-        // uncheck fixtures/nights optionally
-        // $$('input[name="fixtures"], input[name="nights"]').forEach(i => i.checked = false);
-      });
-
-      selectClubs && selectClubs.addEventListener('click', function (e) {
-        e.preventDefault();
-        $('#clubInputs').classList.remove('d-none');
-        noPreference.classList.add('d-none');
-      });
-      renderClubInputs(2);
-      
-
-    })();
-
-    const $$ = (selector) => Array.from(document.querySelectorAll(selector));
-
-    //update profile margin
-    const hotelRateInputs = $$('input[name="hotel_rate"]');
-    const coachHireCostInputs = $$('input[name="coach_hire_cost"]');
-    const avgCostFixtureInputs = $$('input[name="avg_cost_fixture"]');
-    const nightsInputs = $$('input[name="nights"]');
-    const attractionInputs = $$('input[name="attraction"]');
-    const fixtureInputs = $$('input[name="fixtures"]');
-    const nightsLabels = $$('#nightsRow .price-option');
-    const totalPassengersSelect = document.querySelector('#total_passengers');
-
-    // --- Calculation function ---
-    function calculate_rate(night, fixtures_count, coach_hire_cost, avg_cost_fixture, hotelRate) {
-      const totalPassengersSelect = document.querySelector('select[name="total_passengers"]');
-      const totalPassengers = totalPassengersSelect.value;
-      const singleRooms = 0;
-      const ssRate = 0;
-      const freeWithSS = 0;
-      const freePPsharing = 0;
-      const crossingCost = 0;
-      const otherCosts = 0;
-      const porterage = 0;
-      const attraction = 0;
-      console.log('night'+night)
-      console.log('totalPassengers'+totalPassengers)
-      console.log('hotelRate'+hotelRate)
-      //const fixtures_count = fixtures_count;
-      const hotelMain = totalPassengers * hotelRate * night;
-      const hotelSS = singleRooms * ssRate * night;
-      const coach = coach_hire_cost * (night+1);
-     const fixtures = avg_cost_fixture * fixtures_count;
-
-      const totalIN =
-        hotelMain +
-        hotelSS +
-        coach +
-        fixtures +
-        freeWithSS +
-        freePPsharing +
-        crossingCost +
-        otherCosts +
-        porterage +
-        attraction;
-        console.log('totalIN'+totalIN)
-      const billedPassengers = totalPassengers;
-      const convert = 1;
-      const totalINConv = totalIN / convert;
-      const profitpoints25 = 2500;
-      const rrRate3 = (totalINConv + profitpoints25) / billedPassengers;
-      console.log('rrRate3'+rrRate3)
-      return roundTo5or9(rrRate3);
-    }
-
-    // --- Update all profit margins ---
+    /* ==========================
+       HELPERS
+    ========================== */
+    const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
+ /* ==========================
+       PROFIT MARGIN (ALL HOTELS)
+    ========================== */
     function updateProfitMargins() {
-      // Get the latest values (you may have one or multiple inputs)
-      const hotelRate = parseFloat(hotelRateInputs[0]?.value || 0);
-      const coachHireCost = parseFloat(coachHireCostInputs[0]?.value || 0);
-      const avgCostFixture = parseFloat(avgCostFixtureInputs[0]?.value || 0);
+      const pax = +document.querySelector('#total_passengers').value;
+      const coach = +document.querySelector('#coach_hire_cost').value;
+      const avgFixture = +document.querySelector('#avg_cost_fixture').value;
 
-      
-       //const selectedRow = document.querySelector('input[name="nights"]:checked')?.closest("tr");
-      //if (!selectedRow) return null;
+      $$('.hotelDiv').forEach(hotelDiv => {
+        if (hotelDiv.style.display === 'none') return;
 
-      //const nights = parseInt(selectedRow.dataset.nights);
-      //const fixtureCount = parseInt(selectedRow.querySelector(".fixture-count").textContent);
+        const rate = +hotelDiv.querySelector('.hotel_rate').value;
+        if (!rate) return;
 
-      // Update each night's profit margin
-      nightsLabels.forEach(label => {
-         const nightCount = parseInt(label.dataset.nights, 10); // ✅ Correct nights from data attribute
-  
-          const fixtureCountEl = label.querySelector(".fixture-count");
-          const fixtureCount = parseInt(fixtureCountEl.textContent.trim(), 10) || (nightCount - 1); 
-          // ✅ Fallback to default (nights - 1) if empty
-          
-          const profitSpan = label.querySelector('.profit_margin');
-        
-        if (profitSpan) {
-          const result = calculate_rate(
-            nightCount,
-            fixtureCount,
-            coachHireCost,
-            avgCostFixture,
-            hotelRate
+        $$('.price-option', hotelDiv).forEach(row => {
+          const nights = +row.dataset.nights;
+          //const fixtures = nights - 1;
+          const fixtureSpan = row.querySelector('.fixture-count');
+          const fixtures = +fixtureSpan.textContent || 0;
+          const span = row.querySelector('.profit_margin');
+
+          span.textContent = calculate_rate(
+            nights, fixtures, coach, avgFixture, rate, pax
           );
-          profitSpan.textContent = result;
-        }
-      });
-    }
-    function updateFinalRate1() {
-      // 1. Get selected night label (active)
-      const activeNight = document.querySelector('#nightsRow .price-option.active');
-      if (!activeNight) return;
-
-      // 2. Get profit margin from selected night
-      const profitMarginSpan = activeNight.querySelector('.profit_margin');
-      const profitMargin = parseFloat(profitMarginSpan?.textContent || 0);
-        console.log('profile'+profitMargin)
-      // 3. Get selected fixture count
-      const selectedFixture = fixtureInputs.find(i => i.checked);
-      /*const fixtureCount = parseInt(selectedFixture?.value || 0, 10);
-
-      // 4. Get avgCostFixture
-      const avgCostFixture = parseFloat(avgCostFixtureInputs[0]?.value || 0);*/
-
-      // 5. Get selected attraction and its data-cost
-      const selectedAttraction = document.querySelector('input[name="attraction"]:checked');
-      const attractionCost = parseFloat(selectedAttraction?.getAttribute('data-cost') || 0);
-      console.log('attractionCost'+attractionCost)
-      // 6. Calculate final total per person
-      //const finalRate = profitMargin + ((fixtureCount * avgCostFixture)/30) + attractionCost;
-      const finalRate = profitMargin  + attractionCost;
-
-      // 7. Update final_pp_cost span
-      const finalSpan = document.querySelector('.final_pp_cost');
-      if (finalSpan) {
-        finalSpan.textContent = roundTo5or9(finalRate);
-         const finalCostInput = document.querySelector('#final_cost');
-          if (finalCostInput) {
-            finalCostInput.value = roundTo5or9(finalRate);
-          }
-      }
-    }
-    function updateFinalRate() {
-
-      // 1. Get the selected night (radio)
-      const selectedNightRadio = document.querySelector('input[name="nights"]:checked');
-      if (!selectedNightRadio) return;
-
-      // Get the selected row for that night
-      const activeNight = selectedNightRadio.closest('.price-option');
-      const profitMarginSpan = activeNight.querySelector('.profit_margin');
-      const profitMargin = parseFloat(profitMarginSpan?.textContent || 0);
-     
-      console.log("Night Profit Margin:", profitMargin);
-
-      // 2. Get selected attraction
-
-      // First detect if "No attractions" radio is checked
-      const selectedNoAttraction = document.querySelector('input[name="attraction"][value="none"]:checked');
-
-      let attractionCost = 0;
-
-      if (!selectedNoAttraction) {
-        // Means one or more checkboxes are selected → sum their cost
-        document.querySelectorAll('input[name="attraction[]"]:checked').forEach(cb => {
-          attractionCost += parseFloat(cb.dataset.cost || 0);
         });
-      }
+      });
+      renderClubInputs();
+    }
+   
+    /* ==========================
+       NIGHTS SELECTION
+    ========================== */
+    document.addEventListener('change', e => {
+      if (!e.target.classList.contains('nights')) return;
 
-      console.log("Attraction Cost:", attractionCost);
+      const hotelDiv = e.target.closest('.hotelDiv');
 
-      // 3. Calculate final total per person
-      const finalRate = profitMargin + attractionCost;
+      $$('.price-option', hotelDiv).forEach(r => r.classList.remove('active'));
+      e.target.closest('.price-option').classList.add('active');
 
-      // 4. Update UI display
-      const finalSpan = document.querySelector('.final_pp_cost');
-      if (finalSpan) finalSpan.textContent = roundTo5or9(finalRate);
+      updateProfitMargins();
+      updateFinalRate();
+      updateSummary();
+    });
 
-      // 5. Hidden input update
-      const finalCostInput = document.querySelector('#final_cost');
-      if (finalCostInput) finalCostInput.value = roundTo5or9(finalRate);
+    /* ==========================
+       CLICK ROW SELECT
+    ========================== */
+    document.addEventListener('click', e => {
+      const row = e.target.closest('.price-option');
+      if (!row) return;
+
+      const hotelDiv = row.closest('.hotelDiv');
+      if (!hotelDiv) return;
+
+      row.querySelector('.nights').checked = true;
+      row.querySelector('.nights').dispatchEvent(new Event('change', { bubbles:true }));
+    });
+
+    /* ==========================
+       CALCULATION
+    ========================== */
+    function calculate_rate(nights, fixtures, coach, avgFixture, hotelRate, pax) {
+      const hotel = pax * hotelRate * nights;
+      const coachCost = coach * (nights + 1);
+      //const coachCost = 0;
+      const fixtureCost = avgFixture * fixtures;
+
+      const total = hotel + coachCost + fixtureCost;
+      const profit = (total + 2500) / pax;
+
+      return roundTo5or9(profit);
     }
 
-    // --- Trigger recalculation when hotelRate changes ---
-    hotelRateInputs.forEach(input => {
-      input.addEventListener('input', updateProfitMargins);
-       input.addEventListener('change', updateFinalRate);
-    });
+   
+
+    /* ==========================
+       FINAL RATE (SUM ALL HOTELS)
+    ========================== */
+    function updateFinalRate() {
+      let total = 0;
+      let hasHotelSelected = false;
+
+      const coach = +document.querySelector('#coach_hire_cost').value;
+      const nights = +document.querySelector('#nights').value;
+      const coachCost = coach * (nights + 1);
+      const pax = +document.querySelector('#total_passengers').value;
+      // ---- HOTELS TOTAL ----
+      document.querySelectorAll('.hotelDiv').forEach(hotelDiv => {
+
+        // skip hidden hotel blocks
+        if (hotelDiv.style.display === 'none') return;
+
+        // skip if hotel not selected
+        const hotelSelect = hotelDiv.querySelector('select[name="hotel[]"]');
+        if (!hotelSelect || !hotelSelect.value) return;
+
+        // skip if hotel rate is 0
+        const hotelRateInput = hotelDiv.querySelector('.hotel_rate');
+        const hotelRate = parseFloat(hotelRateInput?.value || 0);
+        if (hotelRate <= 0) return;
+
+        // get checked nights radio INSIDE this hotel block
+        const checkedNight = hotelDiv.querySelector('input.nights:checked');
+        if (!checkedNight) return;
+
+        const activeRow = checkedNight.closest('.price-option');
+        if (!activeRow) return;
+
+        const profit = parseFloat(
+          activeRow.querySelector('.profit_margin')?.textContent || 0
+        );
+
+        total += profit;
+        hasHotelSelected = true; // ✅ at least one valid hotel
+      });
+        console.log('total'+total)
+      // ---- ADD COACH + ATTRACTIONS ONLY IF HOTEL EXISTS ----
+      if (hasHotelSelected) {
+
+        // attractions
+        document.querySelectorAll('input[name="attraction[]"]:checked').forEach(cb => {
+          total += parseFloat(cb.dataset.cost || 0);
+        });
+       // console.log('coach'+(parseFloat(coachCost/pax)))
+        // coach
+       //total += parseFloat(coachCost/pax);
+      }
+
+      // ---- UPDATE UI ----
+      const final = roundTo5or9(total);
+
+      document.querySelector('.final_pp_cost').textContent = final;
+      document.querySelector('#final_cost').value = final;
+    }
 
 
-    totalPassengersSelect.addEventListener('change', () => {
-        updateProfitMargins();
-        updateFinalRate();
-    });
-    // Optional: also recalc when fixtures or nights change
-    fixtureInputs.forEach(input => {
-      input.addEventListener('change', updateFinalRate);
-    });
-    attractionInputs.forEach(input => {
-      input.addEventListener('change', updateFinalRate);
-    });
 
-    // Run once on page load
-    updateProfitMargins();
-    updateFinalRate();
+    /* ==========================
+       SUMMARY (ALL HOTELS)
+    ========================== */
+    function updateSummary() {
 
-    function roundTo5or9(value) {
-        let n = Math.ceil(value); // remove decimals and always round up
-        let lastDigit = n % 10;
+      let hotelSummaries = [];
+      let totalNights = 0;
+      let totalFixtures = 0;
 
-        if (lastDigit <= 5) {
-            n = n - lastDigit + 5; // push to nearest 5
-        } else {
-            n = n - lastDigit + 9; // push to nearest 9
+      // ---- LOOP ALL HOTEL BLOCKS ----
+      document.querySelectorAll('.hotelDiv').forEach((hotelDiv, index) => {
+
+        if (hotelDiv.style.display === 'none') return;
+
+        const hotelSelect = hotelDiv.querySelector('select[name="hotel[]"]');
+        if (!hotelSelect || !hotelSelect.value) return;
+
+        const hotelName =
+          hotelSelect.options[hotelSelect.selectedIndex].text;
+
+        const selectedNightRow = hotelDiv
+          .querySelector('.price-option input.nights:checked')
+          ?.closest('.price-option');
+
+        if (!selectedNightRow) return;
+
+        const nights = parseInt(selectedNightRow.dataset.nights || 0, 10);
+        const fixtures = parseInt(
+          selectedNightRow.querySelector('.fixture-count')?.textContent || (nights - 1),
+          10
+        );
+
+        totalNights += nights;
+        totalFixtures += fixtures;
+
+        // ✅ SET FIXTURE COUNT INTO HIDDEN FIELD FOR THIS HOTEL
+        const fixtureInput = hotelDiv.querySelector('.fixture_cnt');
+        if (fixtureInput) {
+          fixtureInput.value = fixtures;
         }
 
-        return n;
+        // store per-hotel summary
+        hotelSummaries.push({
+          name: hotelName,
+          fixtures
+        });
+      });
+
+      // ---- EXTRA NIGHT ONLY IF MORE THAN 1 HOTEL ----
+      if (hotelSummaries.length > 1) {
+        //totalNights += 1;
+      }
+
+      const totalDays = totalNights + 1;
+
+      // ---- DATE ----
+      const tourDate =
+        document.querySelector('input[name="date_from"]')?.value || 'N/A';
+
+      // ---- ATTRACTIONS ----
+      const activeAttractions = Array.from(
+        document.querySelectorAll('.attraction-card.active .card-title')
+      ).map(el => el.textContent.trim());
+
+      const attractionText = activeAttractions.length
+        ? activeAttractions.join(', ')
+        : 'No attractions';
+
+      // update nights input
+      document.querySelector('#nights').value = totalNights;
+
+      // ---- BUILD HOTEL HTML ----
+      const hotelHtml = hotelSummaries.length
+        ? hotelSummaries.map(hotel => `
+            <li><strong>Hotel:</strong> ${hotel.name}</li>
+            <li><strong>Fixtures:</strong> ${hotel.fixtures}</li>
+          `).join('')
+        : `<li><strong>Hotel:</strong> N/A</li>`;
+
+      // ---- UPDATE SUMMARY ----
+      document.querySelector('.summery ul').innerHTML = `
+        ${hotelHtml}
+        <li><strong>Approx tour date:</strong> ${tourDate}</li>
+        <li><strong>Total tour length:</strong> ${totalNights} nights / ${totalDays} days</li>
+        <li><strong>Attractions:</strong> ${attractionText}</li>
+        <li><strong>Coach:</strong> Included</li>
+      `;
+    }
+
+
+
+
+
+
+    /* ==========================
+       ROUND
+    ========================== */
+     function roundTo5or9(value) {
+        if(value != 0)
+        {
+            let n = Math.ceil(value); // remove decimals and always round up
+            let lastDigit = n % 10;
+
+            if (lastDigit <= 5) {
+                n = n - lastDigit + 5; // push to nearest 5
+            } else {
+                n = n - lastDigit + 9; // push to nearest 9
+            }
+
+            return n;
+        }
+        else
+        {
+            return value;
+        }
+        
     }
 </script>
+<!-- Fixtur button -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const MIN_FIXTURES = 1;
+      const MAX_FIXTURES = 8;
 
+      document.querySelectorAll(".tour-table tbody tr").forEach((row) => {
+        const nights = parseInt(row.dataset.nights);
+        const fixtureCountEl = row.querySelector(".fixture-count");
+        const btnUp = row.querySelector(".btn-up");
+        const btnDown = row.querySelector(".btn-down");
 
+        // Default fixtures = nights - 1
+        let fixtures = Math.max(MIN_FIXTURES, nights - 1);
+        fixtureCountEl.textContent = fixtures;
+
+        // Update button visual states
+        function updateButtons() {
+          btnDown.classList.toggle("disabled-btn", fixtures <= MIN_FIXTURES);
+          btnUp.classList.toggle("disabled-btn", fixtures >= MAX_FIXTURES);
+           updateProfitMargins();
+            updateFinalRate();
+        }
+
+        updateButtons();
+
+        btnUp.addEventListener("click", () => {
+          if (fixtures < MAX_FIXTURES) {
+            fixtures++;
+            fixtureCountEl.textContent = fixtures;
+            updateButtons();
+          }
+        });
+
+        btnDown.addEventListener("click", () => {
+          if (fixtures > MIN_FIXTURES) {
+            fixtures--;
+            fixtureCountEl.textContent = fixtures;
+            updateButtons();
+          }
+        });
+      });
+
+      // Highlight selected row
+      const radios = document.querySelectorAll('input[name="tour"]');
+      radios.forEach((radio) => {
+        radio.addEventListener("change", () => {
+          document.querySelectorAll(".tour-table tr").forEach((tr) => tr.classList.remove("selected"));
+          radio.closest("tr").classList.add("selected");
+        });
+      });
+    });
+
+</script>
+<!-- attraction -->
 <script>
     document.addEventListener("DOMContentLoaded", function () {
   
@@ -4763,64 +4545,93 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
-});
-/*document.getElementById('continue').addEventListener('click', function() {
-    document.querySelector('.page1').style.display = 'none'; // Hide page1
-    document.querySelector('.page2').style.display = 'block'; // Show page2
+    });
 
-    this.style.display = 'none'; // Hide Continue button
-    document.getElementById('enquiryNow').style.display = 'block'; // Show Enquiry Now button
-});*/
-</script>
-<!-- update right side summary -->
-<script>
-    function updateSummary() {
-  // ---- HOTEL ----
-  const hotelSelect = document.querySelector('select[name="hotel"]');
-  const hotelName = hotelSelect?.options[hotelSelect.selectedIndex]?.text || 'N/A';
+     
 
-  // ---- DATE ----
-  const tourDate = document.querySelector('input[name="date_from"]')?.value || 'N/A';
-
-  // ---- SELECTED NIGHTS ROW ----
-  const selectedNightRow = document.querySelector('#nightsRow .price-option input[name="nights"]:checked')?.closest('.price-option');
-  const nights = selectedNightRow?.dataset.nights || '0';
-  const days = selectedNightRow?.dataset.days || '0';
-  const fixtures = selectedNightRow?.querySelector('.fixture-count')?.textContent || '0';
-
-  // ---- ATTRACTION ----
-  const selectedAttractionCard = document.querySelector('.attraction-card.active');
-  let attractionText = 'No attractions';
-  if (selectedAttractionCard && selectedAttractionCard.querySelector('.card-title')) {
-      attractionText = selectedAttractionCard.querySelector('.card-title').textContent.trim();
-  }
-
-  // ---- UPDATE SUMMARY LIST ----
-  document.querySelector('.summery ul').innerHTML = `
-    <li><strong>Hotel:</strong> ${hotelName}</li>
-    <li><strong>Approx tour date:</strong> ${tourDate}</li>
-    <li><strong>Tour length:</strong> ${nights} nights / ${days} days</li>
-    <li><strong>No. fixtures:</strong> ${fixtures}</li>
-    <li><strong>Attractions:</strong> ${attractionText}</li>
-    <li><strong>Coach:</strong> Included</li>
-  `;
-}
-
-// ✅ Run once
-updateSummary();
-
-// ✅ Add event listeners
-document.querySelector('select[name="hotel"]').addEventListener('change', function() {
-    let cost = this.options[this.selectedIndex].getAttribute('data-cost');
-    
-    document.getElementById('hotel_rate').value = cost ? cost : '';
+    // ✅ Run once
     updateSummary();
-    updateProfitMargins();
-    updateFinalRate();
-});
-document.querySelectorAll('.btn-up, .btn-down').forEach(btn => btn.addEventListener('click', updateSummary));
 
+    // ✅ Add event listeners
+    // Hotel dropdown change (loop-safe)
+    document.addEventListener('change', function (e) {
+        if (!e.target.matches('select[name="hotel[]"]')) return;
 
+        const hotelSelect = e.target;
+        const hotelDiv = hotelSelect.closest('.hotelDiv');
+        if (!hotelDiv) return;
+
+        const selectedOption = hotelSelect.options[hotelSelect.selectedIndex];
+        const cost = selectedOption?.dataset.cost || 0;
+
+        // ✅ Update hotel rate (CLASS, not ID)
+        const hotelRateInput = hotelDiv.querySelector('.hotel_rate');
+        if (hotelRateInput) {
+            hotelRateInput.value = cost;
+        }
+
+        // ✅ Show Add Hotel button only when hotel selected
+        const addHotelBtn = hotelDiv.querySelector('.add_hotel');
+        if (addHotelBtn) {
+            addHotelBtn.style.display = hotelSelect.value ? 'inline-block' : 'none';
+        }
+
+        // ✅ Force summary + recalculation
+        setTimeout(() => {
+            if (typeof updateSummary === 'function') updateSummary();
+            if (typeof updateProfitMargins === 'function') updateProfitMargins();
+            if (typeof updateFinalRate === 'function') updateFinalRate();
+        }, 0);
+    });
+
+    document.querySelectorAll('.btn-up, .btn-down').forEach(btn =>
+      btn.addEventListener('click', () => {
+        updateProfitMargins();
+        updateSummary();
+        updateFinalRate();
+      })
+    );
+    //change pax
+    const totalPassengers = document.getElementById('total_passengers');
+
+    if (totalPassengers) {
+      totalPassengers.addEventListener('change', function () {
+        updateProfitMargins();
+        updateSummary();
+        updateFinalRate();
+      });
+    }
+    $(document).on('click', '.add_hotel', function () {
+        var key = $(this).data('key');
+
+        // Show next hotel block
+        var nextHotelDiv = $('.hotal_' + key);
+        nextHotelDiv.show();
+
+        // Collect all previously selected hotel IDs
+        var selectedHotelIds = [];
+
+        $('.hotelDiv:visible').each(function () {
+            var val = $(this).find('select[name="hotel[]"]').val();
+            if (val) {
+                selectedHotelIds.push(val);
+            }
+        });
+
+        // Remove all previously selected hotels from next dropdown
+        selectedHotelIds.forEach(function (hotelId) {
+            nextHotelDiv
+                .find('select[name="hotel[]"] option[value="' + hotelId + '"]')
+                .remove();
+        });
+
+        // Reset selection in next dropdown
+        nextHotelDiv.find('select[name="hotel[]"]').val('');
+
+        // Hide Add button for current block
+        $(this).hide();
+
+    });
 </script>
 <!-- validation for hotel, night, date -->
 <script>
@@ -4829,7 +4640,7 @@ document.querySelectorAll('.btn-up, .btn-down').forEach(btn => btn.addEventListe
     // Remove old error messages
     document.querySelectorAll(".error-text").forEach(el => el.remove());
 
-    let hotel     = document.querySelector('select[name="hotel"]');
+    let hotel     = document.querySelector('select[name="hotel[]"]');
     let dateFrom  = document.querySelector('input[name="date_from"]');
     let nights    = document.querySelector('input[name="nights"]:checked');
     let fixture   = document.querySelector('input[name="nights"]:checked')
@@ -4850,12 +4661,12 @@ document.querySelectorAll('.btn-up, .btn-down').forEach(btn => btn.addEventListe
         dateFrom.insertAdjacentHTML("afterend", `<span class="error-text">Please select a Start date</span>`);
     }
 
-    // Validate Nights & Fixtures
+    /*// Validate Nights & Fixtures
     if (!nights || fixture === "" || fixture === "0") {
         valid = false;
         let nightsRow = document.getElementById("nightsRow");
         nightsRow.insertAdjacentHTML("afterend", `<span class="error-text">Please select Tour Nights and No. of Fixtures</span>`);
-    }
+    }*/
 
     // If any validation failed, stop here
     if (!valid) return;
@@ -4869,22 +4680,22 @@ document.querySelectorAll('.btn-up, .btn-down').forEach(btn => btn.addEventListe
     document.getElementById("enquiryNow").style.display = "block";
     document.getElementById("backPage").style.display = "block";
 
-});
-document.getElementById("backPage").addEventListener("click", function () {
+    });
+    document.getElementById("backPage").addEventListener("click", function () {
 
-    // Remove old error messages
-    document.querySelectorAll(".error-text").forEach(el => el.remove());
+        // Remove old error messages
+        document.querySelectorAll(".error-text").forEach(el => el.remove());
 
-    // ✅ Passed validation → switch to page 2
-    document.querySelector(".page1").style.display = "block";
-    document.querySelector(".page2").style.display = "none";
+        // ✅ Passed validation → switch to page 2
+        document.querySelector(".page1").style.display = "block";
+        document.querySelector(".page2").style.display = "none";
 
-    // ✅ Show Enquire Now button, hide Continue
-    document.getElementById("continue").style.display = "block";
-    document.getElementById("enquiryNow").style.display = "none";
-    document.getElementById("backPage").style.display = "none";
+        // ✅ Show Enquire Now button, hide Continue
+        document.getElementById("continue").style.display = "block";
+        document.getElementById("enquiryNow").style.display = "none";
+        document.getElementById("backPage").style.display = "none";
 
-});
+    });
 
 </script>
 <script>
@@ -4944,6 +4755,10 @@ jQuery(document).ready(function ($) {
     }
 
 });
+
+ 
+
+
 
 </script>
 

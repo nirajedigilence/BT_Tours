@@ -148,7 +148,7 @@ class ExperiencesController extends Controller
     {
         $data = $request->all();
         $map = isset($data["map"])?$data["map"]:'';
-        // $user = Auth::user();
+        $user = Auth::user();
        // $collaborators = User::role('Collaborator')->get();
         $collaborators = array();
         /*if($user){*/
@@ -466,7 +466,48 @@ class ExperiencesController extends Controller
     }
 public function storeEnquiry(Request $request){
     $data = $request->all();
-    
+    $nights = array();
+    if(!empty($data['hotel']))
+    {
+        foreach($data['hotel'] as $k=>$val)
+        {
+            if(!empty($val))
+            {
+                $nights[]=$data['nights_'.$k];
+            }
+            else
+            {$nights[]='';}
+            
+        }
+    }
+    /*pr($nights);
+    pr($data);
+    prd( [
+            'exp_id' => $data['exp_id'],
+            'date' => !empty($data['date_from'])?$data['date_from']:NULL,
+            //'date_to' => !empty($data['date_to'])?$data['date_to']:NULL,
+            'nights' => !empty($nights)?implode(',',$nights):'',
+            'final_cost' => $data['final_cost'],
+            'hotel_estimated_cost' => !empty($data['hotel_rate'])?implode(',',$data['hotel_rate']):'',
+            'hotel_id' => !empty($data['hotel'])?implode(',',$data['hotel']):'',
+            'is_dates_flexible' => isset($data['is_dates_flexible'])?$data['is_dates_flexible']:'0',   
+            'coach_required' => 1,   
+            //'category_id' => isset($data['category_id'])?$data['category_id']:'',   
+            'group_number' => isset($data['total_passengers'])?$data['total_passengers']:'',  
+            'fixture' => !empty($data['fixtures'])?implode(',',$data['fixtures']):'',
+            'attraction' => !empty($data['attraction'])?implode(',',$data['attraction']):'',
+            'extras' => !empty($data['preferred_club'])?implode(',',$data['preferred_club']):'',
+            'contact_name' => $data['contact_name'],
+            'bowls_club' => $data['bowls_club'],
+            'coach_hire_cost' => $data['coach_hire_cost'],
+            'avg_cost_fixture' => $data['avg_cost_fixture'],
+            'email' => $data['email'],
+            'contact_number' => $data['contact_number'],
+            'addtional_note' => $data['addtional_note'],
+            'created_at' => date('Y-m-d H:i:s'),
+
+        ]);*/
+
     $url = getenv('IMAGE_URL').'api/get_experience_data';
         //$url = getenv('IMAGE_URL').'api/get_experience_data';
     
@@ -477,15 +518,15 @@ public function storeEnquiry(Request $request){
             'exp_id' => $data['exp_id'],
             'date' => !empty($data['date_from'])?$data['date_from']:NULL,
             //'date_to' => !empty($data['date_to'])?$data['date_to']:NULL,
-            'nights' => $data['nights'],
+            'nights' => !empty($nights)?implode(',',$nights):'',
             'final_cost' => $data['final_cost'],
-            'hotel_estimated_cost' => $data['hotel_rate'],
-            'hotel_id' => $data['hotel'],
+            'hotel_estimated_cost' => !empty($data['hotel_rate'])?implode(',',$data['hotel_rate']):'',
+            'hotel_id' => !empty($data['hotel'])?implode(',',$data['hotel']):'',
             'is_dates_flexible' => isset($data['is_dates_flexible'])?$data['is_dates_flexible']:'0',   
             'coach_required' => 1,   
             //'category_id' => isset($data['category_id'])?$data['category_id']:'',   
             'group_number' => isset($data['total_passengers'])?$data['total_passengers']:'',  
-            'fixture' => !empty($data['preferred_club'])?count($data['preferred_club']):'0',
+            'fixture' => !empty($data['fixtures'])?implode(',',$data['fixtures']):'',
             'attraction' => !empty($data['attraction'])?implode(',',$data['attraction']):'',
             'extras' => !empty($data['preferred_club'])?implode(',',$data['preferred_club']):'',
             'contact_name' => $data['contact_name'],
