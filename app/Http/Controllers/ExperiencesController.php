@@ -387,21 +387,49 @@ class ExperiencesController extends Controller
         // pr($cart); exit;
         $client = new Client();
 
+        // Get bt_tour from URL param first, fallback to cookie
+        $bt_tour = $_GET['bt_tour'] ?? null;
+
+        if (empty($bt_tour)) {
+            // Fallback: read from bt_user cookie (same source as cart icon link)
+            $bt_user_cookie = json_decode(\Cookie::get('bt_user'), true);
+            if (!empty($bt_user_cookie) && !empty($bt_user_cookie['user_id'])) {
+                $bt_tour = $bt_user_cookie['user_id'];
+                \Log::info('[showCart] bt_tour missing from URL, got from cookie: ' . $bt_tour);
+            }
+        }
+
+        if (empty($bt_tour)) {
+            \Log::warning('[showCart] No bt_tour param and no cookie found. Showing empty cart.');
+            $cart = array();
+            return view('booking.cart', compact('cart'));
+        }
+
         try {
             $updateurl = getenv('IMAGE_URL') . 'api/show_cart';
+            \Log::info('=== BT_TOURS SHOW_CART DEBUG ===');
+            \Log::info('IMAGE_URL env: ' . getenv('IMAGE_URL'));
+            \Log::info('Full API URL: ' . $updateurl);
+            \Log::info('bt_tour value: ' . $bt_tour);
+
             $response = $client->request('post', $updateurl, [
                 'form_params' => [
-                    'created_by' => $_GET['bt_tour']
+                    'created_by' => $bt_tour
                 ],
                 'auth' => ['Tours-user', 'L3tM3L00kd']
             ]);
             $data_api = json_decode($response->getBody()->getContents(), true);
 
-            //return response()->json(['data' => $data]);
+            \Log::info('API Response received, cart count: ' . (isset($data_api['cart']) ? count($data_api['cart']) : 'NO CART KEY'));
+            \Log::info('=== END BT_TOURS SHOW_CART DEBUG ===');
 
         } catch (\Exception $e) {
             // prd($e->getMessage());
             //return response()->json(['error' => $e->getMessage()], 500);
+            \Log::error('=== BT_TOURS SHOW_CART ERROR ===');
+            \Log::error('API call FAILED! Error: ' . $e->getMessage());
+            \Log::error('IMAGE_URL was: ' . getenv('IMAGE_URL'));
+            \Log::error('=== END BT_TOURS SHOW_CART ERROR ===');
             $data_api = array();
         }
         $cart = !empty($data_api['cart']) ? $data_api['cart'] : array();
