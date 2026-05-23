@@ -29,6 +29,7 @@ Route::get('/contact-us', 'ExperiencesController@contact_us')->name('contact-us'
 Route::post('/contact-us/send-mail', 'ExperiencesController@send_mail')->name('send-mail')->middleware('less');
 
 Route::get('/terms-conditions', 'ExperiencesController@terms')->name('terms')->middleware('less');
+Route::get('/terms-conditions-hotel', 'ExperiencesController@terms_hotel')->name('terms-hotel')->middleware('less');
 Route::get('/privacy-policy', 'ExperiencesController@privacy_policy')->name('privacy-policy')->middleware('less');
 Route::get('/cookies', 'ExperiencesController@cookies')->name('cookies')->middleware('less');
 Route::get('/bowling/{slug}','ExperiencesController@show_bowling')

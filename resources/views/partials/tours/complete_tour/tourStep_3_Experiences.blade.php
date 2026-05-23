@@ -20,7 +20,7 @@
 </div>
 <div class="white_part ">
     <div class="flwMainTitleCls">
-        Experiences
+        Tour Details
     </div>
     <div class="partOneCls">
         <div class="row">

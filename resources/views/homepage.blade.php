@@ -621,7 +621,7 @@
             <h1>Bowling Holidays<br>Reimagined</h1>
             <p>Discover the perfect lawn bowls tour destination for your club. Explore all the best bowls holidays below!</p>
             <div class="buttons">
-                <a href="/search" class="btn discover-btn">Discover Now</a>
+                <a href="/all-tours/public/search" class="btn discover-btn">Discover Now</a>
                 <!-- <a href="#" class="btn enquire-btn">Enquire</a> -->
             </div>
         </div>
@@ -640,7 +640,7 @@
         <div class="content-quality">
             <h1>We are the No. 1 Provider of<br>Quality Bowling Holidays!</h1>
             <p>With over 20 years of expertise we're passionate about helping clubs<br> like yours organise an exceptional, personalised bowls holiday!</p>
-            <!-- <a href="/search" class="btn-link">Discover all destinations</a> -->
+            <!-- <a href="/all-tours/public/search" class="btn-link">Discover all destinations</a> -->
         </div>
   </section>
   <section class="category-section">
@@ -651,26 +651,26 @@
     
       <div class="categories">
           <div class="category">
-            <a href="/search?category=indoor">
+            <a href="/all-tours/public/search?category=indoor">
               <img src="{{ asset('images/homepage/c1.png') }}" alt="Indoor">
               <div class="c-title"><p>Indoor</p></div>
             </a>
           </div>
           <div class="category">
-            <a href="/search?category=outdoor">
+            <a href="/all-tours/public/search?category=outdoor">
               <img src="{{ asset('images/homepage/c2.png') }}" alt="Outdoor">
               <div class="c-title"><p>Outdoor</p></div>
             </a>
           </div>
           <div class="category">
-            <a href="/search?category=premium">
+            <a href="/all-tours/public/search?category=premium">
               <img src="{{ asset('images/homepage/c3.png') }}" alt="Premium">
               <div class="c-title"><p>Premium</p></div>
             </a>
           </div>
       </div>
       <div class="category-footer">
-          <p style="color: #fff;margin-top: 70px;"><!-- Why not have a look at all of our tours?  --><a href="/search">View More Destinations</a></p>
+          <p style="color: #fff;margin-top: 70px;"><!-- Why not have a look at all of our tours?  --><a href="/all-tours/public/search">View More Destinations</a></p>
           <div class="why-choose">
             <h2>Why choose us...?</h2>
             <div class="features">

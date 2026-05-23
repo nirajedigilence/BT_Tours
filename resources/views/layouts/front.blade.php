@@ -616,7 +616,8 @@ if($uri == '' || $uri == 'search' || $uri == 'about' || $uri == 'partnership' ||
 <!-- <li id="menu-item-1078" class="menu-item menu-item-type-taxonomy menu-item-object-types menu-item-1078"><a href="/types/top-picks/">Top Lawn Bowls Holiday Destinations</a></li>
 <li id="menu-item-699" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-699"><a href="/memberships/">Membership</a></li>
 <li id="menu-item-1079" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1079"><a href="/clubs/">Bowls fixtures list | Find a club near me</a></li> -->
-<li id="menu-item-553" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-553"><a href="/terms-conditions/">Terms &amp; Conditions</a></li>
+<li id="menu-item-553" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-553"><a href="{{ route('terms') }}">T&amp;C Tour Organiser</a></li>
+<li id="menu-item-554" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-554"><a href="{{ route('terms-hotel') }}">T&amp;C Hotel</a></li>
 </ul>                </div>
                 <div class="footer_newsletter">
                     <h3>Contact Us</h3>

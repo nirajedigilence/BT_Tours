@@ -63,6 +63,12 @@ class ExperiencesController extends Controller
         $data = array();
         return view('terms', compact('data', 'page_title'));
     }
+    public function terms_hotel(Request $request)
+    {
+        $page_title = "Terms &amp; Conditions - Hotel - Bowling Tours";
+        $data = array();
+        return view('terms_hotel', compact('data', 'page_title'));
+    }
     public function about_us(Request $request)
     {
         $page_title = "Effortless Bowling Tours for Your Club - About Us";
@@ -329,16 +335,11 @@ class ExperiencesController extends Controller
     public function getAddToCart3(Request $request)
     {
         $data = $request->all();
-        //prd($data);
-        /*if(isset($request->tour_type) && $request->tour_type == 2)
-        {
-            $result = $this->addToCartCruise($request);
-        }
-        else
-        {
-            $result = $this->addToCart($request);
-        }*/
         $client = new Client();
+
+        // Send the selected travel partner's collaborator_id as-is to Veenus API
+        // so the cart is created with user_id = the selected collaborator (not the super user)
+        $collaborator_id = $data['collaborator_id'];
 
         try {
             $updateurl = getenv('IMAGE_URL') . 'api/bowling_add_to_cart3';
@@ -346,7 +347,7 @@ class ExperiencesController extends Controller
                 'form_params' => [
                     '_token' => $data['_token'],
                     'tour_type' => '3',
-                    'collaborator_id' => $data['collaborator_id'],
+                    'collaborator_id' => $collaborator_id,
                     'created_by' => $data['created_by'],
                     'currency' => $data['currency'],
                     'dates_rates_id' => $data['dates_rates_id'],
@@ -359,77 +360,42 @@ class ExperiencesController extends Controller
             ]);
             $data_api = json_decode($response->getBody()->getContents(), true);
 
-            //return response()->json(['data' => $data]);
-
         } catch (\Exception $e) {
-            //prd($e->getMessage());
-            //return response()->json(['error' => $e->getMessage()], 500);
             $data_api = array();
         }
-        // prd($data_api);
         $code = !empty($data_api['code']) ? $data_api['code'] : 400;
         $message = (!empty($data_api['status']) && $data_api['status'] == 'success') ? "Experience was successfully added." : "There was a problem adding the experience to the cart!";
 
         if (!empty($request->hold_tour_days)) {
             return redirect()->route('hold-tours')
                 ->with($code, $message);
-
         } else {
-            return redirect('/cart?bt_tour=' . $data['created_by'])->with($code, $message);
-
+            return redirect('/cart')->with($code, $message);
         }
-
     }
     public function showCart(Request $request)
     {
-        /*$created_by = Auth::user()->getAuthIdentifier();
-        $cart = Cart::getCurrentUserCart(null,$created_by)->toArray();*/
-        // pr($cart); exit;
+        $bt_user_data = getUserData();
         $client = new Client();
 
-        // Get bt_tour from URL param first, fallback to cookie
-        $bt_tour = $_GET['bt_tour'] ?? null;
-
-        if (empty($bt_tour)) {
-            // Fallback: read from bt_user cookie (same source as cart icon link)
-            $bt_user_cookie = json_decode(\Cookie::get('bt_user'), true);
-            if (!empty($bt_user_cookie) && !empty($bt_user_cookie['user_id'])) {
-                $bt_tour = $bt_user_cookie['user_id'];
-                \Log::info('[showCart] bt_tour missing from URL, got from cookie: ' . $bt_tour);
-            }
-        }
-
-        if (empty($bt_tour)) {
-            \Log::warning('[showCart] No bt_tour param and no cookie found. Showing empty cart.');
+        // Not logged in
+        if (empty($bt_user_data) || empty($bt_user_data['id'])) {
             $cart = array();
             return view('booking.cart', compact('cart'));
         }
 
+        // Both SuperUser and Collaborator: call show_cart API with their own user ID
+        // SuperUser items have created_by = SuperUser_id (we send SuperUser's ID as collaborator_id in getAddToCart3)
+        // Collaborator items have created_by = Collaborator_id (normal flow)
+        $encoded = base64_encode($bt_user_data['id']);
         try {
             $updateurl = getenv('IMAGE_URL') . 'api/show_cart';
-            \Log::info('=== BT_TOURS SHOW_CART DEBUG ===');
-            \Log::info('IMAGE_URL env: ' . getenv('IMAGE_URL'));
-            \Log::info('Full API URL: ' . $updateurl);
-            \Log::info('bt_tour value: ' . $bt_tour);
-
             $response = $client->request('post', $updateurl, [
-                'form_params' => [
-                    'created_by' => $bt_tour
-                ],
+                'form_params' => ['created_by' => $encoded],
                 'auth' => ['Tours-user', 'L3tM3L00kd']
             ]);
             $data_api = json_decode($response->getBody()->getContents(), true);
-
-            \Log::info('API Response received, cart count: ' . (isset($data_api['cart']) ? count($data_api['cart']) : 'NO CART KEY'));
-            \Log::info('=== END BT_TOURS SHOW_CART DEBUG ===');
-
         } catch (\Exception $e) {
-            // prd($e->getMessage());
-            //return response()->json(['error' => $e->getMessage()], 500);
-            \Log::error('=== BT_TOURS SHOW_CART ERROR ===');
-            \Log::error('API call FAILED! Error: ' . $e->getMessage());
-            \Log::error('IMAGE_URL was: ' . getenv('IMAGE_URL'));
-            \Log::error('=== END BT_TOURS SHOW_CART ERROR ===');
             $data_api = array();
         }
         $cart = !empty($data_api['cart']) ? $data_api['cart'] : array();
@@ -438,24 +404,24 @@ class ExperiencesController extends Controller
     }
     public function finalizeCart(Request $request)
     {
-
         $client = new Client();
+
+        // Get the user ID from cookie and base64 encode for the API
+        $bt_user_data = getUserData();
+        $user_id = !empty($bt_user_data['id']) ? $bt_user_data['id'] : '';
+        $created_by_encoded = base64_encode($user_id);
 
         try {
             $updateurl = getenv('IMAGE_URL') . 'api/finalize_cart';
             $response = $client->request('post', $updateurl, [
                 'form_params' => [
-                    'created_by' => $request->created_by
+                    'created_by' => $created_by_encoded
                 ],
                 'auth' => ['Tours-user', 'L3tM3L00kd']
             ]);
             $data_api = json_decode($response->getBody()->getContents(), true);
 
-            //return response()->json(['data' => $data]);
-
         } catch (\Exception $e) {
-
-            //return response()->json(['error' => $e->getMessage()], 500);
             $data_api = array();
         }
 
@@ -463,7 +429,6 @@ class ExperiencesController extends Controller
         $message = !empty($data_api['message']) ? $data_api['message'] : 'There was a problem finalizing the order.';
         return redirect()->back()
             ->with($code, $message);
-
     }
     public function deleteCartExperience($id, $user_id, Ajax $ajax)
     {

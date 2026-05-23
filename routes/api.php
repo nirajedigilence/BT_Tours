@@ -21,3 +21,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/get_countries', [App\Http\Controllers\API\APIController::class, 'get_countries'])->name('get_countries');
 Route::get('/get_country_area', [App\Http\Controllers\API\APIController::class, 'get_country_area'])->name('get_country_area');
 Route::get('/get_tour_slider', [App\Http\Controllers\API\APIController::class, 'get_tour_slider'])->name('get_tour_slider');
+Route::post('/trigger-bt-sync', [App\Http\Controllers\API\APIController::class, 'trigger_bt_sync'])->name('trigger_bt_sync');

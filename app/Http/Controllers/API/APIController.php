@@ -106,5 +106,28 @@ class APIController extends Controller
             ], 401);
          }
     }
+
+    public function trigger_bt_sync(Request $request)
+    {
+        try {
+            \Artisan::call('BT:cron');
+
+            return response()->json([
+                'code' => 200,
+                'status' => 'success',
+                'message' => 'BT sync executed successfully',
+            ], 200);
+        } catch (\Throwable $e) {
+            \Log::error('Failed to execute BT sync from API trigger.', [
+                'error' => $e->getMessage(),
+            ]);
+
+            return response()->json([
+                'code' => 500,
+                'status' => 'error',
+                'message' => 'BT sync execution failed',
+            ], 500);
+        }
+    }
     
 }
