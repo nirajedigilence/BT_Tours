@@ -218,6 +218,7 @@ class ExperiencesController extends Controller
         $response = $client->request('get', $updateurl);
         //$update_exp = json_decode($response->getBody()->getContents(), true);
         // Remove UTF-8 BOM
+        $body = (string) $response->getBody();
         $body = preg_replace('/^\xEF\xBB\xBF/', '', $body);
         $body = ltrim($body, "\xEF\xBB\xBF");
         $update_exp = json_decode($body, true);
@@ -237,6 +238,7 @@ class ExperiencesController extends Controller
         ]);
         //$update_exp = json_decode($response->getBody()->getContents(), true);
         // Remove UTF-8 BOM
+        $body = (string) $response->getBody();
         $body = preg_replace('/^\xEF\xBB\xBF/', '', $body);
         $body = ltrim($body, "\xEF\xBB\xBF");
         $update_exp = json_decode($body, true);
@@ -545,6 +547,7 @@ class ExperiencesController extends Controller
         ]);
         //$update_exp = json_decode($response->getBody()->getContents(), true);
         // Remove UTF-8 BOM
+        $body = (string) $response->getBody();
         $body = preg_replace('/^\xEF\xBB\xBF/', '', $body);
         $body = ltrim($body, "\xEF\xBB\xBF");
         $update_exp = json_decode($body, true);
