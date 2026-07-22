@@ -216,7 +216,11 @@ class ExperiencesController extends Controller
         // $updateurl = 'https://bowlingtours-staging-co-uk.stackstaging.com/wp-json/custom/v1/getClubdata'; 
         $updateurl = getenv('IMAGE_URL') . 'api/get_bt_collabrator_data';
         $response = $client->request('get', $updateurl);
-        $update_exp = json_decode($response->getBody()->getContents(), true);
+        //$update_exp = json_decode($response->getBody()->getContents(), true);
+        // Remove UTF-8 BOM
+        $body = preg_replace('/^\xEF\xBB\xBF/', '', $body);
+        $body = ltrim($body, "\xEF\xBB\xBF");
+        $update_exp = json_decode($body, true);
         $collaborators = array();
         if (!empty($update_exp['status'])) {
             $collaborators = $update_exp['data'];
@@ -231,7 +235,11 @@ class ExperiencesController extends Controller
             ],
             'auth' => ['Tours-user', 'L3tM3L00kd']
         ]);
-        $update_exp = json_decode($response->getBody()->getContents(), true);
+        //$update_exp = json_decode($response->getBody()->getContents(), true);
+        // Remove UTF-8 BOM
+        $body = preg_replace('/^\xEF\xBB\xBF/', '', $body);
+        $body = ltrim($body, "\xEF\xBB\xBF");
+        $update_exp = json_decode($body, true);
         $exp_dates = array();
         if (!empty($update_exp['status'])) {
             $exp_dates = $update_exp['data'];
@@ -535,7 +543,11 @@ class ExperiencesController extends Controller
             ],
             'auth' => ['Tours-user', 'L3tM3L00kd']
         ]);
-        $update_exp = json_decode($response->getBody()->getContents(), true);
+        //$update_exp = json_decode($response->getBody()->getContents(), true);
+        // Remove UTF-8 BOM
+        $body = preg_replace('/^\xEF\xBB\xBF/', '', $body);
+        $body = ltrim($body, "\xEF\xBB\xBF");
+        $update_exp = json_decode($body, true);
         $exe = Experience::select('slug_name')->where('id', $data['exp_id'])->first();
         if (!empty($update_exp['status'])) {
             return redirect('/bowling/' . $exe->slug_name)->with('success', 'Enquiry added successfully.');
