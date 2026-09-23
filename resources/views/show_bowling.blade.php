@@ -755,6 +755,10 @@
     $bt_user_data = getUserData();
 
     $date_available = '';
+    $singleSupplement = $row->srs;
+    if ($singleSupplement === null || $singleSupplement === '') {
+        $singleSupplement = 0;
+    }
                                 ?>
                             @if(empty($bt_user_data))
                                                     <div class="priceBox">
@@ -868,7 +872,7 @@
                                                                             {{$currency_symbol}}{{$row->rate }}<!-- {{ min($rates) }} --></span><small>pp</small>
                                                                     </div>
                                                                     <div class="priceS"> <span id="priceS"
-                                                                            style="letter-spacing: 3px">{{$currency_symbol}}{{$row->srs }}</span><small>ss
+                                                                            style="letter-spacing: 3px">{{$currency_symbol}}{{$singleSupplement}}</span><small>ss
                                                                             pp</small></div>
                                                                     <div id="lenghtnight" style="color: #fff;font-size: 18px;font-weight: 500;">
                                                                         <!-- {{ (!empty($lenghtnights[0]) ? min($lenghtnights) : 0) }} nights -->
@@ -986,7 +990,7 @@
                                                                     <div class="prices" style="margin-bottom:15px;">
                                                                         <?php    //if(!empty($row->experienceDatesActive[0]) || !empty($row->price)){ ?>
                                                                             <div class="priceL" style="font-size:4rem;"> <span id="priceL" style="letter-spacing: 3px">{{$currency_symbol}}{{$row->rate }}<!-- {{ min($rates) }} --></span><small>pp</small></div>
-                                                                            <div class="priceS"> <span id="priceS" style="letter-spacing: 3px">{{$currency_symbol}}{{$row->srs }}</span><small>ss pp</small></div>
+                                                                            <div class="priceS"> <span id="priceS" style="letter-spacing: 3px">{{$currency_symbol}}{{$singleSupplement}}</span><small>ss pp</small></div>
                                                                             <div id="lenghtnight" style="color: #fff;font-size: 18px;font-weight: 500;"><!-- {{ (!empty($lenghtnights[0]) ? min($lenghtnights) : 0) }} nights --></div>
                                                                         <?php    /*}else{
                                                                               echo '<h3 style="color: #fff;width: 200px;margin: 25px;font-weight: 600;">Dates available on request</h3>';
