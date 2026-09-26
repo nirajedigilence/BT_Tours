@@ -42,8 +42,8 @@
     <script src="{{ asset('js/jquery.validate.min.js') }}"></script>
     <script src="{{ asset('js/iziToast.js') }}"></script>
     <script src="{{ asset('js/general.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+    <script src="{{ asset('js/popper.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 {{--    <script>--}}
 {{--        laravel.errors.errorBagContainer = $('#errors');--}}
 {{--        laravel.errors.showErrorsBag = true;--}}

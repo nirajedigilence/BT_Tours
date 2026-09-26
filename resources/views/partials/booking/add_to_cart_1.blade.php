@@ -76,7 +76,8 @@
 </style>
 <form method="post" class="addToCartForms" id="addToCartForm2">
     <div class="cart_popup" style="margin: 0;padding: 50px;max-width: none;">
-        {{ csrf_field() }}
+        
+          @csrf
         <div class="popup_heading">
             Add to cart
         </div>

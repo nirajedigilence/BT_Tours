@@ -772,15 +772,27 @@ class ExperiencesController extends Controller
         //dbg2($countries); exit();
 
         $data = $this->getData($request);
-        $search_txt = !empty($request->search_text) ? $request->search_text : '';
+        $search_txt = !empty($data['search_text']) ? $data['search_text'] : (!empty($request->search_text) ? (string) $request->search_text : '');
         if (!empty($search_txt)) {
 
-            $exp = ExperienceExtra::whereRaw('(name like "%' . $search_txt . '%" )')->get();
+            $exp = ExperienceExtra::where('name', 'like', '%' . $search_txt . '%')->get();
 
             if (empty($exp[0])) {
-                $experiences = Experience::with("experienceCategories")->with('experienceImages')->with('ExperienceAttractions')->where('active', "=", 1)->whereRaw('(name like "%' . $search_txt . '%" or description like "%' . $search_txt . '%")')->where('exp_type', "=", 3);
+                $experiences = Experience::with("experienceCategories")
+                    ->with('experienceImages')
+                    ->with('ExperienceAttractions')
+                    ->where('active', 1)
+                    ->where(function ($query) use ($search_txt) {
+                        $query->where('name', 'like', '%' . $search_txt . '%')
+                              ->orWhere('description', 'like', '%' . $search_txt . '%');
+                    })
+                    ->where('exp_type', 3);
             } else {
-                $experiences = Experience::with("experienceCategories")->with('experienceImages')->with('ExperienceAttractions')->where('active', "=", 1)->where('exp_type', "=", 3);
+                $experiences = Experience::with("experienceCategories")
+                    ->with('experienceImages')
+                    ->with('ExperienceAttractions')
+                    ->where('active', 1)
+                    ->where('exp_type', 3);
 
             }
 
@@ -798,7 +810,11 @@ class ExperiencesController extends Controller
             }
 
         } else {
-            $experiences = Experience::with("experienceCategories")->with('experienceImages')->with('ExperienceAttractions')->where('active', "=", 1)->where('exp_type', "=", 3);
+            $experiences = Experience::with("experienceCategories")
+                ->with('experienceImages')
+                ->with('ExperienceAttractions')
+                ->where('active', 1)
+                ->where('exp_type', 3);
 
         }
 
@@ -927,23 +943,20 @@ class ExperiencesController extends Controller
         // $experiences->whereHas('experienceDates', function ($query) {
         //     $query->whereRaw('IFNULL(experience_dates.price, experiences.price) between ? AND ? ', [0, 2000]);
         // });
-        parse_str($data["filter_serial"], $output);
-        if (isset($output['sortby']) && $output['sortby'] == 'price-desc') {
-            /*$items = $experiences->get(); 
-            if(!empty($items)){
+        $filter_serial = !empty($data["filter_serial"]) ? $data["filter_serial"] : '';
+        $output = [];
+        if (!empty($filter_serial)) {
+            parse_str($filter_serial, $output);
+        }
+        $sortBy = isset($output['sortby']) ? $output['sortby'] : $request->input('sortby');
 
-                $items = Arr::sort($items, function($exp)
-                {
-                    return $exp->price;
-                });
-            }*/
-
+        if ($sortBy === 'price-desc') {
             $experiences->orderBy('rate', 'ASC');
             $items = $experiences->get();
-        } elseif (isset($output['sortby']) && $output['sortby'] == 'postdate-desc') {
+        } elseif ($sortBy === 'postdate-desc') {
             $experiences->orderBy('created_at', 'DESC');
             $items = $experiences->get();
-        } elseif (isset($output['sortby']) && $output['sortby'] == 'mobility-desc') {
+        } elseif ($sortBy === 'mobility-desc') {
             $experiences->orderBy('mobility', 'ASC');
             $items = $experiences->get();
         } else {
@@ -971,20 +984,26 @@ class ExperiencesController extends Controller
     protected function getData(Request $request)
     {
         $rules = [
+            'search_text' => 'nullable|string|max:255',
             'price_from' => 'nullable|numeric|min:0|max:99999999.99',
             'price_to' => 'nullable|numeric|min:0|max:99999999.99',
             'experience_categories_id' => 'nullable|array',
             'experience_categories_id.*' => 'exists:experience_categories,id',
             'experience_extras_id' => 'nullable|array',
-            'experience_extras_id' => 'exists:experience_extras,id',
-            'country_areas_id' => 'sometimes',
-            //'country_areas_id' => 'exists:country_areas,id',
+            'experience_extras_id.*' => 'exists:experience_extras,id',
+            'country_areas_id' => 'nullable|array',
+            'country_areas_id.*' => 'integer',
+            'countries_id' => 'nullable|array',
+            'countries_id.*' => 'integer',
             'years' => 'nullable|array',
+            'years.*' => 'integer',
             'months' => 'nullable|array',
-            'filter_serial' => 'nullable',
+            'months.*' => 'integer',
+            'view' => 'nullable|string|in:grid,list',
+            'sortby' => 'nullable|string|in:price-desc,postdate-desc,mobility-desc',
+            'filter_serial' => 'nullable|string',
             'dates_id' => 'nullable|numeric',
-            'country' => 'sometimes',
-            'countries_id' => 'sometimes',
+            'country' => 'nullable|string|max:255',
             'id' => 'nullable|numeric',
         ];
 
