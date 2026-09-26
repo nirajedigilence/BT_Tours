@@ -755,6 +755,10 @@
     $bt_user_data = getUserData();
 
     $date_available = '';
+    $singleSupplement = $row->srs;
+    if ($singleSupplement === null || $singleSupplement === '') {
+        $singleSupplement = 0;
+    }
                                 ?>
                             @if(empty($bt_user_data))
                                                     <div class="priceBox">
@@ -820,42 +824,55 @@
                                 //$lenghtnights[] = $row->nights;
                                 $lenghtnights[] = $row->nights;
 
-                                 if(!empty($dates_rates)){
-                                                    if($dates_rates[$dates_rates_id][0]->currency == 1)
-                                                    {
-                                                        $rates = array_filter(array_column($dates_rates[$dates_rates_id], 'rate'),'is_numeric');
-                                                        $srs = array_filter(array_column($dates_rates[$dates_rates_id], 'single_srs'),'is_numeric');
-                                                        $currency = '£';
-                                                    }
-                                                    elseif($dates_rates[$dates_rates_id][0]->currency == 2)
-                                                    {
-                                                        $rates = array_filter(array_column($dates_rates[$dates_rates_id], 'rate_euro'),'is_numeric');
-                                                        $srs = array_filter(array_column($dates_rates[$dates_rates_id], 'single_srs_euro'),'is_numeric');
-                                                         $currency = '€';
-                                                    }
-                                                    else
-                                                    {
-                                                        $rates = array_filter(array_column($dates_rates[$dates_rates_id], 'rate'),'is_numeric');
-                                                        $srs = array_filter(array_column($dates_rates[$dates_rates_id], 'single_srs'),'is_numeric');
-                                                        $currency = '£';
-                                                    }
-                                                    
-                                                }else{
-                                                     $rates[] = $row->rate;
-                                                        $srs[] = $row->single_srs;
-                                                        $currency = '£';
-                                                   
-                                                }
+                                if (!empty($dates_rates)) {
+                                    $rates = array_filter(array_column($dates_rates, 'rate'), 'is_numeric');
+                                    $srs = array_filter(array_column($dates_rates, 'single_srs'), 'is_numeric');
+
+                                    // $lenghtnights = array_filter(array_column($dates_rates, 'nights'));
+                                    $currency_symbol = '£';
+                                } else {
+                                    $rates[] = $row->rate;
+                                    $srs[] = $row->single_srs;
+                                    $currency_symbol = '£';
+                                    // $lenghtnights[] = $row->nights;
+                                }
+                                //prd($dates_rates);
+                                /*if(!empty($dates_rates[0])){
+                                       if($dates_rates[0]->currency == 1)
+                                       {
+                                           $rates = array_filter(array_column($dates_rates, 'rate'),'is_numeric');
+                                           $srs = array_filter(array_column($dates_rates, 'srs'),'is_numeric');
+                                           $currency_symbol = '£';
+                                       }
+                                       elseif($dates_rates[0]->currency == 2)
+                                       {
+                                           $rates = array_filter(array_column($dates_rates, 'rate_euro'),'is_numeric');
+                                           $srs = array_filter(array_column($dates_rates, 'srs_euro'),'is_numeric');
+                                            $currency_symbol = '€';
+                                       }
+                                       else
+                                       {
+                                           $rates = array_filter(array_column($dates_rates, 'rate'),'is_numeric');
+                                           $srs = array_filter(array_column($dates_rates, 'srs'),'is_numeric');
+                                           $currency_symbol = '£';
+                                       }
+
+                                   }else{
+                                        $rates[] = $row->rate;
+                                           $srs[] = $row->srs;
+                                           $currency_symbol = '£';
+
+                                   }*/
                                                                 ?>
                                                             <div class="darkBlueHolder">
                                                                 <div class="prices" style="margin-bottom:15px;">
                                                                     <?php    //if(!empty($row->experienceDatesActive[0]) || !empty($row->price)){ ?>
                                                                     <div class="priceL" style="font-size:3rem;"><small>From</small> <span
                                                                             id="priceL" style="letter-spacing: 3px">
-                                                                            {{$currency_symbol}}{{ min($rates) }}pp<!-- {{ min($rates) }} --></span><small>pp</small>
+                                                                            {{$currency_symbol}}{{$row->rate }}<!-- {{ min($rates) }} --></span><small>pp</small>
                                                                     </div>
                                                                     <div class="priceS"> <span id="priceS"
-                                                                            style="letter-spacing: 3px">{{$currency_symbol}}{{ min($srs) }}ss pp</span><small>ss
+                                                                            style="letter-spacing: 3px">{{$currency_symbol}}{{$singleSupplement}}</span><small>ss
                                                                             pp</small></div>
                                                                     <div id="lenghtnight" style="color: #fff;font-size: 18px;font-weight: 500;">
                                                                         <!-- {{ (!empty($lenghtnights[0]) ? min($lenghtnights) : 0) }} nights -->
@@ -973,7 +990,7 @@
                                                                     <div class="prices" style="margin-bottom:15px;">
                                                                         <?php    //if(!empty($row->experienceDatesActive[0]) || !empty($row->price)){ ?>
                                                                             <div class="priceL" style="font-size:4rem;"> <span id="priceL" style="letter-spacing: 3px">{{$currency_symbol}}{{$row->rate }}<!-- {{ min($rates) }} --></span><small>pp</small></div>
-                                                                            <div class="priceS"> <span id="priceS" style="letter-spacing: 3px">{{$currency_symbol}}{{$row->srs }}</span><small>ss pp</small></div>
+                                                                            <div class="priceS"> <span id="priceS" style="letter-spacing: 3px">{{$currency_symbol}}{{$singleSupplement}}</span><small>ss pp</small></div>
                                                                             <div id="lenghtnight" style="color: #fff;font-size: 18px;font-weight: 500;"><!-- {{ (!empty($lenghtnights[0]) ? min($lenghtnights) : 0) }} nights --></div>
                                                                         <?php    /*}else{
                                                                               echo '<h3 style="color: #fff;width: 200px;margin: 25px;font-weight: 600;">Dates available on request</h3>';
@@ -1176,7 +1193,7 @@
                                                                                             $(this).html("Please wait ...");
                                                                                             var hold_days = $('#hold_tour_days').val();
 
-                                                                                           // $.ajaxSetup({ headers: {'X-CSRF-TOKEN': '{{csrf_token()}}'}});
+                                                                                            $.ajaxSetup({ headers: {'X-CSRF-TOKEN': '{{csrf_token()}}'}});
                                                                                             $.ajax({
                                                                                                 type: "POST",
                                                                                                 cache: false,
@@ -2550,8 +2567,8 @@
             }
                                                     ?>
                                                     <div class="right">
-                                                        <span class="up"><span class="curreny_sysbol">{{$currency}}</span>{{$row->rate }}pp</span>
-                                                        <span class="down"><span class="curreny_sysbol">{{$currency}}</span>{{$row->srs }}ss pp</span>   
+                                                        <span class="up"><span class="curreny_sysbol">{{$currency}}</span>{{ $rates }}pp</span>
+                                                        <span class="down"><span class="curreny_sysbol">{{$currency}}</span>{{ $srs }}ss pp</span>    
                                                     </div>
 
 
